@@ -57,7 +57,7 @@ Large components often suffer from this.props syndrome. That is to say, you see 
 }
 
 ```
-After cutting down all these ``this.props`` noise
+After cutting down all these ``this.props`` noise. The below is much easier to read and clearly points out which props we are using in the component.
 
 ```
 render() {
@@ -72,6 +72,7 @@ render() {
     isLoggedIn,
     gridView
   } = this.props;
+
   return (
     <ProductPrice
       hidePriceFulfillmentDisplay={hidePriceFulfillmentDisplay}
@@ -88,3 +89,40 @@ render() {
 }
 
 ```
+
+This makes sense to do in a large component where the same props might be used multiple times and in several subcomponents, but in this simple example we can use Spread Attributes for a super shortcut:
+
+```
+render() {
+    const props = this.props;
+    return ( <ProductPrice {...props} /> )
+}
+```
+
+Stateless Functional Components (as mentioned earlier) make great use of Object Destructuring, since they receive props as an arg:
+
+```
+const ProductPrice = ({
+  hidePriceFulfillmentDisplay,
+  primaryOffer,
+  productType,
+  productPageUrl,
+  inventory,
+  submapType,
+  ppu,
+  isLoggedIn,
+  gridView
+}) =>
+  <ProductPrice
+    hidePriceFulfillmentDisplay={hidePriceFulfillmentDisplay}
+    primaryOffer={primaryOffer}
+    productType={productType}
+    productPageUrl={productPageUrl}
+    inventory={inventory}
+    submapType={submapType}
+    ppu={ppu}
+    isLoggedIn={isLoggedIn}
+    gridView={isGridView}
+  />
+
+  ```
