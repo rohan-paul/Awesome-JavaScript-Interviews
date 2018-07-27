@@ -1,10 +1,10 @@
 ## Benefits of Prototypes and how does it help with memory-leak in javascript
 
-A memory leak is any object that persists after you no longer have a use or need for it. 
+A memory leak is any object that persists after you no longer have a use or need for it.
 
-1> [http://blog.cowchimp.com/prototype-optimizing-memory-usage/](http://blog.cowchimp.com/prototype-optimizing-memory-usage/)
+### 1> [http://blog.cowchimp.com/prototype-optimizing-memory-usage/](http://blog.cowchimp.com/prototype-optimizing-memory-usage/)
 
-If you're using knockout.js it's a likely scenario that you'll need to loop over an array of items and render a piece of UI for each one.
+It's a common scenario that you'll need to loop over an array of items and render a piece of UI for each one for many front-end library.
 Take a look at this example ViewModel for a form component which is composed of multiple field components.
 
 ```
@@ -31,7 +31,7 @@ function FieldViewModel(field) {
 }
 
 ```
-Notice the save and validate methods (lines 14-19).
+Notice the save and validate methods.
 Each of those methods is needlessly defined every time FieldViewModel is instantiated.
 Now look at this alternative example.
 
@@ -53,16 +53,17 @@ function FieldViewModel(field) {
 FieldViewModel.prototype.save = function() {
   console.log('key "%s" and value "%s"', this.key, this.value());
 };
+
 FieldViewModel.prototype.validate = function() {
   //validate logic
 };
 
 ```
-In this example the methods are defined on FieldViewModel.prototype (lines 15-20).
+In this example the methods are defined on FieldViewModel.prototype.
 When the methods are defined in this manner, all field instances will share the same function references.
-The methods can access the object's properties via the this (line 16).
+The methods can access the object's properties via the this.
 
-2> [https://boopathi.in/blog/prototyping-and-gc-advantages-in-javascript/](https://boopathi.in/blog/prototyping-and-gc-advantages-in-javascript/)
+## 2> [https://boopathi.in/blog/prototyping-and-gc-advantages-in-javascript/](https://boopathi.in/blog/prototyping-and-gc-advantages-in-javascript/)
 
 Prototype based inheritance
 In the view of providing the same functionality with scaling opportunities, when we define foo like this,
@@ -94,4 +95,4 @@ Prototypes in JavaScript are a way for implementing inheritance, and inheritance
 
 4> [https://stackoverflow.com/questions/1871821/detecting-memory-leaks-in-javascript](https://stackoverflow.com/questions/1871821/detecting-memory-leaks-in-javascript)
 
-The usual thing is to have the methods shared amongst instances by putting them on the prototype, and for instances to have small wrapper functions built in a well-contained closure context (e.g., one that doesn't close over extraneous data) -- usually created by a helper function for that reason -- that set up the call to the instance. That way, only small amounts of code are duplicated for each instance, the majority of it is shared. 
+The usual thing is to have the methods shared amongst instances by putting them on the prototype, and for instances to have small wrapper functions built in a well-contained closure context (e.g., one that doesn't close over extraneous data) -- usually created by a helper function for that reason -- that set up the call to the instance. That way, only small amounts of code are duplicated for each instance, the majority of it is shared.
