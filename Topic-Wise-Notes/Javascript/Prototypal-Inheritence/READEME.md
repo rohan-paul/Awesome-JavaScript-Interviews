@@ -1,14 +1,36 @@
+## MOST IMPORTANT KEY POINT OF USING PROTOTYPE - Method delegation can preserve memory resources because you only need one copy of each method to be shared by all instances. There are several ways to set up the relationship in JavaScript.
+
+## When you try to access a property on the new object, it checks the object’s own properties first. If it doesn’t find it there, it checks the `[[Prototype]]`, and so on up the prototype chain until it gets back to `Object.prototype`, which is the root delegate for most objects.
+
+## The prototype is a property on a constructor function that sets what will become the __proto__ property on the constructed object.
+
+## Every object can have another object as its prototype. Then the former object inherits all of its prototype’s properties. An object specifies its prototype via the internal property [[Prototype]]. The chain of objects connected by the [[Prototype]] property is called the prototype chain:
+
+## The __proto__ is an accessor property of the Object.prototype object. It exposes the internal prototype linkage ( [[Prototype]]) of an object through which it is accessed. The __proto__ is pronounced as dunder proto.
+
+```
+function Foo(name) {
+  this.name = name;
+}
+var b = new Foo('b');
+var a = new Foo('a');
+b.say = function() {
+  console.log('Hi from ' + this.whoAmI());
+}
+console.log(a.__proto__ === Foo.prototype); // true
+console.log(a.__proto__ === b.__proto__); // true
+```
+
 ## Aren’t classical inheritance and prototypal inheritance really the same thing, just a stylistic preference?
 
-## No.
+## Ans is No.
 
 Classical and prototypal inheritance are fundamentally and semantically distinct.
 
-There are some defining characteristics between classical inheritance and prototypal inheritance. For any of this article to make sense, you must keep these points in mind:
+In class inheritance, instances inherit from a blueprint (the class), and create sub-class relationships. In other words, you can’t use the class like you would use an instance. You can’t invoke instance methods on a class definition itself. You must first create an instance and then invoke methods on that instance. a description of the object to be created. Classes inherit from classes and create subclass relationships: hierarchical class taxonomies.
 
-In class inheritance, instances inherit from a blueprint (the class), and create sub-class relationships. In other words, you can’t use the class like you would use an instance. You can’t invoke instance methods on a class definition itself. You must first create an instance and then invoke methods on that instance.
-
-In prototypal inheritance, instances inherit from other instances.
+In prototypal inheritance, instances inherit from other instances.  A delegate prototype is an object that serves as a base for another object. When you inherit from a delegate prototype, the new object gets a reference to the prototype.
+A prototype is a working object instance. Objects inherit directly from other objects.”
 
 Using delegate prototypes (setting the prototype of one instance to refer to an examplar object), it’s literally Objects Linking to Other Objects, or OLOO, as Kyle Simpson calls it.
 
@@ -37,3 +59,20 @@ Let’s break this one down a little. `animal` is a delegate prototype. `mouse` 
 `Object.assign()` is a new ES6 feature You pass in a destination object, and as many source objects as you like, separated by commas. It will copy all of the enumerable own properties by assignment from the source objects to the destination objects with last in priority. If there are any property name conflicts, the version from the last object passed in wins.
 
 `Object.create()` is an ES5 feature that was championed by Douglas Crockford so that we could attach delegate prototypes without using constructors and the `new` keyword.
+
+## Does `new` mean that code is using classical inheritance?
+
+## No.
+
+The `new` keyword is used to invoke a constructor. What it actually does is:
+
+Create a new instance
+
+Bind `this` to the new instance
+
+Reference the new object’s delegate [[Prototype]] to the object referenced by the constructor function’s `prototype` property.
+
+## What happens when new( ) an instance:
+
+Note that the prototype in Foo.prototype is not to form a prototype chain. Foo.prototype points to some where in a prototype chain, but this prototype property of Foo is not to form the prototype chain. What constitute a prototype chain are the __proto__ pointing up the chain, and the objects pointed to by __proto__, such as going from foo.__proto__, going up to foo.__proto__.__proto__, and so forth, until null is reached.
+

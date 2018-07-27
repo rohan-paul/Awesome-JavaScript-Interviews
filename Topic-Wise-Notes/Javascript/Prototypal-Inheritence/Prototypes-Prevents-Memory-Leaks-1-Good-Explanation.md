@@ -1,3 +1,8 @@
+## MOST IMPORTANT KEY POINT OF USING PROTOTYPE - Method delegation can preserve memory resources because you only need one copy of each method to be shared by all instances. There are several ways to set up the relationship in JavaScript.
+## When you try to access a property on the new object, it checks the object’s own properties first. If it doesn’t find it there, it checks the `[[Prototype]]`, and so on up the prototype chain until it gets back to `Object.prototype`, which is the root delegate for most objects.
+
+
+
 ```
 function Person (firstName, lastName) {
     this.firstName = firstName,
