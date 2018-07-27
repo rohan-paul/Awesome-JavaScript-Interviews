@@ -176,5 +176,37 @@ As prototype object is shared among all the objects created using the constructo
 
 ## - Problem with the prototype: Modifying a property using one object reflects the other object also
 
-## To solve above both problmes, we can define all the object specific properties inside the constructor and all shared properties and methods insdie the prototype as shown below:
+## To solve above both problems, we can define all the object specific properties inside the constructor and all shared properties and methods insdie the prototype as shown below:
+
+```
+//Define the object specific properties inside the constructor
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    this.friends = ["A", "B"];
+
+    // Define the shared properties and methods using the prototype
+    Person.prototype.sayName = function(){
+	    console.log(this.name);
+    }
+
+    //Create two objects using the Person constructor function
+    var person1 = new Person("Virat", "Kohli");
+    var person2 = new Person("Sachin", "Tendulkar");
+
+    //Lets check if person1 and person2 have points to the same instance of the sayName function
+    console.log(person1.sayName === person2.sayName) // => true
+
+    //Let's modify friends property and check
+    person1.friends.push("C");
+
+    console.log(person1.friends)  // => Output: "A", "B", "C"
+    console.log(person2.frinds)   // => Output: "A", "B"
+
+    }
+}
+
+```
+
+## In the above example, friends property of person2 did not change on changing the friends property of person1. Because friends prop was a object specific prop.
 
