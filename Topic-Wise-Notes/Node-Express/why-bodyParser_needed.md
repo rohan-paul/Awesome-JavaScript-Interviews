@@ -8,6 +8,10 @@ The middleware was a part of Express.js earlier but now you have to install it s
 
 This body-parser module parses the JSON, buffer, string and URL encoded data submitted using HTTP POST request.
 
+Each middleware layer is essentially adding a function that specifically handles something to your flow through the middleware.
+
+**app.use(bodyParser)**  -  by adding bodyParser, you're ensuring your server handles incoming requests through the express middleware. So, now parsing the body of incoming requests is part of the procedure that your middleware takes when handling incoming requests -- all because you called **app.use(bodyParser)**.
+
 **B> urlencoded - https://www.npmjs.com/package/body-parser#extended**
 
 The extended option allows to choose between parsing the URL-encoded data with the querystring library (when false) or the qs library (when true). The "extended" syntax allows for rich objects and arrays to be encoded into the URL-encoded format, allowing for a JSON-like experience with URL-encoded.
