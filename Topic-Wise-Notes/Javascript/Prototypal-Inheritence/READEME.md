@@ -1,4 +1,6 @@
-## MOST IMPORTANT KEY POINT OF USING PROTOTYPE - Method delegation can preserve memory resources because you only need one copy of each method to be shared by all instances. There are several ways to set up the relationship in JavaScript.
+## MOST IMPORTANT KEY POINT OF PROTOTYPE as benefitting memory leask- Method delegation can preserve memory resources because you only need one copy of each method to be shared by all instances. So, under the regular function construction way of defining (like in Prototypes-Prevents-Memory-Leaks-1-Good-Explanation.js), each new  instance of function Person will have a copy of the same methods defined withing function Person. But with prototype, that method will be shared among all the instance of the Person function.
+
+##  Every JavaScript object has an internal property called [[Prototype]]. If you look up a property via obj.propName or obj['propName'] and the object does not have such a property - which can be checked via obj.hasOwnProperty('propName') - the runtime looks up the property in the object referenced by [[Prototype]] instead. If the prototype-object also doesn't have such a property, its prototype is checked in turn, thus walking the original object's prototype-chain until a match is found or its end is reached. If you create a new object via new Func(), the object's [[Prototype]] property will be set to the object referenced by Func.prototype.
 
 ## When you try to access a property on the new object, it checks the object’s own properties first. If it doesn’t find it there, it checks the `[[Prototype]]`, and so on up the prototype chain until it gets back to `Object.prototype`, which is the root delegate for most objects.
 
@@ -19,6 +21,27 @@ b.say = function() {
 }
 console.log(a.__proto__ === Foo.prototype); // true
 console.log(a.__proto__ === b.__proto__); // true
+```
+
+Simple implementation of Prototype based function definition
+
+```
+var Person = function(name)  {
+    this.name = name;
+}
+
+Person.prototype.getName = function() {
+    return this.name;
+}
+
+var john = new Person("John")
+
+john.getName() // => "John"
+
+Person.prototype.sayName = function() {
+    return (`Hello, my name is ${this.getName()}`);
+}
+
 ```
 
 ## Aren’t classical inheritance and prototypal inheritance really the same thing, just a stylistic preference?
