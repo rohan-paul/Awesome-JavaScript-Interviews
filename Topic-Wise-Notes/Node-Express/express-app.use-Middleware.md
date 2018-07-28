@@ -1,4 +1,60 @@
-# Understanding app.use middleware - 13-June-2018
+#  Understanding Middleware  - the core concept behind Express.js request processing and routing
+
+Middleware refers to reusable components that can be plugged into an Express application. Middleware consists of functions that handle HTTP requests, such as the one we would pass to Node's native http.createServer function. A middleware component can add features by manipulating the request and response objects and then send the response to the client or pass control to the following middleware in
+the stack.
+
+To load a middleware into an Express application, we call the app.use() method. The app.use() method takes an optional path parameter as the first argument, which is useful if we want to mount certain functionalities to an endpoint. When using the path parameter, the middleware will be executed only if the URL matches that path. Practical use cases include serving static assets under the /public path or loading special middleware for an admin path
+
+3> https://medium.com/@adamzerner/middleware-in-express-60d75055ba8f  -  GOOD
+
+To understand how middleware works in Express, there’s a few things you have to understand:
+
+### You could have multiple routes that match an incoming request.
+
+### Routes are executed from top to bottom.
+
+### If a route matches an incoming request, subsequent routes that match the incoming request won’t be hit if you don’t call next().
+
+Let me explain.
+
+```
+app.get('/', function(req, res) {
+  console.log('one');
+});
+
+app.get('/', function(req, res) {
+  console.log('two');
+});
+```
+
+Here’s what will happen if there’s an incoming GET / request:
+
+It will match the first route. The code in the first route will be executed. “The buck stops here”. Even though the second route matches the incoming request.
+
+So how would we get “two” to be logged as well?
+
+```
+app.get('/', function(req, res, next) {
+  console.log('one');
+  next();
+});
+
+app.get('/', function(req, res) {
+  console.log('two');
+});
+```
+
+Now…
+
+GET /
+outputs
+
+one
+two
+
+## Calling ``next()`` allows “the buck to NOT stop here”.
+
+# Understanding app.use() middleware - 13-June-2018
 
 ## 1> Best Explanation - https://stackoverflow.com/questions/15601703/difference-between-app-use-and-app-get-in-express-js
 
@@ -14,7 +70,7 @@ app.use() is intended for binding middleware to your application. The path is a 
 
 To setup your middleware, you can invoke app.use (<specific_middleware_layer_here>) for every middleware layer that you want to add (it can be generic to all paths, or triggered only on specific path(s) your server handles), and it will add onto your Express middleware stack.
 
-Middleware layers can be added one by one in multiple invocations of use, or even all at once in series with one invocation. See use documentation for more details.
+Middleware layers can be added one by one in multiple invocations of use, or even all at once in series with one invocation.
 
 Each middleware layer is essentially adding a function that specifically handles something to your flow through the middleware.
 
