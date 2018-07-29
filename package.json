@@ -1,0 +1,23 @@
+{
+  "name": "curated-list-for-javascript-interviews",
+  "version": "1.0.0",
+  "description": "**A curated list of resources for JavaScript Interviews**",
+  "main": "random-code-1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohan-paul/Awesome-JavaScript-Interviews.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohan-paul/Awesome-JavaScript-Interviews/issues"
+  },
+  "homepage": "https://github.com/rohan-paul/Awesome-JavaScript-Interviews#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "request": "^2.87.0"
+  }
+}
