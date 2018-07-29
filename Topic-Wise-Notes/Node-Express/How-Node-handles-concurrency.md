@@ -1,5 +1,7 @@
 ## When Node is single-threaded how does it handle concurrency - 10June2017
 
+[The official Doc](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/) has some very good explanation.
+
 ## 1> Some Key points noted on 10-June-2018 >>
 
 - A> The simple ans is - With callback function and event-loop
@@ -77,6 +79,10 @@ Here Client Request is a call to one or more Java Script Functions. Java Script 
 So Each Client Request looks like as shown below:
 
 function (other-function, callback-function)
+
+## So in a nutshell - event loop allows Node.js to perform non-blocking I/O operation, despite the fact that JavaScript is single-threaded & by offloads operations to the system kernel whenever possible. So, the question is if Node pushes all those responsibilities down to the kernel then why would a thread pool be needed?” It’s so because the kernel doesn’t support doing everything asynchronously. In those cases Node has to lock a thread for the duration of the operation so it can continue executing the event loop without blocking.
+
+## [Official Doc](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/) - Since most modern kernels are multi-threaded, they can handle multiple operations executing in the background. When one of these operations completes, the kernel tells Node.js so that the appropriate callback may be added to the poll queue to eventually be executed.
 
 ## 2> https://www.fpcomplete.com/blog/2016/12/concurrency-and-node
 
