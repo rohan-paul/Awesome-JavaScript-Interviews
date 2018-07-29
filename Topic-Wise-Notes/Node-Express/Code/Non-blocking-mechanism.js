@@ -1,18 +1,24 @@
-/* var fs = require('fs')
-var myNumber = undefined
+// To check the output of this file run in a Terminal $ node Non-blocking-mechanism.js
+// Running it within
 
-function addOne(callback) {
-  fs.readFile('number.txt', function doneReading(err, fileContents) {
-    myNumber = parseInt(fileContents)
-    myNumber++
-    callback()
-  })
+const fs = require('fs'); // for requiring this, I dont need any separate package.json as my machine is already running in node env
+var myNumber = undefined;
+
+addOne = callbackFunction => {
+    fs.readFile('number.txt', doneReading = (err, fileContent) => {
+        myNumber = parseInt(fileContent);
+        myNumber++
+        callbackFunction()
+    })
 }
 
-function logMyNumber() {
-  console.log(myNumber)
+logMyNumberFromCallback = () => {
+    return console.log(myNumber);
 }
 
-addOne(logMyNumber)
+addOne(logMyNumberFromCallback); // => 2
 
-console.log(myNumber) // logs out undefined -- this line gets run before readFile is done */
+
+// The below line will get executed first (before readFile is done) logging out 'undefined' -- Even thought its placed after addOne() in the top-down flow in this file - This is because when readFile() is non-blocking, meaning when its doing its job of reading the number.txt file, the code right below its execution block will continue to get executed  */
+
+console.log(myNumber) // => undefined
