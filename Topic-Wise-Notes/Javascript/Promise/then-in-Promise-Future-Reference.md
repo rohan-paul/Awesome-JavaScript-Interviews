@@ -95,12 +95,15 @@ So, handle the above case with Promise I am using “axios” that is similar to
 
 ```js
 const axios = require(‘axios’);
+
 axios.get(‘http://www.somepage.com')
-.then(function (response) { // Reponse being the result of the first request
+.then(function (response) {
+    // response being the result of the first request
     // Returns another promise to the next .then(..) in the chain
     return axios.get(`http://www.somepage.com/${response.someValue}`);
 })
-.then(function response { // Reponse being the result of the second request
+.then(function response {
+    // response being the result of the second request
     // Handle response
 })
 .catch(function (error) {
@@ -114,3 +117,16 @@ Instead of nesting callbacks inside callbacks inside callbacks, you chain .then(
 A friendly reminder: just like with callback based APIs, this is still asynchronous operations. The code that is executed when the request has finished — that is, the subsequent .then() calls — is put on the event loop just like a callback function would be. This means you cannot access any variables passed to or declared in the Promise chain outside the Promise. The same goes for errors thrown in the Promise chain.
 
 
+### As a side note, remember the general syntax of chaining together axios calls
+
+```js
+axios.get('http://google.com')
+    .then((response) => {
+        // do something with Google res
+        return axios.get('http://apple.com')
+        // response being the result of the first request
+        // do something with Apple res
+    })
+    .catch((err) => {
+        // handle err
+    })
