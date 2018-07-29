@@ -11,7 +11,8 @@ Promises allow you to write asynchronous code, so for example, when you are maki
 
 Promise objects have a .then() method which takes two parameters — a success callback function and failure callback function. In this example, when the fetch method successfully returns from making the API request, the success callback function is called which has a Response object as it’s parameter. The Response object also has several methods available to it, one of which is a .json() method which also returns Promise. So, if you want to do anything with a response from an API request and that response is in a JSON format, you’ll need to do this:
 
-```
+```js
+
 fetch('http://api.exampledomain.com/api/search').then(
   function(response){
      return response.json();
@@ -31,7 +32,7 @@ There are few use cases where Async/Await doesn't cut it and we have to go back 
 
 If we try and do this with async and await, the following will happen: */
 
-```
+```js
 getABC = async () => {
 
   let A = await getValueA();  // getValueA takes 2 second to finish
@@ -49,7 +50,7 @@ This is not an optimal solution, since the three variables A, B, and C aren't de
 
 To send all requests at the same time a Promise.all() is required. This will make sure we still have all the results before continuing, but the asynchronous calls will be firing in parallel, not one after another.
 
-```
+```js
 getABC = async () => {
 
   // Promise.all() allows us to send all requests at the same time. But of course, it will give me 3 independent results, from the 3 independent function invocations. From those 3 independent results, getting the final return value by applying reduce on them.

@@ -9,7 +9,7 @@ So from my working file this is an example for post actions
 
 import { FETCH_POSTS, NEW_POST } from './types'
 
-```
+```js
 // function with ES5 way to dispatch the data to the reducer
 export function fetchPosts() {
     return function(dispatch) {

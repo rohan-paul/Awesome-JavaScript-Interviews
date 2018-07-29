@@ -10,6 +10,7 @@ This is the easiest direction in React to transfer data. If I have access to dat
 
 In my example, if I need to pass something from the App to the ToDoList:
 
+```js
 class App extends React.Component {
     render() {
     [... somewhere in here I define a variable listName which I think will be useful as data in my ToDoList component...]
@@ -22,7 +23,7 @@ class App extends React.Component {
         );
     }
 }
-
+```
 
 # 2> Child to Parent — Use a callback and states
 

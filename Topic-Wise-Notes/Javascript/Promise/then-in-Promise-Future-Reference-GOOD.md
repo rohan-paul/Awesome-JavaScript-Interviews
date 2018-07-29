@@ -76,7 +76,7 @@ One thing to note here is the first argument in every callback function will con
 This is the anti-pattern that has been named “callback hell”.
 
 
-### A promise is an object that wraps an asynchronous operation and notifies when it’s done. This sounds exactly like callbacks, but the important differences are in the usage of Promises. Instead of providing a callback, a promise has its own methods which you call to tell the promise what will happen when it is successful or when it fails. The methods a promise provides are “then(…)” for when a successful result is available and “catch(…)” for when something went wrong.
+### A promise is an object that wraps an asynchronous operation and notifies when it’s done. This sounds exactly like callbacks, but the important differences are in the usage of Promises. Instead of providing a callback, a promise has its own methods (.then) which you call to tell the promise what will happen when it is successful or when it fails. The methods a promise provides are “then(…)” for when a successful result is available and “catch(…)” for when something went wrong.
 
 Below is general syntax
 
@@ -119,7 +119,7 @@ A friendly reminder: just like with callback based APIs, this is still asynchron
 
 ### As a side note, remember the general syntax of chaining together axios calls
 
-```js
+```JS
 axios.get('http://google.com')
     .then((response) => {
         // do something with Google res

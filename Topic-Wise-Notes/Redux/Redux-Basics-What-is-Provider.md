@@ -14,7 +14,7 @@ If we were to follow the previous diagram, the Provider node would be represente
 
 It's a helper React component that eliminates the need to keep passing along the redux store as a parameter.  So, as per the syntax Provider takes in proopery of out store, like so store={store}
 
-```
+```js
 .....
     {Provider} = require('react-redux'),
 .....
@@ -38,12 +38,14 @@ React Redux exposes the Provider component to handle passing our store to every 
 
 Like in the below - https://codepen.io/cassiecodes/pen/bZybop
 
+```js
 ReactDOM.render(
   <Provider store={createStore(todoApp)}>
      <TodoApp />
   </Provider>,
   document.getElementById('root')
 );
+```
 
 3. https://www.robinwieruch.de/react-provider-pattern-context/
 
@@ -51,7 +53,7 @@ Basically, React’s provider pattern takes the clutter away of passing mandator
 
 In Redux or MobX, you often end up with a Provider component at the top of your component hierarchy that bridges your state layer (Redux/MobX/…) to your view layer (React). The Provider component gets the state as props and afterward, each child component has implicitly access to the managed state from the store(s).
 
-```
+```js
 ReactDOM.render(
   <Provider store={store}>
     <App />

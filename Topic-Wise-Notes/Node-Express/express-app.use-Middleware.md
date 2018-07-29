@@ -100,7 +100,7 @@ Bind application-level middleware to an instance of the app object by using the 
 
 This example shows a middleware function mounted on the /user/:id path. The function is executed for any type of HTTP request on the /user/:id path.
 
-```
+```js
 app.use('/user/:id', function (req, res, next) {
   console.log('Request Type:', req.method)
   next()

@@ -2,7 +2,7 @@
 
 **Very simply its passing an object as an argument to the function, but the destructuring uses only the named properties of the object.**
 
-```
+```js
 const destructuring = ({ used }) => console.log(used);
 
 const properties = {
@@ -15,7 +15,7 @@ destructuring(properties); // => 2
 
 ## Benefits of destructuring - Shorter code
 
-```
+```js
 var object = { one: 1, two: 2, three: 3 }
 
 let one = object.one;
@@ -27,7 +27,7 @@ console.log(one, two, three) // prints 1, 2, 3
 ```
 ### Now with destructuring, the same code becomes much more clear and shorter
 
-```
+```js
 var object = { one: 1, two: 2, three: 3 }
 
 let { once, tow, three } = object
@@ -39,7 +39,8 @@ console.log(one, two, three) // prints 1, 2, 3
 
 Large components often suffer from this.props syndrome. That is to say, you see the phrase this.props all over the place, which unfortunately detracts from readability by acting as a source of extra noise. Take this example of a Product Price component which has a lot of props to render:
 
-```render() {
+```js
+render() {
   return (
     <ProductPrice
       hidePriceFulfillmentDisplay=
@@ -59,7 +60,7 @@ Large components often suffer from this.props syndrome. That is to say, you see 
 ```
 After cutting down all these ``this.props`` noise. The below is much easier to read and clearly points out which props we are using in the component.
 
-```
+```js
 render() {
   const {
     hidePriceFulfillmentDisplay,
@@ -92,7 +93,7 @@ render() {
 
 This makes sense to do in a large component where the same props might be used multiple times and in several subcomponents, but in this simple example we can use Spread Attributes for a super shortcut:
 
-```
+```js
 render() {
     const props = this.props;
     return ( <ProductPrice {...props} /> )
@@ -101,7 +102,7 @@ render() {
 
 Stateless Functional Components (as mentioned earlier) make great use of Object Destructuring, since they receive props as an arg:
 
-```
+```js
 const ProductPrice = ({
   hidePriceFulfillmentDisplay,
   primaryOffer,

@@ -28,7 +28,7 @@ Object serialization is the process of converting an object’s state to a strin
 
 ## My working example - ../brad-mern-shopping-list/client/src/actions/itemActions.js
 
-```
+```js
 import axios from 'axios';
 import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING } from './types';
 

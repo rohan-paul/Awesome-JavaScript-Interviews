@@ -14,7 +14,7 @@ also sets the functions to be called if there is an error while starting the ser
 
 ## Explanation so, basically it removes all the create and start server code from your app.js and let you focus only on the application logic part. Note: If you see in package.json file you would note this:
 
-```
+```js
 "scripts": {
   "start": "node ./bin/www"
 }

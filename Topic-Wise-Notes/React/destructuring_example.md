@@ -70,7 +70,7 @@ This block of code is fully functional but looks terrible! By the time we get to
 
 We can achieve this in the function parameter as we pass in the props argument:
 
-```
+```js
 const Listing = ({ listing }) => (
   <div>
     <p>Title: {listing.title}</p>
@@ -87,7 +87,7 @@ const Listing = ({ listing }) => (
 
 Even better, we can further destructure nested objects like below:
 
-```
+```js
 const Listing = ({
   listing: {
     title,
@@ -114,7 +114,7 @@ Can you see how much easier this is to read? In this example, we’ve destructur
 
 The idea is very much the same in class components, only here, I have to use render() and return() syntax while declaring the de-structured ``listing`` prop inside the ``render()``. Also, I can destructure the Component object as I import React in class components. This isn’t necessary for functional components as we won’t be extending the Component class for those.
 
-```
+```js
 import React, { Component } from 'react';
 
 class Listing extends Component {

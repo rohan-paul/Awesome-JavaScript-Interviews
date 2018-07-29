@@ -99,7 +99,7 @@ General Read
 
 2> Great example - https://codeburst.io/how-node-js-single-thread-mechanism-work-understanding-event-loop-in-nodejs-230f7440b0ea
 
-```
+```js
 var sockets = require('websocket.io');
 
     httpServer = sockets.listen(4000);
