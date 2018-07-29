@@ -76,3 +76,35 @@ function addOne(thenRunThisFunction) {
 }
 addOne(function thisGetsRunAfterAddOneFinishes() {})
 ```
+
+Imagine you had 3 async functions a, b and c. Each one takes 1 minute to run and after it finishes it calls a callback (that gets passed in the first argument). If you wanted to tell node 'start running a, then run b after a finishes, and then run c after b finishes' it would look like this:
+
+```
+a(function() {
+  b(function() {
+    c()
+  })
+})
+```
+When this code gets executed, a will immediately start running, then a minute later it will finish and call b, then a minute later it will finish and call c and finally 3 minutes later node will stop running since there would be nothing more to do. There are definitely more elegant ways to write the above example, but the point is that if you have code that has to wait for some other async code to finish then you express that dependency by putting your code in functions that get passed around as callbacks.
+
+The design of node requires you to think non-linearly. Consider this list of operations:
+
+```
+read a file
+process that file
+If you were to turn this into pseudocode you would end up with this:
+
+var file = readFile()
+processFile(file)
+```
+This kind of linear (step-by-step, in order) code isn't the way that node works. If this code were to get executed then readFile and processFile would both get executed at the same exact time. This doesn't make sense since readFile will take a while to complete. Instead you need to express that processFile depends on readFile finishing. This is exactly what callbacks are for! And because of the way that JavaScript works you can write this dependency many different ways:
+
+```
+var fs = require('fs')
+
+fs.readFile('movie.mp4', function finishedReading(error, movieData) {
+  if (error) return console.error(error)
+  // do something with the movieData
+})
+```
