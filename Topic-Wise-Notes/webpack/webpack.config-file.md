@@ -55,6 +55,10 @@ And the below from ``./config/webpack.config.dev.js``
     }),
 ```
 
+### Template: We are entering the path where our HTML file is located.
+
+### inject: it is optional actually what it does is Inject the script files inside the body tag.
+
 # Loaders
 
 Loaders let you run preprocessors on files as they’re imported. This allows you to bundle static resources beyond JavaScript, but let’s look at what can be done when loading .js modules first.
@@ -71,7 +75,7 @@ module: {
 +     ]
 +   }
 
-# Transsormations like converting ES6 to ES5
+# Transformations like converting ES6 to ES5 with 'babel-loader'
 
 ```js
 module: {
@@ -89,6 +93,62 @@ module: {
 What above code does is it checks if any file ends with .js/.jsx send that files to the babel-loader and apply transformations.
 
 Like we are using jsx but our browser doesn't understand jsx so that babel loader takes our jsx and converted it into javascript.
+
+# Different types of loaders- css-loader style-loader file-loader ,html-loader.
+
+We can add more loaders in rules array
+
+```js
+module: {
+        rules: [
+
+          {
+            test: /\.(js|jsx)$/,
+            exclude: /(node_modules|bower_components)/,
+          use:['babel-loader']
+
+          },
+          {
+            test:/\.css$/, use:[
+            { loader: MiniCssExtractPlugin.loader}
+              ,{loader:"css-loader",
+
+              options:{
+                minimize:true,
+                sourceMap:true
+              }
+            }
+            ]
+          },
+          {
+            test: /\.(html)$/,
+            use: {
+              loader: 'html-loader',
+              options: {
+                attrs: [':data-src'],
+                minimize:true
+              }
+            }
+          },
+          {
+            test: /\.(png|jpg|gif|jpeg|ttf)$/,
+            use: [
+              {
+                loader: 'file-loader',
+                options: {
+                 name:'[path][name].[ext]',
+
+                }
+              }
+            ]
+          }
+        ]
+      },
+
+
+```
+**css-loader:** goes through possible @import and url() lookups within the matched files and creates source map for our CSS files, compress the css files by removing white spaces.
+
 
 
 # The understanding of the concept of externals in webpack.config.js - Noted while doing Countdown timer
