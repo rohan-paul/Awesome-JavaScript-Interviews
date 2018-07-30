@@ -1,10 +1,61 @@
-## html-webpack-plugin
+# html-webpack-plugin
 
 https://webpack.js.org/plugins/html-webpack-plugin/
 
 The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles. This is especially useful for webpack bundles that include a hash in the filename which changes every compilation. You can either let the plugin generate an HTML file for you, supply your own template using lodash templates, or use your own loader.
 
-Loaders
+## Actual Implementation
+
+/home/paul/PAUL/H/Web/R/REDUX/Small-Redux-Post-BootCamp/boilerplate-kind-Redux-Counter-22Jul-2018/simple-redux-app/webpack.config.js
+
+const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
+  template: path.join(__dirname, '/src/index.html'),
+  filename: 'index.html',
+  inject: 'body',
+});
+
+### 2> https://medium.com/a-beginners-guide-for-webpack-2/index-html-using-html-webpack-plugin-85eabdb73474
+
+We got webpack configured to package and bundle our js code in a single file -app.bundle.js, we need an index.html for our web app with a script tag havingsrc='app.bundle.js'. We have two options - either create it manually or have it created automatically by using ‘html-webpack-plugin’
+
+While creating index.html manually works good, it would be nice if webpack can create the index.html automatically for us with an included <script> tag with its src pointing to our app.bundle.js.
+
+Webpack can do this for us with the help of html-webpack-plugin. Using this plugin has some added advantages like auto-hashing the ‘src’ attribute of the embedded <script> tag every time the webpack is run, which makes browser to get the latest version of the file from server instead of using a cached one whenever it has a new hash.
+
+
+In **create-react-app** - this is module is used extensively, which I can see after ejecting
+The below from ``./config/webpack.config.prod.js``
+```js
+// Generates an `index.html` file with the <script> injected.
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: paths.appHtml,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
+      },
+    }),
+```
+
+And the below from ``./config/webpack.config.dev.js``
+
+```js
+// Generates an `index.html` file with the <script> injected.
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: paths.appHtml,
+    }),
+```
+
+# Loaders
 
 Loaders let you run preprocessors on files as they’re imported. This allows you to bundle static resources beyond JavaScript, but let’s look at what can be done when loading .js modules first.
 
@@ -20,8 +71,27 @@ module: {
 +     ]
 +   }
 
+# Transsormations like converting ES6 to ES5
 
-## The understanding of the concept of externals in webpack.config.js - Noted while doing Countdown timer
+```js
+module: {
+        rules: [
+
+          {
+            test: /\.(js|jsx)$/,
+            exclude: /(node_modules|bower_components)/,
+            use:['babel-loader']
+
+          }
+    ]
+}
+```
+What above code does is it checks if any file ends with .js/.jsx send that files to the babel-loader and apply transformations.
+
+Like we are using jsx but our browser doesn't understand jsx so that babel loader takes our jsx and converted it into javascript.
+
+
+# The understanding of the concept of externals in webpack.config.js - Noted while doing Countdown timer
 
 A) https://laracasts.com/discuss/channels/laravel/using-webpack-with-externals
 
