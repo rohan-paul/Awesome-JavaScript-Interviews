@@ -1,0 +1,67 @@
+## Issue - Wih React 16.0.0 - Issue with Webpack  - 30Sep2017
+
+After running ``$ webpack`` - it would only show some 35 hidden modules rather than some 187 hidden modules.
+
+Solution - Only solution this day was to downgrade to the immediately previous version of “15.6.2”
+
+
+Note - What does webpack mean by XX hidden modules
+
+https://stackoverflow.com/questions/28858176/what-does-webpack-mean-by-xx-hidden-modules
+
+Webpack hides modules coming from folders like ["node_modules", "bower_components", "jam", "components"] in your console output by default. This helps you to focus on your modules instead on your dependencies.
+
+You can display them by using the --display-modules argument.
+
+``$ webpack --display-modules``
+
+## Issue - configuration.resolve has an unknown property 'root'.
+
+In webpack.config.js I had below under resolve…
+
+```.js
+  resolve: {
+    root: __dirname,
+```
+
+Final SOLUTION - https://stackoverflow.com/questions/43107233/configuration-resolve-has-an-unknown-property-root
+
+resolve.root is Webpack 1 configuration and doesn't exist for Webpack 2.
+
+For Webpack 2 you can use resolve.modules:
+
+```js
+resolve: {
+    modules: [__dirname, 'node_modules'],
+```
+
+## Issue - “webpack: command not found” - Suddenly getting this, from the same directory from where it was working just fine last night - 9-Oct-2017
+
+First followed this.
+
+https://stackoverflow.com/questions/38788166/webpack-command-not-working
+
+“use the scripts property of your package.json to use webpack from this directory which will be exported.” So in package.json included the following in the script:
+
+```js
+"scripts": {
+  "build": "webpack --config webpack.config.js"
+}
+```
+
+then ``$ npm run build``
+
+But still was getting the same error.
+
+Hence, from - https://stackoverflow.com/questions/32550089/webpack-command-not-found-after-npm-install-webpack-g
+
+Install it globally
+
+``npm i -g webpack``
+
+And now SOLVED.
+
+## Issue - CLI for webpack must be installed. These are recommended choices  ALSO WAS GETTING “Cannot find module 'webpack-cli”
+
+Just install webpack-cli globally with ``$ npm i -g webpack-cli``
+
