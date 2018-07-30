@@ -1,6 +1,6 @@
-### React Hot Loader is a plugin that allows React components to be live reloaded without the loss of state. It works with Webpack and other bundlers that support both Hot Module Replacement (HMR) and Babel plugins.
+### React Hot Loader is a plugin that allows React components to be live reloaded without the loss of state. It works with Webpack and other bundlers that support both Hot Module Replacement (HMR) and Babel plugins. It is the replacement of code in a running application without requiring a restart or reloading of the application. It is very useful when developing because you can see your changes as you make them thus giving immediate feedback. React hot loading depends on a working Webpack HMR setup
 
-https://gaearon.github.io/react-hot-loader/getstarted/
+https://gaearon.github.io/react-hot-loader/getstarted/  - This is a good resource to implement HMR (Hot Module Replacement) in React
 
 ## Hot reloading In create-react-app
 
@@ -45,7 +45,19 @@ if (module.hot) {
   module.hot.accept();
 }
 ```
-/home/paul/PAUL/H/Web/R/REDUX/Small-Redux-Post-BootCamp/boilerplate-kind-Redux-Counter-22Jul-2018/simple-redux-app/src/index.jsx
+Boilerplate example suggested by the above authentic blog
+
+```js
+if (module.hot) {
+  module.hot.accept('./containers/Root', () => { render(Root) })
+}
+```
+
+[https://github.com/wkwiatek/react-hot-loader-minimal-boilerplate/blob/master/src/index.js](https://github.com/wkwiatek/react-hot-loader-minimal-boilerplate/blob/master/src/index.js)
+
+
+
+Another example - /home/paul/PAUL/H/Web/R/REDUX/Small-Redux-Post-BootCamp/boilerplate-kind-Redux-Counter-22Jul-2018/simple-redux-app/src/index.jsx
 
 ```js
 
