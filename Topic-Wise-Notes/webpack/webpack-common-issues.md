@@ -65,3 +65,25 @@ And now SOLVED.
 
 Just install webpack-cli globally with ``$ npm i -g webpack-cli``
 
+
+## Issue - ``webpac -w`` command failed giving me the following node-saas error
+
+Node Sass could not find a binding for your current environment: Linux 64-bit with Node.js 9.x
+
+The source of the problems is most certainly, that I upgraded the node version in between.
+
+Solution -
+https://stackoverflow.com/questions/37986800/node-sass-could-not-find-a-binding-for-your-current-environment
+
+``npm rebuild node-sass``
+
+Another solution would have been -
+
+Just delete the node-sass folder and run ``npm install``
+
+
+## Issue - < webpack > would throw error - Invalid configuration object. Webpack has been initialised using a configuration object that does not match the API schema. - configuration.module has an unknown property 'loaders'.
+
+https://stackoverflow.com/questions/49203841/webpack-4-1-1-configuration-module-has-an-unknown-property-loaders
+
+All I had to do was rename loaders to rules   -  in the webpack.config file
