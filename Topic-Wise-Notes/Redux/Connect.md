@@ -1,9 +1,10 @@
 ## A> https://github.com/reduxjs/react-redux/blob/master/docs/api.md
 
-Connects a React component to a Redux store. The first argument to connect is mapStateToProps() function.
+### Connects a React component to a Redux store. The first argument to connect is mapStateToProps() function.
 
-[ what mapStateToProps() does is, it allows us to take our state (e.g. item state (from itemReducer.js ) ) and turn this into a component property so I can use it in this component - like e.g. this.props.items
-/home/paul/codes-Lap/React/MERN-Practice-Post-Bootcamp/brad-mern-shopping-list/client/src/components/ShoppingList.js ]
+## What mapStateToProps() does is, it allows us to take our state (e.g. item state (from itemReducer.js in the below project ) ) and turn this into a component property so I can use it in this component - like e.g. this.props.items
+
+[https://github.com/rohan-paul/mern-shopping-list/blob/master/client/src/components/ShoppingList.js](https://github.com/rohan-paul/mern-shopping-list/blob/master/client/src/components/ShoppingList.js)
 
 If this argument is specified, the new component will subscribe to Redux store updates. This means that any time the store is updated, mapStateToProps will be called. The results of mapStateToProps must be a plain object, which will be merged into the component’s props. If you don't want to subscribe to store updates, pass null or undefined in place of mapStateToProps.
 
@@ -17,7 +18,9 @@ On the other hand, when we want to retrieve data, we do not get it directly from
 
 This is precisely what connect does. It maps the stores state and dispatch to the props of a component :
 
-mapStateToProps and mapDispatchToProps are both pure functions that are provided the stores “state” and “dispatch” respectively. Furthermore, both functions have to return an object, whose keys will then be passed on as the props of the component they are connected to.
+**mapStateToProps** and **mapDispatchToProps** are both pure functions that are provided the stores “state” and “dispatch” respectively. Furthermore, both functions have to return an object, whose keys will then be passed on as the props of the component they are connected to.
+
+Note: you can't use mapStateToProps for the same purpose as mapDispatchToProps for the basic reason that you don't have access to dispatch inside mapStateToProp. So you couldn't use  mapStateToProps to give the wrapped component a method that uses dispatch.
 
 Now take a look at the example - https://www.sohamkamani.com/blog/2017/03/31/react-redux-connect-explained/
 
@@ -37,3 +40,5 @@ what mapStateToProps() does in the above example is, it allows us to take our to
 ### mapStateToProps() has the Store state as an argument and its used to link the component with certain part of the store state
 
 ### By linking I mean the object returned by mapStateToProps will be provided at construction time as props and any subsequent change will be available through componentWillReceiveProps.
+
+

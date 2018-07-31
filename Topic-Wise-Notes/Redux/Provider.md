@@ -1,5 +1,7 @@
 # Provider
 
+ ## It serves just one purpose : to “provide” the store to its child components.
+
 1. [https://www.sohamkamani.com/blog/2017/03/31/react-redux-connect-explained/](https://www.sohamkamani.com/blog/2017/03/31/react-redux-connect-explained/)
 
 If we want to link our React application with the redux store, we first have to let our app know that this store exists. This is where we come to the first major part of the react-redux library, which is the Provider.

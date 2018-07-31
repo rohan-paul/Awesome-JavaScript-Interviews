@@ -16,9 +16,10 @@ Call non-pure functions, e.g. Date.now() or Math.random().
 
 For now, just remember that the reducer must be pure. Given the same arguments, it should calculate the next state and return it. No surprises. No side effects. No API calls. No mutations. Just a calculation.
 
+
 2>  https://daveceddia.com/what-is-a-reducer/
 
-Redux is basically a fancy Array.reduce function. A Redux reducer function has this signature:
+Redux is basically a fancy ``Array.reduce`` function. A Redux reducer function has this signature:
 
 ## (state, action) => newState
 
@@ -27,3 +28,17 @@ As in: it takes the current state, and an action, and returns the newState. Look
 ## (accumulatedValue, nextItem) => nextAccumulatedValue
 
 Plainly speaking, a Redux reducer gets to decide how each action affects the state.
+
+## 3>  Reducers Must be Pure Functions
+
+In order to achieve deterministic state reproduction, reducers must be pure functions. No exceptions. A pure function:
+
+Given the same input, always returns the same output.
+Has no side-effects.
+Importantly in JavaScript, all non-primitive objects are passed into functions as references. In other words, if you pass in an object, and then directly mutate a property on that object, the object changes outside the function as well. That’s a side-effect. You can’t know the full meaning of calling the function without also knowing the full history of the object you passed in. That’s bad.
+
+Reducers should return a new object, instead. You can do that with `Object.assign({}, state, { thingToChange })`, for instance.
+
+Array parameters are also references. You can’t just `.push()` new items to an array in a reducer, because `.push()` is a mutating operation. Likewise, so are `.pop()`, `.shift()`, `.unshift()`, `.reverse()`, `.splice()`, and any other mutator method.
+
+[https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44](https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44)
