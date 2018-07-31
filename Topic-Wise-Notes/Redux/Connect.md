@@ -18,9 +18,20 @@ On the other hand, when we want to retrieve data, we do not get it directly from
 
 This is precisely what connect does. It maps the stores state and dispatch to the props of a component :
 
+### mapStateToProps() is a utility which helps your component get updated state(which is updated by some other components),
+
+### mapDispatchToProps() is a utility which will help your component to fire an action event (dispatching action which may cause change of application state)
+
+
 **mapStateToProps** and **mapDispatchToProps** are both pure functions that are provided the stores “state” and “dispatch” respectively. Furthermore, both functions have to return an object, whose keys will then be passed on as the props of the component they are connected to.
 
 Note: you can't use mapStateToProps for the same purpose as mapDispatchToProps for the basic reason that you don't have access to dispatch inside mapStateToProp. So you couldn't use  mapStateToProps to give the wrapped component a method that uses dispatch.
+
+### mapStateToProps receives the state and props and allows you to extract props from the state to pass to the component.
+
+### mapDispatchToProps receives dispatch and props and is meant for you to bind action creators to dispatch so when you execute the resulting function the action gets dispatched.
+
+**mapStateToProps and mapDispatchToProps** are separate for a good reason, consider the performance: mapStateToProps is actually run several times when state changes, and mapDispatchToProps once (or way fewer anyway than mapStateToProps) it doesn't depend on the state.
 
 Now take a look at the example - https://www.sohamkamani.com/blog/2017/03/31/react-redux-connect-explained/
 
@@ -41,4 +52,7 @@ what mapStateToProps() does in the above example is, it allows us to take our to
 
 ### By linking I mean the object returned by mapStateToProps will be provided at construction time as props and any subsequent change will be available through componentWillReceiveProps.
 
+### D) mapDispatchToProps() function - We can remove all reference to our store from our component via the mapDispatchToProps() function. We saw that mapDispatchToProps() allows us to bring in actions, combine them with dispatch and connect events on our page to actions in our store.
+
+https://learn.co/lessons/map-dispatch-to-props-readme
 

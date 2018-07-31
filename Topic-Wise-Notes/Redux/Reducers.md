@@ -42,3 +42,5 @@ Reducers should return a new object, instead. You can do that with `Object.assig
 Array parameters are also references. You can’t just `.push()` new items to an array in a reducer, because `.push()` is a mutating operation. Likewise, so are `.pop()`, `.shift()`, `.unshift()`, `.reverse()`, `.splice()`, and any other mutator method.
 
 [https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44](https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44)
+
+## Reducers shouldn't perform any side effects like API calls or router transitions. These should happen before an action is dispatched.

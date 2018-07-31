@@ -1,3 +1,11 @@
+### An action is a plain object describing what happened. For example:
+[https://redux.js.org/basics/dataflow](https://redux.js.org/basics/dataflow)
+
+ { type: 'LIKE_ARTICLE', articleId: 42 }
+ { type: 'FETCH_USER_SUCCESS', response: { id: 3, name: 'Mary' } }
+ { type: 'ADD_TODO', text: 'Read the Redux docs.' }
+Think of an action as a very brief snippet of news. “Mary liked article 42.” or “‘Read the Redux docs.' was added to the list of todos.”
+
 Check my working file -
 /home/paul/codes-Lap/React/React-snippets/redux-show-list-of-micro-blog-posts/src/actions/postActions.js
 

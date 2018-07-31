@@ -1,3 +1,7 @@
+### mapStateToProps() is a utility which helps your component get updated state(which is updated by some other components),
+
+### mapDispatchToProps() is a utility which will help your component to fire an action event (dispatching action which may cause change of application state)
+
 ## 1. mapStateToProps - General Syntax - 1st Example
 
 ### Note, because mapStateToProps() take the item state (from itemReducer.js ) and turns this into a component property. So I am applying PropTypes on item ``item: PropTypes.object.isRequired``
