@@ -53,10 +53,10 @@ export const setItemsLoading = item => {
 }
 
 ```
-I am using dispatch() to send the type along with the data that we get from the axios request to the backend. The main function (addItem) dispatches another function ( setItemsLoading ). This second function is called a thunk, and it returns the object/action.  the context of redux-thunk, a thunk is a second function that performs delayed logic by being asynchronously returned by a first function.
+I am using dispatch() to send the type along with the data that we get from the axios request to the backend. The main function (addItem) dispatches another function ( setItemsLoading ). This second function is called a thunk, and it returns the object/action. In the context of redux-thunk, a thunk is a second function that performs delayed logic by being asynchronously returned by a first function.
 
 This double function strategy allows us to wait for an asynchronous operation (like fetching data) to complete, and then the action is returned by the thunk.
 
-The plain data flows in a typical Redux (dispatch(action) -> reducer -> new state -> re-render
+The plain data flows in a typical Redux dispatch(action) -> reducer -> new state -> re-render
 
 The adjusted order, including reducers, is: dispatch ➡️ action creator ➡️ thunk ➡️ action ➡️ reducer.
