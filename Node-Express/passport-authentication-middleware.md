@@ -16,7 +16,7 @@ This passport middleware will be injected via passport.use(strategy) function. T
 
 https://stackoverflow.com/questions/42306821/why-would-i-need-to-use-passport-package-with-jsonwebtoken-for-applying-token-ba
 
-3> Understanding the main function of official dox (https://github.com/themikenicholson/passport-jwt#configure-strategy)
+### 3> Understanding the main function of official dox (https://github.com/themikenicholson/passport-jwt#configure-strategy)
 
 ```js
 passport.use(new JwtStrategy(opts, function(jwt_payload, done) {
@@ -44,3 +44,25 @@ So, this payload will have the attribute id that will be a user id to be used as
 C> Once I do that, I want to find that user
 
 D> 'done' is a passport error-first callback accepting arguments done(error, user, info)
+
+
+## Relationship between json web token and passport - jwt module creates the token and passport actually validates it.
+
+### Passport is Authentication Middleware for Node.JS, it is not for any specific method of authentication, the method for authentication like OAuth, JWT is implemented in Passport by Strategy pattern, so it means that you can swap the authentication mechanism without affecting other parts of your application.
+
+###  Passport is a middleware that handles authentication (login/logout) and the latter deals with authorisation (a JWT is generated after authentication and is sent to the client, in which the client will return the JWT with each HTTP request to be validated to grant access to resources).
+
+1> Basically, you use jsonwebtoken to generate the token. This is returned to the client who in turn sends it every time he makes a request. This is typically passed in the auth header. Passwort-jwt check this auth header and verifies it's validity. If it is invalid, it returns a 401, otherwise it populate your req.user.
+
+https://stackoverflow.com/questions/42306821/why-would-i-need-to-use-passport-package-with-jsonwebtoken-for-applying-token-ba
+
+
+2> Now here is how everything is going to work:
+(https://medium.com/front-end-hacking/learn-using-jwt-with-passport-authentication-9761539c4314)
+
+When the user logs in, the backend creates a signed token and returns it in response
+
+The client saves the token ( the one returned by backend in response ) locally (typically in localStorage) and sends it back in every subsequent request that needs authentication (i.e. that needs access to protected resources).
+
+All requests needing authentication pass through a middleware that checks the provided token and allows the request only if the token is verified
+
