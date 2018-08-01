@@ -107,5 +107,4 @@ componentWillUnmount()
 ```
 - DOM cleanup
 - listener removal & timer removal
-
- ![react component's life cycle events](http://i.imgur.com/3LkFtGd.png)
+ 
