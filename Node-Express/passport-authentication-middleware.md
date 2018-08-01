@@ -1,4 +1,4 @@
-Passport is a framework that is extremely flexible and modular. It allows you to work with the main authentication strategies: Basic & Digest, OpenID, OAuth, OAuth 2.0 and JWT. And also allows you to work with external services authentication, such as Facebook, Google+, Twitter and more. By the way, in its official website, there is a list with +300 authentication strategies, created and maintained by 3rd-party.
+Passport is a framework, and a Node.js middleware, that is extremely flexible and modular. It allows you to work with the main authentication strategies: Basic & Digest, OpenID, OAuth, OAuth 2.0 and JWT. And also allows you to work with external services authentication, such as Facebook, Google+, Twitter and more. By the way, in its official website, there is a list with +300 authentication strategies, created and maintained by 3rd-party.
 
 ## How passport validation works
 
@@ -9,13 +9,15 @@ https://jonathanmh.com/express-passport-json-web-token-jwt-authentication-beginn
 
 2> passport-jwt:
 
-In this strategy, server validates user credentials and returns encrypted user object i.e token. Client can save token using cookie, local-storage, or other mechanism. Then on every user request it validates token and only on successful validation proceed with the request.
+In this strategy, I assume that the client will send the JWT token in Authorization Header as a Bearer Token.
+Server validates user credentials and returns encrypted user object i.e token. Client can save token using cookie, local-storage, or other mechanism. Then on every user request it validates token and only on successful validation proceed with the request.
 
 This passport middleware will be injected via passport.use(strategy) function. To finish, two functions will be included from Passport to be used on the application. They are the initialize() function which starts the Passport and authenticate() which is used to authenticate the access for a route.
 
 https://stackoverflow.com/questions/42306821/why-would-i-need-to-use-passport-package-with-jsonwebtoken-for-applying-token-ba
 
 3> Understanding the main function of official dox (https://github.com/themikenicholson/passport-jwt#configure-strategy)
+
 ```js
 passport.use(new JwtStrategy(opts, function(jwt_payload, done) {
     User.findOne({id: jwt_payload.sub}, function(err, user) {

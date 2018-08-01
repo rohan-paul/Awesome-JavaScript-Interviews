@@ -3,6 +3,17 @@
 
 The JWT Claims Set represents a compact URL-safe JSON object, that is base64url encoded and digitally signed and/or encrypted. The JSON object consists of zero or more name/value pairs (or members), where the names are strings and the values are arbitrary JSON values. These members are the claims represented by the JWT.
 
+**It is  Stateless**: All the information needed to complete a particular request is sent along with it, including an Authorization HTTP header which contains our JWT which serves as an ‘identity object.’ Since the payload contains all the required information for us to authenticate the user, we can avoid making repeated calls to our database.
+
+**JSON Web Token is NOT Encrypted**: As demonstrated in the previous steps, the data inside a JWT is encoded and signed, not encrypted. The purpose of encoding data is to transform the data’s structure. Signing data allows the data receiver to verify the authenticity of the source of the data. So encoding and signing data does NOT secure the data. On the other hand, the main purpose of encryption is to secure the data and to prevent unauthorized access. While a JWT’s signature prevents malicious parties from tampering with it, the token’s header is only Base64 encoded. When dealing with confidential identifiers in your tokens, you should encrypt your tokens using AES.
+
+JWT are "signed" and therefore its contents are protected from tampering: you cannot change its contents without invalidating them.
+
+You can optionally "encrypt" the contents and therefore turn them visible only to issuer (the entity creating the token) and the consumer (the entity that is destined to use its contents after verification).
+
+**To encrypt** a JWT for a given recipient you need to know their public RSA key. Decryption happens with the private RSA key, which the recipient must keep secure at all times.
+
+
 1> Basic steps of token flow in JWT
 
 https://blog.jscrambler.com/implementing-jwt-using-passport/
@@ -96,3 +107,10 @@ There are a number of ways the JWT may be included in a request. In order to rem
 A number of extractor factory functions are provided in passport-jwt.ExtractJwt. These factory functions return a new extractor configured with the given parameters. fromAuthHeaderAsBearerToken() is one suct function that I am using here, as my scheme here was ‘bearer’ as stated in my user.js routes file.
 
 fromAuthHeaderAsBearerToken() creates a new extractor that looks for the JWT in the authorization header with the scheme 'bearer'
+
+#### Some good resources on this topic
+
+ - https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec
+
+
+
