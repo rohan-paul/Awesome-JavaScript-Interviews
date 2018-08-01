@@ -1,8 +1,8 @@
-### A promise is an object that wraps an asynchronous operation and notifies when it’s done. This sounds exactly like callbacks, but the important differences are in the usage of Promises. Instead of providing a callback, a promise has its own methods (.then) which you call to tell the promise what will happen when it is successful or when it fails. The methods a promise provides are “then(…)” for when a successful result is available and “catch(…)” for when something went wrong.
+#### A promise is an object that wraps an asynchronous operation and notifies when it’s done. This sounds exactly like callbacks, but the important differences are in the usage of Promises. Instead of providing a callback, a promise has its own methods (.then) which you call to tell the promise what will happen when it is successful or when it fails. The methods a promise provides are “then(…)” for when a successful result is available and “catch(…)” for when something went wrong.
 
-### It takes 2 arguments and both are callback functions. The first one is for the fullfilment case and the socond one is for the rejection case.
+#### It takes 2 arguments and both are callback functions. The first one is for the fullfilment case and the socond one is for the rejection case.
 
-### Promise in JS means, just as the word meaning, i.e. its not the value itself, but its the promise of a value.
+#### Promise in JS means, just as the word meaning, i.e. its not the value itself, but its the promise of a value.
 
 ### Why Use Promises
 
