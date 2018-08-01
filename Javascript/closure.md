@@ -10,7 +10,7 @@ var awFunc = function (first) {
     return someFunc;  // note that I did not invoke this function, but I did return the function
 }
 
-var someMoreFunc = awFunc('awe')
+var someMoreFunc = awFunc('awe') // At this point awFunc has finished running
 
 console.log(someMoreFunc())  // This will return 'aweundefined'
 
@@ -33,3 +33,32 @@ const getSecret = (secret) => {
 ```
 
 In the example above, the `.getPrivileged()` method is defined inside the scope of `getSecret()`, which gives it access to any variables from `getSecret()`, and makes it a privileged method. In this case, the parameter, `secret`.
+
+### Another example of closure
+
+```js
+const outerFunc = () => {
+    let name = 'Rohan'
+
+    const closureFunc = () => {
+        console.log(name);
+    }
+    return closureFunc()
+}
+
+var name = 'Paul'
+
+outerFunc()  // => Will Print 'Rohan'
+```
+
+### So whats going on above
+
+First, when a function runs, a new function Lexical Environment is created automatically. That’s a general rule for all functions. That Lexical Environment is used to store local variables and parameters of the call.
+
+During the function call we have two Lexical Environments: the inner one (for the function call) and the outer one (global):
+
+The inner Lexical Environment corresponds to the current execution of that function.
+
+When code wants to access a variable – it is first searched for in the inner Lexical Environment, then in the outer one, then the more outer one and so on until the end of the chain.
+
+If a variable is not found anywhere, that’s an error in strict mode. Without use strict, an assignment to an undefined variable creates a new global variable, for backwards compatibility.
