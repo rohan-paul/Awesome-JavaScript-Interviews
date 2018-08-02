@@ -1,6 +1,11 @@
 ## What is the call stack?
 
-At the most basic level, a call stack is a data structure that uses the Last In, First Out (LIFO) principle to temporarily store and manage function invocation (call).
+### At the most basic level, a call stack is a data structure that uses the Last In, First Out (LIFO) principle to temporarily store and manage function invocation (call).
+
+## Execution context is a concept in the language spec that—in layman's terms—roughly equates to the 'environment' a function executes in; that is, variable scope (and the scope chain, variables in closures from outer scopes), function arguments, and the value of the this object.
+
+## The call stack is a collection of execution contexts.
+
 When code is run in JavaScript, the environment in which it is executed is very important, and is evaluated as 1 of the following:
 
 Global code – The default envionment where your code is executed for the first time.

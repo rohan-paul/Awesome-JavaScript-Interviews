@@ -5,6 +5,9 @@
   * Declarations contribute to the `VariableEnvironment` when the execution scope is entered (^).
 
 # What is function hoisting? Provide some examples where it can be good or bad.
+
+An Execution Context is created each time you run your .js file/app. The first step in this creation phase is Hoisting. The JS Engine reserves space or set's up memory for all the variables and functions defined in your code. These are then accessed when your code is executed line-by-line.
+
 Function (and also variable) hoisting is when a function (or variable) is available before it's actual declaration statement.
 Consider the following code.
 ```javascript
@@ -56,3 +59,20 @@ function hoistedFunc () {
 }
 ```
 While the example is rather benign, it is easy to see how this may result in an ongoing error which is not detected
+
+## Think of hoisting as more of a compile-time thing. In JavaScript, function declarations are "hoisted" to the top of their scope. In other words, they are parsed and evaluated before any other code. (This is opposed to function expressions, which are evaluated inline.) Consider the following:
+
+```js
+
+a();  // => Hello
+
+b(); // => TypeError: b is not a function
+
+function a() { console.log('Hello') }
+var b = function() { }
+
+```
+
+The call to a() will succeed because its declaration was hoisted to the top; a was assigned to automatically before program execution began.
+
+For the call to b() - the b variable declaration will also be hoisted: it'll be declared from the start, but no value will be assigned to it before line 4. Calling b() before line 4 will indeed result in an error, but a different one: we'll be trying to execute undefined, which isn't a function.
