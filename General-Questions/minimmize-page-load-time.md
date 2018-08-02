@@ -47,3 +47,17 @@ Reduce redirects, which create additional HTTP requests to your server and incre
 When someone visits your website, the elements on the web page they are trying to access are automatically downloaded and stored on their hard drive in a cache (temporary storage). That way, the next time they visit your website, their browser will load the requested web page very quickly, without having to send an HTTP request to the server again.
 
 However, caching works for repeat visitors only, since, obviously, first-time visitors don’t have a cached and stored version of your website. Nevertheless, enabling full caching for your website can reduce your page load time from 2.4 to 0.9 seconds. This is due to the fact that there may be 30 or more different components that need to be stored in the user’s cache the first time they visit your website, but only a few components need to be downloaded for subsequent visits.
+
+## Optimize Your Images
+
+Images take up a lot of bandwidth. When they’re not optimized, meaning they are large in size, they use a lot of server resources and take more time to load. When your images are not optimized, your website can be much slower.
+
+## Disable Hotlinking
+
+If you don’t disable hotlinking, you allow people to use the content that’s hosted on your server for their own websites. By allowing them to practically use your servers and your content for their websites, you’ll get a lot of server load for no reason.
+
+This is why you should disable hotlinking and prevent people from stealing your server resources. However, in order to do that, you need to add the necessary code to your server. There are some tools that can help you generate the right code, but your web hosting provider can also help you with this
+
+## Optimize Your Database
+
+Optimizing your database is yet another very effective way to speed up your website. This is something you should do on a regular basis, especially if you use WordPress or some other CMS that relies a lot on database usage.
