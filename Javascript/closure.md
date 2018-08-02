@@ -62,3 +62,16 @@ The inner Lexical Environment corresponds to the current execution of that funct
 When code wants to access a variable – it is first searched for in the inner Lexical Environment, then in the outer one, then the more outer one and so on until the end of the chain.
 
 If a variable is not found anywhere, that’s an error in strict mode. Without use strict, an assignment to an undefined variable creates a new global variable, for backwards compatibility.
+
+### Some overall key points
+
+### Closure
+  * A closure is a function that remembers its outer variables and can access them.
+  * Combination of a function and the lexical environment within which that function was declared
+  * The `closure` is the function object itself.
+  * Accessing variables outside of the immediate lexical scope creates a closure.
+  * Happens when we have a nested functions.
+  * JavaScript engines also may optimize, discard variables that are unused to save memory.
+  * A `Lexical Environment` object lives in the `heap` as long as there is a function which may use it. And when there are none, it is cleared.
+  * All functions in JavaScript are closures.
+  * The internal property `[[Environment]]` of a function, refers to the outer lexical environment
