@@ -34,3 +34,15 @@ const counter = this.state.counter;
 const { users, counter } = this.state;
 ```
 That’s especially beneficial for functional stateless components, because they always receive the props object in their function signature. Often you will not use the props but its content, so you can destructure the content already in the function signature.
+
+```js
+// no destructuring
+function Greeting(props) {
+  return <h1>{props.greeting}</h1>;
+}
+
+// destructuring
+function Greeting({ greeting }) {
+  return <h1>{greeting}</h1>;
+}
+```

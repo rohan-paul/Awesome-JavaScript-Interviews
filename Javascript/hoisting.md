@@ -1,3 +1,9 @@
+### Hoisting
+  * Variable and function **declarations** are put into memory during the compile phase.
+  * Stays exactly where you typed it in your coding (not actually moved to the top).
+  * Only hoists declarations, not initializations.
+  * Declarations contribute to the `VariableEnvironment` when the execution scope is entered (^).
+
 # What is function hoisting? Provide some examples where it can be good or bad.
 Function (and also variable) hoisting is when a function (or variable) is available before it's actual declaration statement.
 Consider the following code.
