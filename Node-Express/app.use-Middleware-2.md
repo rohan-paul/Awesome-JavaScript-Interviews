@@ -27,24 +27,3 @@ The code you showed mounts a static server to the path / that reads from the dir
 app.use('/', express.static(__dirname));
 
 If you were to change the path to /path, then the static file server will serve static files from that path instead. If you specify no path, then / is used by default.
-
-3> **app.use applies the specified middleware to the main app middleware stack**. 
-
-When attaching middleware to the main app stack, the order of attachment matters; if you attach middleware A before middleware B, middleware A will always execute first. You can specify a path for which a particular middleware is applicable. In the below example, “hello world” will always be logged before “happy holidays.”
-
-```js
-
-const express = require('express');
-const app = express();
-
-app.use(function(req, res, next) {
-    console.log("hello world")
-})
-
-app.use(function(req, res, next) {
-    console.log("happy world")
-})
-
-```
-
-## app.use() acts as a middleware in express apps. Unlike app.get() and app.post() or so, you actually can use app.use() without specifying the request URL. In such a case what it does is, it gets executed every time no matter what URL's been hit.

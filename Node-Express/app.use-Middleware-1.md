@@ -80,7 +80,7 @@ Each middleware layer is essentially adding a function that specifically handles
 
 Official - https://expressjs.com/en/guide/using-middleware.html
 
-Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
+### Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
 
 Middleware functions can perform the following tasks:
 
@@ -105,4 +105,46 @@ app.use('/user/:id', function (req, res, next) {
   console.log('Request Type:', req.method)
   next()
 })
+```
+
+3> **app.use applies the specified middleware to the main app middleware stack**.
+
+When attaching middleware ( the function passed to app.use below is the middleware) to the main app stack, the order of attachment matters; if you attach middleware A before middleware B, middleware A will always execute first. You can specify a path for which a particular middleware is applicable. In the below example, “hello world” will always be logged before “happy holidays.”
+
+```js
+
+const express = require('express');
+const app = express();
+
+app.use(function(req, res, next) {
+    console.log("hello world")
+})
+
+app.use(function(req, res, next) {
+    console.log("happy world")
+})
+
+```
+
+## app.use() acts as a middleware in express apps. Unlike app.get() and app.post() or so, you actually can use app.use() without specifying the request URL. In such a case what it does is, it gets executed every time no matter what URL's been hit.
+
+## 4> The order of middleware loading is important: 
+
+To load the middleware function, call app.use(), specifying the middleware function. For example, the following code loads the myLogger middleware function before the route to the root path (/).
+
+```js
+var app = express()
+
+var myLogger = function (req, res, next) {
+  console.log('LOGGED')
+  next()
+}
+
+app.use(myLogger)
+
+app.get('/', function (req, res) {
+  res.send('Hello World!')
+})
+
+app.listen(3000)
 ```

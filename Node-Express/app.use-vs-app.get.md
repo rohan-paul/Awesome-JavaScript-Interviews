@@ -1,3 +1,28 @@
+## Differences between app.use() and app.get()
+
+## 1. app.use() takes only one callback whereas app.all() can take multiple callbacks.
+
+## 2. ## app.use() only see whether url starts with specified path where app.all() will match complete path.
+
+Here is an example to demonstrate this:
+
+```js
+app.use( "/product" , mymiddleware);
+// will match /product
+// will match /product/cool
+// will match /product/foo
+
+app.all( "/product" , handler);
+// will match /product
+// won't match /product/cool   <-- important
+// won't match /product/foo    <-- important
+
+app.all( "/product/*" , handler);
+// won't match /product        <-- Important
+// will match /product/cool
+// will match /product/foo
+```
+
 # When you use app.use('/some_route', myCallBack()).
 
 https://medium.com/@agoiabeladeyemi/a-simple-explanation-of-express-middleware-c68ea839f498
@@ -14,6 +39,33 @@ The requestObject: contains information about the HTTP request. You can access t
 The responseObject: is used to handle the requestObject. The responseObject represents the HTTP response that an Express app sends when it gets an HTTP request.
 
 The next : this may accept a parameter or may not. When it does not accept a parameter, it means go to the next executable. It is a way to escape from the middleware function.
+
+
+## The example below shows how you can add the middleware function using both methods, and with/without a route.
+
+```js
+var express = require('express');
+var app = express();
+
+// An example middleware function
+var a_middleware_function = function(req, res, next) {
+  // ... perform some operations
+  next(); // Call next() so Express will call the next middleware function in the chain.
+}
+
+// Function added with use() for all routes and verbs
+app.use(a_middleware_function);
+
+// Function added with use() for a specific route
+app.use('/someroute', a_middleware_function);
+
+// A middleware function added for a specific HTTP verb and route
+app.get('/', a_middleware_function);
+
+app.listen(3000);
+```
+
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction - Above we declare the middleware function separately and then set it as the callback. In our previous route handler function we declared the callback function when it was used. In JavaScript, either approach is valid.
 
 # Difference between app.get() and app.use()
 
