@@ -90,3 +90,30 @@ This is what happens when the code is run:
 8. The execution order then move to thirdFunction().
 
 9.  thirdFunction() returns and print “The end from thirdFunction” to the console.
+
+### What causes a stack overflow?
+
+A stack overflow occurs when there is a recursive function (a function that calls itself) without an exit point. The browser (hosting environment) has a maximum stack call that it can accomodate before throwing a stack error.
+
+Here is an example:
+
+```js
+function callMyself(){
+  callMyself();
+}
+callMyself();
+```
+The callMyself() will run until the browser throws a “Maximum call size exceeded”. And that is a stack overflow.
+
+
+## The key takeaways from the call stack are:
+
+1. It is single-threaded. Meaning it can only do one thing at a time.
+2. Code execution is synchronous.
+3. A function invocation creates a stack frame that occupies a temporary memory.
+4. It works as a LIFO — Last In, First Out data structure.
+
+
+
+
+
