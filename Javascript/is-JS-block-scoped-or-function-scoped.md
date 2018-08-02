@@ -1,12 +1,13 @@
 # Is JavaScript block-scoped or function scoped?
 
-Short answer - Javascript is function scoped. But it also has block scope (with the use of let and const)
+## Javascript is function scoped when using ``var``.
+## But JS is block scope (with the use of ES6 ``let`` and ``const``)
 
 ## What is block-scoped?
 ### Block-scoped exists when a declared variable inside a block of code (usually enclosed between curly backets) is only visible/accessible within that block of code.
 
 
-Consider the following.
+Consider the following, where JS is function-scoped
 
 ```javascript
 var testFunc = function() {
@@ -17,6 +18,7 @@ var testFunc = function() {
   // logging printed outside of block
   console.log(printed)
 }
+
 // logs 9 - printed is available outside of block
 testFunc()
 ```
@@ -67,3 +69,5 @@ var testFunc = function() {
 testFunc()
 ```
 So Javascript also has block scoping.
+
+A nice video on this - https://www.youtube.com/watch?v=q8SHaDQdul0&list=PLRqwX-V7Uu6YgpA3Oht-7B4NBQwFVe3pr
