@@ -12,3 +12,5 @@ This is a classical question in an interview. We can concatenate the topics all 
 8. The `DOMContentLoaded` event will be triggered after the initial HTML has been loaded and parsed completely.
 9. The Render tree will be constructed following the CSSOM and the DOM tree, in which the layout of page elements, styles and so on will be calculated.
 10. In the process of constructing the Render tree, the browser will call the GPU to paint, composite the layers and display the contents on the screen.
+
+For much more detailed explanation - (https://github.com/alex/what-happens-when/blob/master/README.rst)[https://github.com/alex/what-happens-when/blob/master/README.rst]
