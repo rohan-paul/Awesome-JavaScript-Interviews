@@ -16,7 +16,25 @@ let a = 111 // only literals, not a number
 a.toString() // converted to object when necessary
 ```
 
-Object is a reference type. We will encouter problems about shallow copy and deep copy when using it.
+# Typeof
+
+`typeof` can always display the correct type of primitive types, except `null`:
+```js
+typeof 1 // 'number'
+typeof '1' // 'string'
+typeof undefined // 'undefined'
+typeof true // 'boolean'
+typeof Symbol() // 'symbol'
+typeof b // b is not declared,but it still can be displayed as undefined
+```
+
+For object,  `typeof` will always display `object`, except **function**:
+```js
+typeof [] // 'object'
+typeof {} // 'object'
+typeof console.log // 'function'
+
+Object is a reference type. We will encounter problems about shallow copy and deep copy when using it.
 
 ```js
 let a = { name: 'FE' }
@@ -24,3 +42,38 @@ let b = a
 b.name = 'EF'
 console.log(a.name) // EF
 ```
+
+# Type Conversion
+
+## Converting to Boolean
+
+When the condition is judged, other than `undefined`, `null`, `false`, `NaN`, `''`, `0`, `-0`, all of the values, including objects, are converted to `true`.
+
+## Objects to Primitive Types
+
+When objects are converted, `valueOf` and `toString` will be called, respectively in order. These two methods can also be overridden.
+
+```js
+let a = {
+    valueOf() {
+        return 0
+    }
+}
+```
+
+## Arithmetic Operators
+
+Only for additions, if one of the parameters is a string, the other one will be converted to string as well. For all other operations, as long as one of the parameters is a number, the other one will be converted to a number.
+
+Additions will invoke three types of type conversions: to primitive types, to numbers and to string:
+
+```js
+1 + '1' // '11'
+
+2 * '2' // 4
+
+[1, 2] + [2, 1] // '1,22,1'
+
+// [1, 2].toString() -> '1,2'
+// [2, 1].toString() -> '2,1'
+// '1,2' + '2,1' = '1,22,1'
