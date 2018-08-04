@@ -8,7 +8,7 @@ Go to “Network” tab and then reload the page. Now you will see the loading t
 
 Now to load the above page (https://github.com/rohan-paul), there will be many othere resources will alo be loaded and I will see all of them, out of which only the top one will match my exaxt requested URL (https://github.com/rohan-paul in this case) in the network tab
 
-click on it, and then
+click on it, and then I will see the below
 
 
 ```js
