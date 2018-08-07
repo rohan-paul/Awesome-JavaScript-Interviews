@@ -19,4 +19,3 @@ HTTP is an application layer protocol relying on lower-level protocols such as *
 Now you understand HTTP then what is that HTTPS? HTTPS is the secured HTTP protocol required to send and receive information securely over internet. Nowadays it is mandatory for all websites to have HTTPS protocol to have secured internet. Browsers like Google Chrome will show an alert with “Not Secure” message in the address bar if the site is not served over HTTPS.
 
 Besides the security and encryption, the communication structure of HTTPS protocol remains same as HTTP protocol as explained above.
-
