@@ -16,6 +16,27 @@ For the first category, the component may need to perform some/all of the follow
 
 * Set up or remove any listeners or web-sockets (like a firebase ref listener) - start listener within componentDidMount and stop listener in componentWillUnmount
 
+
+### Mounting
+
+- constructor()
+- componentWillMount()
+- render()
+- componentDidMount()
+
+### Updating
+
+- componentWillReceiveProps()
+- shouldComponentUpdate()
+- componentWillUpdate()
+- render()
+- componentDidUpdate()
+
+### Unmounting
+
+componentWillUnmount()
+
+
 Now coming to the life cycle events that triggered when the component receives new data from its parent component.
 
 * `componentWillReceiveProps` - for times when you want to execute some code whenever your component receives props

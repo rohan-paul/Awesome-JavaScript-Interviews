@@ -23,6 +23,13 @@ componentDidMount()
 
 ---
 
+ #### componentDidMount() is the best place to put calls to fetch data (as against componentWillMount ), for two reasons:
+
+  - Using DidMount makes it clear that data won’t be loaded until after the initial render. This reminds you to set up initial state properly, so you don’t end up with undefined state that causes errors.
+  - If on the other hand, I put a fetch network call inside componentWillMount - then a situation may arise when an asynchronous call to fetch data will not return before the render happens. This means the component will render with empty data at least once. There is no way to “pause” rendering to wait for data to arrive.
+
+ - If you ever need to render your app on the server (SSR/isomorphic/other buzzwords), componentWillMount will actually be called twice – once on the server, and again on the client – which is probably not what you want. Putting the data loading code in componentDidMount will ensure that data is only fetched from the client.
+
 ## Updating
 
 ##### componentWillReceiveProps
@@ -107,4 +114,4 @@ componentWillUnmount()
 ```
 - DOM cleanup
 - listener removal & timer removal
- 
+
