@@ -1,18 +1,16 @@
-### How bcrypt works
-
 ### bcrypt works in 2 steps, first genSalt and then hash the password with that salt
 
-The regular steps are >> Generate the salt first (if err throw err else give me the salt)
+### The regular steps are >> Generate the salt first (if err throw err else give me the salt)
 
-and then hash the password with the generated salt (passing a cb so if there's error throw error else give me the hash).
+### and then hash the password with the generated salt (passing a cb so if there's error throw error else give me the hash).
 
-So from [official doc](https://github.com/dcodeIO/bcrypt.js#usage---async) the below are the steps
+So from [official doc](https://github.com/dcodeIO/bcrypt.js#usage---async) the below function is for the first step of **generating the salt and hashing**
 
 ```js
 var salt = bcrypt.genSaltSync(10);
 var hash = bcrypt.hashSync("B4c0/\/", salt);
 
-// And to hash a password the ES6 Async way is combine them both without blocking any othere operation
+// And to hash a password the ES6 Async way is combine them both without blocking any other operation
 
     bcrypt.genSalt(10, function(err, salt) {
       bcrypt.hash("B4c0/\/", salt, function(err, hash) {
@@ -22,8 +20,7 @@ var hash = bcrypt.hashSync("B4c0/\/", salt);
 ```
 Bcrypt allows us to choose the value of saltRounds, which gives us control over the cost of processing the data. The higher this number is, the longer it takes for the machine to calculate the hash associated with the password. It is important when choosing this value, to select a number high enough that someone who tries to find the password for a user by brute force, requires so much time to generate all the possible hash of passwords that does not compensate him. And on the other hand, it must be small enough so as not to end the user’s patience when registering and logging in (this patience is not usually very high). By default, the saltRounds value is 10.
 
-One example of generation salt
-[https://github.com/rohan-paul/Tiny-Twitter-Clone/blob/master/models/user.js](https://github.com/rohan-paul/Tiny-Twitter-Clone/blob/master/models/user.js)
+### One example of the first step of generating the salt and hashing - [https://github.com/rohan-paul/Tiny-Twitter-Clone/blob/master/models/user.js](https://github.com/rohan-paul/Tiny-Twitter-Clone/blob/master/models/user.js)
 
 ```js
 UserSchema.pre('save', function(next) {
@@ -48,6 +45,31 @@ UserSchema.pre('save', function(next) {
 
 Explanation of ``UserSchmea.pre`` in above - Its the middleware - also known as “pre” and “post” hooks that tie particular functions to particular lifecycle and query events. This middleware is defined on the schema level and can modify the query or the document itself as it is executed. Middleware is invoked with two arguments: the event trigger (as a string) and the callback function that is triggered for that particular event. The callback itself takes in an argument of a function, which we typically call next , and when invoked — advances the document/query to the next awaiting middleware.
 So what the below function does is - before (i.e. pre) user saves the normal text password into the database, making sure it encrypts it first
+
+
+### Example from my [dev-book app - https://github.com/rohan-paul/Developer-Profile-App/blob/master/routes/api/users.js](https://github.com/rohan-paul/Developer-Profile-App/blob/master/routes/api/users.js)
+### First hashing and then save the hashed password into mongo
+
+```js
+// and then get other details of the new user from the post request
+        const newUser = new User({
+            name: req.body.name,
+            email: req.body.email,
+            avatar,
+            password: req.body.password
+        });
+
+        bcrypt.genSalt(10, (err, salt) => {
+            bcrypt.hash(newUser.password, salt, (err, hash) => {
+                if (err) throw err;
+                newUser.password = hash;
+                newUser
+                    .save()
+                    .then(user => res.json(user))
+                    .catch(user => console.log(err))
+            });
+        });
+```
 
 ### Next step before signing-in a new user, it compares the password with that saved in the database
 
@@ -104,4 +126,10 @@ router.post('/login', (req, res) => {
 
 ```
 
+### Authentication at the time of signing in a user
+
+[https://solidgeargroup.com/hashing-passwords-nodejs-mongodb-bcrypt](https://solidgeargroup.com/hashing-passwords-nodejs-mongodb-bcrypt)
+
+The salt is incorporated into the hash (as plaintext). The compare function simply pulls the salt out of the hash and then uses it to hash the password and perform the comparison.
+When a user logs into our system, we need to check that the password entered is correct. Unlike other systems that would decrypt the password in the database (if it is encrypted), and compare it with the one entered by the user, what we do with bcrypt is encrypt the one entered by the user. To do this, we will pass the password to bcrypt to calculate the hash, but also the password stored in the database associated with the user (hash). This is because, as mentioned before, the bcrypt algorithm used a random segment (salt) to generate the hash associated with the pasword. This was stored along with the password, and you need it to recalculate the hash of the password entered by the user and finally compare with the one entered when registering and see if they match.
 
