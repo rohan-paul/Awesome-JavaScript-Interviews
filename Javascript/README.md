@@ -1,7 +1,19 @@
-# Built-in Types
-JavaScript defines seven built-in types, which can be broken down into two categories: `Primitive Type` and `Object`.
+# [Built-in Types - from MDN ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Data_types)
 
-There are six primitive types: `null`, `undefined`, `boolean`, `number`, `string` and `symbol `.
+### The latest ECMAScript standard defines seven data types:
+
+Six data types that are primitives:
+
+- Boolean
+- Null
+- Undefined
+- Number
+- String
+- Symbol (new in ECMAScript 2015)
+
+and the seventh one is Object
+
+
 
 In JavaScript, there are no true integers, all numbers are implemented in double-precision 64-bit binary format IEEE 754. When we use binary floating-point numbers, it will have some side effects. Here is an example of these side effects.
 
