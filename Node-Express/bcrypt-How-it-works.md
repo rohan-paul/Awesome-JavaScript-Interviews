@@ -1,3 +1,23 @@
+## Fist, What is password hashing?
+
+hash("hello") = 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
+hash("hbllo") = 58756879c05c68dfac9866712fad6a93f8146f337a69afe7dd238f3364946366
+hash("waltz") = c0e81794384491161f1777c232bc6bd9ec38f616560b120fda8e90f383853542
+
+Hash algorithms are one way functions. They turn any amount of data into a fixed-length "fingerprint" that cannot be reversed. They also have the property that if the input changes by even a tiny bit, the resulting hash is completely different (see the example above). This is great for protecting passwords, because we want to store passwords in a form that protects them even if the password file itself is compromised, but at the same time, we need to be able to verify that a user's password is correct.
+
+The general workflow for account registration and authentication in a hash-based account system is as follows:
+
+1> The user creates an account.
+
+2> Their password is hashed and stored in the database. At no point is the plain-text (unencrypted) password ever written to the hard drive.
+
+3> When the user attempts to login, the hash of the password they entered is checked against the hash of their real password (retrieved from the database).
+
+4> If the hashes match, the user is granted access. If not, the user is told they entered invalid login credentials.
+
+5> Steps 3 and 4 repeat every time someone tries to login to their account.
+
 ### bcrypt works in 2 steps, first genSalt and then hash the password with that salt
 
 ### The regular steps are >> Generate the salt first (if err throw err else give me the salt)
@@ -132,4 +152,43 @@ router.post('/login', (req, res) => {
 
 The salt is incorporated into the hash (as plaintext). The compare function simply pulls the salt out of the hash and then uses it to hash the password and perform the comparison.
 When a user logs into our system, we need to check that the password entered is correct. Unlike other systems that would decrypt the password in the database (if it is encrypted), and compare it with the one entered by the user, what we do with bcrypt is encrypt the one entered by the user. To do this, we will pass the password to bcrypt to calculate the hash, but also the password stored in the database associated with the user (hash). This is because, as mentioned before, the bcrypt algorithm used a random segment (salt) to generate the hash associated with the pasword. This was stored along with the password, and you need it to recalculate the hash of the password entered by the user and finally compare with the one entered when registering and see if they match.
+
+Looking at the [source code of bcrypt.compare](https://github.com/dcodeIO/bcrypt.js/blob/b09f7f266a7015456b7b36deeb026dc636f64542/dist/bcrypt.js#L269) function makes the above steps clear
+
+```js
+bcrypt.compare = function(s, hash, callback, progressCallback) {
+
+        function _async(callback) {
+            if (typeof s !== "string" || typeof hash !== "string") {
+                nextTick(callback.bind(this, Error("Illegal arguments: "+(typeof s)+', '+(typeof hash))));
+                return;
+            }
+            if (hash.length !== 60) {
+                nextTick(callback.bind(this, null, false));
+                return;
+            }
+            bcrypt.hash(s, hash.substr(0, 29), function(err, comp) {
+                if (err)
+                    callback(err);
+                else
+                    callback(null, safeStringCompare(comp, hash));
+            }, progressCallback);
+        }
+
+        if (callback) {
+            if (typeof callback !== 'function')
+                throw Error("Illegal callback: "+typeof(callback));
+            _async(callback);
+        } else
+            return new Promise(function(resolve, reject) {
+                _async(function(err, res) {
+                    if (err) {
+                        reject(err);
+                        return;
+                    }
+                    resolve(res);
+                });
+            });
+    };
+    ```
 
