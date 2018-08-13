@@ -30,26 +30,47 @@ componentDidMount()
 
  - If you ever need to render your app on the server (SSR/isomorphic/other buzzwords), componentWillMount will actually be called twice – once on the server, and again on the client – which is probably not what you want. Putting the data loading code in componentDidMount will ensure that data is only fetched from the client.
 
+
 ## Updating
 
 ##### componentWillReceiveProps
+
 ```js
 componentWillReceiveProps(nextProps = {})
 ```
 - Use to compare upcoming, new props (`nextProps.prop`) with old (`this.props.prop`)
-- `setState()` (especially in response to a prop change) can be called here and won't cause a rerender
+- `setState()` (especially in response to a prop change) can be called here and won't cause a re-render
 
 ---js
 
 ##### shouldComponentUpdate
 
-shouldComponentUpdate is always called before the render method and enables to define if a re-rendering is needed or can be skipped. Obviously this method is never called on initial rendering. A boolean value must be returned. Access to the upcoming as well as the current props and state ensure that possible changes can be detected to determine if a rendering is needed or not.
+``shouldComponentUpdate`` is always called before the render method and enables to define if a re-rendering is needed or can be skipped. So it is called after props or state are changed (and after componentWillReceiveProps), but before it renders. It’s unique among lifecycle functions in that it is expected to return a boolean value. If false, render will not be called. This can be very useful for skipping unnecessary renders and save some CPU.
+Obviously this method is never called on initial rendering. A boolean value must be returned. Access to the upcoming as well as the current props and state ensure that possible changes can be detected to determine if a rendering is needed or not.
 
 
 ```js
 boolean shouldComponentUpdate(
   object nextProps, object nextState
 ) { return statement }
+```
+
+#### An example of shouldComponentUpdate
+
+```js
+class Scorecard extends Component {
+  // Other functions omitted for brevity.
+  shouldComponentUpdate(nextProps, nextState) {
+    // Same as `componentWillReceiveProps`, `nextProps` is the
+    // new props and `this.props` is the old.
+    const {playerName} = this.props;
+    // Ditto for `nextState` and `this.state`.
+    const {score} = this.state;
+    // Only `playerName` and `score` affect the display.
+    // If something else changes, re-rendering would be a waste.
+    return !(nextProps.playerName === playerName && nextState.score === score);
+  }
+}
 ```
 
 - Unless `forceUpdate` is used, can be used to block a render cycle. `componentWillUpdate` and `componentDidUpdate` will not be called - Use to increase performance.
