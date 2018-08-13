@@ -13,6 +13,19 @@ Six data types that are primitives:
 
 and the seventh one is Object
 
+```js
+console.log("\"string\" type:", typeof "string"); // Logs: "string" type: string
+console.log("7 type:", typeof 7); // Logs: 7 type is: number
+console.log("7.5 type:", typeof 7.5); // Logs: 7.5 type is: number
+console.log("true type:", typeof true); // Logs: true type: boolean
+console.log("undefined type:", typeof undefined); // Logs: undefined type: undefined
+console.log("null type:", typeof null); // Logs: null type: object
+console.log("{} type:", typeof {}); // Logs: {} type: object
+console.log("[] type:", typeof []); // Logs: [] type: object
+console.log("function type:", typeof
+    function() {}); // Logs: function type: function
+```
+
 
 
 In JavaScript, there are no true integers, all numbers are implemented in double-precision 64-bit binary format IEEE 754. When we use binary floating-point numbers, it will have some side effects. Here is an example of these side effects.

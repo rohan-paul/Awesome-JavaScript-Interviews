@@ -45,6 +45,8 @@ componentWillReceiveProps(nextProps = {})
 
 ##### shouldComponentUpdate
 
+ ### This method should return true or false, and accordingly the component would be re-rendered or skipped.
+
 ``shouldComponentUpdate`` is always called before the render method and enables to define if a re-rendering is needed or can be skipped. So it is called after props or state are changed (and after componentWillReceiveProps), but before it renders. It’s unique among lifecycle functions in that it is expected to return a boolean value. If false, render will not be called. This can be very useful for skipping unnecessary renders and save some CPU.
 Obviously this method is never called on initial rendering. A boolean value must be returned. Access to the upcoming as well as the current props and state ensure that possible changes can be detected to determine if a rendering is needed or not.
 
@@ -55,7 +57,7 @@ boolean shouldComponentUpdate(
 ) { return statement }
 ```
 
-#### An example of shouldComponentUpdate
+#### A code example of shouldComponentUpdate
 
 ```js
 class Scorecard extends Component {
@@ -71,6 +73,16 @@ class Scorecard extends Component {
     return !(nextProps.playerName === playerName && nextState.score === score);
   }
 }
+```
+
+#### A code example of shouldComponentUpdate
+
+```js
+shouldComponentUpdate(nextProps, nextState) {
+  let shouldUpdate = this.props.status !== nextProps.status;
+  return shouldUpdate;
+}
+
 ```
 
 - Unless `forceUpdate` is used, can be used to block a render cycle. `componentWillUpdate` and `componentDidUpdate` will not be called - Use to increase performance.
