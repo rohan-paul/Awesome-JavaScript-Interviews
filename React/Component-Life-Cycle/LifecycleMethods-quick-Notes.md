@@ -2,7 +2,7 @@
 
 ##### componentWillMount
 
-componentWillMount is called before the render method is executed. It is important to note that setting the state in this phase will not trigger a re-rendering.
+componentWillMount is called before the render method is executed. It is important to note that setting the state in this phase **WILL NOT TRIGGER a RE-RENDERING**.
 ```js
 componentWillMount()
 ```
@@ -35,8 +35,19 @@ componentDidMount()
 
 ##### componentWillReceiveProps
 
+componentWillReceiveProps gets executed when the props have changed and is not first render. Sometimes state depends on the props, hence whenever props changes the state should also be synced. This is the method where it should be done.
+The similar method for the state doesn’t exist before state change because the props are read only within a component and can never be dependent on the state.
+Usage: This is how the state can be kept synced with the new props.
+
+
 ```js
-componentWillReceiveProps(nextProps = {})
+componentWillReceiveProps(nextProps) {
+    if (this.props.status !== this.props.nextProps) {
+        this.setState({
+            state: nextProps.status
+        })
+    }
+}
 ```
 - Use to compare upcoming, new props (`nextProps.prop`) with old (`this.props.prop`)
 - `setState()` (especially in response to a prop change) can be called here and won't cause a re-render
@@ -144,8 +155,18 @@ componentDidUpdate(prevProps = {},  prevState = {})
 
 ## Unmounting
 
+#### componentWillUnmount
+
+This method is the last method in the lifecycle. This is executed just before the component gets removed from the DOM.
+Usage: In this method, we do all the cleanups related to the component.
+For example, on logout, the user details and all the auth tokens can be cleared before unmounting the main component.
+
 ```js
-componentWillUnmount()
+componentWillUnmount() {
+    this.chart.destroy()
+    this.resetLocalStorage();
+    this.clearSession();
+}
 ```
 - DOM cleanup
 - listener removal & timer removal

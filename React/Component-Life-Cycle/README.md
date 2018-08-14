@@ -17,14 +17,14 @@ For the first category, the component may need to perform some/all of the follow
 * Set up or remove any listeners or web-sockets (like a firebase ref listener) - start listener within componentDidMount and stop listener in componentWillUnmount
 
 
-### Mounting
+### Mounting - After preparing with basic needs, state and props, our React Component is ready to mount in the browser DOM. This phase gives hook methods for before and after mounting of components.
 
 - constructor()
 - componentWillMount()
 - render()
 - componentDidMount()
 
-### Updating
+### Updating - This phase starts when the react component has taken birth on the browser and grows by receiving new updates. The component can be updated by two ways, sending new props or updating the state.
 
 - componentWillReceiveProps()
 - shouldComponentUpdate()
