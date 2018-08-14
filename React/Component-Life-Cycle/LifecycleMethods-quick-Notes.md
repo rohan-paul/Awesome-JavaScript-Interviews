@@ -50,6 +50,8 @@ componentWillReceiveProps(nextProps = {})
 ``shouldComponentUpdate`` is always called before the render method and enables to define if a re-rendering is needed or can be skipped. So it is called after props or state are changed (and after componentWillReceiveProps), but before it renders. It’s unique among lifecycle functions in that it is expected to return a boolean value. If false, render will not be called. This can be very useful for skipping unnecessary renders and save some CPU.
 Obviously this method is never called on initial rendering. A boolean value must be returned. Access to the upcoming as well as the current props and state ensure that possible changes can be detected to determine if a rendering is needed or not.
 
+This method is generally used when rendering is a very heavy method, then you should avoid render every now and then. For example, suppose for every render, the component generates thousand prime numbers, let’s consider some app has this kind of logic, then we can control when it is required then only the component is rendered.
+
 
 ```js
 boolean shouldComponentUpdate(
@@ -75,7 +77,7 @@ class Scorecard extends Component {
 }
 ```
 
-#### A code example of shouldComponentUpdate
+#### Another code example of shouldComponentUpdate
 
 ```js
 shouldComponentUpdate(nextProps, nextState) {
