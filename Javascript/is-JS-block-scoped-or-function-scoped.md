@@ -5,8 +5,8 @@
 ## But JS is block scope (with the use of ES6 ``let`` and ``const``)
 
 ## What is block-scoped?
-### Block-scoped exists when a declared variable inside a block of code (usually enclosed between curly backets) is only visible/accessible within that block of code.
 
+### Block-scoped exists when a declared variable inside a block of code (usually enclosed between curly brackets) is only visible/accessible within that block of code.
 
 Consider the following, where JS is function-scoped
 
@@ -23,9 +23,32 @@ var testFunc = function() {
 // logs 9 - printed is available outside of block
 testFunc()
 ```
-Thus Javscript is function scoped.
+But that does not mean, that I can access a variable that has been declared within the function, out of the function in the global space. This is because this most fundamental principle of JavaScript - each new function creates a local scope. Variables created in the global scope can be accessed in the local scope. But variables created in the local scope cannot be referenced in the global scope.
 
-## Or Not! It's a trick question!!!
+```js
+var testFunc = function() {
+    // printed it defined in the "for loop" block
+    for (var n = 0; n < 10; n++) {
+      var printed = n
+      var someVariable = 'I am available'
+    }
+    // logging printed outside of block
+    console.log(printed)
+  }
+
+  // logs 9 - printed is available outside of block
+  testFunc()
+
+console.log(someVariable)
+
+```
+
+
+
+
+
+
+### The below example where Javascript is block scoped.
 
 With the introduction of ES6, const and let has been introduced as ways to declare/assign variables. Consider the following.
 

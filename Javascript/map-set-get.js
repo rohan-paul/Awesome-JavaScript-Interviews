@@ -27,7 +27,12 @@ console.log(map)  // => Map {}
 
 map.set(0, 'val-1')
 
-console.log(map)
+console.log(map)  // => Map { 0 => 'val-1' }
+
+
+
+
+
 // EXAMPLE-2 Map can also use objects as keys
 
 let john = { name: "John" };
@@ -42,4 +47,8 @@ visitsCountMap.set(john, 123);
 
 console.log(visitsCountMap)  // => Map { { name: 'John' } => 123 }
 
-/* Using objects as keys is one of most notable and important Map features. For string keys, Object can be fine, but it would be difficult to replace the Map with a regular Object in the example above. */
+/* Using objects as keys is one of most notable and important Map features. For string keys, Object can be fine, but it would be difficult to replace the Map with a regular Object in the example above. In the old times, before Map existed, people added unique identifiers to objects for that like below */
+
+let john_old = { name: 'john-old', id : 1}
+let visitsCounts = {}
+visitsCounts[john.id] = 123;

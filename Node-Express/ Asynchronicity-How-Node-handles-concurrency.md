@@ -130,3 +130,5 @@ Node has a pool of Thread and you must be scratching your head wondering if Node
 ## 3> node.js handle thousands of concurrent requests per second, when writing them to Mongo?
 
 Generally the web server and the database server are 2 different machines, because of Async nature, the event loop gets free after forwarding the read/write request to database server. That is why, a Node JS HTTP server can handle a large number of requests while the process of complex read/write operations could be inprocess on database server(s).
+
+### Further Resources - https://youtu.be/8aGhZQkoFbQ - Very famous video

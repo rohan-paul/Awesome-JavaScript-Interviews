@@ -1,6 +1,6 @@
 ## What is a session?
 
-A session is a place to store data that you want access to across requests. Each user that visits your website has a unique session.  You can use sessions to store and access user data as they browse your application. Sessions are integral to web application development because they allow the application to store state. Based on what action a user took on Page A, we can show a different Page B. Without them, applications would be stateless, and not very useful.
+A session is a place to store data that you want have access to, across the requests between client and server. Each user that visits your website has a unique session.  You can use sessions to store and access user data as they browse your application. Sessions are integral to web application development because they allow the application to store state. Based on what action a user took on Page A, we can show a different Page B. Without them, applications would be stateless, and not very useful.
 
 Sessions can store their information in different ways. The popular ways to store session data is:
 
@@ -33,9 +33,28 @@ When a user makes a subsequent request to the web server, this cookie gets sent 
 The server can manipulate the cookie if it needs to, and then sends it back to the browser.
 Until the cookie expires, every time you make a request, your browser will send the cookies back to the server.
 
-#### The module like express-session will provide you with a nice API to work with sessions (letting you get & set data to the session), but under the hood, it will save and retrieve this data using a cookie.
+#### modules like express-session will provide you with a nice API to work with sessions (letting you get & set data to the session), but under the hood, it will save and retrieve this data using a cookie.
 
+Express-session also offers ways to secure your cookies to ensure that the information inside your application cookies are not exposed.
 
+https://github.com/expressjs/session#cookiesecure  - Please note that secure: true is a recommended option. However, it requires an https-enabled website, i.e., HTTPS is necessary for secure cookies. If secure is set, and you access your site over HTTP, the cookie will not be set. If you have your node.js behind a proxy and are using secure: true, you need to set "trust proxy" in express:
+
+```js
+var app = express()
+app.set('trust proxy', 1) // trust first proxy
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}))
+```
+
+### Some drawbacks with cookies:
+
+They can only store small bits of data, about 4KB usually.
+They are sent in every request, and if you store a bunch of data in a cookie, it will increase the size of the requests, which will slow down your site’s performance.
+If an attacker figures out how your cookies are encrypted (your secret key), then your cookies will be compromised. Attackers will then be able to read the data that is stored in the cookies, which can be sensitive user data.
 
 
 ### We use sessions to maintain state between user requests and we use cookies to transport the session ID between those requests.

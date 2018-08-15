@@ -17,7 +17,7 @@ To understand how middleware works in Express, there’s a few things you have t
 
 Let me explain.
 
-```
+```js
 app.get('/', function(req, res) {
   console.log('one');
 });
@@ -33,7 +33,7 @@ It will match the first route. The code in the first route will be executed. “
 
 So how would we get “two” to be logged as well?
 
-```
+```js
 app.get('/', function(req, res, next) {
   console.log('one');
   next();
@@ -128,7 +128,7 @@ app.use(function(req, res, next) {
 
 ## app.use() acts as a middleware in express apps. Unlike app.get() and app.post() or so, you actually can use app.use() without specifying the request URL. In such a case what it does is, it gets executed every time no matter what URL's been hit.
 
-## 4> The order of middleware loading is important: 
+## 4> The order of middleware loading is important:
 
 To load the middleware function, call app.use(), specifying the middleware function. For example, the following code loads the myLogger middleware function before the route to the root path (/).
 
