@@ -1,6 +1,7 @@
 # Is JavaScript block-scoped or function scoped?
 
 ## Javascript is function scoped when using ``var``.
+
 ## But JS is block scope (with the use of ES6 ``let`` and ``const``)
 
 ## What is block-scoped?
