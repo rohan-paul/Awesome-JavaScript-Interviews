@@ -12,17 +12,13 @@ Sessions can store their information in different ways. The popular ways to stor
 #### The module like express-session will provide you with a nice API to work with sessions (letting you get & set data to the session), but under the hood, it will save and retrieve this data using a cookie.
 
 
-### Storing Session Data in Application Memory
+### 1. Storing Session Data in Application Memory
 
 One way to store session data is in Application memory. This is often the simplest way, but not used in production.
 
-Storing session data in application memory essentially means that the data is stored for the lifetime of your application runtime. If your web application server crashes or is stopped, all session data is removed.
+Storing session data in application memory essentially means that the data is stored for the lifetime of your application runtime. If your web application server crashes or is stopped, all session data is removed. It also causes memory leaks. As your application stays running, more and more memory is used, until your app runs out of memory.
 
-Storing session data in memory also causes memory leaks. As your application stays running, more and more memory is used, until your app runs out of memory.
-
-For development purposes, it is often useful to store sessions in application memory. Otherwise, there are better ways of storing session data. We’ll explore these below.
-
-### Storing Session Data in Cookies
+### 2. Storing Session Data in Cookies
 
 A cookie is usually a small piece of data that gets sent between a web server to your web browser. It allows the server to store information relevant to a specific user.
 
@@ -55,6 +51,40 @@ app.use(session({
 They can only store small bits of data, about 4KB usually.
 They are sent in every request, and if you store a bunch of data in a cookie, it will increase the size of the requests, which will slow down your site’s performance.
 If an attacker figures out how your cookies are encrypted (your secret key), then your cookies will be compromised. Attackers will then be able to read the data that is stored in the cookies, which can be sensitive user data.
+
+### 3. Storing Session Data in a Memory Cache
+
+A Memory Cache is a place where small chunks of key-value data can be stored. Popular examples of memory caches that are used to store session information are Redis and Memcached.
+
+#### When storing session data in a memory cache, the server will still use a cookie, but the cookie will only contain a unique sessionId. This sessionId will be used by the server to perform a lookup against the store.
+
+
+When using a memory cache, your cookie only contains a session ID. This removes the risk of private user information being exposed in the cookie.
+
+#### There are some other benefits to using a memory cache to store session information.
+
+They are normally key-value based and are very quick to perform lookups.
+They normally are decoupled from your application server. This decoupling reduces dependencies.
+A single memory store can serve many applications.
+They automatically manage memory by removing old session data.
+
+#### However, there are some downsides to them as well:
+
+They are another server to set up and manage.
+They may be overkill for small applications. Normally database stores (which we will cover next), or cookies will do the job as well.
+There’s no good way to reset the cache without removing all the sessions stored inside it.
+
+### 4. Storing Session Data in a Database
+
+Lastly, let’s talk about storing session data in a traditional database, like MySQL or PostgreSQL. For most cases, this works in a very similar way to storing session data in a memory store.
+
+The session cookie still contains a sessionId. In this case, it will map to the primary key of the Session table on the database.
+
+**Some drawback of storing session in database**
+
+Retrieving data from a database is slower than a memory cache because the data is stored on disk, not on memory. You’ll be hitting your database a lot when you store your sessions there.
+
+Additionally, you have to completely manage old sessions yourself. If you don’t get rid of old sessions, your database will be filled with thousands of unused rows.
 
 
 ### We use sessions to maintain state between user requests and we use cookies to transport the session ID between those requests.
@@ -93,7 +123,7 @@ We're importing the [session function](https://github.com/expressjs/session/blob
 This can be either a string for a single secret, or an array of multiple secrets. If an array of secrets is provided, only the first element will be used to sign the session ID cookie, while all the elements will be considered when verifying the signature in requests.
 
 
-**Store**. I’m using MongoDB as my backend, and I want to persist the application sessions in my database, so I am using the connect-mongo NPM module and setting the session store value to an instance of this module. However, you might be using a different backend, so your store option could be different. The default for **store** is express-session is an in-memory storage. That is, it defaults to a new **MemoryStore** instance. ( **MemoryStore** is the default memory where express-session stores cookie data  )
+**Store**. I’m using MongoDB as my backend, and I want to persist the application sessions in my database, so I am using the **connect-mongo** NPM module and setting the session store value to an instance of this module. However, you might be using a different backend, so your store option could be different. The default for **store** is express-session is an in-memory storage. That is, it defaults to a new **MemoryStore** instance. ( **MemoryStore** is the default memory where express-session stores cookie data  ). Note - express-session by default uses a MemoryStore (in-memory key-value store for storing session data) implementation that is only designed for development environments, but cant scale in production, as after few user logins it can no more handle all those session data and will crash wiping out all session data.
 
 **Cookie**. This determines the behavior of the HTTP cookie that stores the session ID.
 
