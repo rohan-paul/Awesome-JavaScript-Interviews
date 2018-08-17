@@ -12,6 +12,8 @@ https://jonathanmh.com/express-passport-json-web-token-jwt-authentication-beginn
 In this strategy, I assume that the client will send the JWT token in Authorization Header as a Bearer Token.
 Server validates user credentials and returns encrypted user object i.e token. Client can save token using cookie, local-storage, or other mechanism. Then on every user request it validates token and only on successful validation proceed with the request.
 
+One great advantage of tokens is that we don’t have to lookup the token in a database on every api call as it contains all needed information in itself. This should help keeping the authentication process small. The biggest downside of that is the inability of revoking a token without having a whitelist or blacklist somewhere. This is the reason we keep the lifetime of the token small (like for example 120 minutes).
+
 This passport middleware will be injected via passport.use(strategy) function. To finish, two functions will be included from Passport to be used on the application. They are the initialize() function which starts the Passport and authenticate() which is used to authenticate the access for a route.
 
 https://stackoverflow.com/questions/42306821/why-would-i-need-to-use-passport-package-with-jsonwebtoken-for-applying-token-ba
@@ -66,3 +68,7 @@ The client saves the token ( the one returned by backend in response ) locally (
 
 All requests needing authentication pass through a middleware that checks the provided token and allows the request only if the token is verified
 
+
+**In serializeUser** passport attaches the profile information to req.user. This occurs as a direct result of the serializeUser() and deserializeUser() functions. - https://hackernoon.com/passportjs-the-confusing-parts-explained-edca874ebead
+
+**In deserializeUser()**, the first argument is an id which is the same id that was passed in done(null, user.id) of serializeUser(). deserializeUser() then makes a request to our DB to find the full profile information for the user and then calls done(null, user). This is where the user profile is attached to the request handler at req.user. Then finally after all this occurs, the user is routed back to the /login/google/return route handler where we can finally access the user profile information on req.user. - https://hackernoon.com/passportjs-the-confusing-parts-explained-edca874ebead

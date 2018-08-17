@@ -92,6 +92,10 @@ An Authentication Strategy
 Application Middleware
 Sessions
 
+passport.authenticate() will call our ‘local’ auth strategy, so we need to configure passport to use that strategy. We can configure passport with passport.use(new strategyClass). Here we tell passport how the local strategy can be used to authenticate the user.
+
+Inside the strategyClass declaration, we will take in the data from our POST request, use that to find the matching user in the database and check that the credentials match.
+
 Authentication strategies are a way for passport to delegate authentication to other modular packages. For example, there are Node packages that provide passport authentication strategies for Facebook and Twitter, etc.
 
 For our local use case, the strategy is provided by the passport-local package. Passport provides the use() function for plugging in the strategy (we’ll be doing that differently later), and it generally looks like this when using mongoose:
@@ -116,7 +120,6 @@ passport.use(new LocalStrategy(
 ));
 
 ```
-
 Notice that the callback function provided to the LocalStrategy object is the one that contains the logic used to verify a user’s identity.
 
 The verify callback must return a model of the user when the authentication is successful (the credentials are valid).
