@@ -7,10 +7,12 @@ app.get('/', (request, response) => {
 ```
 Now let’s go over the building blocks for sessions and authentication, one by one.
 
-express-session
+#### express-session
+
 express-session is an Express middleware used for persisting sessions across stateless HTTP requests. It expands on some key objects provided by both Express and Node.js.
 
-Overview
+#### Overview
+
 Sessions are used for storing data about a user and presenting dynamic data based on a user’s identity. They rely upon saving session data to a cookie that is sent to the user’s browser and then received back in future user requests.
 
 This module expands the Express request object with the session property (among other things), which itself is an object that can be used by other middleware.
@@ -23,7 +25,8 @@ This way cookies are very lightweight while more costly lookups to the database 
 
 You can view the value of this ID in action by logging request.sessionID when inside an Express route callback.
 
-Conceptual Workflow
+#### Conceptual Workflow
+
 The way you would usually provide information for a session is through an HTML form element in a web page. You would “log in” a user through a POST request to your web server containing username and password values.
 
 Your login page form would look like this:

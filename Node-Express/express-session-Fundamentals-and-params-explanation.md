@@ -1,3 +1,18 @@
+## The very basic steps of express-session and cookie-based session management
+
+The first time a browser makes a request to our server, express session
+
+generates a unique session id
+2. saves that session id in a session cookie and passes this back to the browser.
+
+3. creates an empty session object, as req.session.
+
+4. saves the session object to the database.
+
+Now if the same browser makes another request, the browser sends that earlier saved cookie that contains our session id, and boom, that’s the caller id. Express session knows that browser has sent requests before.
+
+=================================================
+
 ## What is a session?
 
 A session is a place to store data that you want have access to, across the requests between client and server. Each user that visits your website has a unique session.  You can use sessions to store and access user data as they browse your application. Sessions are integral to web application development because they allow the application to store state. Based on what action a user took on Page A, we can show a different Page B. Without them, applications would be stateless, and not very useful.
@@ -128,6 +143,7 @@ This can be either a string for a single secret, or an array of multiple secrets
 **Cookie**. This determines the behavior of the HTTP cookie that stores the session ID.
 
 **resave** - Forces the session to be saved back to the session store, even if the session was never modified during the request. Depending on your store this may be necessary, but it can also create race conditions where a client makes two parallel requests to your server and changes made to the session in one request may get overwritten when the other request ends, even if it made no changes (this behavior also depends on what store you're using).
+So, resave: false will not resave to the session store unless the session is modified. Modified means adding a property to req.session or changing a variable value.
 
 
 Typically, you'll want false.
@@ -137,7 +153,7 @@ How do I know if this is necessary for my store? The best way to know is to chec
 **saveUninitialized**
 Forces a session that is "uninitialized" to be saved to the store. A session is uninitialized when it is new but not modified. Choosing false is useful for implementing login sessions, reducing server storage usage, or complying with laws that require permission before setting a cookie. Choosing false will also help with race conditions where a client makes multiple parallel requests without a session.
 
-
+So, saveUninitialized: false: An uninitialized session is an unmodified one. When set to false, the session won’t be saved unless we modify it. It also won’t send the id back to the browser.
 
 
 #### Good resources

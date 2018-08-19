@@ -18,6 +18,7 @@
   "homepage": "https://github.com/rohan-paul/Awesome-JavaScript-Interviews#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "immutability-helper": "^2.7.1",
     "request": "^2.87.0"
   }
 }

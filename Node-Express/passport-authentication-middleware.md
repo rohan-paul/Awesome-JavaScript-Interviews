@@ -2,7 +2,7 @@ Passport is a framework, and a Node.js middleware, that is extremely flexible an
 
 ## How passport validation works
 
-1> passport.js works with the concept of strategies. They basically are a middleware function that a requests runs through before getting to the actual route. If your defined authentication strategy fails, which means that the callback will be called with an error that is not null or false as the second argument, the route will not be called, but a 401 Unauthorized response will be sent.
+1> passport.js works with the concept of strategies. They basically are a middleware function that a requests runs through before getting to the actual route. If your defined authentication strategy fails, which means that the callback will be called with an error that is not null or false as the second argument, the route will not be called, but a 401 Unauthorized response will be sent. So below, there's some more details on passport-jwt strategy (which I am using in my DevBook app). Similarly, I got passport-local strategy for my mern-postman-registration-medium-article app. For more details see - https://www.sitepoint.com/local-authentication-using-passport-node-js/
 
 https://jonathanmh.com/express-passport-json-web-token-jwt-authentication-beginners/
 
