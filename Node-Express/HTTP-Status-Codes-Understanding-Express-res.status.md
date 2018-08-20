@@ -35,7 +35,6 @@ logout(event) {
 
 ```
 
-
 ### Some other Response Object Methods
 
 ### res.append(field [, value])
