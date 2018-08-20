@@ -38,6 +38,22 @@ handleSubmit(event) {
 ### Step-2
 This request is registered in the relevant server route (/user/login) being handled at the file [routes/user.js](https://github.com/rohan-paul/SignUp-Form-with-Passport/blob/master/server/routes/user.js)
 
+1> The HTTP post request is performed by calling axios.post(). In its first parameter we’re passing in the URI of the service endpoint. In the second parameter, we’re passing in the full user object which contains the properties of the user: username and password. By default these two properties are set to be empty string
+
+2> **https://www.sitepoint.com/axios-beginner-guide/ - Good explanation**
+
+The post, put, and patch methods take a data object as their second argument, and an optional config object as the third
+
+### The response object
+
+When the request is successful, your then() callback will receive a response object with the following properties:
+
+data: the payload returned from the server. By default, Axios expects JSON and will parse this back into a JavaScript object for you.
+status: the HTTP code returned from the server.
+statusText: the HTTP status message returned by the server.
+headers: all the headers sent back by the server.
+config: the original request configuration.
+request: the actual XMLHttpRequest object (when running in a browser).
 
 ```js
 router.post('/login',
