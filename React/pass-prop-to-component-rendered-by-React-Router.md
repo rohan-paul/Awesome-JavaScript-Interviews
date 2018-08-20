@@ -38,6 +38,8 @@ So if you’re not supposed to pass a function to component, what’s the soluti
 ```
 ### So to recap, if you need to pass a prop to a component being rendered by React Router, instead of using Routes component prop, use its render prop passing it an inline function then pass along the arguments to the element you’re creating.
 
+Source: https://tylermcginnis.com/react-router-pass-props-to-components/
+
 #### Another implementation in my little MERN signup form with passport, and bcrypt
 
 [https://github.com/rohan-paul/SignUp-Form-with-Passport/blob/master/src/App.js](https://github.com/rohan-paul/SignUp-Form-with-Passport/blob/master/src/App.js)
@@ -46,7 +48,7 @@ So if you’re not supposed to pass a function to component, what’s the soluti
 render() {
     return (
       <div className="App">
-   
+
         <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
         {/* greet user if logged in: */}
         {this.state.loggedIn &&
