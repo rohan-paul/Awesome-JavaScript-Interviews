@@ -57,6 +57,6 @@ I am using dispatch() to send the type along with the data that we get from the 
 
 This double function strategy allows us to wait for an asynchronous operation (like fetching data) to complete, and then the action is returned by the thunk.
 
-The plain data flows in a typical Redux dispatch(action) -> reducer -> new state -> re-render
+The plain data flows in a typical Redux is like this >> dispatch(action) -> reducer -> new state -> re-render
 
 The adjusted order, including reducers, is: dispatch ➡️ action creator ➡️ thunk ➡️ action ➡️ reducer.

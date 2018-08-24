@@ -4,7 +4,7 @@
 
 1> Official Doc - https://reacttraining.com/react-router/web/api/Redirect
 
-Rendering a <Redirect> will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do.
+Rendering a <Redirect> will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do. 
 
 2> https://medium.com/@anneeb/redirecting-in-react-4de5e517354a
 

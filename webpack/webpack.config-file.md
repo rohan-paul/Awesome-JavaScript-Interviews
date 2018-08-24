@@ -23,7 +23,7 @@ While creating index.html manually works good, it would be nice if webpack can c
 Webpack can do this for us with the help of html-webpack-plugin. Using this plugin has some added advantages like auto-hashing the ‘src’ attribute of the embedded <script> tag every time the webpack is run, which makes browser to get the latest version of the file from server instead of using a cached one whenever it has a new hash.
 
 
-In **create-react-app** - this is module is used extensively, which I can see after ejecting
+In **create-react-app** - this module is used extensively, which I can see after ejecting
 The below from ``./config/webpack.config.prod.js``
 ```js
 // Generates an `index.html` file with the <script> injected.
@@ -61,7 +61,7 @@ And the below from ``./config/webpack.config.dev.js``
 
 # Loaders
 
-Loaders let you run preprocessors on files as they’re imported. This allows you to bundle static resources beyond JavaScript, but let’s look at what can be done when loading .js modules first.
+Webpack accepts a loader object which specify loader to apply to files that match the test regex and exclude files that match the exclude regex. So, loaders let you run preprocessors on files as they’re imported. This allows you to bundle static resources beyond JavaScript, but let’s look at what can be done when loading .js modules first.  In this below case we’re applying the babel-loader to all files with a .js extension that aren’t in node_modules and are not in bower_components
 
 module: {
 +     rules: [
