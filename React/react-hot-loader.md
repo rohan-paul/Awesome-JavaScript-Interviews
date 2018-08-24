@@ -2,19 +2,6 @@
 
 https://gaearon.github.io/react-hot-loader/getstarted/  - This is a good resource to implement HMR (Hot Module Replacement) in React
 
-## Hot reloading In create-react-app AFTER ejecting
-
-/home/paul/codes-Lap/React/boilerplate/redux-boilerplate-base-counter-AFTER-EJECTING
-
-### First configuration in webpackDevServer.config.js
-
-// Enable hot reloading server. It will provide /sockjs-node/ endpoint
-// for the WebpackDevServer client so it can learn when the files were
-// updated. The WebpackDevServer client is included as an entry point
-// in the Webpack development configuration. Note that only changes
-// to CSS are currently hot reloaded. JS changes will refresh the browser.
-``hot: true,``
-
 # How React Hot Loader works
 
 https://github.com/gaearon/react-hot-loader.wiki.git
@@ -111,8 +98,23 @@ To this:
   "build": "react-app-rewired build",
   "test":  "react-app-rewired test --env=jsdom"
 }
-
 ```
+
+
+# Hot reloading In create-react-app AFTER ejecting
+
+[https://github.com/rohan-paul/redux-boilerplate-base-counter/tree/master/redux-boilerplate-base-counter-AFTER-EJECTING](https://github.com/rohan-paul/redux-boilerplate-base-counter/tree/master/redux-boilerplate-base-counter-AFTER-EJECTING)
+
+### First configuration in webpackDevServer.config.js
+
+// Enable hot reloading server. It will provide /sockjs-node/ endpoint
+// for the WebpackDevServer client so it can learn when the files were
+// updated. The WebpackDevServer client is included as an entry point
+// in the Webpack development configuration. Note that only changes
+// to CSS are currently hot reloaded. JS changes will refresh the browser.
+``hot: true,``
+
+I also completely deleted the webpack files in config folder and instead had a fresh and single webpack.config.js file in the root of the project.
 
 ### What is repalaceReducer()
 
