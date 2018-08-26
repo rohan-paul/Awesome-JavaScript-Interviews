@@ -24,7 +24,7 @@ Hot module replacement, enchanted with React-hot-loader, might look like a aweso
 
 And my [live app here-a boilterplate basic counter with react and redux](https://github.com/rohan-paul/redux-boilerplate-base-counter/tree/master/redux-boilerplate-base-counter-without-ejecting)
 
-https://daveceddia.com/hot-reloading-create-react-app/
+Followed this guide to implement  - https://daveceddia.com/hot-reloading-create-react-app/
 
 #### Create React App don’t have Hot Module Replacement (HMR) set up by default. HMR allows us to replace modules in-place without restarting the server.
 
