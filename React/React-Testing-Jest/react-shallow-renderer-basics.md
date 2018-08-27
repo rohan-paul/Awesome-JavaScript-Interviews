@@ -36,3 +36,9 @@ expect(result.props.children).toEqual([
   <Subcomponent foo="bar" />
 ]);
 ```
+
+But remember that this **shallow** is different from enzyme's **shallow**
+
+Some in the developer community opine that - use Enzyme's shallow and enzyme-to-json for your Jest snapshot tests (instead of react-test-renderer). Why? Because **Enzyme's shallow** creates snapshots that omit child components, so each snapshot is truly tied to a single component.
+
+Shallow rendering is useful to constrain yourself to testing a component as a unit, and to ensure that your tests aren't indirectly asserting on behavior of child components

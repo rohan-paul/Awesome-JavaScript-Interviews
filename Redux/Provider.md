@@ -1,4 +1,4 @@
-# Provider
+# Provider (Its a HOC concept)
 
  ## It serves just one purpose : to “provide” the store to its child components.
 
@@ -14,7 +14,7 @@ If we were to follow the previous diagram, the Provider node would be represente
 
 2. http://funkyjavascript.com/redux-provider/
 
-It's a helper React component that eliminates the need to keep passing along the redux store as a parameter.  So, as per the syntax Provider takes in proopery of out store, like so store={store}
+It's a helper React component that eliminates the need to keep passing along the redux store as a parameter.  So, as per the syntax Provider takes in property of my store, like so store={store}
 
 ```js
 .....
@@ -32,7 +32,7 @@ It's a helper React component that eliminates the need to keep passing along the
 
 ```
 
-Provider is a component you can get from the react-redux module. It can only have one child component so I wrapped my two components TypeyThing and ListOfThings in a div.
+Provider can only have one child component so I wrapped my two components TypeyThing and ListOfThings in a div.
 
 2. http://www.react.express/react_redux
 
@@ -65,3 +65,24 @@ ReactDOM.render(
 ```
 
 Understanding Store - https://redux.js.org/basics/store
+
+## 4. Provider is an HOC Concept - https://stackoverflow.com/questions/48227188/how-does-provider-and-connect-work-in-react
+
+To be able to understand how Provider and connect work we need to understand 2 concepts in React
+
+### 1- Context api:
+
+### Context is a way to pass data through the component tree without having to pass the props down manually at every level
+
+### 2- Higher Order Component (HOC):
+
+### A higher-order component is a function that takes a component and returns a new component but before returning the new component you can pass extra custom props and then return it,
+
+5. Provider is an HOC Concept  - https://medium.com/@bloodyowl/the-provider-and-higher-order-component-patterns-with-react-d16ab2d1636
+Lots of React libraries need to make their data pass through all your component tree. For instance, Redux needs to pass its store and React Router needs to pass the current location. This could possibly seem to be handled using shared mutable state, but it only works on the client, when you have one state. If you prerender on the server, it’s just impossible to rely on such implementation.
+
+Fortunately, React provides a way to pass data from top to bottom: context. You can basically see it as the global object of your component tree. Provider component sets the context for all its children, providing the store in it.
+
+At the top of your app, you must therefore have a Provider. Its only role will basically be to add the data you want to the tree’s context, so that all its descendants can have access to it.
+
+ the best way to create a reusable functionality is a Higher-Order Component. This means that we basically wrap the component in another one, whose only role is to grab the functionality and pass it as props. The component you export from your module is the Higher-Order Component, which renders yours.
