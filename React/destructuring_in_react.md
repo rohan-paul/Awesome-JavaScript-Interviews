@@ -1,6 +1,6 @@
 ## What is destructuring in the context of React
 
-**Very simply its passing an object as an argument to the function, but the destructuring uses only the named properties of the object.**
+**1. Very simply its passing an object as an argument to the function, but the destructuring uses only the named properties of the object.**
 
 ```js
 const destructuring = ({ used }) => console.log(used);
@@ -12,6 +12,34 @@ const properties = {
 
 destructuring(properties); // => 2
 ```
+
+### 3. Another example of just saving me 4 characters while writing codes
+
+say I have the below state
+
+```js
+state = {
+    items: [
+    { value: 'Pants', id: uniqueId(), packed: false },
+    { value: 'Jacket', id: uniqueId(), packed: false },
+    ]
+}
+```
+
+And now I have to render the state.items - so for that I have to do ``this.state.items`` - BUT with destructuring I can do the below inside render()
+
+```js
+render() {
+    const { items } = this.state;
+    return (
+        // codes
+    )
+}
+```
+
+So it saved me just 4 characters.
+
+
 
 ## Benefits of destructuring - Shorter code
 

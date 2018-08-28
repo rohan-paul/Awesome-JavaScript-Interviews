@@ -130,7 +130,7 @@ You can also specify the stash id.
 
 ## git stash drop stash@{1}
 
-If you no longer need a particular stash, you can delete it with: 
+If you no longer need a particular stash, you can delete it with:
 
 ## git stash drop <stash_id>
 
