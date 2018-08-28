@@ -49,10 +49,76 @@ render () {
 
 This callback is called when the component mounts with a reference to the dom element as an argument. Importantly, when the component unmounts the callback is called again but this time with null as an argument.
 
-### Example-2
+### Example-2 - I ma rendering three input fields and onFocus on a particular field that should render a different class
 
-## Use ‘ref’ only if its MUST , otherwise not …why?
 [https://github.com/rohan-paul/React-snippets/tree/master/Using-refs-vs-keys-for-input-form](https://github.com/rohan-paul/React-snippets/tree/master/Using-refs-vs-keys-for-input-form)
+
+```js
+class RefComponent extends React.Component {
+onFocus() {
+        this.myInput.setAttribute('class', 'highlight')
+}
+onBlur() {
+    this.myInput.setAttribute('class', '')
+}
+
+render() {
+    return (
+        <div>
+            <input
+                ref={input => {
+                    this.myInput = input
+                }}
+                onFocus={this.onFocus.bind(this)}
+                onBlur={this.onBlur.bind(this)}
+            />
+        </div>
+    )
+   }
+}
+
+
+ReactDOM.render(<React.Fragment><RefComponent/><RefComponent/><RefComponent/></React.Fragment>, document.getElementById('root'))
+```
+
+
+## MOST IMPORTANT EXPLANATION OF THE ABOVE - The difference between the ref={callback} and the ref = “myInput” in react?
+[https://stackoverflow.com/questions/41467146/what-is-the-different-between-the-ref-callback-and-the-ref-myinput-in-reac]
+
+### The callback I set on ref will receive the component as the first parameter, the 'this' word will be the current class 'RefComponent' in this example. Setting < this.myInput > in the callback to ref will make myInput available to all other functions like onFocus()
+
+
+
+## MOST IMPORTANT EXPLANATION OF THE ABOVE-B
+
+https://stackoverflow.com/questions/41467146/what-is-the-different-between-the-ref-callback-and-the-ref-myinput-in-reac
+
+When you assign a ref={callback} like <input ref={(input) => {this.myInput = input}}/> what basically you are doing is saving the ref with the name myInput for future use.
+So instead of using ref="someInput" and then using this.refs.someInput we can use the callback method and then access the component later like this.myInput.
+
+Here is a demo for the same, whereby we are accessing the input value using ref on button click
+
+```js
+class App extends React.Component {
+  constructor(){
+    super();
+  }
+  handleClick = () => {
+    console.log(this.textInput.value);
+  }
+  render() {
+    return (
+      <div>
+        <input type="text" ref={(input) => {this.textInput = input}}/>
+        <button type="button" onClick={this.handleClick}>Click</button>
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<App/>, document.getElementById('app'));
+```
+=====================================
 
 ## Use ‘ref’ only if its MUST , otherwise not
 
@@ -62,7 +128,7 @@ This callback is called when the component mounts with a reference to the dom el
 
 ## The difference between the ref={callback} and the ref = “myInput” in react?
 
-https://stackoverflow.com/questions/41467146/what-is-the-different-between-the-ref-callback-and-the-ref-myinput-in-reac](https://stackoverflow.com/questions/41467146/what-is-the-different-between-the-ref-callback-and-the-ref-myinput-in-reac)
+[https://stackoverflow.com/questions/41467146/what-is-the-different-between-the-ref-callback-and-the-ref-myinput-in-reac](https://stackoverflow.com/questions/41467146/what-is-the-different-between-the-ref-callback-and-the-ref-myinput-in-reac)
 
 Note the ref="string" form will be deprecated
 
@@ -76,6 +142,8 @@ According to the react docs
 ``React will call the ref callback with the DOM element when the component mounts, and call it with null when it unmounts.``
 
 This is actually a pretty slick idea, by passing null on unmount and calling your callback again you automatically clean up references.
+
+
 
 #### Other sources to refer
 
