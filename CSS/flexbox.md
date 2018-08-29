@@ -11,7 +11,15 @@ Note: Flexbox layout is most appropriate to the components of an application, an
 
 Source - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
-### A Flexible Layout must have a parent element with the display property set to flex. An area of a document laid out using flexbox is called a flex container. To create a flex container, we set the value of the area's container's display property to flex or inline-flex. As soon as we do this the direct children of that container become flex items. As with all properties in CSS, some initial values are defined,
+### A Flexible Layout must have a parent element with the display property set to flex. Like below
+
+```
+.flex-container {
+  display: flex;
+}
+```
+
+### An area of a document laid out using flexbox is called a flex container. To create a flex container, we set the value of the area's container's display property to flex or inline-flex. As soon as we do this the direct children of that container become flex items. As with all properties in CSS, some initial values are defined,
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox#The_flex_container
 
