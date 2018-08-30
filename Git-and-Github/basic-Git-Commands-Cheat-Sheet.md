@@ -8,6 +8,10 @@ Show branches:
 
 ## `git branch`
 
+List or Show all the available branches (both local and remote)
+
+## `git branch -a`
+
 Create branch:
 
 ## `git branch branchname`

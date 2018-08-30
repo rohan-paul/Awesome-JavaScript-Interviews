@@ -30,6 +30,25 @@ With HTTPS if anyone in between the sender and the recipient could open the mess
 
 ### To do this, the computer at each end uses a document called an "SSL Certificate" containing character strings that are the keys to their secret "codes."
 
-SSL certificates contain the computer owner's "public key."
+## SSL certificates contain the computer owner's "public key."
 
 The owner shares the public key with anyone who needs it. Other users need the public key to encrypt messages to the owner. The owner sends those users the SSL certificate, which contains the public key. The owner does not share the private key with anyone.
+
+
+## Advantages of HTTPS
+In most cases, sites running over HTTPS will have a redirect in place. Therefore, even if you type in HTTP:// it will redirect to an https over a secured connection
+
+It allows users to perform secure e-commerce transaction, such as online banking.
+
+SSL technology protects any users and builds trust
+
+An independent authority verifies the identity of the certificate owner. So each SSL Certificate contains unique, authenticated information about the certificate owner.
+
+
+## Limitations of HTTPS
+
+HTTPS protocol can't stop stealing confidential information from the pages cached on the browser
+
+SSL data can be encrypted only during transmission on the network. So it can't clear the text in the browser memory
+
+HTTPS can increase computational overhead as well as network overhead of the organization
