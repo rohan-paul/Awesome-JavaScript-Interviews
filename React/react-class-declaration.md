@@ -42,4 +42,4 @@ class Book extends Component {
 export default connect(Book)
 ```
 
-2> No. 2 gives possibilities for further working with the class before exporting it. Such as adding proptypes Book.propTypes = { /* prop-types defintion */}
+2> No. 2 gives possibilities for further working with the class before exporting it. Such as adding proptypes Book.propTypes = { /* prop-types definition */}

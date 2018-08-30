@@ -8,12 +8,12 @@ Also Read my live detailed-comments in code - [https://github.com/rohan-paul/Fet
 
 This is the easiest direction in React to transfer data. If I have access to data in my parent component that I need my child component to have access to, I can pass it as a prop to the child when I instantiate it within the parent.
 
-In my example, if I need to pass something from the App to the ToDoList:
+In my example, if I need to pass something from the parent App Component to the ToDoList Child component:
 
 ```js
 class App extends React.Component {
     render() {
-    [... somewhere in here I define a variable listName which I think will be useful as data in my ToDoList component...]
+    // [... somewhere in here I define a variable listName which I think will be useful as data in my ToDoList component...]
 
         return (
             <div>

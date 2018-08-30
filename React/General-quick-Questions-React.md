@@ -1,6 +1,4 @@
-## What’s the difference between an Element and a Component in React?Simply put, a React element describes what you want to see on the screen. Not so
-
-Simply put, a React element is an object representation of some UI.
+## What’s the difference between an Element and a Component in React? Simply put, a React element describes what you want to see on the screen. Not so Simply put, a React element is an object representation of some UI.
 
 A React component is a function or a class which optionally accepts input and returns a React element
 
