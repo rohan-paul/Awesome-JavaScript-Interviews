@@ -49,7 +49,7 @@ render () {
 
 This callback is called when the component mounts with a reference to the dom element as an argument. Importantly, when the component unmounts the callback is called again but this time with null as an argument.
 
-### Example-2 - I ma rendering three input fields and onFocus on a particular field that should render a different class
+### Example-2 - I am rendering three input fields and onFocus on a particular field that should render a different class
 
 [https://github.com/rohan-paul/React-snippets/tree/master/Using-refs-vs-keys-for-input-form](https://github.com/rohan-paul/React-snippets/tree/master/Using-refs-vs-keys-for-input-form)
 

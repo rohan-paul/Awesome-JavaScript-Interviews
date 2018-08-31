@@ -10,6 +10,16 @@ We often call this process rendering, and you can think of it as a projection of
 
 [http://teropa.info/blog/2015/03/02/change-and-its-detection-in-javascript-frameworks.html](http://teropa.info/blog/2015/03/02/change-and-its-detection-in-javascript-frameworks.html)
 
+### Server-Side Rendering: The way it was before React and other libraries
+
+Before the era of Big JavaScript, every interaction you had with a web application used to trigger a server roundtrip. Each click and each form submission meant that the webpage unloaded, a request was sent to the server, the server responded with a new page that the browser then rendered.
+
+With this approach, there wasn't really any state to manage in the front-end. Each time something happened, that was the end of the universe, as far as the browser was concerned. Whatever state there was, it was a backend concern. The frontend was just some generated HTML and CSS, with perhaps a bit of JavaScript sprinkled on top.
+
+While this was a very simple approach from a front-end perspective, it was also very slow. Not only did each interaction mean a full re-rendering of the UI, it was also a remote re-rendering, with a full roundtrip to a faraway data center.
+
+[http://teropa.info/blog/2015/03/02/change-and-its-detection-in-javascript-frameworks.html](http://teropa.info/blog/2015/03/02/change-and-its-detection-in-javascript-frameworks.html)
+
 
 **Virtual DOM is the name React developers gave to their DOM manipulation engine.** Virtual DOM provides a series of Javascript calls that tell the library how to build an in-memory DOM tree and how to update it when data bound to it changes. The central piece of Virtual DOM is its smart diffing algorithm: once the differences in the model have been mapped to the in-memory copy of the DOM, the algorithm finds the minimum number of operations required to update the real DOM. This results in two copies of the in-memory DOM being present during the diffing process.
 
@@ -38,3 +48,28 @@ React is magical, but it still can’t get around the fact that we must build a 
 ### Whenever a change is made in your application, React takes each element and completes the process of “reconciliation”. At its core, this is just a side-by-side comparison of each component against the version in the virtual DOM. If they are the same, they are left alone. If the component has changed, then it is replaced in the virtual DOM and prepared for insertion into the real DOM. All of this happens incredibly fast.
 
 And once your application begins to change many things at once or deal with large/complex components, you will see that React is a heaven-sent abstraction.
+
+## When a React UI is rendered for the first time after launching the app, it is first rendered into a virtual DOM, which is not an actual DOM object graph, but a light-weight, pure JavaScript data structure of plain objects and arrays that represents a real DOM object graph. A separate process then takes that virtual DOM structure and creates the corresponding real DOM elements
+
+
+## Then, when a change occurs, a new virtual DOM is created from scratch. That new virtual DOM will reflect the new state of the data model. React now has two virtual DOM data structures at hand: The new one and the old one. It then runs a diffing algorithm on the two virtual DOMs, to get the set of changes between them. Those changes, and only those changes, are applied to the real DOM: This element was added, this attribute's value changed, etc.
+
+[http://teropa.info/blog/2015/03/02/change-and-its-detection-in-javascript-frameworks.html](http://teropa.info/blog/2015/03/02/change-and-its-detection-in-javascript-frameworks.html)
+
+<img src="Virtual-DOM.jpeg"/>
+
+### Why Immutable function and Immutable, persistent data-structure is so important in React
+
+One approach to controlling changes is to favor immutable, persistent data structures. They seem to be a particularly good fit with React's virtual DOM approach.
+
+The thing about immutable data structures is that, as the name implies, you can never mutate one, but only produce new versions of it. If you want to change an object's attribute, you'll need to make a new object with the new attribute, since you can't change the existing one. Because of the way persistent data structures work, this is actually much more efficient than it sounds.
+
+What this means in terms of change detection is that when a React component's state consists of immutable data only, there's an escape hatch: When you're re-rendering a component, and the component's state still points to the same data structure as the last time you rendered it, you can skip re-rendering. You can just use the previous virtual DOM for that component and the whole component tree stemming from it. There's no need to dig in further, since nothing could possibly have changed in the state.
+
+
+## Some more Theory on Virtual DOM
+
+Virtual Dom is javascript object as similar to real DOM. On every mutation triggered either through “setState, dispatcher ” react creates a new virtual tree from scratch by adjusting those changes. React can produce upto 200000 trees in 1 second. In fact, it can produce tree much faster and more efficiently. Creation of new virtual tree follows BFS strategy so that changes of any node could be adjusted through parent node if the change has happened on parent node too. If the changes have been done at the root node itself (first root of tree), then react will scrap down the complete tree and create new tree from scratch and also trigger re-rendered for the child components again.
+
+You might be wondering that why are we not hitting down the rendering performance, even though it creates virtual tree every time from scratch (in case of only change in parent node) and also trigger the render method of the child components again. Because all these happens without touching the real dom. Real Dom is still far away from the picture.
+
