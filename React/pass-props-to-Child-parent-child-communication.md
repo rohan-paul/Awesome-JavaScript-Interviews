@@ -25,7 +25,75 @@ class App extends React.Component {
 }
 ```
 
+Then in the ToDoList child component I will access / consume the passed-in data from parent like below
+
+```js
+class ToDoList extends React.Component {
+    render() {
+        const { listNameFromParent } = this.props;
+        return (
+            <div>
+                 <ul>{listNameFromParent}</ul>
+            </div>
+        );
+    }
+
+}
+```
+
+#### Another example of passing data from parent to chile
+
+```js
+
+// RecipeList is the parent - note I am passing 5 props down to child
+
+class RecipeList extends Component{
+    render(){
+        return (
+            <div style={{'display':'flex'}}>
+                {this.props.recipes.map((item,index)=>(
+                    <Recipe key={index}
+                        title={item.title}
+                        ingredients={item.ingredients}
+                        instructions={item.instructions}
+                        img={item.img}
+                    />
+                ))}
+            </div>
+        )
+    }
+}
+
+// And then the child - note, 
+
+class Reciepe extends Component{
+
+    render(){
+
+        const { title, img, instructions } = this.props;
+
+        const ingredients=this.props.ingredients.map((ing,index)=>(<li key={index} >{ing}</li>));
+        
+        return (
+            <div className='recipe-card'>
+                <div className='recipe-card-img'> <img src={img} alt={title}/> </div>
+                <div className='recipe-card-content'>
+                    <h3 className='recipe-title'>Reciepe {title}</h3>
+                    <ul> {ingredients} </ul>
+                    <h4>Instructions:</h4>
+                    <p>{instructions}</p>
+                </div>
+            </div>
+        )
+    }
+}
+
+```
+
+
 # 2> Child to Parent — Use a callback and states
+
+## For passing from child to parent - pass one callback function from parent to child and then use this passed-down function in the child to send something back to parent.
 
 Same tutorial - https://medium.com/@ruthmpardee/passing-data-between-react-components-103ad82ebd17
 
@@ -34,6 +102,8 @@ Same tutorial - https://medium.com/@ruthmpardee/passing-data-between-react-compo
 ### B> Pass that callback as a prop to the child (just like the way in Point no-1 above) - this is it will be a regular prop passing from parent to child.
 
 ### C> Call the callback using this.props.[callback] in the child (insert your own name where it says [callback] of course), and pass in the data as the argument.
+
+
 
 
 Here’s what that might look like if I had data in **ToDoItem** (the Child Component) that I need to access in **ToDoList**(The parent Component) : And the data that **ToDoList** will receive from the child **ToDoItem** is given a variable name **listInfo** for example.
