@@ -10,6 +10,46 @@ We often call this process rendering, and you can think of it as a projection of
 
 [http://teropa.info/blog/2015/03/02/change-and-its-detection-in-javascript-frameworks.html](http://teropa.info/blog/2015/03/02/change-and-its-detection-in-javascript-frameworks.html)
 
+## How normal DOM (without React) works
+
+# 1> [https://medium.com/@gethylgeorge/how-virtual-dom-and-diffing-works-in-react-6fc805f9f84e](https://medium.com/@gethylgeorge/how-virtual-dom-and-diffing-works-in-react-6fc805f9f84e)
+
+[https://developer.mozilla.org/en-US/docs/Mozilla/Introduction_to_Layout_in_Mozilla](https://developer.mozilla.org/en-US/docs/Mozilla/Introduction_to_Layout_in_Mozilla)
+
+Since DOM is represented as a tree structure, and changes to the DOM is pretty quick but the changed element, and it’s children’s has to go through Reflow/Layout stage and then the changes has to be Re-painted which are slow. Therefore more the items to reflow/repaint, more slow your app becomes.
+
+### 2> What Virtual-DOM does is, it tries to minimize these two stages, and thereby getting a better performance for a big complex app.
+
+[https://hackernoon.com/virtual-dom-in-reactjs-43a3fdb1d130](https://hackernoon.com/virtual-dom-in-reactjs-43a3fdb1d130)
+
+Rendering engines which is responsible for displaying or rendering the webpage on the browser screen parses the HTML page to create DOM. It also parses the CSS and applies the CSS to the HTML creating a render tree, this process is called as attachment.
+
+Layout process give exact co-ordinates to each node of the render tree, where the node gets painted and displayed.
+
+So when we do,
+
+``document.getElementById('elementId').innerHTML = "New Value"``
+
+Following thing happens:
+
+Browser have to parses the HTML
+
+It removes the child element of elementId
+
+Updates the DOM with the “New Value”
+
+Re-calculate the CSS for the parent and child
+
+Update the layout i.e. each elements exact co-ordinates on the screen
+
+Traverse the render tree and paint it on the browser display
+
+Recalculating the CSS and changed layouts uses complex algorithm and they effect the performance.
+
+Thus updating a Real DOM does not involves just updating the DOM but, it involves a lot of other process.
+
+Also, each of the above steps runs for each update of the real DOM i.e. if we update the Real DOM 10 times each of the above step will repeat 10 times. This is why updating Real DOM is slow.
+
 ### Server-Side Rendering: The way it was before React and other libraries
 
 Before the era of Big JavaScript, every interaction you had with a web application used to trigger a server roundtrip. Each click and each form submission meant that the webpage unloaded, a request was sent to the server, the server responded with a new page that the browser then rendered.
@@ -20,6 +60,18 @@ While this was a very simple approach from a front-end perspective, it was also 
 
 [http://teropa.info/blog/2015/03/02/change-and-its-detection-in-javascript-frameworks.html](http://teropa.info/blog/2015/03/02/change-and-its-detection-in-javascript-frameworks.html)
 
+## [What is virtual DOM?](https://hackernoon.com/virtual-dom-in-reactjs-43a3fdb1d130)
+
+### Virtual DOM is in-memory representation of Real DOM. It is lightweight JavaScript object which is copy of Real DOM.
+
+Updating virtual DOM in ReactJS is faster because ReactJS uses
+
+ - Efficient diff algorithm
+ - Batched update operations
+ - Efficient update of sub tree only
+ - Uses observable instead of dirty checking to detect change
+
+## ReactJS uses observable’s to find the modified components. Whenever setState() method is called on any component, ReactJS makes that component dirty and re-renders it.
 
 **Virtual DOM is the name React developers gave to their DOM manipulation engine.** Virtual DOM provides a series of Javascript calls that tell the library how to build an in-memory DOM tree and how to update it when data bound to it changes. The central piece of Virtual DOM is its smart diffing algorithm: once the differences in the model have been mapped to the in-memory copy of the DOM, the algorithm finds the minimum number of operations required to update the real DOM. This results in two copies of the in-memory DOM being present during the diffing process.
 
@@ -69,7 +121,15 @@ What this means in terms of change detection is that when a React component's st
 
 ## Some more Theory on Virtual DOM
 
-Virtual Dom is javascript object as similar to real DOM. On every mutation triggered either through “setState, dispatcher ” react creates a new virtual tree from scratch by adjusting those changes. React can produce upto 200000 trees in 1 second. In fact, it can produce tree much faster and more efficiently. Creation of new virtual tree follows BFS strategy so that changes of any node could be adjusted through parent node if the change has happened on parent node too. If the changes have been done at the root node itself (first root of tree), then react will scrap down the complete tree and create new tree from scratch and also trigger re-rendered for the child components again.
+Virtual Dom is javascript object as similar to real DOM. On every mutation triggered either through “setState, dispatcher ” react creates a new virtual tree from scratch by adjusting those changes. React can produce upto 200000 trees in 1 second. In fact, it can produce tree much faster and more efficiently. Creation of new virtual tree follows [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) strategy so that changes of any node could be adjusted through parent node if the change has happened on parent node too. If the changes have been done at the root node itself (first root of tree), then react will scrap down the complete tree and create new tree from scratch and also trigger re-rendered for the child components again.
 
 You might be wondering that why are we not hitting down the rendering performance, even though it creates virtual tree every time from scratch (in case of only change in parent node) and also trigger the render method of the child components again. Because all these happens without touching the real dom. Real Dom is still far away from the picture.
 
+[Breadth-first search from Wikipedia](https://en.wikipedia.org/wiki/Breadth-first_search)
+Breadth-first search (BFS) is an algorithm for traversing or searching tree or graph data structures. It starts at the tree root (or some arbitrary node of a graph, sometimes referred to as a 'search key'[1]), and explores all of the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level.
+
+It uses the opposite strategy as depth-first search, which instead explores the highest-depth nodes first before being forced to backtrack and expand shallower nodes.
+
+## Good Sources
+
+- [https://hackernoon.com/virtual-dom-in-reactjs-43a3fdb1d130](https://hackernoon.com/virtual-dom-in-reactjs-43a3fdb1d130)
