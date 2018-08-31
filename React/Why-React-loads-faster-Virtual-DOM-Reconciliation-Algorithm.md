@@ -73,6 +73,26 @@ Updating virtual DOM in ReactJS is faster because ReactJS uses
 
 ## ReactJS uses observable’s to find the modified components. Whenever setState() method is called on any component, ReactJS makes that component dirty and re-renders it.
 
+### Whenever setState() method is called, ReactJS creates the whole Virtual DOM from scratch. Creating a whole tree is very fast so it does not affect the performance. At any given time, ReactJS maintains two virtual DOM, one with the updated state Virtual DOM and other with the previous state Virtual DOM.
+
+ReactJS using diff algorithm compares both the Virtual DOM to find the minimum number of steps to update the Real DOM.
+
+ReactJS uses following steps to find the difference in both the Virtual DOM’s
+
+**1. Re-render all the children if parent state has changed.** If the state of a component has changed, then ReactJS re-renders all the child components even if child components are not modified. To prevent the unwanted re-render of the child components we can use shouldComponentUpdate() component life cycle method. This will further help in boosting the performance.
+
+
+**2. Breadth First Search.** ReactJS traverse the tree using BST. Consider the below tree. States of element B and H have changed. So when using BST ReactJS reached element B it will by default re-render the element H. This is the reason to use BST for tree traversal
+
+<img src="BST.jpeg"/>
+
+**3. Reconciliation.** It is the process to determine which parts of the Real DOM need to be updated. It follow below steps:
+
+Two elements of different types will produce different trees.
+
+## The developer can hint at which child elements may be stable across different renders with a key prop.
+
+
 **Virtual DOM is the name React developers gave to their DOM manipulation engine.** Virtual DOM provides a series of Javascript calls that tell the library how to build an in-memory DOM tree and how to update it when data bound to it changes. The central piece of Virtual DOM is its smart diffing algorithm: once the differences in the model have been mapped to the in-memory copy of the DOM, the algorithm finds the minimum number of operations required to update the real DOM. This results in two copies of the in-memory DOM being present during the diffing process.
 
 ## Summing up, updating the browser’s DOM is a three-step process in React.
@@ -129,6 +149,12 @@ You might be wondering that why are we not hitting down the rendering performanc
 Breadth-first search (BFS) is an algorithm for traversing or searching tree or graph data structures. It starts at the tree root (or some arbitrary node of a graph, sometimes referred to as a 'search key'[1]), and explores all of the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level.
 
 It uses the opposite strategy as depth-first search, which instead explores the highest-depth nodes first before being forced to backtrack and expand shallower nodes.
+
+### Batch Update
+
+ReactJS using the diff algorithm to find the minimum number of steps to update the Real DOM. Once it has these steps, it executes all the steps in one event loop without involving the steps to repaint the Real DOM. Thus, if there are more elements which get updated ReactJS will wait for the event loop to finish then, in bulk will updated the real DOM with all the updated elements.
+
+Once all the steps are executed, React will repaint the Real DOM. This means during the event loop, there is exactly one time when the Real DOM is being painted. Thus all the layout process will run only one time for updating the real DOM.
 
 ## Good Sources
 
