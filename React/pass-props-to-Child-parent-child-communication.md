@@ -4,6 +4,8 @@
 
 Also Read my live detailed-comments in code - [https://github.com/rohan-paul/Fetch-Github-Profile/blob/master/simple-version-without-using-redux/src/App.js](https://github.com/rohan-paul/Fetch-Github-Profile/blob/master/simple-version-without-using-redux/src/App.js)
 
+#### And a great live example [https://jsbin.com/tipixiy/edit?js,output](https://jsbin.com/tipixiy/edit?js,output)
+
 # 1> Parent to Child — Use Prop
 
 This is the easiest direction in React to transfer data. If I have access to data in my parent component that I need my child component to have access to, I can pass it as a prop to the child when I instantiate it within the parent.
@@ -41,6 +43,10 @@ class ToDoList extends React.Component {
 }
 ```
 
+## However if the above ToDoList child-component was declared as a ES6-Class component with a constructor -  We had to call super(props) inside the constructor BEFORE BEING ABLE TO use this.props
+
+### The reason why this cannot be allowed before super() is because this is uninitialized if super() is not called. However even if we are not using ``this`` we need a super inside a constructor because ES6 class constructors MUST call super if they are subclasses. Thus, you have to call super() as long as you have a constructor. (But a subclass does not have to have a constructor).
+
 #### Another example of passing data from parent to chile
 
 ```js
@@ -64,16 +70,16 @@ class RecipeList extends Component{
     }
 }
 
-// And then the child - note, 
+// And then Recipe is the child - note,
 
-class Reciepe extends Component{
+class Recipe extends Component{
 
     render(){
 
         const { title, img, instructions } = this.props;
 
         const ingredients=this.props.ingredients.map((ing,index)=>(<li key={index} >{ing}</li>));
-        
+
         return (
             <div className='recipe-card'>
                 <div className='recipe-card-img'> <img src={img} alt={title}/> </div>
