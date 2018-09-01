@@ -46,7 +46,7 @@ class ToDoItem extends React.Component{
 ```
 
 
-## Another Implemented of the above concept in below file -
+## Another Implementation of the above concept in below file -
 
 [https://github.com/rohan-paul/Fetch-Github-Profile/blob/master/simple-version-without-using-redux/src/App.js](https://github.com/rohan-paul/Fetch-Github-Profile/blob/master/simple-version-without-using-redux/src/App.js)
 
