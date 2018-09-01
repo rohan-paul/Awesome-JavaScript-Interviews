@@ -54,7 +54,7 @@ two
 
 ## Calling ``next()`` allows “the buck to NOT stop here”.
 
-# Understanding app.use() middleware - 13-June-2018
+# Understanding app.use() middleware
 
 ## 1> Best Explanation - https://stackoverflow.com/questions/15601703/difference-between-app-use-and-app-get-in-express-js
 

@@ -1,4 +1,4 @@
-## When Node is single-threaded how does it handle concurrency - 10June2017
+## When Node is single-threaded how does it handle concurrency
 
 [The official Doc](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/) has some very good explanation.
 

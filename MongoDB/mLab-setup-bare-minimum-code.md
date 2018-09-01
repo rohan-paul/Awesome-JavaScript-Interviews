@@ -12,7 +12,7 @@ Now under “MongoDB Deployment” I will see the database name >
 
 D> Click on that database > click on User > add database user > and now go ahead and create the root user’s password
 
-## Basic mLab Implementation for a new Project - 15-June-2018
+## Basic mLab Implementation for a new Project
 
 Steps 1 > Set up a completely new mLab account
 

@@ -1,4 +1,4 @@
-## what exactly does the mongoose 'exec' method do? - 13June2018
+## what exactly does the mongoose 'exec' method do?
 
 ### 1> http://mongoosejs.com/docs/api.html#query_Query-exec
 

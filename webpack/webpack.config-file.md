@@ -6,13 +6,15 @@ The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bu
 
 ## Actual Implementation
 
-/home/paul/PAUL/H/Web/R/REDUX/Small-Redux-Post-BootCamp/boilerplate-kind-Redux-Counter-22Jul-2018/simple-redux-app/webpack.config.js
+[https://github.com/rohan-paul/redux-boilerplate-base-counter/blob/master/redux-boilerplate-base-counter-AFTER-EJECTING/webpack.config.js#L8](https://github.com/rohan-paul/redux-boilerplate-base-counter/blob/master/redux-boilerplate-base-counter-AFTER-EJECTING/webpack.config.js#L8)
 
+```js
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   template: path.join(__dirname, '/src/index.html'),
   filename: 'index.html',
   inject: 'body',
 });
+```
 
 ### 2> https://medium.com/a-beginners-guide-for-webpack-2/index-html-using-html-webpack-plugin-85eabdb73474
 
@@ -64,16 +66,16 @@ And the below from ``./config/webpack.config.dev.js``
 Webpack accepts a loader object which specify loader to apply to files that match the test regex and exclude files that match the exclude regex. So, loaders let you run preprocessors on files as they’re imported. This allows you to bundle static resources beyond JavaScript, but let’s look at what can be done when loading .js modules first.  In this below case we’re applying the babel-loader to all files with a .js extension that aren’t in node_modules and are not in bower_components
 
 module: {
-+     rules: [
-+       {
-+         test: /\.js$/,
-+         exclude: /(node_modules|bower_components)/,
-+         use: {
-+           loader: 'babel-loader',
-+         }
-+       }
-+     ]
-+   }
+     rules: [
+       {
+         test: /\.js$/,
+         exclude: /(node_modules|bower_components)/,
+         use: {
+           loader: 'babel-loader',
+         }
+       }
+     ]
+   }
 
 # Transformations like converting ES6 to ES5 with 'babel-loader'
 

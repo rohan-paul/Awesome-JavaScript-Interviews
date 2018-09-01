@@ -1,4 +1,4 @@
-# How Props are passed - 16May2018
+# How Props are passed
 
 ### Basic Theory - https://medium.com/@ruthmpardee/passing-data-between-react-components-103ad82ebd17
 

@@ -1,4 +1,4 @@
-### First time installation on 5-SEP-2017
+### First time installation
 
 1> Best way to install - I directly ran the command as given in Official site -
 
@@ -6,7 +6,7 @@
 
 ``wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh ``
 
-But on 5-Sep-2017 after doing the above, was getting error “heroku command not found” after running ``heroku login`` or ``heroku --version``
+I was getting error “heroku command not found” after running ``heroku login`` or ``heroku --version``
 
 So, from official site [https://devcenter.heroku.com/articles/heroku-cli#download-and-install](https://devcenter.heroku.com/articles/heroku-cli#download-and-install) I installed the CLI by
 
@@ -20,13 +20,13 @@ and ONLY then, running ``heroku -v`` was giving me correct version
 
 ``which heroku`` it will output “/usr/bin/heroku”
 
-### First time Deployment of an app to Heroku - Note for each Heroku account max 5 apps are permitted without adding a Credit Card for Account Verification - Note last updated on 24-Oct-2017
+### First time Deployment of an app to Heroku - Note for each Heroku account max 5 apps are permitted without adding a Credit Card for Account Verification
 
 The most important basic steps for deployment are the follows. All of them to be run from the Project root directory.
 
 ``heroku login`` [ Not needed if I have already logged in ]
 
-``heroku keys:add``  [ Not needed if I have already added an SSH key earlier. Its a single key for multiple projects It will add the existing SSH key from the local Machine to Heroku, I ran this on 5-Sep-2017 ]
+``heroku keys:add``  [ Not needed if I have already added an SSH key earlier. Its a single key for multiple projects It will add the existing SSH key from the local Machine to Heroku ]
 
 ``heroku create``
 
