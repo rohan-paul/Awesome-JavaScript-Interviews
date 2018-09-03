@@ -25,6 +25,16 @@ localStorage.setItem('config', JSON.stringify(config));
 var config = JSON.parse(localStorage.getItem('config'));
 
 ```
+### And now the localForage code for the above
+
+```js
+localForage Code
+// Save our users.
+var users = [ {id: 1, fullName: 'Matt'}, {id: 2, fullName: 'Bob'} ];
+localForage.setItem('users', users, function(result) {
+    console.log(result);
+});
+```
 
 
 ## Issues with localStorage:
@@ -86,3 +96,5 @@ Again, this method can be passed a callback function that will be executed when 
 1> [http://blog.teamtreehouse.com/using-localforage-offline-data-storage](http://blog.teamtreehouse.com/using-localforage-offline-data-storage)
 
 2> [https://hacks.mozilla.org/2014/02/localforage-offline-storage-improved/](https://hacks.mozilla.org/2014/02/localforage-offline-storage-improved/)
+
+3> [My Implemented code with async-await in my To-Do kind of app for checingin/uncheking items before trave](https://github.com/rohan-paul/check-pack-items-before-travel/tree/master/src/lib/api.js)

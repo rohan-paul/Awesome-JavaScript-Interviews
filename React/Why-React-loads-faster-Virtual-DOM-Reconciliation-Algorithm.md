@@ -73,7 +73,7 @@ Updating virtual DOM in ReactJS is faster because ReactJS uses
 
 ## ReactJS uses observable’s to find the modified components. Whenever setState() method is called on any component, ReactJS makes that component dirty and re-renders it.
 
-### Whenever setState() method is called, ReactJS creates the whole Virtual DOM from scratch. Creating a whole tree is very fast so it does not affect the performance. 
+### Whenever setState() method is called, ReactJS creates the whole Virtual DOM from scratch. Creating a whole tree is very fast so it does not affect the performance.
 ### Once you render a JSX element, every single Virtual DOM object gets updated.Compared to updating real DOM objects, the Virtual DOM updates faster. Before updating, a copy of the virtual DOM is made and later compared with the updated Virtual DOM.
 ### So at any given time, ReactJS maintains two virtual DOM, one with the updated state Virtual DOM and other with the previous state Virtual DOM. Then React can figure out which objects have been changed, and this process is called Diffing. Once React knows which objects to update, it updates only those objects in the Real DOM.
 
@@ -168,7 +168,7 @@ Once all the steps are executed, React will repaint the Real DOM. This means dur
 
 
 
-My collection of common JS / React / Node Interview questions, along with answers that I was putting together for myself while preparing for Interviews. Most of them, I was actually asked in real Interviews over the past few months. And very recentely I got my first job as full-stack Developer coming from a completely different educational and career background (Banking) and after completing my Programming Bootcamp from The Hacking School 
+My collection of common JS / React / Node Interview questions, along with answers that I was putting together for myself while preparing for Interviews. Most of them, I was actually asked in real Interviews over the past few months. And very recentely I got my first job as full-stack Developer coming from a completely different educational and career background (Banking) and after completing my Programming Bootcamp from The Hacking School
 
 This github repo, is by no means comprehensive, and for each of the concepts, there are better and more in depth coverage in the web (I have tried to include the sources as much as possible) - But my only aim with this repo is to have a reference tool so that I could continue a technical discussion with the interviewer for two, three or four hours.
 
