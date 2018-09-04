@@ -1,6 +1,7 @@
 <img src="Redux-Thunk.jpeg">
 
-First, the synchronous and pure flow of data through Redux’s components is well-defined with distinct, simple roles. Action creators create objects → objects are dispatched to the store → the store invokes reducers → reducers generate new state → listeners are notified of state updates.
+First, the synchronous and pure flow of data through Redux’s components is well-defined with distinct, simple roles.
+### Action creators create objects → objects are dispatched to the store → the store invokes reducers → reducers generate new state → listeners are notified of state updates.
 
 A thunk is another word for a function. But it’s not just any old function. It’s a special (and uncommon) name for a function that’s returned by another. Like this:
 
@@ -50,7 +51,33 @@ If Redux Thunk middleware is enabled, any time you attempt to dispatch a functio
 
 And then since we “taught” Redux to recognize such “special” action creators (we call them thunk action creators), we can now use them in any place where we would use regular action creators.
 
+### ************************************
 
+[https://medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60](https://medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60)
+
+
+## Redux-Thunk source code has only expanded to fourteen lines total from its birth in 2016
+
+https://github.com/reduxjs/redux-thunk/blob/master/src/index.js
+
+
+```js
+function createThunkMiddleware(extraArgument) {
+  return ({ dispatch, getState }) => next => action => {
+    if (typeof action === 'function') {
+      return action(dispatch, getState, extraArgument);
+    }
+
+    return next(action);
+  };
+}
+
+const thunk = createThunkMiddleware();
+thunk.withExtraArgument = createThunkMiddleware;
+
+export default thunk;
+
+```
 
 ### Other sources to Read
 
