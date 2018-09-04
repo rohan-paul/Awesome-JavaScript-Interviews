@@ -2,9 +2,19 @@
 
 [https://www.w3schools.com/jsref/event_onchange.asp](https://www.w3schools.com/jsref/event_onchange.asp)
 
+The onchange event occurs when the value of an element has been changed.
+
+For radiobuttons and checkboxes, the onchange event occurs when the checked state has been changed.
+
 Execute a JavaScript when a user changes the selected option of a <select> element:
 
-<select onchange="myFunction()">
+``<select onchange="myFunction()">``
+
+Execute a JavaScript when a user changes the content of an input field:
+
+``<input type="text" onchange="myFunction()">``
+
+
 
 ## How to "onchange" in ReactJS
 

@@ -1,4 +1,4 @@
-And container is component , where I am using a Redux state inside of a React component. Because note, while we have the application state in redux store, but here in this component I am again declaring some states.
+And container is a component , where I am using a Redux state inside of a React component. Because note, while we have the application state in redux store, but here in this component I am again declaring some states.
 
 Why Container Component - To separate our data-fetching and rendering concerns. A container does data fetching and then renders its corresponding sub-component.
 

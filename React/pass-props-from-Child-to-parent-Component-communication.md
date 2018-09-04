@@ -67,6 +67,19 @@ So, I pass this callback function to the child-Component SearchProfile as a prop
   So in SearchProfile I do < this.props.fetchProfileBoundFunction(username) >
 
 
+## Even Another Implementation of the above concept in below file -
+
+[https://github.com/rohan-paul/check-pack-items-before-travel/blob/master/src/components/Items.js](https://github.com/rohan-paul/check-pack-items-before-travel/blob/master/src/components/Items.js)
+
+updateSearchTerm() in parent component Items.js - Fundamental explanation why I need it atl - Because, here, my most fundamental need is to change the searchTerm ( the parent state ) to whatever I type. But then, I am updating this searchTerm from the child and passing down 'searchTerm' as a prop from parent to child. And Prop is immutable, so I can not directly change 'searchTerm' in the Filter.js
+So, instead I can give the child a function ( updateSearchTerm() in this file ), that the child can call, and that function can manipulate the state.
+
+SO ITS DATA DOWN ACTIONS UP KIND OF FLOW
+
+## Further example of data passing from child to parent by invoking a CB (defined in parent ) in child and updating state in parent
+
+[https://github.com/rohan-paul/check-pack-items-before-travel/blob/master/src/components/NewItem.js](https://github.com/rohan-paul/check-pack-items-before-travel/blob/master/src/components/NewItem.js)
+
 ## React component communication
 
 https://www.javascriptstuff.com/component-communication/
