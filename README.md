@@ -1,5 +1,3 @@
-<img src="Developer-Interview.jpeg">
-
 <img src="character-animated-2.gif">
 
 # Awesome JavaScript Interviews
