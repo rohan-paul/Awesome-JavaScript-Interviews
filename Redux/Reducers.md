@@ -1,3 +1,7 @@
+### Reducers - Absolute Bas
+
+### Reducer is just                                                             
+
 1> https://redux.js.org/basics/reducers
 
 Reducers specify how the application's state changes in response to actions sent to the store. Remember that actions only describe what happened, but don't describe how the application's state changes.

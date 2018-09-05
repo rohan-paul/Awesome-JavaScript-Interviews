@@ -6,8 +6,52 @@ A list of common questions, along with answers, and some code-snippets that I am
 
 There are many fantastic resources for JavaScript interview questions, videos, and blog posts on the web and that I have drawn from (**the below is one such small list**. I will cite as many as I can throughout so that additional information on each list item can be easily found.
 
+### Algorithms
+- [Big O Cheatsheet](http://bigocheatsheet.com/)
+- :book: [Grokking Algorithms](https://www.goodreads.com/book/show/22847284-grokking-algorithms-an-illustrated-guide-for-programmers-and-other-curio)
+- [Algorithms Visualization](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+- [medium.freecodecamp.org/coding-interviews-for-dummies-5e048933b82b](https://medium.freecodecamp.org/coding-interviews-for-dummies-5e048933b82b)
+- [www.educative.io/collection/page/5642554087309312/5679846214598656/240002](https://www.educative.io/collection/page/5642554087309312/5679846214598656/240002)
+- [www.wikiwand.com/en/Rabin%E2%80%93Karp_algorithm](https://www.wikiwand.com/en/Rabin%E2%80%93Karp_algorithm)
+- [www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/](https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/)
+- [developers/sorting-algorithms](https://www.toptal.com/developers/sorting-algorithms)
+- [tackling-javascript-algorithms-66f1ac9770dc](https://medium.com/@yanganif/tackling-javascript-algorithms-66f1ac9770dc)
+- [sorting-algorithms-in-javascript](https://github.com/benoitvallon/computer-science-in-javascript/tree/master/sorting-algorithms-in-javascript)
 
-**A curated list of general resources for JavaScript Interviews**
+### Soft Skills
+- :book: [Difficult Conversations](https://www.goodreads.com/book/show/774088.Difficult_Conversations)
+- :book: [Crucial Conversations](https://www.goodreads.com/book/show/15014.Crucial_Conversations)
+- :book: [How to Win Friends and Influence People](https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People)
+
+### Where To Look For Further Info
+- [freeCodeCamp Guide](https://guide.freecodecamp.org/)
+- [GeeksForGeeks](https://www.geeksforgeeks.org/)
+- [Dev.To](https://dev.to/)
+- [Stack Overflow](https://stackoverflow.com/)
+- [Dzone](https://dzone.com/)
+
+### Coding Practice Sites :zap:
+- :link: [CodeForces](http://codeforces.com/)
+- :link: [CodeChef](https://www.codechef.com)
+- :link: [Coderbyte](https://coderbyte.com/)
+- :link: [CodinGame](https://www.codingame.com/)
+- :link: [Cs Academy](https://csacademy.com/)
+- :link: [HackerRank](https://hackerrank.com/)
+- :link: [Spoj](https://spoj.com/)
+- :link: [HackerEarth](https://hackerearth.com/)
+- :link: [TopCoder](https://www.topcoder.com/)
+- :link: [Codewars](https://codewars.com/)
+- :link: [Exercism](http://www.exercism.io/)
+- :link: [CodeFights](https://codefights.com/)
+- :link: [Project Euler](https://projecteuler.net/)
+- :link: [LeetCode](https://leetcode.com/)
+- :link: [InterviewBit](https://www.interviewbit.com/)
+- :link: [uCoder](ucoder.com.br)
+- :link: [LintCode](https://www.lintcode.com/)
+- :link: [CodeCombat](https://codecombat.com/)
+
+
+**More curated list of general resources for JavaScript Interviews**
 
 [https://www.thatjsdude.com/interview/js1.html](https://www.thatjsdude.com/interview/js1.html) - JS: Interview Algorithm Part-1
 
