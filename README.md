@@ -1,5 +1,7 @@
 <img src="Developer-Interview.jpeg">
 
+<img src="character-animated-2.gif">
+
 # Awesome JavaScript Interviews
 
 A list of common questions, along with answers, and some code-snippets that I am putting together for myself while preparing for JavaScript interviews. Many of these questions are what I have actually faced in real interview. It is by no means comprehensive, and the answers are relatively short ( and for each of the concepts, there are probably better and/or more in depth coverage in the web), but I see this repo as reference tool, so I can continue a technical talk with the interviewer for two to three hours.
