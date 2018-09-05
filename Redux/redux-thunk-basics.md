@@ -86,4 +86,3 @@ export default thunk;
 
 
 2> [https://medium.com/@gethylgeorge/understanding-how-redux-thunk-works-72de3bdebc50](https://medium.com/@gethylgeorge/understanding-how-redux-thunk-works-72de3bdebc50)
-

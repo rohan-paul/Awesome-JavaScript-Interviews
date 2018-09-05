@@ -1,3 +1,61 @@
+## First some basic Branch related Commands
+
+## General note - After I create and move into a new branch, I have to do ``git add .`` and ``git commit -m "some message"`` for the the changes that I did to that branch to persist.
+
+
+-------------------
+Show branches:
+
+### `git branch`
+
+List or Show all the available branches (both local and remote)
+
+### `git branch -a`
+
+Create branch:
+
+### `git branch branchname`
+
+Change to branch:
+
+### `git checkout branchname`
+
+Create and change to new branch:
+
+### `git checkout -b branchname`
+
+Delete not merged branch:
+
+### `git branch -D branch_to_delete`
+
+
+To push the changes from a a new-branch to remote repo (i.e. to github)
+
+### git push origin name_of_your_new_branch
+
+Update your branch when the original branch from official repository has been updated (applicable when working in teams and many people are committing to a branch)
+
+### git fetch [name_of_your_remote]
+
+
+Delete the branch on github :
+
+### git push origin :[name_of_your_new_branch]
+
+The only difference is the : to say delete, you can do it too by using github interface to remove branch :
+[https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/)
+
+### To Delete a branch
+
+On GitHub, navigate to the main page of the repository.
+
+Branches link on overview pageAbove the list of files, click  NUMBER branches.
+
+delete the branchScroll to the branch that you want to delete, then click the delete icon on the right.
+
+
+### ******************************************************************
+
 ## STEP 1
 
 I make sure I am in the master branch of my team's shared repository & that I have the LATEST VERSION:

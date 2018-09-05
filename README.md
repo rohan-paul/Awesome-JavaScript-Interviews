@@ -1,3 +1,5 @@
+<img src="Developer-Interview.jpeg">
+
 # Awesome JavaScript Interviews
 
 A list of common questions, along with answers, and some code-snippets that I am putting together for myself while preparing for JavaScript interviews. Many of these questions are what I have actually faced in real interview. It is by no means comprehensive, and the answers are relatively short ( and for each of the concepts, there are probably better and/or more in depth coverage in the web), but I see this repo as reference tool, so I can continue a technical talk with the interviewer for two to three hours.
@@ -5,7 +7,7 @@ A list of common questions, along with answers, and some code-snippets that I am
 There are many fantastic resources for JavaScript interview questions, videos, and blog posts on the web and that I have drawn from (**the below is one such small list**. I will cite as many as I can throughout so that additional information on each list item can be easily found.
 
 
-**A curated list of resources for JavaScript Interviews**
+**A curated list of general resources for JavaScript Interviews**
 
 [https://www.thatjsdude.com/interview/js1.html](https://www.thatjsdude.com/interview/js1.html) - JS: Interview Algorithm Part-1
 
