@@ -10,18 +10,33 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - [Big O Cheatsheet](http://bigocheatsheet.com/)
 - :book: [Grokking Algorithms](https://www.goodreads.com/book/show/22847284-grokking-algorithms-an-illustrated-guide-for-programmers-and-other-curio)
 - [Algorithms Visualization](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
-- [medium.freecodecamp.org/coding-interviews-for-dummies-5e048933b82b](https://medium.freecodecamp.org/coding-interviews-for-dummies-5e048933b82b)
-- [www.educative.io/collection/page/5642554087309312/5679846214598656/240002](https://www.educative.io/collection/page/5642554087309312/5679846214598656/240002)
-- [www.wikiwand.com/en/Rabin%E2%80%93Karp_algorithm](https://www.wikiwand.com/en/Rabin%E2%80%93Karp_algorithm)
+- [medium.freecodecamp.org/coding-interviews-for-dummies](https://medium.freecodecamp.org/coding-interviews-for-dummies-5e048933b82b)
+- [www.educative.io/collection/page/](https://www.educative.io/collection/page/5642554087309312/5679846214598656/240002)
+- [Karp_algorithm](https://www.wikiwand.com/en/Rabin%E2%80%93Karp_algorithm)
 - [www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/](https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/)
 - [developers/sorting-algorithms](https://www.toptal.com/developers/sorting-algorithms)
 - [tackling-javascript-algorithms-66f1ac9770dc](https://medium.com/@yanganif/tackling-javascript-algorithms-66f1ac9770dc)
 - [sorting-algorithms-in-javascript](https://github.com/benoitvallon/computer-science-in-javascript/tree/master/sorting-algorithms-in-javascript)
+- [/master-the-javascript-interview-soft-skills](https://medium.com/javascript-scene/master-the-javascript-interview-soft-skills-a8a5fb02c466)
+- [the-best-way-to-learn-to-code-is-to-code-learn-app-architecture-by-building-apps](https://medium.com/javascript-scene/the-best-way-to-learn-to-code-is-to-code-learn-app-architecture-by-building-apps-7ec029db6e00)
+- [7-key-steps-to-getting-your-first-software-engineering-job] (https://medium.freecodecamp.org/7-key-steps-to-getting-your-first-software-engineering-job-6ef80543cad9)
+- [5-key-learnings-from-the-post-bootcamp-job-search](https://medium.freecodecamp.org/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331)
+- [how-to-get-your-first-developer-job-in-4-months](https://medium.freecodecamp.org/https-medium-com-samwcoding-how-to-get-your-first-developer-job-in-4-months-ec86da6e5d9a)
+- [how-to-land-your-first-dev-job-even-if-you-don-t-have-a-cs-degree](https://medium.com/swlh/how-to-land-your-first-dev-job-even-if-you-don-t-have-a-cs-degree-e83d08db4615)
+- [how-to-land-a-top-notch-tech-job-as-a-student](https://medium.freecodecamp.org/how-to-land-a-top-notch-tech-job-as-a-student-5c97fec82f3d)
+- [unlocking-the-javascript-code-interview-an-interviewer-perspective](https://medium.com/appsflyer/unlocking-the-javascript-code-interview-an-interviewer-perspective-f4fe06246b29)
+- [get-that-job-at-google.html](https://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html)
+- [i-failed-my-effing-coding-interview-ab720c339c8a](https://blog.usejournal.com/i-failed-my-effing-coding-interview-ab720c339c8a)
+- [how-i-landed-a-full-stack-developer-job-without-a-tech-degree-or-work-experience](https://medium.freecodecamp.org/how-i-landed-a-full-stack-developer-job-without-a-tech-degree-or-work-experience-6add97be2051)
+- [here-are-4-best-ways-to-apply-for-software-engineer-jobs-and-exactly-how-to-use-them](https://medium.freecodecamp.org/here-are-4-best-ways-to-apply-for-software-engineer-jobs-and-exactly-how-to-use-them-a644a88b2241)
+- 
+
 
 ### Soft Skills
 - :book: [Difficult Conversations](https://www.goodreads.com/book/show/774088.Difficult_Conversations)
 - :book: [Crucial Conversations](https://www.goodreads.com/book/show/15014.Crucial_Conversations)
 - :book: [How to Win Friends and Influence People](https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People)
+- [/medium.com/javascript-scene/every-developer-needs-a-code-portfolio-cc79c3d92110](https://medium.com/javascript-scene/every-developer-needs-a-code-portfolio-cc79c3d92110)
 
 ### Where To Look For Further Info
 - [freeCodeCamp Guide](https://guide.freecodecamp.org/)
@@ -50,6 +65,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - :link: [LintCode](https://www.lintcode.com/)
 - :link: [CodeCombat](https://codecombat.com/)
 
+## -------------------------------------------------------------------------------
 
 **More curated list of general resources for JavaScript Interviews**
 
