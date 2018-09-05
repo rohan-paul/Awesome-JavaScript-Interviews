@@ -2,7 +2,7 @@
 
 ### Reducer is just a function that takes two arguments A) Action (which is just a plain JS object preferably with type property ) and B) It takes the current state of your application. And then new state of the world comes out as the output of reducers.
 
-### And how the action object is created - by something called Action creator, which is a function and the purpose of which is to create object.
+### And how the action object is created - by something called Action creator, which is a function and the purpose of which is to create objects. So Action Creators creates objects -> Objects goes to Reducers (which is just a function) -> And ultimately what comes out, is the new state which is just an object.
 
 <img src="reducers.svg">
 
@@ -55,7 +55,7 @@ Array parameters are also references. You can’t just `.push()` new items to an
 
 
 
-My collection of common JavaScript / React / Node Interview questions, along with answers that I was putting together for myself while preparing for Interviews. Most of them, I was actually asked in real Interviews over the past few months. And just couple of weeks back got my first job as full-stack Engineer, coming from a completely different educational (MBA) and career background (Banking) and after completing my Programming Bootcamp from The Hacking School 
+My collection of common JavaScript / React / Node Interview questions, along with answers that I was putting together for myself while preparing for Interviews. Most of them, I was actually asked in real Interviews over the past few months. And just couple of weeks back got my first job as full-stack Engineer, coming from a completely different educational (MBA) and career background (Banking) and after completing my Programming Bootcamp from The Hacking School
 
 This github repo, is by no means comprehensive, and for each of the concepts, there are better and more in depth coverage in the web (I have tried to include the sources as much as possible) - But my only aim with this repo is to have a reference tool so that I could continue a technical discussion with the interviewer for two, three or four hours.
 

@@ -6,7 +6,7 @@ A list of common questions, along with answers, and some code-snippets that I am
 
 There are many fantastic resources for JavaScript interview questions, videos, and blog posts on the web and that I have drawn from. I will cite as many as I can throughout so that additional information on each list item can be easily found.
 
-### Understanding the Theory the fundamental of some popular Algorithm questions
+### For Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 - :link: [Big O Cheatsheet](http://bigocheatsheet.com/)
 - :book: [Grokking Algorithms](https://www.goodreads.com/book/show/22847284-grokking-algorithms-an-illustrated-guide-for-programmers-and-other-curio)
 - :link: [Algorithms Visualization](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
