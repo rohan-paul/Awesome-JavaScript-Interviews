@@ -22,7 +22,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 
 
-### Problems-and-solutions of some popular Interview challenges
+### Github Repos with large collections of problems-and-solutions of some popular Interview challenges
 - :link: [Algorithm-in-JavaScript](https://github.com/rohan-paul/Algorithm-in-JavaScript)
 - :link: [Javascript-Challenges](https://github.com/rohan-paul/Javascript-Challenges)
 - :link: [JS-Challenges](https://github.com/rohan-paul/The-Hacking-School-Full-Stack-Bootcamp-Projects/tree/master/JS-Challenges)
@@ -31,7 +31,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 
 
-### Soft Skills overall requirements for getting the first Developer Job
+### Overall multi-factor approach for winning this huge challenge of getting the first Developer Job
 - :book: [Difficult Conversations](https://www.goodreads.com/book/show/774088.Difficult_Conversations)
 - :book: [Crucial Conversations](https://www.goodreads.com/book/show/15014.Crucial_Conversations)
 - :book: [How to Win Friends and Influence People](https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People)
