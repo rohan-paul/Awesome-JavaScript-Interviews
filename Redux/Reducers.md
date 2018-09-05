@@ -53,13 +53,3 @@ Array parameters are also references. You can’t just `.push()` new items to an
 
 ## Reducers shouldn't perform any side effects like API calls or router transitions. These should happen before an action is dispatched.
 
-
-
-My collection of common JavaScript / React / Node Interview questions, along with answers that I was putting together for myself while preparing for Interviews. Most of them, I was actually asked in real Interviews over the past few months. And just couple of weeks back got my first job as full-stack Engineer, coming from a completely different educational (MBA) and career background (Banking) and after completing my Programming Bootcamp from The Hacking School
-
-This github repo, is by no means comprehensive, and for each of the concepts, there are better and more in depth coverage in the web (I have tried to include the sources as much as possible) - But my only aim with this repo is to have a reference tool so that I could continue a technical discussion with the interviewer for two, three or four hours.
-
-https://github.com/rohan-paul/Awesome-JavaScript-Interviews
-
-
-(https://www.thehackingschool.com/)
