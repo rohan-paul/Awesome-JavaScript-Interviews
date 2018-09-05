@@ -51,7 +51,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - :link: [how-to-get-a-tech-job-with-no-previous-work-experience](https://medium.freecodecamp.org/how-to-get-a-tech-job-with-no-previous-work-experience-6d3d7d25e1)
 - :link: [the-hard-thing-about-learning-hard-things](https://medium.freecodecamp.org/the-hard-thing-about-learning-hard-things-168e655ac7f2)
 - :link: [70-job-find-websites-for-developers-other-tech-professionals](https://medium.com/@traversymedia/70-job-find-websites-for-developers-other-tech-professionals-34cdb45518be)
-- :link: [YouTube - 70+ Websites To Find Developer Jobs][https://www.youtube.com/watch?v=xKOPqWWmxEQ]
+- :link: [YouTube - 70+ Websites To Find Developer Jobs](https://www.youtube.com/watch?v=xKOPqWWmxEQ)
 - :link: [YouTube - I'm 47 And Now I Want to be a Programmer](https://www.youtube.com/watch?v=EJDZ2L95Sjo)
 - :link: [YouTube - How To Be A Well-Paid Programmer In 1 Year?](https://www.youtube.com/watch?v=V71Cv7mjgfI)
 
