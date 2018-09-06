@@ -1,6 +1,6 @@
 ### Simple ans to why React app load faster is - its Because of virtual DOM.
 
-The virtual DOM is a tree based on JavaScript objects created with React that resembles a DOM tree. Each time you need to change something in the DOM, React employs a different algorithm that exclusively re-renders the DOM nodes that have changed.
+The virtual DOM is a tree based on JavaScript objects created with React that resembles a DOM tree. Each time you need to change something in the DOM, React employs a different algorithm that exclusively re-renders the DOM nodes that have changed. Meaning, React allows developers to write code as if the entire page is rendered on each change while in the underhood React ONLY renders sub-components that have actually changed.
 
 ### What is DOM rendering
 
