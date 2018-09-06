@@ -32,9 +32,6 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 
 ### Overall multi-factor approach for winning this huge challenge of getting the first Developer Job
-- :book: [Difficult Conversations](https://www.goodreads.com/book/show/774088.Difficult_Conversations)
-- :book: [Crucial Conversations](https://www.goodreads.com/book/show/15014.Crucial_Conversations)
-- :book: [How to Win Friends and Influence People](https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People)
 - :link: [/medium.com/javascript-scene/every-developer-needs-a-code-portfolio-cc79c3d92110](https://medium.com/javascript-scene/every-developer-needs-a-code-portfolio-cc79c3d92110)
 - :link: [/master-the-javascript-interview-soft-skills](https://medium.com/javascript-scene/master-the-javascript-interview-soft-skills-a8a5fb02c466)
 - :link: [the-best-way-to-learn-to-code-is-to-code-learn-app-architecture-by-building-apps](https://medium.com/javascript-scene/the-best-way-to-learn-to-code-is-to-code-learn-app-architecture-by-building-apps-7ec029db6e00)
@@ -58,6 +55,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 ### Some other very very important resources
 - :link: [javascript cheatsheet](http://overapi.com/javascript)
+- :link: [functional-programming-in-js-map-filter-reduce](https://hackernoon.com/functional-programming-in-js-map-filter-reduce-pt-5-308a205fdd5f)
 - :link: [developer.mozilla.org/JavaScript/A_re-introduction_to_JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
 - :link: [developer.mozilla.org/docs/JavaScript/Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 - :book: [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS)

@@ -27,3 +27,5 @@
 13> Describe synthetic events in React. How it is different from Javascript Events.
 
 14> Explain ``this.props.children``
+
+15> 
