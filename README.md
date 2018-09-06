@@ -32,7 +32,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 
 ### Overall multi-factor approach for winning this huge challenge of getting the first Developer Job
-- :link: [/medium.com/javascript-scene/every-developer-needs-a-code-portfolio-cc79c3d92110](https://medium.com/javascript-scene/every-developer-needs-a-code-portfolio-cc79c3d92110)
+- :link: [medium.com/javascript-scene/every-developer-needs-a-code-portfolio](https://medium.com/javascript-scene/every-developer-needs-a-code-portfolio-cc79c3d92110)
 - :link: [/master-the-javascript-interview-soft-skills](https://medium.com/javascript-scene/master-the-javascript-interview-soft-skills-a8a5fb02c466)
 - :link: [the-best-way-to-learn-to-code-is-to-code-learn-app-architecture-by-building-apps](https://medium.com/javascript-scene/the-best-way-to-learn-to-code-is-to-code-learn-app-architecture-by-building-apps-7ec029db6e00)
 - :link: [7-key-steps-to-getting-your-first-software-engineering-job](https://medium.freecodecamp.org/7-key-steps-to-getting-your-first-software-engineering-job-6ef80543cad9)
@@ -42,7 +42,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - :link: [how-to-land-a-top-notch-tech-job-as-a-student](https://medium.freecodecamp.org/how-to-land-a-top-notch-tech-job-as-a-student-5c97fec82f3d)
 - :link: [unlocking-the-javascript-code-interview-an-interviewer-perspective](https://medium.com/appsflyer/unlocking-the-javascript-code-interview-an-interviewer-perspective-f4fe06246b29)
 - :link: [get-that-job-at-google.html](https://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html)
-- :link: [i-failed-my-effing-coding-interview-ab720c339c8a](https://blog.usejournal.com/i-failed-my-effing-coding-interview-ab720c339c8a)
+- :link: [i-failed-my-effing-coding-interview-ab720c339c8a](https://blog.usejournal.com/i-failed-my-effing-coding-interview)
 - :link: [how-i-landed-a-full-stack-developer-job-without-a-tech-degree-or-work-experience](https://medium.freecodecamp.org/how-i-landed-a-full-stack-developer-job-without-a-tech-degree-or-work-experience-6add97be2051)
 - :link: [here-are-4-best-ways-to-apply-for-software-engineer-jobs-and-exactly-how-to-use-them](https://medium.freecodecamp.org/here-are-4-best-ways-to-apply-for-software-engineer-jobs-and-exactly-how-to-use-them-a644a88b2241)
 - :link: [how-to-get-a-tech-job-with-no-previous-work-experience](https://medium.freecodecamp.org/how-to-get-a-tech-job-with-no-previous-work-experience-6d3d7d25e1)
