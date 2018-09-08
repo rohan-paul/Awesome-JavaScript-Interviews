@@ -8,16 +8,16 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 ### For Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 - :link: [Big O Cheatsheet](http://bigocheatsheet.com/)
+- :link: [developers/sorting-algorithms](https://www.toptal.com/developers/sorting-algorithms)
+- :link: [tackling-javascript-algorithms](https://medium.com/@yanganif/tackling-javascript-algorithms-66f1ac9770dc)
+- :link: [sorting-algorithms-in-javascript](https://github.com/benoitvallon/computer-science-in-javascript/tree/master/sorting-algorithms-in-javascript)
+- :link: [Learn-Data_Structure-Algorithm-by-Javascript](https://github.com/Algorithm-archive/Learn-Data_Structure-Algorithm-by-Javascript)
 - :book: [Grokking Algorithms](https://www.goodreads.com/book/show/22847284-grokking-algorithms-an-illustrated-guide-for-programmers-and-other-curio)
 - :link: [Algorithms Visualization](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 - :link: [coding-interviews-for-dummies](https://medium.freecodecamp.org/coding-interviews-for-dummies-5e048933b82b)
 - :link: [educative.io/collection/page/](https://www.educative.io/collection/page/5642554087309312/5679846214598656/240002)
 - :link: [Karp_algorithm](https://www.wikiwand.com/en/Rabin%E2%80%93Karp_algorithm)
 - :link: [www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/](https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/)
-- :link: [developers/sorting-algorithms](https://www.toptal.com/developers/sorting-algorithms)
-- :link: [tackling-javascript-algorithms](https://medium.com/@yanganif/tackling-javascript-algorithms-66f1ac9770dc)
-- :link: [sorting-algorithms-in-javascript](https://github.com/benoitvallon/computer-science-in-javascript/tree/master/sorting-algorithms-in-javascript)
-- :link: [Learn-Data_Structure-Algorithm-by-Javascript](https://github.com/Algorithm-archive/Learn-Data_Structure-Algorithm-by-Javascript)
 - :link: [best javascript-algorithms github repo](https://github.com/trekhleb/javascript-algorithms)
 
 
@@ -31,7 +31,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 
 
-### Overall multi-factor approach for winning this huge challenge a great journey of getting the first Developer Job
+### Overall multi-factor approach for winning this huge challenge and a great journey of getting the first Developer Job
 - :link: [medium.com/javascript-scene/every-developer-needs-a-code-portfolio](https://medium.com/javascript-scene/every-developer-needs-a-code-portfolio-cc79c3d92110)
 - :link: [/master-the-javascript-interview-soft-skills](https://medium.com/javascript-scene/master-the-javascript-interview-soft-skills-a8a5fb02c466)
 - :link: [the-best-way-to-learn-to-code-is-to-code-learn-app-architecture-by-building-apps](https://medium.com/javascript-scene/the-best-way-to-learn-to-code-is-to-code-learn-app-architecture-by-building-apps-7ec029db6e00)
@@ -55,11 +55,12 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 ### Some other very very important resources
 - :link: [javascript cheatsheet](http://overapi.com/javascript)
+- :link: [Super useful es6-cheatsheet](https://github.com/DrkSephy/es6-cheatsheet)
+- :link: [freeCodeCamp Guide](https://guide.freecodecamp.org/)
 - :link: [functional-programming-in-js-map-filter-reduce](https://hackernoon.com/functional-programming-in-js-map-filter-reduce-pt-5-308a205fdd5f)
 - :link: [developer.mozilla.org/JavaScript/A_re-introduction_to_JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
 - :link: [developer.mozilla.org/docs/JavaScript/Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 - :book: [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS)
-- :link: [freeCodeCamp Guide](https://guide.freecodecamp.org/)
 - :link: [GeeksForGeeks](https://www.geeksforgeeks.org/)
 - :link: [Dev.To](https://dev.to/)
 - :link: [Stack Overflow](https://stackoverflow.com/)
