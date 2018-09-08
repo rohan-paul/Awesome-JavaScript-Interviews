@@ -28,4 +28,6 @@
 
 14> Explain ``this.props.children``
 
-15> 
+15> Differentiate controlled and uncontrolled components in React Js?
+
+16> 

@@ -75,7 +75,7 @@ class FourWheelers extends Vehicle {
                 console.log(super.getName() + super.getModel() + "has " + this.noOfSeats + "seats");
           }
  }
- 
+
 /*Creating Child class object*/
 let myCar = new FourWheelers("Audi", "R8", 5);
 myCar.showNoOfSeats();          // Child Class method

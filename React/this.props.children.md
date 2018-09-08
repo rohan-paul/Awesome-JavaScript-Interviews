@@ -4,7 +4,7 @@
 
 ## What are the situations to use the same
 
-You'd do it when you want to include the child elements in the rendered output directly, unchanged; 
+You'd do it when you want to include the child elements in the rendered output directly, unchanged;
 
 The [React docs](https://reactjs.org/docs/composition-vs-inheritance.html) and the simple example - [https://codepen.io/gaearon/pen/ozqNOV](https://codepen.io/gaearon/pen/ozqNOV) say that you can use props.children on components that represent ‘generic boxes’ and that ‘don’t know their children ahead of time’.
 

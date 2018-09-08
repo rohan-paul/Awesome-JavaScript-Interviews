@@ -32,7 +32,7 @@ class ToDoList extends React.Component {
 
 // Now from within ToDoItem (The Child Component) we can pass something to callbackFromParent (the prop that was given the value or assigned the value of the CB function that was defined in the parent ) :
 
-// Chile component
+// Child component
 class ToDoItem extends React.Component{
     someFn = () => {
         // [...somewhere in here I define a variable listInfo which I think will be useful as data in my ToDoList component...]
@@ -51,6 +51,8 @@ class ToDoItem extends React.Component{
 [https://github.com/rohan-paul/Fetch-Github-Profile/blob/master/simple-version-without-using-redux/src/App.js](https://github.com/rohan-paul/Fetch-Github-Profile/blob/master/simple-version-without-using-redux/src/App.js)
 
 ******************
+App.js is Parent and SearchProfile and Profile are the children.
+
 Define a callback in my parent which takes the data I need in as a parameter.
 
 Pass that callback as a prop to the child (see above).
@@ -61,7 +63,7 @@ fetchProfile() is a callback function defined in parent. This takes the data I n
 
 So, I pass this callback function to the child-Component SearchProfile as a prop, with the below line
 
-<SearchProfile fetchProfileBoundFunction={this.fetchProfile.bind(this)}/>
+``<SearchProfile fetchProfileBoundFunction={this.fetchProfile.bind(this)}/>``
 
   Call the callback (fetchProfileBoundFunction) using this.props.[callback] in the child and pass in the data as the argument.
   So in SearchProfile I do < this.props.fetchProfileBoundFunction(username) >
@@ -71,10 +73,89 @@ So, I pass this callback function to the child-Component SearchProfile as a prop
 
 [https://github.com/rohan-paul/check-pack-items-before-travel/blob/master/src/components/Items.js](https://github.com/rohan-paul/check-pack-items-before-travel/blob/master/src/components/Items.js)
 
-updateSearchTerm() in parent component Items.js - Fundamental explanation why I need it atl - Because, here, my most fundamental need is to change the searchTerm ( the parent state ) to whatever I type. But then, I am updating this searchTerm from the child and passing down 'searchTerm' as a prop from parent to child. And Prop is immutable, so I can not directly change 'searchTerm' in the Filter.js
+updateSearchTerm() in parent component Items.js - Fundamental explanation why I need it at all - Because, here, my most fundamental need is to change the searchTerm ( the parent state ) to whatever I type. But then, I am updating this searchTerm from the child and passing down 'searchTerm' as a prop from parent to child. And Prop is immutable, so I can not directly change 'searchTerm' in the Filter.js
 So, instead I can give the child a function ( updateSearchTerm() in this file ), that the child can call, and that function can manipulate the state.
 
-SO ITS DATA DOWN ACTIONS UP KIND OF FLOW
+
+```js
+class Items extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            searchTerm: ''
+          };
+    }
+
+    updateSearchTerm = searchTerm => {
+        this.setState({
+            searchTerm
+        })
+    }
+    /* In above, I am using object destructuring syntax. So the single 'searchTerm' is equivalent to doing < searchTerm: searchTerm >  Which effectively means tha I am telling setState 'Hey take the searchTerm argument of updateSearchTerm() function and set them to be the value of the key-value pair of state (which is an object and both the key and the value is called 'searchTerm' ).
+    */
+
+    render() {
+
+        const { title, items, onRemove, onToggle } = this.props;
+
+        return (
+          <section className="Items">
+            <h2>
+              {title} ({items.length})
+            </h2>
+            <Filter searchTerm={this.state.searchTerm} onChange={this.updateSearchTerm} />
+            {items
+              .filter(item =>
+                item.value.toLowerCase().includes(this.state.searchTerm.toLowerCase()),
+              )
+              .map(item => (
+                <Item
+                  key={item.id}
+                  onToggle={onToggle}
+                  onRemove={() => onRemove(item)}
+                  item={item}
+                />
+              ))}
+          </section>
+        );
+      }
+    }
+```
+
+#### And then in <Filter /> child component, I have the below. SO ITS DATA-DOWN ACTIONS-UP KIND OF FLOW
+
+```js
+class Filter extends Component {
+
+// note onChange and searchTerm were the props that were handed-down from Items.js
+// and so first to access / consume it inside the child I have to do a this.props
+// And because this is a Functional Component without constructor, so I don't need to
+// declare super(props) before using this.props
+// note the onChange() inside handleChange() is NOT an event attribute but the props passed from parent Items.js to
+
+    handleChange = event => {
+
+        const { onChange } = this.props;
+
+        const value = event.target.value;
+        onChange(value)
+    }
+
+    render() {
+
+        const { searchTerm } = this.props;
+
+        return (
+            <input
+                className="Items-searchTerm"
+                value={searchTerm}
+                onChange={this.handleChange}
+                />
+        );
+    }
+}
+```
 
 ## Further example of data passing from child to parent by invoking a CB (defined in parent ) in child and updating state in parent
 
