@@ -1,3 +1,18 @@
+### Redux is a small library. And how small is it. [Its just 5 methods](https://github.com/reduxjs/redux/tree/master/src)
+
+
+### applyMiddleware function()
+
+### bindActionCreators function()
+
+### combineReducers function()
+
+### compose function()
+
+### createStore function()
+
+
+
 ## [Redux architecture revolves around a strict unidirectional data flow.](https://redux.js.org/basics/data-flow)
 
 This means that all data in an application follows the same lifecycle pattern, making the logic of your app more predictable and easier to understand. It also encourages data normalization, so that you don't end up with multiple, independent copies of the same data that are unaware of one another.

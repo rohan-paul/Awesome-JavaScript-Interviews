@@ -27,7 +27,6 @@ class ToDoList extends React.Component {
             </div>
         );
     }
-
 }
 
 // Now from within ToDoItem (The Child Component) we can pass something to callbackFromParent (the prop that was given the value or assigned the value of the CB function that was defined in the parent ) :
@@ -139,6 +138,7 @@ class Filter extends Component {
         const { onChange } = this.props;
 
         const value = event.target.value;
+
         onChange(value)
     }
 
