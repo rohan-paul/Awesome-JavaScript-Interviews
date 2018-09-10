@@ -51,6 +51,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - :link: [YouTube - 70+ Websites To Find Developer Jobs](https://www.youtube.com/watch?v=xKOPqWWmxEQ)
 - :link: [YouTube - I'm 47 And Now I Want to be a Programmer](https://www.youtube.com/watch?v=EJDZ2L95Sjo)
 - :link: [YouTube - How To Be A Well-Paid Programmer In 1 Year?](https://www.youtube.com/watch?v=V71Cv7mjgfI)
+- :link: [the-secret-to-being-a-top-developer-is-building-things-heres-a-list-of-fun-apps-to-build](https://medium.freecodecamp.org/the-secret-to-being-a-top-developer-is-building-things-heres-a-list-of-fun-apps-to-build-aac61ac0736c)
 
 
 ### Some other very very important resources
