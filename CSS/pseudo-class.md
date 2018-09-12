@@ -40,7 +40,7 @@ Note: a:hover MUST come after a:link and a:visited in the CSS definition in orde
 
 [https://www.w3schools.com/css/css_pseudo_classes.asp](https://www.w3schools.com/css/css_pseudo_classes.asp)
 
-#### And the general principle of html and css holds good - One thing to keep in mind is that the order in which children are placed in the tree is important. Children located top to bottom in code are placed left to right in the tree.
+#### And the general principle of html and css holds good - the order in which children are placed in the tree is important. Children located top to bottom in code are placed left to right in the tree.
 
 
 ### Further Reference
