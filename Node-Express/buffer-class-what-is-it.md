@@ -86,6 +86,19 @@ buf1.toString() // 'Buffer rea'
 
 ```
 
+### Some more examples (https://nodejs.org/api/buffer.html#buffer_class_method_buffer_from_string_encoding)
+
+```js
+const buf1 = Buffer.from('this is a tést');
+const buf2 = Buffer.from('7468697320697320612074c3a97374', 'hex');
+
+console.log(buf1.toString());
+// Prints: this is a tést
+console.log(buf2.toString());
+// Prints: this is a tést
+```
+
+
 ## Good References
 
 1> [https://medium.freecodecamp.org/do-you-want-a-better-understanding-of-buffer-in-node-js-check-this-out-2e29de2968e8](https://medium.freecodecamp.org/do-you-want-a-better-understanding-of-buffer-in-node-js-check-this-out-2e29de2968e8)
