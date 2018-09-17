@@ -47,8 +47,40 @@ The list above has some examples for native Node.js objects that are also readab
 Notice that the objects are also closely related. While an HTTP response is a readable stream on the client, it’s a writable stream on the server. This is because in the HTTP case, we basically read from one object (http.IncomingMessage) and write to the other (http.ServerResponse).
 
 
+## [Using fs.createWriteStream()](https://stackabuse.com/writing-to-files-in-node-js/)
+
+
+
+When handling particularly large files, or files that come in chunks, say from a network connection, using streams is preferable to writing files in one go via the above methods that write entire files.
+
+Streams write small amounts of data at a time. While this has the disadvantage of being slower because data is transferred in chunks, it has advantages for RAM performance. Since the whole file is not loaded in memory all at once, RAM usage is lower.
+
+To write to a file using streams, you need to create a new writable stream. You can then write data to the stream at intervals, all at once, or according to data availability from a server or other process, then close the stream for good once all the data packets have been written.
+
+```js
+const fs = require('fs');
+
+const writeStream = fs.createWriteStream('secret.txt');
+
+// write some data with a base64 encoding
+writeStream.write('aef35ghhjdk74hja83ksnfjk888sfsf', 'base64');
+
+// the finish event is emitted when all data has been flushed from the stream
+writeStream.on('finish', () => {
+    console.log('wrote all data to file')
+})
+
+writeStream.end();
+
+```
+
+We created a writable stream, then wrote some data to the stream. We have included a log statement when the "finish" event is emitted, letting us know that all data has been flushed to the underlying system. In this case, that means all data has been written to the file system.
+
+
 ### Further Reading
 
 1> [https://www.sitepoint.com/basics-node-js-streams/](https://www.sitepoint.com/basics-node-js-streams/)
 
 2> [https://medium.freecodecamp.org/node-js-streams-everything-you-need-to-know-c9141306be93](https://medium.freecodecamp.org/node-js-streams-everything-you-need-to-know-c9141306be93)
+
+3>
