@@ -1,6 +1,56 @@
-# Child to Parent — Use a callback and states
+## Passing simple Props from Parent to Child — where the prop is not a function
 
-## For passing from child to parent - pass one callback function from parent to child and then use this passed-down function in the child to send something back to parent.
+Inside the parent component, just do ``<ChildComponent propName={this.props.propName} />`` and then inside the child component just do ``{this.props.propName}``
+
+[Implemented example](https://github.com/rohan-paul/React-snippets/blob/master/Wrapper-Component-Print-Users-Followers-With-Webpack-Setup/src/App.js)
+
+```js
+class App extends React.Component {
+    render () {
+        return (
+            <div>
+                <Profile
+                    name={this.props.profileData.name}
+                    imgURL={this.props.profileData.imgURL}/>
+                <Followers
+                    followerList={this.props.profileData.followerList} />
+            </div>
+        );
+    }
+};
+
+class Profile extends React.Component {
+    render () {
+        return (
+            <div>
+                <h3>{this.props.name}</h3>
+                <img src={this.props.imgURL} />
+            </div>
+        );
+    }
+};
+
+class Followers extends React.Component {
+    render () {
+        var followers = this.props.followerList.map(function(follower, index){
+            return (<li key={index}>{follower}</li>);
+        });
+
+        return (
+            <div>
+                <h5>My followers:</h5>
+                <ul>
+                    {followers}
+                </ul>
+            </div>
+        );
+    }
+};
+```
+
+## Child to Parent — Use a callback and states
+
+### For passing from child to parent - pass one callback function from parent to child and then use this passed-down function in the child to send something back to parent.
 
 Same tutorial - https://medium.com/@ruthmpardee/passing-data-between-react-components-103ad82ebd17
 

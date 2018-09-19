@@ -49,8 +49,6 @@ Notice that the objects are also closely related. While an HTTP response is a re
 
 ## [Using fs.createWriteStream()](https://stackabuse.com/writing-to-files-in-node-js/)
 
-
-
 When handling particularly large files, or files that come in chunks, say from a network connection, using streams is preferable to writing files in one go via the above methods that write entire files.
 
 Streams write small amounts of data at a time. While this has the disadvantage of being slower because data is transferred in chunks, it has advantages for RAM performance. Since the whole file is not loaded in memory all at once, RAM usage is lower.
