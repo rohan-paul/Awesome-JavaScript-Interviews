@@ -17,3 +17,5 @@ git fetch --all
 git reset --hard origin/branch-name
 git pull origin branch-name
 ```
+
+#### IMP POINT - So if I have a particular branch in which I want all the remote repo’s changes to be fetched, I have to run the above command for that particular branch. And just fetching the master branch will not be enough to bring the other branches changes to my local machine.
