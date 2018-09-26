@@ -13,6 +13,7 @@ Instead, you’re defining styled components that possesses their own encapsulat
 
 ```js
 import styled from 'styled-components';
+
 const Title = styled.h1`
   font-size: 1.5em;
   color: purple;
@@ -25,6 +26,8 @@ This might seem like a minor difference, and in fact both syntaxes are very simi
 In other words, we’re getting rid of CSS classes as an intermediary step between the component and its styles. As styled-components co-creator Max Stoiber says:
 
 “The basic idea of styled-components is to enforce best practices by removing the mapping between styles and components.”
+
+
 
 
 ### Another example - say in a file called Landing.js Component in which the <Wrapper /> is a styled-component
@@ -51,7 +54,7 @@ const Wrapper = styled.div`
 
 ```
 
-### Props Over Classes 
+### Props Over Classes
 
 In keeping with this no-classes philosophy, styled-components makes use of props over classes when it comes to customizing the behavior of a component. So instead of:
 
@@ -60,7 +63,7 @@ In keeping with this no-classes philosophy, styled-components makes use of props
 h1.title{
   font-size: 1.5em;
   color: purple;
-  
+
   &.primary{
     color: blue;
   }
