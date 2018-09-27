@@ -1,4 +1,4 @@
-## Fist, What is password hashing?
+## Fist, What is password hashing - its the below kind of transforming.
 
 hash("hello") = 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
 hash("hbllo") = 58756879c05c68dfac9866712fad6a93f8146f337a69afe7dd238f3364946366
@@ -190,5 +190,22 @@ bcrypt.compare = function(s, hash, callback, progressCallback) {
                 });
             });
     };
-    ```
+
+```
+
+### Online bcrypt hashing and de-hashing generator and checker
+
+[https://bcrypt-generator.com/](https://bcrypt-generator.com/)
+
+Just put the rounds (which is the salt length to generate, i.e. the function wheere I am hashing the plain-text password )
+
+``bcrypt.hashSync(plainTextPassword, 10)``  So the number 10 is the rounds in the above online tool
+
+After hashing a plaintext password, for checking I will just put the hashed password from the mongo database - i.e. after running terminal command something like ``db.users.find()`` which will give all the users saved in the mongo database.
+
+So an example is this hashed password - ``$2a$10$m0mq4PYOOvm74Gukml4FN.T0Ntobhzi42T6b5v1WIsJ5aZkVzJz3a``  And then put the round as 10 and I will get ``123`` which was my plaintext password in this case.
+
+
+
+
 
