@@ -18,12 +18,41 @@ create a .env file at the root directory of your application and add the variabl
 ```js
 MONGO_DB=mongodb://localhost:27017/ap-port-login
 ```
-## Finally, add ``.env`` to your ‘.gitignore’ file so that Git ignores it and it never ends up on GitHub. You can add any keys you want to this file.
+
+
+## Most importantly - add ``.env`` to your ‘.gitignore’ file so that Git ignores it and it never ends up on GitHub. You can add any keys you want to this file.
 
 ### Only drawback - I need to put this li ( require('dotenv').config() ) in every single file where I want to use environment variables AND I have to deploy the dotenv to production where I don’t actually need it.
 
+### Then in my config/config.js - where I am initiating the mongodb connection
 
-### Some other examples of the use case of .env file
+```js
+'use strict'
+
+const mongoose = require('mongoose');
+
+module.exports = {
+    'database': process.env.MONGO_DB,
+
+    // connect function to create a mongoDB connection
+    'connectDB' : function () {
+        mongoose.connect(this.database)
+    },
+}
+// on mongo connection open event print a console statement
+mongoose.connection.on('open', function () {
+    console.log('Connected to Database (MongoDB) ');
+})
+
+```
+
+### And in my ./app.js
+
+```js
+config.connectDB()
+```
+
+## Some other examples of the use case of .env file
 
 ```js
 //contents of .env
