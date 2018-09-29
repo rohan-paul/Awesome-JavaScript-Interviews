@@ -103,6 +103,27 @@ Arrays of ObjectId refs works like this. Just call the populate method on the qu
 And like magic, we have created a unified object using 2 schemas, 2 models, and 2 collections. All of the steps are important of course, but the thing that no other site made explicitly clear was that after setting up the ground work, you have to make sure you are pushing _ids into the field you will need populated later.
 
 
+### Another implementation
+
+Let’s pretend we’re building a social app, and we have two models: a User and a Post:
+
+```js
+var UserSchema = {
+  _id: String,
+  username: String
+};
+
+var PostSchema = {
+  _id: String,
+  user: {
+    ref: 'User',
+    type: String
+  }
+  
+```
+
+If you run this query: ``Post.find({}).populate('user').exec(callback)``, Mongoose will look at the field user in the post, see that it has a ref to the User model, and find that user by its _id 
+
 
 ### Sources to read
 
