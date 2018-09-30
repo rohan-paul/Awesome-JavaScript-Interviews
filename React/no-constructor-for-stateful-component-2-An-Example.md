@@ -2,6 +2,8 @@
 
 #### An use-case  The below parent component (FetchWeather) only fetches the weather and update the state with the fetched data. Andthen the passes that state down as props to the child RenderWeather component.
 
+This code is slight modification from the code in [https://github.com/Kennypee/Weather-Scanner](https://github.com/Kennypee/Weather-Scanner) - that just fetches the weather and renders it.
+
 ```js
 import React from "react";
 import RenderWeather from "./components/RenderWeather";
