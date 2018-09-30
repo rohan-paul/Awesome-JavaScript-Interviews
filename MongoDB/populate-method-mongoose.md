@@ -119,10 +119,10 @@ var PostSchema = {
     ref: 'User',
     type: String
   }
-  
+
 ```
 
-If you run this query: ``Post.find({}).populate('user').exec(callback)``, Mongoose will look at the field user in the post, see that it has a ref to the User model, and find that user by its _id 
+If you run this query: ``Post.find({}).populate('user').exec(callback)``, Mongoose will look at the field user in the post, see that it has a ref to the User model, and find that user by its _id
 
 
 ### Sources to read
