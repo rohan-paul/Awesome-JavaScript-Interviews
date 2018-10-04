@@ -1,6 +1,6 @@
 ## 1> What are Thunks?
 
-The precise definition of a “thunk” varies across contexts. Generally though, thunks are a functional programming technique used to delay computation. Instead of performing some work now, you produce a function body or unevaluated expression (the “thunk”) which can optionally be used to perform the work later. Compare:
+Thunks are a functional programming technique used to delay computation. Instead of performing some work now, you produce a function body or unevaluated expression (the “thunk”) which can optionally be used to perform the work later. Compare:
 
 ```js
 // Eager version
@@ -39,7 +39,6 @@ In React / Redux, thunks enable us to avoid directly causing side effects in our
 
 
 https://medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60
-
 
 
 

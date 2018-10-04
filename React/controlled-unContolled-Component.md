@@ -32,6 +32,8 @@ class ControlledForm extends Component {
 }
 ```
 
+#### A user types into the input box → onChange is triggered invoking the updateUsername function. → the state of our component is set to a new value → React re-renders the virtual DOM → React Diffs the change → Real DOM is updated.
+
 An uncontrolled component is where your form data is handled by the DOM, instead of inside your React component.
 
 You use refs to accomplish this.
