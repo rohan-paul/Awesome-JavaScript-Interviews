@@ -35,7 +35,7 @@ And running ``db.users.find().pretty()`` gives me the below result in terminal
 
 ```
 
-### Now to add a new document (i.e. record ) into this users collection run the below in terminal
+### Now use ``db.users.insert`` to add a new document (i.e. record ) into this users collection run the below in terminal
 
 ```
 db.users.insert(

@@ -30,4 +30,4 @@
 
 15> Differentiate controlled and uncontrolled components in React Js?
 
-16> 
+16> How to optimize React component to render it less often? (using shouldComponentUpdate to determine if any relevant data changed)
