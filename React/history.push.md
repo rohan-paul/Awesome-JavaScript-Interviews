@@ -1,6 +1,8 @@
- ### this.props.history.push("/")
+### this.props.history.push("/")
 
- [Official Doc](https://reacttraining.com/react-router/core/api/history)
+[Official Doc](https://reacttraining.com/react-router/core/api/history)
+
+### Effectively this is the most common way to implement ``redirect`` after a successful form submission.
 
 
 ### Use case in my [MERN book library repo](https://github.com/rohan-paul/MERN-book-library/blob/master/src/components/Create.js)
@@ -35,4 +37,20 @@ handleClick(e) {
     e.preventDefault()
     this.props.history.push('/redirected');
   }
+```
+
+#### Another implementation - Here, in the onSubmit method, I submit an axios.post which will hit the back-end to upload new data to the mongo database. And after that, I want the page to be redirected to the '/dashboard' page.
+
+```js
+onSubmit = (e) => { 
+  e.preventDefault();
+  const { date, time, tideHeightInMeters } = this.state;
+  axios.post('/api/tidal', { date, time, tideHeightInMeters })
+  this.props.history.push('/dashboard');
+}
+```
+And then inside the return statement, I will have the below line (the oft-repeated pattern in all form submission)
+
+```js
+<form onSubmit={this.onSubmit}>
 ```
