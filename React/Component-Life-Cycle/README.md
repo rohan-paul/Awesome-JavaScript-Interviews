@@ -65,3 +65,5 @@ Now coming to the life cycle events that triggered when the component receives n
 2. "State updates" refer to the current instance only (eg `this.setState`).
 
 ![react component's life cycle events](http://i.imgur.com/3LkFtGd.png)
+
+<img src="component-life-cycle.jpeg">
