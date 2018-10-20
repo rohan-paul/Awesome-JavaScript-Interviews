@@ -36,7 +36,6 @@ The function ``fs.createWriteStream()`` creates a writable stream in a very simp
 
 ## Comparison with multer
 
-
 Some developers opine that Multer is easier because it abstracts away some of the details of Busboy.
 
 ### Difference between busboy and connect-busboy

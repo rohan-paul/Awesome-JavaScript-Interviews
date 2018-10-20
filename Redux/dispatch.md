@@ -1,6 +1,6 @@
 https://redux.js.org/api-reference/store#dispatch
 
-dispatch() is one of the 4 methods of redux-store. dispatch() is the method used to dispatch actions and trigger state changes to the store. react-redux is simply trying to give you convenient access to it.
+dispatch() is one of the 4 methods of redux-store. dispatch() is the method used to dispatch actions and trigger state changes to the store. ``react-redux`` is simply trying to give you convenient access to it.
 
 ```
 ​getState()​

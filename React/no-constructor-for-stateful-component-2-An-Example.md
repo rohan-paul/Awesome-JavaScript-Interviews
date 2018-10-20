@@ -99,3 +99,6 @@ class RenderWeather extends React.Component{
 
 export default RenderWeather;
 ```
+
+### Further Reading
+https://www.robinwieruch.de/react-state-without-constructor/?fbclid=IwAR2tELzjRnsNxovZ43PL6GjunhUPZ6kSac46S1ypj5ltspEIiJbOt-Vs1GA

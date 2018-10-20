@@ -37,6 +37,8 @@ app.use('/api/tidal', tidalRoutes);
 
 ```
 
+#### In the above ``app.use`` line very importantly remember the first slash ('/') - because without it the slash will not be put after localhost:3000 and I will get a 404 respnse.
+
 #### And finally, in the project root .routes/tidalRoutes.js I will have the detailed CRUD functions for this data model
 
 ```js
