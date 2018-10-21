@@ -30,11 +30,13 @@ This means that all data in an application follows the same lifecycle pattern, m
 
 ## An example of How data and state flows in Redux
 
-Basically in React the `setState()` method is the initial and final step for changing the state and re-rendering the component. But with Redux this state changing will have to go through 5 / 6 different steps before state change can happen. Here's an example
+Basically in React the `setState()` method is the initial and final step for changing the state and re-rendering the component. But with Redux this state changing will have to go through 5 / 6 different steps before state change can happen. Here's an example. All these because in Redux all the application's state lives in one immutable state-tree called store. That store is at the fundamental level is a simple javascript object. And the reason its called **immutable** is because one does not simply modify the state tree. What we do is, we distribute action. **State is read-only**: The state cannot be changed directly by the view or any other process (maybe as a result of network callback or some other event). In order to change the state, you must express your intent by emitting an action. An action is a plain object describing your intent, and it contains a type property and some other data. Actions can be logged and later replayed which makes it good for debugging and testing purpose.
 
 ### 1> User types in an input box.
 
-### 2> That calls an action-creator to get a well-formed action.
+### 2> That calls an action-creator to get a well-formed action. Action-Creator is just a function and creates an object.
+
+Object goes to the reducer, which in turn is just a function that takes an object. And what comes out of it is also just an object.
 
 ### 3> The action then is dispatched to Redux - Redux then inserts that action to a Root-reducer.
 
@@ -43,3 +45,19 @@ Basically in React the `setState()` method is the initial and final step for cha
 ### 5> That reducer returns a new state and given the old state and the action object, the new state becomes the stored state.
 
 ### 6> That store then is fed-back into React and calls forth the final updated state.
+
+Again I’ll walk through a simple example to show how a user input could trigger a state change that is reflected by a different part of the screen.
+
+The user clicks a button in the app and a component prop is called like a function.
+
+The corresponding container dispatches an action. This happens because the prop (which was just called in the container) is tied to an action dispatcher using mapDispatchToProps (in the container).
+
+A reducer ‘hears’ that action and runs a function which returns a new state with specific modifications.
+
+The container ‘knows’ that state has changed and modifies a specific prop in the component as a result of the mapStateToProps function.
+
+The component now has a prop that has officially changed due to a new state being generated, so if that prop is responsible for any any visible UI, the user will see it change automatically.
+
+#### Further Reading
+
+[https://medium.com/@holtkam2/react-redux-understanding-the-data-flow-fd700b6bd56f](https://medium.com/@holtkam2/react-redux-understanding-the-data-flow-fd700b6bd56f)
