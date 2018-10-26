@@ -1,6 +1,6 @@
 https://redux.js.org/api-reference/store#dispatch
 
-dispatch() is one of the 4 methods of redux-store. dispatch() is the method used to dispatch actions and trigger state changes to the store. ``react-redux`` is simply trying to give you convenient access to it.
+dispatch() is one of the 4 methods of redux-store. dispatch() is the method used to dispatch actions and trigger state changes to the store. `react-redux` is simply trying to give you convenient access to it. So the way we take `actions` to the `store` is `dispatch`
 
 ```
 ​getState()​
@@ -11,6 +11,7 @@ dispatch() is one of the 4 methods of redux-store. dispatch() is the method used
 
 ​replaceReducer(nextReducer)​
 ```
+
 ## dispatch(action)​
 
 Dispatches an action. This is the only way to trigger a state change.
@@ -24,9 +25,10 @@ Returns
 (Object): The dispatched action (see notes).
 
 ## Object serialization
+
 Object serialization is the process of converting an object’s state to a string from which it can later be restored. ECMAScript 5 provides native functions JSON.stringify() and JSON.parse() to serialize and restore JavaScript objects. These functions use the JSON data interchange format.
 
-## My working example - ../brad-mern-shopping-list/client/src/actions/itemActions.js
+## My working example - ../brad-mern-shopping-list-Redux-No-Edit-Functionality/client/src/actions/itemActions.js
 
 ```js
 import axios from 'axios';
@@ -51,8 +53,8 @@ export const setItemsLoading = item => {
         type: ITEMS_LOADING
     }
 }
-
 ```
+
 I am using dispatch() to send the type along with the data that we get from the axios request to the backend. The main function (addItem) dispatches another function ( setItemsLoading ). This second function is called a thunk, and it returns the object/action. In the context of redux-thunk, a thunk is a second function that performs delayed logic by being asynchronously returned by a first function.
 
 This double function strategy allows us to wait for an asynchronous operation (like fetching data) to complete, and then the action is returned by the thunk.
