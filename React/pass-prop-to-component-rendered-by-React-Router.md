@@ -1,3 +1,5 @@
+### Component rendering inside Router
+
 #### If you need to pass a prop to a component being rendered by React Router, instead of using Routes component prop, use its render prop passing it an inline function then pass along the arguments to the element you’re creating.
 
 Post

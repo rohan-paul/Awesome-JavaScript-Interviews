@@ -47,7 +47,7 @@ class ToDoList extends React.Component {
 
 ### The reason why this cannot be allowed before super() is because this is uninitialized if super() is not called. However even if we are not using ``this`` we need a super inside a constructor because ES6 class constructors MUST call super if they are subclasses. Thus, you have to call super() as long as you have a constructor. (But a subclass does not have to have a constructor).
 
-#### Another example of passing data from parent to chile
+#### Another example of passing data from parent to child
 
 ```js
 
