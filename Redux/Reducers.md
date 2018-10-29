@@ -1,6 +1,8 @@
 ### Reducers - Absolute Basic
 
-### Reducer is just a function that takes two arguments A) Action (which is just a plain JS object preferably with type property ) and B) It takes the current state of your application. And then new state of the world comes out as the output of reducers.
+### Reducer is just a function that takes two arguments A) Action (which is just a plain JS object preferably with type property ) and
+
+### B) It takes the current state of your application. And then new state of the world comes out as the output of reducers.
 
 ### And how the action object is created - by something called Action creator, which is a function and the purpose of which is to create objects. So Action Creators creates objects -> Objects goes to Reducers (which is just a function) -> And ultimately what comes out, is the new state which is just an object.
 

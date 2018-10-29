@@ -1,4 +1,4 @@
-https://redux.js.org/api-reference/store#dispatch
+<https://redux.js.org/api-reference/store#dispatch>
 
 dispatch() is one of the 4 methods of redux-store. dispatch() is the method used to dispatch actions and trigger state changes to the store. `react-redux` is simply trying to give you convenient access to it. So the way we take `actions` to the `store` is `dispatch`
 
@@ -22,7 +22,7 @@ Arguments
 action (Object): A plain object describing the change that makes sense for your application. Actions are the only way to get data into the store, so any data, whether from the UI events, network callbacks, or other sources such as WebSockets needs to eventually be dispatched as actions. Actions must have a type field that indicates the type of action being performed. Types can be defined as constants and imported from another module. It's better to use strings for type than Symbols because strings are serializable. Other than type, the structure of an action object is really up to you.
 
 Returns
-(Object): The dispatched action (see notes).
+(Object): The dispatched action.
 
 ## Object serialization
 

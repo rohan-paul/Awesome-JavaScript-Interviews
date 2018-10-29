@@ -15,3 +15,7 @@ Its usage is quite rare as react-redux will do the job
 ### Generally for most use cases, when you want to dispatch an action from your component, you should first connect it with the store and use the connect method of react-redux
 
 The purpose of `mapDispatchToProps` and `bindActionCreators` is to wrap up action creator functions inside of new functions, so they automatically dispatch as soon as they're called (and your component doesn't even need to know about dispatch). That's what your first example does.
+
+[From Redux documentation](https://github.com/reduxjs/redux/blob/master/src/bindActionCreators.js)
+
+Turns an object whose values are action creators, into an object with the same keys, but with every function wrapped into a `dispatch` call so they may be invoked directly. This is just a convenience method, as you can call `store.dispatch(MyActionCreators.doSomething())` yourself just fine.
