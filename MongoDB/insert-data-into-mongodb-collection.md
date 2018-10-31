@@ -37,11 +37,11 @@ And running `db.users.find().pretty()` gives me the below result in terminal
 
 ```
 db.users.insert(
-{
-"username" : "p@gmail.com",
-"password" : "$2a$10$HyXCD5.4U/0CvZHq9SDQ0uxD12BQ46yVAHu18lRRVEQZB3uyHXgy.",
-"__v" : 0
-}
+    {
+        "username" : "p@gmail.com",
+        "password" : "$2a$10$HyXCD5.4U/0CvZHq9SDQ0uxD12BQ46yVAHu18lRRVEQZB3uyHXgy.",
+        "__v" : 0
+    }
 )
 ```
 
@@ -50,3 +50,11 @@ db.users.insert(
 And the part "$2a$10$HyXCD5.4U/0CvZHq9SDQ0uxD12BQ46yVAHu18lRRVEQZB3uyHXgy." is what I generated a hashed version of a plaintext password using the online tool [https://bcrypt-generator.com/](https://bcrypt-generator.com/) . Because in my actual app (where this was implemented) I used bcrypt to hash the password.
 
 But I could very well used "123" in the mongo shell.
+
+db.users.insert(
+{
+"name" : "paul",
+"key_contact" : "$2a$10$HyXCD5.4U/0CvZHq9SDQ0uxD12BQ46yVAHu18lRRVEQZB3uyHXgy.",
+"\_\_v" : 0
+}
+)
