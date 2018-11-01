@@ -78,7 +78,7 @@ function getUserWithPosts(username) {
 }
 ```
 
-.populate() needs a query to attach itself to, so we are using User.findOne() to find a user who matches the username we provide in the argument. This returns our user document. This is when .populate() takes over.
+`.populate()` needs a query to attach itself to, so we are using User.findOne() to find a user who matches the username we provide in the argument. This returns our user document. This is when .populate() takes over.
 
 #### You’ll notice I am providing ‘posts’ to our .populate(). By providing the ‘posts’ argument, we’ve told .populate() what property in our user document we want it to work with. Calling .exec() just executes something once .populate() has done it’s thing. The log prints this:
 
