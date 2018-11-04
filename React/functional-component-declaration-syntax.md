@@ -63,3 +63,15 @@ const ProtectedRoutes = ({ component: Component, authenticated, ...rest }) => {
 Then importing it to another component like below
 
 `import { ProtectedRoutes } from "./ProtectedRoutes";`
+
+#### ES6 doesn't allow export default const. You must declare the constant first then export it:
+
+```js
+const Header = () => {
+  return <pre>Header</pre>;
+};
+
+export default Header;
+```
+
+This constraint exists to avoid writting export default a, b, c; that is forbidden: only one variable can be exported as default

@@ -46,3 +46,6 @@ function Greeting({ greeting }) {
   return <h1>{greeting}</h1>;
 }
 ```
+
+### Resources
+1> [https://hackernoon.com/understanding-the-destructuring-assignment-syntax-in-javascript-c3bf8e1e908a](https://hackernoon.com/understanding-the-destructuring-assignment-syntax-in-javascript-c3bf8e1e908a)
