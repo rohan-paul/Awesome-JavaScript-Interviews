@@ -110,6 +110,8 @@ So in SearchProfile I do < this.props.fetchProfileBoundFunction(username) >
 updateSearchTerm() in parent component Items.js - Fundamental explanation why I need it at all - Because, here, my most fundamental need is to change the searchTerm ( the parent state ) to whatever I type. But then, I am updating this searchTerm from the child and passing down 'searchTerm' as a prop from parent to child. And Prop is immutable, so I can not directly change 'searchTerm' in the Filter.js
 So, instead I can give the child a function ( updateSearchTerm() in this file ), that the child can call, and that function can manipulate the state.
 
+// parent component
+
 ```js
 class Items extends Component {
   constructor(props) {
@@ -161,25 +163,35 @@ class Items extends Component {
 
 #### And then in <Filter /> child component, I have the below. SO ITS DATA-DOWN ACTIONS-UP KIND OF FLOW
 
+#### The flow of data passing from child to parent is as below
+
+### A> onChange() is passed from parent to child.
+
+### B> event.target.value is triggerd in the Child whenever the user types something in the input field.
+
+### C> This event.target.value is captured in the 'value' variable and passed as the argument to onChange() - the function that was passed from parent to child. And onChange() is also invoked as soon as user starts typing something in the input filed.
+
+### C> And now 'updateSearchTerm' is executed in parent as well > setState() executed > and parent's state gets changed.
+
+// child component
+
 ```js
 class Filter extends Component {
   // note onChange and searchTerm were the props that were handed-down from Items.js
   // and so first to access / consume it inside the child I have to do a this.props
   // And because this is a Functional Component without constructor, so I don't need to
   // declare super(props) before using this.props
-  // note the onChange() inside handleChange() is NOT an event attribute but the props passed from parent Items.js to
+  // the onChange() inside handleChange() is NOT an 'onChange' event attribute but the props passed from parent Items.js to Filter.js
+  // but the onChange inside return() within the <input/> element is the onChange event attribute.
 
   handleChange = event => {
     const { onChange } = this.props;
-
     const value = event.target.value;
-
     onChange(value);
   };
 
   render() {
     const { searchTerm } = this.props;
-
     return (
       <input
         className="Items-searchTerm"
@@ -191,7 +203,7 @@ class Filter extends Component {
 }
 ```
 
-### Reading
+### Sources / Reading
 
 #### 1> Example of data passing from child to parent by invoking a CB (defined in parent ) in child and updating state in parent
 
