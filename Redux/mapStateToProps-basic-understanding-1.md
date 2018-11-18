@@ -1,3 +1,5 @@
+All `mapStateToProps()` does is, it takes a piece from the App's single state-tree i.e. the **store** and turn this into a component prop, so I can use it in this current component as a regular prop.
+
 Let’s see a basic example: you have two components, `DisplayHello` and `DisplayQuestion`. They both need to access the same info, the **nickname** of our user. The basic way (without using `redux` and `mapStateToProps` ) to do that is to propagate props from the root of your app (which maintains a state) as below:
 
 ```js
