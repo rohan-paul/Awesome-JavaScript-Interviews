@@ -15,9 +15,9 @@
 ``git commit -m "Add new feature."``
 
 
-#### The --squash option will squash all of your intermediate changes into one big change. When he pushes his changes, it will appear to the other developers as if his changes were one giant commit.
+#### The --squash option will squash all of your intermediate changes into one big change. So, it will appear to the other developers as if his changes coming from the dev branch were one giant commit.
 
-This will merge in the way that target branch would include only its own commits + merge commit and not include the commits from the second branch?
+This will merge in the way that target branch would include only its own commits + merge commit and not include the commits from the second branch 
 
 [https://stackoverflow.com/questions/14824431/git-merge-without-including-commits-from-one-branch-to-another](https://stackoverflow.com/questions/14824431/git-merge-without-including-commits-from-one-branch-to-another)
 

@@ -1,6 +1,7 @@
 <img src="Redux-Thunk.jpeg">
 
-First, the synchronous and pure flow of data through Redux’s components is well-defined with distinct, simple roles.
+### First, the synchronous and pure flow of data through Redux’s components is well-defined with distinct, simple roles. Which is as below ->
+
 ### Action creators create objects → objects are dispatched to the store → the store invokes reducers → reducers generate new state → listeners are notified of state updates.
 
 A thunk is another word for a function. But it’s not just any old function. It’s a special (and uncommon) name for a function that’s returned by another. Like this:
@@ -9,11 +10,12 @@ A thunk is another word for a function. But it’s not just any old function. It
 function not_a_thunk() {
   // this one is a "thunk" because it defers work for later:
   return function() {
-    console.log('do stuff now');
+    console.log("do stuff now");
   };
 }
 ```
-If I want to execute the “do stuff now” part, you have to call it like ``not_a_thunk()()`` – calling it twice, basically.
+
+If I want to execute the “do stuff now” part, you have to call it like `not_a_thunk()()` – calling it twice, basically.
 
 At its heart, though, Redux is really simple. Actions are just objects – and they are expected to only be objects. They look like this:
 
@@ -29,8 +31,8 @@ And, since it’s kind of annoying to build objects by hand all the time, Redux 
 ```js
 function userLoggedIn() {
   return {
-    type: 'USER_LOGGED_IN',
-    username: 'dave'
+    type: "USER_LOGGED_IN",
+    username: "dave"
   };
 }
 ```
@@ -39,7 +41,7 @@ Same action, but now you can “create” it by calling the userLoggedIn functio
 
 Isn’t it kind of funny that Redux’s so-called “actions” don’t actually do anything? They’re just objects. Boring and simple and inert.
 
-### *****************************
+### **************\***************
 
 Redux Thunk teaches Redux to recognize special kinds of actions that are in fact functions.
 
@@ -51,20 +53,18 @@ If Redux Thunk middleware is enabled, any time you attempt to dispatch a functio
 
 And then since we “taught” Redux to recognize such “special” action creators (we call them thunk action creators), we can now use them in any place where we would use regular action creators.
 
-### ************************************
+### ****************\*\*\*\*****************
 
 [https://medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60](https://medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60)
-
 
 ## Redux-Thunk source code has only expanded to fourteen lines total from its birth in 2016
 
 https://github.com/reduxjs/redux-thunk/blob/master/src/index.js
 
-
 ```js
 function createThunkMiddleware(extraArgument) {
   return ({ dispatch, getState }) => next => action => {
-    if (typeof action === 'function') {
+    if (typeof action === "function") {
       return action(dispatch, getState, extraArgument);
     }
 
@@ -76,13 +76,11 @@ const thunk = createThunkMiddleware();
 thunk.withExtraArgument = createThunkMiddleware;
 
 export default thunk;
-
 ```
 
 ### Other sources to Read
 
 1> This is the recommended one by thunk's own github page
 [https://stackoverflow.com/questions/35411423/how-to-dispatch-a-redux-action-with-a-timeout/35415559#35415559](https://stackoverflow.com/questions/35411423/how-to-dispatch-a-redux-action-with-a-timeout/35415559#35415559)
-
 
 2> [https://medium.com/@gethylgeorge/understanding-how-redux-thunk-works-72de3bdebc50](https://medium.com/@gethylgeorge/understanding-how-redux-thunk-works-72de3bdebc50)

@@ -38,20 +38,21 @@ Update your branch when the original branch from official repository has been up
 ### git fetch [name_of_your_remote]
 
 
-Delete the branch on github :
+### Delete the branch on github :
 
-### git push origin :[name_of_your_new_branch]
+#### I have to delete it by going to Github and deleting the branch there manually.
 
-The only difference is the : to say delete, you can do it too by using github interface to remove branch :
 [https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/)
-
-### To Delete a branch
 
 On GitHub, navigate to the main page of the repository.
 
 Branches link on overview pageAbove the list of files, click  NUMBER branches.
 
 delete the branchScroll to the branch that you want to delete, then click the delete icon on the right.
+
+### Delete a branch in BitBucket
+
+Nevigate to [https://bitbucket.org/volteo/frontend-portal/branches/](https://bitbucket.org/volteo/frontend-portal/branches/) and then on the right horizontal three-dots select Delete.
 
 
 ### ******************************************************************
