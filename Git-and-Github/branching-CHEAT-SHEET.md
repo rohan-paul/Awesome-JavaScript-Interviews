@@ -29,6 +29,9 @@ Delete not merged branch:
 ### `git branch -D branch_to_delete`
 
 
+### `git branch -m <new-name>` renames the current branch to ‘new-name’
+
+
 To push the changes from a a new-branch to remote repo (i.e. to github)
 
 ### git push origin name_of_your_new_branch
