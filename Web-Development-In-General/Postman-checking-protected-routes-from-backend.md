@@ -4,7 +4,7 @@ So, I have this  "/createtide", route that only Logged-in users (having a valid 
 
 But I also want to check that no unauthorized persons are able to submit any new data from Postman backend as well (i.e. who knows only the API), for which I have my Passport.authenticate middleware codes in each of the protected roues in the backend to protect these from the backend.
 
-#### In this specific case this was my auth architecture - 
+#### In this specific App this is my flow of the authentication architecture from back to front-end - 
 
 First say, I have simple mongo schema like below for Tide model
 
@@ -97,7 +97,21 @@ router.post("/login", function(req, res) {
 module.exports = router;
 ```
 
-B> and while creating a new protected resources > I am checking if the same token is being passed to the server from the front-end.
+B> Then in my Redux Actions creator file (tidalActions.js) - I send the token information as part of axios.post request from front to back end. This is only for those routes , which needs to check back this token in the backend as well before performing the required actions (like create, edit, delete)
+
+```js
+export const createTide = newTide => async dispatch => {
+  const res = await axios.post("/api/tidal/createtide", newTide, {
+    headers: {
+      Authorization: JSON.parse(localStorage.getItem("user"))["token"]
+    }
+  });
+  dispatch({ type: CREATE_TIDE, payload: res.data });
+};
+```
+#### Remember, unless I specifically send this headers information to the backend along with the axios.post request, in the backend there will be NO req.headers information. I can check that by doing a console.log(req.headers) inside the backend routing code. and will get null.
+
+C> and while creating a new protected resources in the backend (like creating a new Tide ) > I am checking if the same token is being passed to the server from the front-end.
 
 getToken = function(headers) {
  if (headers && headers.authorization) {
