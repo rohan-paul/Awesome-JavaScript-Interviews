@@ -28,7 +28,7 @@ A signal is an asynchronous notification sent to a process or to a specific thre
 
 Signal events will be emitted when the NodeJS process receives a signal.
 
-Each signal have name(i.e. 'SIGINT', 'SIGTERM', etc.), more about that in NodeJS here.
+Each signal have name(i.e. 'SIGINT', 'SIGTERM', etc.).
 
 #### 'SIGINT' generated with <Ctrl>+C in the terminal.
 
@@ -40,53 +40,56 @@ You can read more about Termination Signals [here](https://www.gnu.org/software/
 
 As you guess we need to add handler which will receive 'SIGTERM' signal.
 
-
 ### Here we have a simple server which has a route that creates user in MongoDB. And the code of graceful shutdown
 
 ```js
-mongoose.connect('mongodb://localhost/test', (err) => {
-  if (err) throw err;
-  console.log('Mongoose connected!');
-});
-const User = mongoose.model('User', { name: String });
+mongoose.connect(
+  "mongodb://localhost/test",
+  err => {
+    if (err) throw err;
+    console.log("Mongoose connected!");
+  }
+);
+const User = mongoose.model("User", { name: String });
 
-app.post('/user', async (req, res) => {
+app.post("/user", async (req, res) => {
   try {
     const user = new User({ name: req.body.username });
     await user.save();
-    res.send('Success!').status(201);
+    res.send("Success!").status(201);
   } catch (err) {
     res.send(err.message).status(500);
   }
 });
 
-const server = app.listen(3000, () => console.log('Example app listening on port 3000!'));
+const server = app.listen(3000, () =>
+  console.log("Example app listening on port 3000!")
+);
 
-process.on('SIGTERM', () => {
-  console.info('SIGTERM signal received.');
-  console.log('Closing http server.');
+process.on("SIGTERM", () => {
+  console.info("SIGTERM signal received.");
+  console.log("Closing http server.");
   server.close(() => {
-    console.log('Http server closed.');
+    console.log("Http server closed.");
     // boolean means [force], see in mongoose doc
     mongoose.connection.close(false, () => {
-      console.log('MongoDb connection closed.');
+      console.log("MongoDb connection closed.");
       process.exit(0);
     });
   });
 });
-
 ```
 
 ## 2. Stop new requests from client
 
 Now we need to stop http server and stop accepting new requests.
-It can be done using ``server.close`` function
+It can be done using `server.close` function
 
 ## 3. Close all data process
 
-As you have seen our application exits close database connection.
+As you have seen our application exits ( generated with 'SIGTERM' event ) will also close database connection.
 
-What is the cause? -EventLoop
+What is the cause? - EventLoop
 
 As we know NodeJS will exit when EventLoop queue is empty and nothing left to do.
 
@@ -96,14 +99,71 @@ We need to exit from process using process.exit function.
 Argument 0 means exit with a “success” code.
 To exit with a “failure” code use 1.
 
-To get this exit code after shutdown run this command in terminal where you run your node server i seen logs
-
-echo $?
-
 By default NodeJS exits with process code 0 if EventLoop is empty.
 
+### Second Implementation
 
+My config.js file as below
 
+```js
+const mongoose = require("mongoose");
+
+module.exports = {
+  database: process.env.MONGO_DB,
+
+  options: {
+    reconnectTries: Number.MAX_VALUE, // Never stop trying to reconnect
+    reconnectInterval: 1000, // Reconnect every 500ms
+    poolSize: 10 // Maintain up to 10 socket connections
+  },
+
+  // Connect connection with MongoDB Database
+  connectDB: function() {
+    mongoose.connect(
+      this.database,
+      this.options
+    );
+  },
+
+  // Disconnect connection with MongoDB Database
+  disconnectDB: function() {
+    mongoose.disconnect(this.database);
+  }
+};
+// on mongo connection open event print a console statement
+mongoose.connection.on("open", function() {
+  console.log("Connected to Database (MongoDB) ");
+});
+
+// on mongo connection error event
+mongoose.connection.on("error", function() {
+  console.log("error in Database (MongoDB) connections");
+});
+
+// on mongo connection disconnected event
+mongoose.connection.on("disconnected", () => {
+  console.log("Mongoose default connection disconnected");
+});
+
+//listen for SIGINT event(generated with <Ctrl>+C in the terminal) and close db connection on that event
+process.on("SIGINT", () => {
+  mongoose.connection.close(() => {
+    console.log("Mongoose disconnected through app termination");
+    process.exit(0);
+  });
+});
+```
+
+And then my main server.js / index.js file will have this small graceful shutdown code. Where I will listen for `SIGINT` event(generated with <Ctrl>+C in the terminal) and close db connection on that event
+
+```js
+const config = require("./config/config");
+
+process.on("SIGINT", () => {
+  config.disconnectDB();
+  process.exit(0);
+});
+```
 
 ### Reference
 
