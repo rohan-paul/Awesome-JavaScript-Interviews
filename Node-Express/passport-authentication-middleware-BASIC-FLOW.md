@@ -8,6 +8,8 @@ Passport is a framework, and a Node.js middleware, that is extremely flexible an
 
 #### Now when any protected-client route makes a request, this token needs to be present in the header ("Authorization: JWT eyJ0eXAiO...") on all subsequent requests, that for all subsequent requst to a protected-route, which needs authentication. Passwort-jwt in the backend for that specific protected-route, checks this auth header and verifies it's validity. If it is invalid, it returns a 401, otherwise it populate your req.user.
 
+### Note, the token is generated with jsonwebtoken and using jwt.sign() function in the auth.js backend route or controller. And this token is saved in the localStroge in the frontend in Login.js file in React, i.e. the file that creates a POST request to the backend's auth.js's login route ('/login')
+
 ## The actual implementation steps - How passport validation work-flow works (passport-jwt strategy and jsonwebtoken)
 
 **1> passport.js** works with the concept of strategies. They basically are a middleware function that a requests runs through before getting to the actual route. If your defined authentication strategy fails, which means that the callback will be called with an error that is not null or false as the second argument, the route will not be called, but a 401 Unauthorized response will be sent.
