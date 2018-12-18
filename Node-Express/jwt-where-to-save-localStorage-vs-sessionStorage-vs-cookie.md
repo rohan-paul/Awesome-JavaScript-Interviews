@@ -22,7 +22,7 @@ res.json({
 });
 ```
 
-And the way this token is saved in the localStroge in the frontend is within Login.js file in React, i.e. the file that creates a POST request to the backend's auth.js's login route ('/login') like below
+And the way this token is saved in the localStroge in the frontend is within my Login.js react component (or similar file in whatever frontend technology I am using) file in React, i.e. the file that creates a POST request to the backend's auth.js's login route ('/login') like below
 
 ```js
 axios.post("/api/auth/login", { username, password }).then(result => {
