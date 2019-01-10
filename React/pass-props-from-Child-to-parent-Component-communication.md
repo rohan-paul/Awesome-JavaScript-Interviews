@@ -203,7 +203,7 @@ class Filter extends Component {
 }
 ```
 
-### Sources / Reading
+### Further Sources / Reading
 
 #### 1> Example of data passing from child to parent by invoking a CB (defined in parent ) in child and updating state in parent
 
