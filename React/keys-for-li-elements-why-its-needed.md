@@ -104,6 +104,8 @@ const FruitList = (props) => {
 
 ### 1St Reason for not using array-index - Performance - React will re-render elements whose content has changed for a specific key. React also re-renders elements whose key has changed for a specific element’s contents, even if the content hasn’t changed. These two cases are indistinguishable from React’s point of view. The below is an example of this creating performance issues in certain cases when using array-index as keys.
 
+#### React can’t tell with a simple equality check wheather to re-render or not, because every time a JSX element is created, that’s a brand new object, unequal to the old one. So that’s where the key prop comes in. React can look at the key and know that, yes, even though this <Item> is not strictly === to the old <Item>, it actually is the same because the keys are the same.
+
 Let’s look at how React will render this list of users when using the index as a key.
 
 const users = [
@@ -248,6 +250,8 @@ Any key that you are going to use should be —
 #### 2> Stable — The key for the same element should not change with time, or page refresh, or re-ordering of elements.
 
 #### 3> Predictable — You can always get the same key again if you want. That is, the key should not be generated randomly.
+
+#### 4> Permanent – An item’s key must not change between re-renders, unless that item is different. So, Math.random is a bad choice for a key (it’ll change every time… and it might not be unique (slim chance of that, though))
 
 **Array indexes are unique, and predictable. However, they are not stable**. In the same vein, random numbers or timestamps should not be used as keys.
 
