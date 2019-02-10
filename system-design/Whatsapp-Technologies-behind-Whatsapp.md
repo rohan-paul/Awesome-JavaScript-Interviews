@@ -15,6 +15,16 @@ Additionally, Whatsapp uses **HTML5 WebSockets** which communication technology 
 
 Mnesia DB handles the heavy-duty task of database management. Mnesia is a multiuser distributed DBMS which also happens to be the default DB of ERLANG. Mnesia helps achieve quicker request responses, thereby improving the overall efficiency.
 
+### What speciality is required from the chosen database for chat app
+
+Message is going to be very write heavy. Unlike photos, videos etc which are written once and consumed a lot of times by lot of clients, message are written once and consumed by the participants once. For the write heavy system with a lot of data, RDBMS usually do not perform well as every write is not just an append to a table but also an updates to the multiple indices which might required locking and hence might interfere with reads and other writes. However, there are NoSQL databases like HBase, cassandra where writes are cheaper.
+
+With NoSQL, we need to store data in denormalized form. Every user would have his/her own copy of message box. That means we will store two copies of the message, one for each participant for every message send for 1:1 conversation.
+
+To increase the efficiency we can use Caching. This is however not as easy as it seems as one of our feature is to ensure high consistency. Most distributed caching system are good with availability and eventually consistent., but not tight consistent.
+
+For messaging service, every bytes waste has very real impact on the experience of application. By sending less data and reducing HTTPS fetches, messaging service receives updates with low latency and high reliability.
+
 ### Backend / API
 
 Erlang is the primary programming language of WhatsApp, much appreciated for the performance reasons. Its major advantages are speed and scalability. And it allows updating the code on the fly.
