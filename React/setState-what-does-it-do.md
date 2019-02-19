@@ -8,3 +8,7 @@ The first thing React will do when setState is called is merge the object you pa
 Whenever setState() method is called, ReactJS creates the whole Virtual DOM from scratch. Creating a whole tree is very fast so it does not affect the performance. At any given time, ReactJS maintains two virtual DOM, one with the updated state Virtual DOM and other with the previous state Virtual DOM.
 
 ReactJS using diff algorithm compares both the Virtual DOM to find the minimum number of steps to update the Real DOM.
+
+I wouldn't worry too much about calling renders excessively until you have determined you have a performance problem. 
+
+#### Rendering (in the React context) and committing the virtual DOM updates to the real DOM are different matters. The rendering here is referring to generating virtual DOMs, and not about updating the browser DOM. React may batch the setState calls and update the browser DOM with the final new state.
