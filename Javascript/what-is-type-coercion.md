@@ -6,27 +6,27 @@ For example, consider the following statement.
 
 ```javascript
 // returns true
-1 == true
+1 == true;
 ```
 
-With double equals, 1 is coerce into being a boolean which results in true == true or a true statement. That was a simple example with double equals, but type coercion can be used in a number of useful ways.
+With double equals, 1 is coerced into being a boolean which results in true == true or a true statement. That was a simple example with double equals, but type coercion can be used in a number of useful ways.
 
 For example.
 
 ```javascript
-var a = 'hello'
-var b = 99
+var a = "hello";
+var b = 99;
 
 // logs the string 'hello99'
 // in this case the number 99 is coerced into a string
-console.log(a + b)
+console.log(a + b);
 
 // another examples
-var object = 'apple'
+var object = "apple";
 
 // object is coerced into true, so we log a statement
 if (object) {
-  console.log('I have an ' + object)
+  console.log("I have an " + object);
 }
 ```
 
@@ -34,7 +34,7 @@ This can also get you into trouble. Consider the following.
 
 ```javascript
 // I have an array, I may not know how long it is
-var a = [0, 1, 2, 3]
+var a = [0, 1, 2, 3];
 
 // I want to say if there is something at index 0 of the array a then do something
 // But a[0] is actually the number 0 when coerced is false

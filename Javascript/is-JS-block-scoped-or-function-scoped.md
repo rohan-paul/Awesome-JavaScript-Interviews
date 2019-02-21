@@ -1,52 +1,47 @@
 # Is JavaScript block-scoped or function scoped?
 
-## Javascript is function scoped when using ``var``.
+## Javascript is function scoped when using `var`.
 
-## But JS is block scope (with the use of ES6 ``let`` and ``const``)
+## But JS is block scope (with the use of ES6 `let` and `const`)
 
 ## What is block-scoped?
 
 ### Block-scoped exists when a declared variable inside a block of code (usually enclosed between curly brackets) is only visible/accessible within that block of code.
 
-Consider the following, where JS is function-scoped
+Consider the following, where JS is **function-scoped**
 
 ```javascript
 var testFunc = function() {
   // printed it defined in the "for loop" block
   for (var n = 0; n < 10; n++) {
-    var printed = n
+    var printed = n;
   }
   // logging printed outside of block
-  console.log(printed)
-}
+  console.log(printed);
+};
 
 // logs 9 - printed is available outside of block
-testFunc()
+testFunc();
 ```
+
 But that does not mean, that I can access a variable that has been declared within the function, out of the function in the global space. This is because this most fundamental principle of JavaScript - each new function creates a local scope. Variables created in the global scope can be accessed in the local scope. But variables created in the local scope cannot be referenced in the global scope.
 
 ```js
 var testFunc = function() {
-    // printed it defined in the "for loop" block
-    for (var n = 0; n < 10; n++) {
-      var printed = n
-      var someVariable = 'I am available'
-    }
-    // logging printed outside of block
-    console.log(printed)
+  // printed it defined in the "for loop" block
+  for (var n = 0; n < 10; n++) {
+    var printed = n;
+    var someVariable = "I am available";
   }
+  // logging printed outside of block
+  console.log(printed);
+};
 
-  // logs 9 - printed is available outside of block
-  testFunc()
+// logs 9 - printed is available outside of block
+testFunc();
 
-console.log(someVariable)
-
+console.log(someVariable);
 ```
-
-
-
-
-
 
 ### The below example where Javascript is block scoped.
 
@@ -57,41 +52,46 @@ var testFunc = function() {
   // var is defined in the this for loop block
   for (var n = 0; n < 10; n++) {
     // notice use of let
-    let printed = n
+    let printed = n;
   }
   // logging printed outside of block
-  console.log(printed)
-}
+  console.log(printed);
+};
 // logs printed is not defined
-testFunc()
+testFunc();
 ```
+
 Similarly
+
 ```javascript
 var testFunc = function() {
   // var is defined in the this for loop block
   for (var n = 0; n < 10; n++) {
-    var printed = 1
+    var printed = 1;
   }
   // logging printed outside of block
-  console.log(printed)
-}
+  console.log(printed);
+};
 // logs 1
-testFunc()
+testFunc();
 ```
+
 And
+
 ```javascript
 var testFunc = function() {
   // var is defined in the this for loop block
   for (var n = 0; n < 10; n++) {
     // notice use of const
-    const printed = 1
+    const printed = 1;
   }
   // logging printed outside of block
-  console.log(printed)
-}
+  console.log(printed);
+};
 // logs printed is not defined
-testFunc()
+testFunc();
 ```
+
 So Javascript also has block scoping.
 
 A nice video on this - https://www.youtube.com/watch?v=q8SHaDQdul0&list=PLRqwX-V7Uu6YgpA3Oht-7B4NBQwFVe3pr
