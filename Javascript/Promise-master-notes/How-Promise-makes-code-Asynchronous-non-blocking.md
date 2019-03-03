@@ -1,6 +1,6 @@
-# Understanding how Promise makes code Asynchronous / non-blocking by understanding how Fetch API works
+### Understanding how Promise makes code Asynchronous / non-blocking by understanding how Fetch API works
 
-## Key Point - With the .then() method, we can chain our ASYNCHRONOUS calls in a SYNCHRONOUS manner. So, within the Promise block, I am converting few Asynchronous operations to Synchronous ones.
+#### Key Point - With the .then() method, we can chain our ASYNCHRONOUS calls in a SYNCHRONOUS manner. So, within the Promise block, I am converting few Asynchronous operations to Synchronous ones.
 
 ## And during that time when those Synchronous operations are getting executed, whatever is after the chain of methods inside the Promise-related block, gets executed normally without being blocked or having to wait for them, while I wait for some execution ( e.g. waiting for response from an API) to happen within the Promise’s block of codes.
 

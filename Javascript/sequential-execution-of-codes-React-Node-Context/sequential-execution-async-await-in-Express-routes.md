@@ -1,4 +1,4 @@
-### Use case (Sequential Execuetion with plain callback function and async-await) - Here in the below EDIT / PUT route - From Client side req.body, I am sending a JSON data which along with other info has a 'date' field. I had to format that 'date' from req.body (to "YYYY-MM-DD") with moment, before running findByIdAndUpdate(). Else mongoose was saving the date one day prior to what I was selecting in the DatePicker, and then subsequent API call for that date's data (after the EDIT) will NOT give me the correct edited data.
+### Use case (Sequential Execution with plain callback function and async-await) - Here in the below EDIT / PUT route - From Client side req.body, I am sending a JSON data which along with other info has a 'date' field. I had to format that 'date' from req.body (to "YYYY-MM-DD") with moment, before running findByIdAndUpdate(). Else mongoose was saving the date one day prior to what I was selecting in the DatePicker, and then subsequent API call for that date's data (after the EDIT) will NOT give me the correct edited data.
 
 ### NOTE - The code is working EVEN WITHOUT async-await. But including async-await seems to be better for safely achieving the result.
 
@@ -15,7 +15,9 @@
 }
 ```
 
-### The acutal route code in Express backend
+### The actual route code in Express backend
+
+#### Alternative - 1 - With a wrapper function which will invoke a callback()
 
 ```js
 router.put("/:id", (req, res, next) => {
@@ -45,7 +47,7 @@ router.put("/:id", (req, res, next) => {
 });
 ```
 
-#### Alternative - 1 for the above EDIT (PUT) route function (with an extra database call ) - this code was working
+#### Alternative - 2 for the above EDIT (PUT) route function (with an extra database call ) - this code was working
 
 ```js
 router.put("/:id", (req, res, next) => {
