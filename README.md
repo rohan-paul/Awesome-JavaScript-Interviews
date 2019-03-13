@@ -23,6 +23,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 
 ### Github Repositories with large collections of problems-and-solutions of some popular Interview challenges
+- :link: [Algorithms-Leetcode-Javascript](https://github.com/ignacio-chiazzo/Algorithms-Leetcode-Javascript)
 - :link: [Algorithm-in-JavaScript](https://github.com/rohan-paul/Algorithm-in-JavaScript)
 - :link: [Javascript-Challenges](https://github.com/rohan-paul/Javascript-Challenges)
 - :link: [JS-Challenges](https://github.com/rohan-paul/The-Hacking-School-Full-Stack-Bootcamp-Projects/tree/master/JS-Challenges)
