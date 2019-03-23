@@ -1,5 +1,7 @@
 #### A promise is an object that wraps an asynchronous operation and notifies when it’s done. This sounds exactly like callbacks, but the important differences are in the usage of Promises. Instead of providing a callback, a promise has its own methods (.then) which you call to tell the promise what will happen when it is successful or when it fails. The methods a promise provides are “then(…)” for when a successful result is available and “catch(…)” for when something went wrong.
 
+In other words, **When we call a Promise function, the result from the successful path will show up in the .then(), while the error scenario will show up in the .catch()**
+
 #### It takes 2 arguments and both are callback functions. The first one is for the fullfilment case and the socond one is for the rejection case.
 
 #### Promise in JS means, just as the word meaning, i.e. its not the value itself, but its the promise of a value.
@@ -9,19 +11,15 @@
 Promises provide a simpler alternative for executing, composing, and managing asynchronous operations when compared to traditional callback-based approaches. They also allow you to handle asynchronous errors using approaches that are similar to synchronous try/catch.
 Promise is basically just an object with 2 functions. A) A function named then() whcih is called anytime the promise is successful, and B) catch() function, which is called anytime something bad has happened.
 
-### All promise instances get a then method which allows you to react to the promise.  The first then method callback receives the result given to it by the resolve() call: The then method on the promise object adds handlers for the resolved and rejected states. This function returns another promise object to allow for promise-pipelining, enabling the developer to chain together async operations where the result of the first operation will get passed to the second.
-
+### All promise instances get a then method which allows you to react to the promise. The first then method callback receives the result given to it by the resolve() call: The then method on the promise object adds handlers for the resolved and rejected states. This function returns another promise object to allow for promise-pipelining, enabling the developer to chain together async operations where the result of the first operation will get passed to the second.
 
 Promises have a then method, which you can use to get the eventual return value (fulfillment) or thrown exception (rejection).
 
 ```js
-promiseMeSomething()
-    .then(function (value) {
-  }, function (reason) {
-});
+promiseMeSomething().then(function(value) {}, function(reason) {});
 ```
 
-``then(resolvedHandler, rejectedHandler); ``
+`then(resolvedHandler, rejectedHandler);`
 
 If promiseMeSomething returns a promise (remember that 'then' method returns a promise) that gets fulfilled later with a return value, the first function (the fulfillment handler) will be called with the value. However, if the promiseMeSomething function gets rejected later by a thrown exception, the second function (the rejection handler) will be called with the exception.
 
@@ -29,18 +27,16 @@ Note that resolution of a promise is always asynchronous: that is, the fulfillme
 
 ```js
 new Promise(function(resolve, reject) {
-	// A mock async action using setTimeout
-	setTimeout(() => resolve(10), 1000);
-})
-.then((result) => {
-	console.log(result);
+  // A mock async action using setTimeout
+  setTimeout(() => resolve(10), 1000);
+}).then(result => {
+  console.log(result);
 });
 
 // Outputs 10 after 1000 ms
-
 ```
 
-### The then callback is triggered when the promise is resolved.  You can also chain then method callbacks:
+### The then callback is triggered when the promise is resolved. You can also chain then method callbacks:
 
 ```js
 new Promise(function(resolve, reject) {
@@ -66,19 +62,21 @@ Second then: 20
 Third then: 40
 
 ```
+
 ### Each then receives the result of the previous then's return value. If a promise has already resolved but then is called again, the callback immediately fires. If the promise is rejected and you call then after rejection, the callback is never called.
 
 If you return a value, the next "then" is called with that value. However, if you return something promise-like, the next "then" waits on it, and is only called when that promise settles (succeeds/fails)
 
 ```js
-fetchData().
-    then(prepareDataForCsv).
-    then(writeToCsv).
-    then(function () {
-    console.log('your csv has been saved');
-}).catch(function (error) {
-    console.log('something went wrong', error);
-});
+fetchData()
+  .then(prepareDataForCsv)
+  .then(writeToCsv)
+  .then(function() {
+    console.log("your csv has been saved");
+  })
+  .catch(function(error) {
+    console.log("something went wrong", error);
+  });
 ```
 
 ## Because of how the chaining of promises and errors work, as discussed earlier, it means that just one catch at the end of the chain is guaranteed to catch any errors thrown along the way. This makes error handling really straight forward.
@@ -93,7 +91,7 @@ A> http://farzicoder.com/Callback-Hell-Promises-generators-Async-Await-in-Node-j
 
 https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261
 
-Because ``.then()`` always returns a new promise, it’s possible to chain promises with precise control over how and where errors are handled. Promises allow you to mimic normal synchronous code’s try/catch behavior.
+Because `.then()` always returns a new promise, it’s possible to chain promises with precise control over how and where errors are handled. Promises allow you to mimic normal synchronous code’s try/catch behavior.
 
 Like synchronous code, chaining will result in a sequence that runs in serial. In other words, you can do:
 
