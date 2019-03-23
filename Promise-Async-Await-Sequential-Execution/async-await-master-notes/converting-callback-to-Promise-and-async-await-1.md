@@ -76,7 +76,7 @@ Converting to a Promise-based function is actually pretty simple. Look at the be
 
 <img src="convert-callback-to-promise-async-await-1.png">
 
-First, we remove the callback argument. Then we add the code to return a new Promise from our Promise-based function. The error callback becomes a reject, while the "happy path" callback becomes a resolve.
+First, we remove the callback argument. Then we add the code to return a new Promise from our Promise-based function. The error callback becomes a reject, while the "happy path" callback becomes a resolve. Promise returning functions should never throw, they should return rejections instead. Throwing from a promise returning function will force you to use both a } catch { and a .catch. People using promisified APIs do not expect promises to throw.
 
 Remember, Promise expects a single function as an argument. That function takes 2 arguments (both are callbacks), a resolve function and a reject function.
 
@@ -151,3 +151,5 @@ Note that async functions all return Promises, so when you use return you are ju
 1> https://benmccormick.org/2015/12/30/es6-patterns-converting-callbacks-to-promises
 
 2> https://dev.to/ccleary00/how-to-rewrite-a-callback-function-in-promise-form-and-asyncawait-form-in-javascript-410e
+
+3> https://medium.com/front-end-weekly/callbacks-promises-and-async-await-ad4756e01d90
