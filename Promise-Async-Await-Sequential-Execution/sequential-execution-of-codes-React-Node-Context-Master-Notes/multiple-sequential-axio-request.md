@@ -14,7 +14,7 @@ I can use async and await
   }
 ```
 
-A very importnat use case of this is, when restting password. Before resetting the password, I have to make sure, that the unique-link sent to the user is  valid (Not expired and the same that was sent to him) - So, for this, in the same password-reset function, I have to first make an axios call to an API endpoint, which will validate that the link sent to the user is valid. And only if this API call returns a valid respoonse, I will fire the second API call to the endpoint to actually reset the password.
+A very important use case of this is, when resetting password. Before resetting the password, I have to make sure, that the unique-link sent to the user is valid (Not expired and the same that was sent to him) - So, for this, in the same password-reset function, I have to first make an axios call to an API endpoint, which will validate that the link sent to the user is valid. And only if this API call returns a valid respoonse, I will fire the second API call to the endpoint to actually reset the password.
 
 Extract from a PasswordReset Component production grade project below
 

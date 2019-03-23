@@ -12,6 +12,9 @@ async function asyncF() {
     return 'TEST';
 }
 ```
+
+**Any async function returns a promise implicitly, and the resolve value of the promise will be whatever you return from the function**
+
 ## Async - declares an asynchronous function (async function someName(){...}).
 
 - Automatically transforms a regular function into a Promise.
@@ -22,12 +25,12 @@ async function asyncF() {
 
 - When placed in front of a Promise call, await forces the rest of the code to wait until that Promise finishes and returns a result.
 - This will pause the async function and wait for the Promise to resolve prior to moving on.
-- Await works only with Promises, it does not work with callbacks.
+- **Await works only with Promises, it does not work with callbacks.**
 - Await can only be used inside async functions.
 
 ## Thumb Rules
 
-- await blocks the code execution within the async function, of which it(await statement) is a part.
+- await blocks the code execution within the async function, of which it (i.e. the 'await' statement) is a part.
 
 - There can be multiple await statements within a single async function.
 
@@ -61,8 +64,6 @@ async function f(){
 
 In most previous examples, we assumed that the promises resolve successfully. Hence, await-ing on a promise returned a value. If a promise we await for fails, this will result in an exception within the async function. We can use standard try/catch to handle it, we just need to wrap our await calls like this:
 
-
-
 ```
 async function doSomethingAsync(){
     try {
@@ -76,6 +77,7 @@ async function doSomethingAsync(){
 ```
 
 **Async function without a try/catch block.**
+
 ```
 async function doSomethingAsync(){
     // This async call may fail.
