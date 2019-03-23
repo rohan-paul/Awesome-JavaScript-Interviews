@@ -103,7 +103,7 @@ function getUserWithPosts(username) {
 
 And like magic, we have created a unified object using 2 schemas, 2 models, and 2 collections. All of the steps are important of course, but the thing that no other site made explicitly clear was that after setting up the ground work, you have to make sure you are pushing \_ids into the field you will need populated later.
 
-### Another implementation
+### 2nd Implementation
 
 Let’s pretend we’re building a social app, and we have two models: a User and a Post:
 
@@ -123,6 +123,76 @@ var PostSchema = {
 
 If you run this query: `Post.find({}).populate('user').exec(callback)`, Mongoose will look at the field user in the post, see that it has a ref to the User model, and find that user by its \_id
 
+### 3rd Implementation in my DevBook Repo
+
+In Profile model, I have the the 'user' property as ObjectId like below,
+
+```js
+const ProfileSchema = new Schema({
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'users'
+  },
+  handle: {
+    type: String,
+    required: true,
+    max: 40
+  },
+  ---
+  ---
+  });
+
+module.exports = Profile = mongoose.model('profile', ProfileSchema);
+```
+
+And in my Profile routes I have the following API endpoint
+
+```js
+router.get(
+  '/',
+  passport.authenticate('jwt', { session: false }),
+  (req, res) => {
+    const errors = {}; // just like in user route, I want to append to the errors object for any actual errors that will be generated. And returning that object for the error case
+
+    Profile.findOne({ user: req.user.id })
+      .populate('user', ['name', 'avatar'])
+      .then(profile => {
+        if (!profile) {
+          errors.noprofile = 'There is not profile for this user';
+          return res.status(404).json(errors);
+        }
+        res.json(profile);
+      })
+      .catch(err => res.status(404).json(err));
+  }
+)
+```
+In the  above A) I am populating my user's profile using the query builder. http://mongoosejs.com/docs/populate.html#population
+
+B) The first parameter of .populate() is the model you wish to use for population. If not specified, populate will look up the model by the name in the Schema's 'ref' field.
+http://mongoosejs.com/docs/api.html#query_Query-populate
+
+C) The second parameter to .populate() is the Field selection for the population query. So here, I only wanted to show the name and avatar of the current logged-in user. So, I pass, ['name', 'avatar']
+
+D) Population is the process of automatically replacing the specified paths in the document with document(s) from other collection(s). So, when I do the below
+
+Profile.findOne({ user: req.user.id })
+      .populate('user', ['name', 'avatar'])
+
+Populated paths are no longer set to their original _id , their value is replaced with the mongoose document returned from the database by performing a separate query before returning the results.
+(http://mongoosejs.com/docs/populate.html)
+
+E) .populate() needs a query to attach itself to, so we are using Profile.findOne() to find a profile who matches the id I provide in the argument. This returns our user document. This is when .populate() takes over.
+
+F) Flow of .populate() -> After findOne() finds the req.user.id and assigns it to the variable 'user' > .populate() is called on user, it will go to the appropriate collection (user model in this case) , search for that _ids, and return my user with 'name' and 'avatar'
+
+G) Why I can fetch user's model data with below line from profile route.
+
+ Profile.findOne({ user: req.user.id })
+  .populate('user', ['name', 'avatar'])
+
+ Because - In Profile model, I have the the 'user' property as ObjectId
+ 
 ### Sources to read
 
 [https://medium.com/@nicknauert/mongooses-model-populate-b844ae6d1ee7](https://mongoosejs.com/docs/2.7.x/docs/populate.html)
