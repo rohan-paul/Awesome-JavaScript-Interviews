@@ -1,8 +1,20 @@
 #### A promise is an object that wraps an asynchronous operation and notifies when it’s done. This sounds exactly like callbacks, but the important differences are in the usage of Promises. Instead of providing a callback, a promise has its own methods (.then) which you call to tell the promise what will happen when it is successful or when it fails. The methods a promise provides are “then(…)” for when a successful result is available and “catch(…)” for when something went wrong.
 
+More simply - The Promise constructor function takes in a single argument, a (callback) function. This function is going to be passed two arguments, resolve and reject.
+
+**resolve** - a function that allows you to change the status of the promise to fulfilled
+
+**reject** - a function that allows you to change the status of the promise to rejected.
+
+### How do you listen for when the status of a promise changes?
+
+This is the most important question. It’s cool we know how to create a promise and change its status, but that’s worthless if we don’t know how to do anything after the status changes.
+
+What a promise actually is. When you create a new Promise, you’re really just creating a plain old JavaScript object. This object can invoke two methods, then, and catch. Here’s the key. When the status of the promise changes to fulfilled, the function that was passed to .then will get invoked. When the status of a promise changes to rejected, the function that was passed to .catch will be invoked. What this means is that once you create a promise, you’ll pass the function you want to run if the async request is successful to .then. You’ll pass the function you want to run if the async request fails to .catch.
+
 In other words, **When we call a Promise function, the result from the successful path will show up in the .then(), while the error scenario will show up in the .catch()**
 
-#### It takes 2 arguments and both are callback functions. The first one is for the fullfilment case and the socond one is for the rejection case.
+#### It takes 2 arguments and both are callback functions. The first one is for the fullfilment case and the second one is for the rejection case.
 
 #### Promise in JS means, just as the word meaning, i.e. its not the value itself, but its the promise of a value.
 
@@ -103,3 +115,7 @@ fetch(url)
 ```
 
 Assuming each of the functions, fetch(), process(), and save() return promises, process() will wait for fetch() to complete before starting, and save() will wait for process() to complete before starting. handleErrors() will only run if any of the previous promises reject.
+
+#### Further Reading
+
+1> [ECMAScript 2019 Language Specification Draft ECMA-262 / June 27, 2018](https://tc39.github.io/ecma262/#sec-promise-constructor)

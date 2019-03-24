@@ -92,3 +92,13 @@ doSomethingAsync().
 ```
 
 It's important to choose which method of error handling you prefer and stick to it. Using both try/catch and .catch() at the same time will most probably lead to problems.
+
+**By wrapping the logic inside an async function, we can replace the then callbacks with await statements. The effect, the code pauses execution on those lines until the Promises resolve! Asynchronous programming becomes synchronous!**
+
+Async/Await enables us to write asynchronous code in a synchronous fashion, which produces cleaner and easier-to-understand logic. Under the hood, it’s just syntactic sugar using [generators and yield statements to “pause” execution](https://tc39.github.io/ecmascript-asyncawait/#async-function-definitions). In other words, async functions can “pull out” the value of a Promise even though it’s nested inside a callback function, giving us the ability to assign it to a variable!
+
+##### Further Reading
+
+1> [Official ES6 Drafts](https://tc39.github.io/ecmascript-asyncawait/#async-function-definitions)
+
+2> [https://medium.com/siliconwat/how-javascript-async-await-works-3cab4b7d21da](https://medium.com/siliconwat/how-javascript-async-await-works-3cab4b7d21da)

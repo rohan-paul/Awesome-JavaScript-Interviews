@@ -153,3 +153,5 @@ Note that async functions all return Promises, so when you use return you are ju
 2> https://dev.to/ccleary00/how-to-rewrite-a-callback-function-in-promise-form-and-asyncawait-form-in-javascript-410e
 
 3> https://medium.com/front-end-weekly/callbacks-promises-and-async-await-ad4756e01d90
+
+4> https://tylermcginnis.com/async-javascript-from-callbacks-to-promises-to-async-await/
