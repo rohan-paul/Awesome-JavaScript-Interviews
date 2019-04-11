@@ -150,7 +150,7 @@ Note that async functions all return Promises, so when you use return you are ju
 
 1> https://benmccormick.org/2015/12/30/es6-patterns-converting-callbacks-to-promises
 
-2> https://dev.to/ccleary00/how-to-rewrite-a-callback-function-in-promise-form-and-asyncawait-form-in-javascript-410e
+2> https://dev.to/ccleary00/how-to-rewrite-a-callback-function-in-promise-form-and-asyncawait-form-in-javascript-410e - This one is greate, 3 ways to convert a callback step-by-step to Promise and async-await.
 
 3> https://medium.com/front-end-weekly/callbacks-promises-and-async-await-ad4756e01d90
 
