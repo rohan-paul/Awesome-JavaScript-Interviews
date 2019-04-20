@@ -1,3 +1,5 @@
+##### `.populate()` is a way to populate referenced subdocuments in any schema.
+
 Lets take an example of a social network, one collection for users, and one for posts. In my research before doing any coding, I stumbled upon `Model.populate()`, a Mongoose method that you can use to essentially link documents across collections.
 
 ### Step 1: Make your schemas
@@ -31,6 +33,8 @@ module.exports = {
   Post
 };
 ```
+
+### Most simply - If you run this query: Post.find({}).populate('user').exec(callback), Mongoose will look at the field user in the post, see that it has a ref to the User model, and find that user by its \_id
 
 This tells Mongoose “Hey, I’m gonna be referencing other documents from other collections”. The next part of that property is the ref (Post or User in the above code). The ref tells Mongoose “Those docs are going to be in the Post or User collection.”
 
@@ -149,25 +153,26 @@ And in my Profile routes I have the following API endpoint
 
 ```js
 router.get(
-  '/',
-  passport.authenticate('jwt', { session: false }),
+  "/",
+  passport.authenticate("jwt", { session: false }),
   (req, res) => {
     const errors = {}; // just like in user route, I want to append to the errors object for any actual errors that will be generated. And returning that object for the error case
 
     Profile.findOne({ user: req.user.id })
-      .populate('user', ['name', 'avatar'])
+      .populate("user", ["name", "avatar"])
       .then(profile => {
         if (!profile) {
-          errors.noprofile = 'There is not profile for this user';
+          errors.noprofile = "There is not profile for this user";
           return res.status(404).json(errors);
         }
         res.json(profile);
       })
       .catch(err => res.status(404).json(err));
   }
-)
+);
 ```
-In the  above A) I am populating my user's profile using the query builder. http://mongoosejs.com/docs/populate.html#population
+
+In the above A) I am populating my user's profile using the query builder. http://mongoosejs.com/docs/populate.html#population
 
 B) The first parameter of .populate() is the model you wish to use for population. If not specified, populate will look up the model by the name in the Schema's 'ref' field.
 http://mongoosejs.com/docs/api.html#query_Query-populate
@@ -177,22 +182,22 @@ C) The second parameter to .populate() is the Field selection for the population
 D) Population is the process of automatically replacing the specified paths in the document with document(s) from other collection(s). So, when I do the below
 
 Profile.findOne({ user: req.user.id })
-      .populate('user', ['name', 'avatar'])
+.populate('user', ['name', 'avatar'])
 
-Populated paths are no longer set to their original _id , their value is replaced with the mongoose document returned from the database by performing a separate query before returning the results.
+Populated paths are no longer set to their original \_id , their value is replaced with the mongoose document returned from the database by performing a separate query before returning the results.
 (http://mongoosejs.com/docs/populate.html)
 
 E) .populate() needs a query to attach itself to, so we are using Profile.findOne() to find a profile who matches the id I provide in the argument. This returns our user document. This is when .populate() takes over.
 
-F) Flow of .populate() -> After findOne() finds the req.user.id and assigns it to the variable 'user' > .populate() is called on user, it will go to the appropriate collection (user model in this case) , search for that _ids, and return my user with 'name' and 'avatar'
+F) Flow of .populate() -> After findOne() finds the req.user.id and assigns it to the variable 'user' > .populate() is called on user, it will go to the appropriate collection (user model in this case) , search for that \_ids, and return my user with 'name' and 'avatar'
 
 G) Why I can fetch user's model data with below line from profile route.
 
- Profile.findOne({ user: req.user.id })
-  .populate('user', ['name', 'avatar'])
+Profile.findOne({ user: req.user.id })
+.populate('user', ['name', 'avatar'])
 
- Because - In Profile model, I have the the 'user' property as ObjectId
- 
+Because - In Profile model, I have the the 'user' property as ObjectId
+
 ### Sources to read
 
 [https://medium.com/@nicknauert/mongooses-model-populate-b844ae6d1ee7](https://mongoosejs.com/docs/2.7.x/docs/populate.html)

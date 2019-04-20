@@ -16,7 +16,6 @@ Material UI provides a snackbar component which is great for these types of mess
 
 Many apps need to trigger messages from dozens of different components. The React Context API makes it dead simple to provide all components access to a shared snackbar so they can trigger these messages without needing to implement separate components for each message.
 
-
 ### [How Do I Use Context?](https://hackernoon.com/how-do-i-use-react-context-3eeb879169a2)
 
 [the codesandbox for this code](https://codesandbox.io/s/04l03y3q9v)
@@ -24,43 +23,31 @@ Many apps need to trigger messages from dozens of different components. The Reac
 Prop Drilling
 I’ve built an application that stores a family’s last name in a <Grandmother /> component. The <Child /> component than displays the last name.
 
-
 ```js
-const App = () => <Grandmother />
+const App = () => <Grandmother />;
 
 class Grandmother extends React.Component {
   state = {
     lastName: "Sanchez"
-  }
+  };
 
   render() {
-    return <Mother lastName={this.state.lastName} />
+    return <Mother lastName={this.state.lastName} />;
   }
 }
 
 const Mother = ({ lastName }) => {
-  return <Child lastName={lastName} />
-}
+  return <Child lastName={lastName} />;
+};
 
 const Child = ({ lastName }) => {
-  return <p>{lastName}</p>
-}
+  return <p>{lastName}</p>;
+};
 ```
 
 ### Context
 
 We can refactor this example to use Context instead. Using Context means we don’t need to pass the lastName through the <Mother /> component. We circumvent components that don’t need to know the lastName property, and share that state only with components that need to know it.
-
-First, we will need to create our Context.
-
-```js
-import React from "react";
-
-const FamilyContext = React.createContext({});
-
-export const FamilyProvider = FamilyContext.Provider;
-export const FamilyConsumer = FamilyContext.Consumer;js
-```
 
 First, we will need to create our Context in a seperate file, say **FamilyContext.js**
 
@@ -73,9 +60,9 @@ export const FamilyProvider = FamilyContext.Provider;
 export const FamilyConsumer = FamilyContext.Consumer;
 ```
 
-We use`` createContext()`` and pass it an empty object as the default value:
+We use`createContext()` and pass it an empty object as the default value:
 
-``const FamilyContext = React.createContext({});``
+`const FamilyContext = React.createContext({});`
 
 We then create a Provider and a Consumer component and export them so they are available for consumption by other components in your application.
 
@@ -84,7 +71,7 @@ export const FamilyProvider = FamilyContext.Provider;
 export const FamilyConsumer = FamilyContext.Consumer;
 ```
 
-Here’s  the final and full code of how we will use the Provider and Consumer in the Grandmother.js file
+Here’s the final and full code of how we will use the Provider and Consumer in the Grandmother.js file
 
 ```js
 import React from "react";
@@ -116,6 +103,7 @@ const Child = () => {
   return <FamilyConsumer>{context => <p>{context}</p>}</FamilyConsumer>;
 };
 ```
+
 Now, we have wrapped the <Mother /> component with <FamilyProvider /> because it contains <Child /> which is the component that needs access to the lastName prop.
 
 ```js
@@ -130,21 +118,25 @@ To actually have access to the lastName, we have also wrapped the <p> tag on lin
 
 ### Let’s dig a bit deeper into <FamilyConsumer />!
 
-At first, it might look a bit confusing if you aren’t familiar with the render prop pattern, but with a bit of explanation I think you might find that it’s a fairly straightforward implementation. You don’t need to know how to build a render prop to use Context, but it’s a really powerful abstraction!
+At first, it might look a bit confusing if you aren’t familiar with the **[render prop](https://reactjs.org/docs/render-props.html)** pattern, but with a bit of explanation I think you might find that it’s a fairly straightforward implementation. You don’t need to know how to build a render prop to use Context, but it’s a really powerful abstraction!
 
 ### What’s a Render Prop?
 
-A render prop is a way of writing components in React so that they are reusable, and can take n number of children of any type. Render props appear in a couple of different disguises. Context implements a Function as a Child Pattern, which is just a render prop called children.
+The term **“render prop”** refers to a technique for sharing code between React components using a prop whose value is a function.
+
+A **render prop** is a way of writing components in React so that they are reusable, and can take n number of children of any type. Render props appear in a couple of different disguises. Context implements a Function as a Child Pattern, which is just a render prop called children.
 
 ```js
 const Child = () => {
   // Family Consumer uses the
   // Function as a Child pattern
-  return <FamilyConsumer>
-    // context is the object with lastName
-    // on it. It gets passed as an argument
-    {context => <p>{context}</p>}
-  </FamilyConsumer>;
+  return (
+    <FamilyConsumer>
+      // context is the object with lastName // on it. It gets passed as an
+      argument
+      {context => <p>{context}</p>}
+    </FamilyConsumer>
+  );
 };
 ```
 
@@ -153,6 +145,7 @@ const Child = () => {
 Ultimately, Context is a great tool to add to your React toolbox. Use it when you find prop drilling has become too complex, but your application isn’t large enough to warrant a third-party solution like MobX or redux.
 
 ### When Should I Use Context?
+
 [https://hackernoon.com/how-do-i-use-react-context-3eeb879169a2](https://hackernoon.com/how-do-i-use-react-context-3eeb879169a2)
 I would recommend reaching for Context when you find yourself passing props down through three or more levels in your component tree. You might notice that you have renamed your props, making it challenging to determine the data’s origin. You might consider implementing context if a bunch of your components know about irrelevant data.
 
