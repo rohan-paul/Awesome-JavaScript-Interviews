@@ -14,7 +14,7 @@
 
 This means that all data in an application follows the same lifecycle pattern, making the logic of your app more predictable and easier to understand. It also encourages data normalization, so that you don't end up with multiple, independent copies of the same data that are unaware of one another.
 
-### The user clicks a button in the app and a component prop is called like a function.
+### The user clicks a button in the app and a component prop is called like a function. The function is called in the form of component.
 
 ### The corresponding container dispatches an action. This happens because the prop (which was just called in the container) is tied to an action dispatcher using mapDispatchToProps (in the container).
 
@@ -45,18 +45,6 @@ Object goes to the reducer, which in turn is just a function that takes an objec
 ### 5> That reducer returns a new state and given the old state and the action object, the new state becomes the stored state.
 
 ### 6> That store then is fed-back into React and calls forth the final updated state.
-
-Again I’ll walk through a simple example to show how a user input could trigger a state change that is reflected by a different part of the screen.
-
-The user clicks a button in the app and a component prop is called like a function.
-
-The corresponding container dispatches an action. This happens because the prop (which was just called in the container) is tied to an action dispatcher using mapDispatchToProps (in the container).
-
-A reducer ‘hears’ that action and runs a function which returns a new state with specific modifications.
-
-The container ‘knows’ that state has changed and modifies a specific prop in the component as a result of the mapStateToProps function.
-
-The component now has a prop that has officially changed due to a new state being generated, so if that prop is responsible for any any visible UI, the user will see it change automatically.
 
 #### Further Reading
 
