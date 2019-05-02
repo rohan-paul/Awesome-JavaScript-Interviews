@@ -12,7 +12,7 @@ We often call this process rendering, and you can think of it as a projection of
 
 ## How normal DOM (without React) works
 
-# 1> [https://medium.com/@gethylgeorge/how-virtual-dom-and-diffing-works-in-react-6fc805f9f84e](https://medium.com/@gethylgeorge/how-virtual-dom-and-diffing-works-in-react-6fc805f9f84e)
+##### 1> [https://medium.com/@gethylgeorge/how-virtual-dom-and-diffing-works-in-react-6fc805f9f84e](https://medium.com/@gethylgeorge/how-virtual-dom-and-diffing-works-in-react-6fc805f9f84e)
 
 [https://developer.mozilla.org/en-US/docs/Mozilla/Introduction_to_Layout_in_Mozilla](https://developer.mozilla.org/en-US/docs/Mozilla/Introduction_to_Layout_in_Mozilla)
 
@@ -28,7 +28,7 @@ Layout process give exact co-ordinates to each node of the render tree, where th
 
 So when we do,
 
-``document.getElementById('elementId').innerHTML = "New Value"``
+`document.getElementById('elementId').innerHTML = "New Value"`
 
 Following thing happens:
 
@@ -66,15 +66,17 @@ While this was a very simple approach from a front-end perspective, it was also 
 
 Updating virtual DOM in ReactJS is faster because ReactJS uses
 
- - Efficient diff algorithm
- - Batched update operations
- - Efficient update of sub tree only
- - Uses observable instead of dirty checking to detect change
+- Efficient diff algorithm
+- Batched update operations
+- Efficient update of sub tree only
+- Uses observable instead of dirty checking to detect change
 
 ## ReactJS uses observable’s to find the modified components. Whenever setState() method is called on any component, ReactJS makes that component dirty and re-renders it.
 
 ### Whenever setState() method is called, ReactJS creates the whole Virtual DOM from scratch. Creating a whole tree is very fast so it does not affect the performance.
+
 ### Once you render a JSX element, every single Virtual DOM object gets updated.Compared to updating real DOM objects, the Virtual DOM updates faster. Before updating, a copy of the virtual DOM is made and later compared with the updated Virtual DOM.
+
 ### So at any given time, ReactJS maintains two virtual DOM, one with the updated state Virtual DOM and other with the previous state Virtual DOM. Then React can figure out which objects have been changed, and this process is called Diffing. Once React knows which objects to update, it updates only those objects in the Real DOM.
 
 ReactJS using diff algorithm compares both the Virtual DOM to find the minimum number of steps to update the Real DOM.
@@ -82,7 +84,6 @@ ReactJS using diff algorithm compares both the Virtual DOM to find the minimum n
 ReactJS uses following steps to find the difference in both the Virtual DOM’s
 
 **1. Re-render all the children if parent state has changed.** If the state of a component has changed, then ReactJS re-renders all the child components even if child components are not modified. To prevent the unwanted re-render of the child components we can use shouldComponentUpdate() component life cycle method. This will further help in boosting the performance.
-
 
 **2. Breadth First Search.** ReactJS traverse the tree using BST. Consider the below tree. States of element B and H have changed. So when using BST ReactJS reached element B it will by default re-render the element H. This is the reason to use BST for tree traversal
 
@@ -94,14 +95,13 @@ Two elements of different types will produce different trees.
 
 ## The developer can hint at which child elements may be stable across different renders with a key prop.
 
-
 **Virtual DOM is the name React developers gave to their DOM manipulation engine.** Virtual DOM provides a series of Javascript calls that tell the library how to build an in-memory DOM tree and how to update it when data bound to it changes. The central piece of Virtual DOM is its smart diffing algorithm: once the differences in the model have been mapped to the in-memory copy of the DOM, the algorithm finds the minimum number of operations required to update the real DOM. This results in two copies of the in-memory DOM being present during the diffing process.
 
 ## Summing up, updating the browser’s DOM is a three-step process in React.
 
 - Whenever anything may have changed, the entire UI will be re-rendered in a Virtual DOM representation.
 
- - The difference between the previous Virtual DOM representation and the new one will be calculated.
+- The difference between the previous Virtual DOM representation and the new one will be calculated.
 
 - The real DOM will be updated with what has actually changed. This is very much like applying a patch.
 
@@ -125,7 +125,6 @@ And once your application begins to change many things at once or deal with larg
 
 ## When a React UI is rendered for the first time after launching the app, it is first rendered into a virtual DOM, which is not an actual DOM object graph, but a light-weight, pure JavaScript data structure of plain objects and arrays that represents a real DOM object graph. A separate process then takes that virtual DOM structure and creates the corresponding real DOM elements
 
-
 ## Then, when a change occurs, a new virtual DOM is created from scratch. That new virtual DOM will reflect the new state of the data model. React now has two virtual DOM data structures at hand: The new one and the old one. It then runs a diffing algorithm on the two virtual DOMs, to get the set of changes between them. Those changes, and only those changes, are applied to the real DOM: This element was added, this attribute's value changed, etc.
 
 [http://teropa.info/blog/2015/03/02/change-and-its-detection-in-javascript-frameworks.html](http://teropa.info/blog/2015/03/02/change-and-its-detection-in-javascript-frameworks.html)
@@ -139,7 +138,6 @@ One approach to controlling changes is to favor immutable, persistent data struc
 The thing about immutable data structures is that, as the name implies, you can never mutate one, but only produce new versions of it. If you want to change an object's attribute, you'll need to make a new object with the new attribute, since you can't change the existing one. Because of the way persistent data structures work, this is actually much more efficient than it sounds.
 
 What this means in terms of change detection is that when a React component's state consists of immutable data only, there's an escape hatch: When you're re-rendering a component, and the component's state still points to the same data structure as the last time you rendered it, you can skip re-rendering. You can just use the previous virtual DOM for that component and the whole component tree stemming from it. There's no need to dig in further, since nothing could possibly have changed in the state.
-
 
 ## Some more Theory on Virtual DOM
 
@@ -162,17 +160,10 @@ Once all the steps are executed, React will repaint the Real DOM. This means dur
 
 - [https://hackernoon.com/virtual-dom-in-reactjs-43a3fdb1d130](https://hackernoon.com/virtual-dom-in-reactjs-43a3fdb1d130)
 
-
-
-
-
-
-
 My collection of common JS / React / Node Interview questions, along with answers that I was putting together for myself while preparing for Interviews. Most of them, I was actually asked in real Interviews over the past few months. And very recentely I got my first job as full-stack Developer coming from a completely different educational and career background (Banking) and after completing my Programming Bootcamp from The Hacking School
 
 This github repo, is by no means comprehensive, and for each of the concepts, there are better and more in depth coverage in the web (I have tried to include the sources as much as possible) - But my only aim with this repo is to have a reference tool so that I could continue a technical discussion with the interviewer for two, three or four hours.
 
 https://github.com/rohan-paul/Awesome-JavaScript-Interviews
-
 
 (https://www.thehackingschool.com/)
