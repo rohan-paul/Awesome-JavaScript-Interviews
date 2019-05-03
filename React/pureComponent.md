@@ -1,4 +1,6 @@
-#### First lets look at STATELESS Component vs Pure Component
+#### PureComponent is exactly the same as Component except that it handles the shouldComponentUpdate method for you. When props or state changes, PureComponent will do a shallow comparison (see below notes for more details) on both props and state. Component on the other hand won’t compare current props and state to next out of the box. Thus, the component will re-render by default whenever shouldComponentUpdate is called.
+
+#### Now lets look at STATELESS Component vs Pure Component
 
 STATELESS COMPONENT declared as a function that has no state and returns the same markup given the same props.
 
@@ -43,3 +45,17 @@ Suppose you want to create a label with some beautiful UI which will be used to 
 Pure Components gives a considerable increase in performance because it reduces the number of render operation in the application which is a huge win for complex UI and therefore advised to use if possible. Also, there will be cases where you want to use the lifecycle methods of Component and in such cases, we cannot use stateless components.
 
 Stateless Components are easy and fast to implement. They are good for very small UI view where re-render cost won’t matter that much. They provide cleaner code and less number of files to deal with.
+
+### What is Shallow Comparison
+
+When comparing previous props and state to next, a shallow comparison will check that primitives have the same value (eg, 1 equals 1 or that true equals true) and that the references are the same between more complex javascript values like objects and arrays.
+
+### Further Reading
+
+1. [https://reactjs.org/docs/react-api.html#reactpurecomponent](https://reactjs.org/docs/react-api.html#reactpurecomponent)
+
+2. [https://reactjs.org/docs/shallow-compare.html](https://reactjs.org/docs/shallow-compare.html)
+
+3. [https://codeburst.io/when-to-use-component-or-purecomponent-a60cfad01a81](https://codeburst.io/when-to-use-component-or-purecomponent-a60cfad01a81)
+
+4. [https://logrocket.com/blog/pure-functional-components/](https://logrocket.com/blog/pure-functional-components/)
