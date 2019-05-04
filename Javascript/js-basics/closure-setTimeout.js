@@ -22,20 +22,15 @@ C) Explanation why the time interval is taking 1 second for consoling out the la
 /* SOLUTION -
 To print the successive values of i with an interval of 1 second, we need to pass into setTimeout() the actual value of i at the moment of each loop execution in the for statement.  */
 
-funcToExecute = (x) => {
-    return () => {
-        console.log((x));
-    }
-}
+funcToExecute = x => {
+  return () => {
+    console.log(x);
+  };
+};
 
 for (var i = 1; i <= 5; i++) {
-
-    setTimeout(funcToExecute(i), i * 500)
-
-
-
+  setTimeout(funcToExecute(i), i * 500);
 }
-
 
 /* More Explanation on why the delay is happening in the correct solution and not in the original solution -
 

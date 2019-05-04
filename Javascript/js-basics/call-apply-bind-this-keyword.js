@@ -1,12 +1,37 @@
-let obj1 = { name: "Rohan" }
+// ***********************EXAMPLE - 1 **************************************//
+/* First note the definition of 'this' - By the official doc (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) - 'this' is just The JavaScript context object in which the current code is executing. In the global execution context (outside of any function), this refers to the global object whether in strict mode or not.
 
-const greeting = function (a, b) {
-  return `welcome ${this.name} to ${a}, ${b}`
+In the global execution context (outside of any function), this refers to the global object whether in strict mode or not.
+ */
+
+/* Where a function uses the this keyword in its body, its value can be bound to a particular object in the call using the call() or apply() methods which all functions inherit from Function.prototype. */
+
+function add(c, d) {
+  return this.a + this.b + c + d;
 }
+
+var o = { a: 1, b: 3 };
+
+// The first parameter is the object to use as
+// 'this', subsequent parameters are passed as
+// arguments in the function call
+add.call(o, 5, 7); // 16
+
+// The first parameter is the object to use as
+// 'this', the second is an array whose
+// members are used as the arguments in the function call
+add.apply(o, [10, 20]); // 34
+// ***********************EXAMPLE - 2 **************************************//
+
+let obj1 = { name: "Rohan" };
+
+const greeting = function(a, b) {
+  return `welcome ${this.name} to ${a}, ${b}`;
+};
 
 // console.log(greeting.call(obj1, "Hitech City", "Hyd"));
 
-let obj2 = { name: "Steve" }
+let obj2 = { name: "Steve" };
 
 // console.log(greeting.call(obj2, "Hitech City", "Hyd"));
 
@@ -21,18 +46,18 @@ D> When it is inside of an object’s method — the function’s owner is t
 
 */
 
-// ***********************EXAMPLE - 2**************************************//
+// ***********************EXAMPLE - 3 **************************************//
 
 var car = {
-  regNo : 'GA123',
-  brand: 'Ford',
+  regNo: "GA123",
+  brand: "Ford",
 
-  displayDetails: function (ownerName) {
+  displayDetails: function(ownerName) {
     console.log(`${ownerName}, this is your car : ${this.regNo} ${this.brand}`);
   }
-}
+};
 // Now invoking the function normally will result
-car.displayDetails("Rohan")
+car.displayDetails("Rohan");
 
 /* Again in the above, I can not use arrow function, as this.regNo will refer to the global 'this' where it does not have  a regNo. See this - https://github.com/babel/babel/issues/1742
 
@@ -44,16 +69,12 @@ When inside an object literal, every functions 'this' is scoped to the object, a
 
 // Coming back to displayDetails() function - But what if we want to borrow a method, like below. Or What if we would like to pass a parameter to the displayDetails function? -
 
-var myCarDetails1 =  car.displayDetails;
+var myCarDetails1 = car.displayDetails;
 // myCarDetails1();
 
 /* Well, this won’t work as the “this” will be now assigned to the global context which doesn’t have neither the regNo or the brand property. So, to do that, I have to user bind. */
 
-var myCarDetails2 = car.displayDetails.bind(car, 'Steve');
+var myCarDetails2 = car.displayDetails.bind(car, "Steve");
 myCarDetails2();
 
 // The bind() method creates a new function where “this” refers to the first argument or parameter in the parenthesis in the above case “car”.
-
-
-
-

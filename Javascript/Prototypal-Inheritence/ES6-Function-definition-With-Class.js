@@ -32,3 +32,7 @@ var w1 = new Worker("Paul");
 
 p1.hello(); // => Hello Rohan you are a person
 w1.hello(); // => Hello Paul you are a Developer
+
+/*
+In line 19, the super keyword is used as a “function” which calls the parent class Person with the parameters passed to Worker. This is a key step to be carried out in order to make sure that Worker is an instance of Person.
+*/
