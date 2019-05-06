@@ -1,3 +1,4 @@
+// *********************** EXPLANATION - 1 **************************************//
 /* By the official doc (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) - 'this' is just The JavaScript context object in which the current code is executing. In the global execution context (outside of any function), this refers to the global object whether in strict mode or not.
 
 In the global execution context (outside of any function), this refers to the global object whether in strict mode or not.
@@ -59,7 +60,7 @@ add.call(o, 5, 7); // 16
 // members are used as the arguments in the function call
 add.apply(o, [10, 20]); // 34
 
-// *************************************************************
+// *********************** EXPLANATION - 2 **************************************//
 /* MORE TEST CASE - Case-1
  A) Inside a function, the value of this depends on how the function is called.
 Since the following code is not in strict mode, and because the value of this is not set by the call, this will default to the global object, which is window in a browser. And global in node

@@ -21,6 +21,7 @@ add.call(o, 5, 7); // 16
 // 'this', the second is an array whose
 // members are used as the arguments in the function call
 add.apply(o, [10, 20]); // 34
+
 // ***********************EXAMPLE - 2 **************************************//
 
 let obj1 = { name: "Rohan" };
