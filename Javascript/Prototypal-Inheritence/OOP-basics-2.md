@@ -102,7 +102,7 @@ Notice that the setters' argument is named differently than the underlying varia
 
 #### Encapsulation
 
-is the ability of an object to be a container (or capsule) for its member properties, including variables and methods. As a fundamental principle of object oriented programming (OOP), encapsulation plays a major role in languages such as C++ and Java. However, in scripting languages, where types and structure are not actively enforced by the compiler or interpreter, it is all-too-easy to fall into bad habits and write code that is brittle, difficult to maintain, and error-prone.
+Encapsulation is the ability of an object to be a container (or capsule) for its member properties, including variables and methods. As a fundamental principle of object oriented programming (OOP), encapsulation plays a major role in languages such as C++ and Java. However, in scripting languages, where types and structure are not actively enforced by the compiler or interpreter, it is all-too-easy to fall into bad habits and write code that is brittle, difficult to maintain, and error-prone.
 
 #### We create objects with methods, properties, and attributes.
 
@@ -110,8 +110,8 @@ When we make them bundled inside an object it’s known as encapsulation. When t
 
 JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a property is an association between a name (or key) and a value. A property’s value can be a function, in which case the property is known as a method. In addition to objects that are predefined in the browser, you can define your own objects.
 
-Two principles with OOP in JS are:
+#### Two principles with OOP in JS are:
 
-Object Creation Patter (Encapsulation)
+Object Creation Pattern (Encapsulation)
 
 Object Reuse Pattern (Inheritance)
