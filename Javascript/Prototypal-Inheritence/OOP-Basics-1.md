@@ -1,3 +1,43 @@
+#### Two principles with OOP in JS are:
+
+Object Creation Pattern (Encapsulation)
+
+Object Reuse Pattern (Inheritance)
+
+There are many object creation ways:
+
+### 1- Ubiquitous Object literal:
+
+```js
+var myOoj = {
+	name: "Nikki",
+	city: "New Delhi",
+	loves: "so many"
+};
+```
+
+### 2- Prototype Pattern
+
+```js
+function myFun() {}
+myFun.prototype.name = "Nikki";
+myFun.prototype.city = "New Delhi";
+var myFun1 = new myFun();
+console.log(myFun1.name); //Nikki
+```
+
+### 3- Constructor Pattern:
+
+```js
+function myFun(name, city, loves) {
+	this.name = name;
+	this.city = city;
+	this.loves = loves;
+}
+var myFun1 = new myFun("Nikki", "New Delhi", "so much things");
+console.log(myFun1.name); //Nikkia
+```
+
 ### Constructor Functions
 
 These functions are the most conventional way to create objects that use functionality from each other using prototypal inheritance.
@@ -20,6 +60,8 @@ console.log(Object.getPrototypeOf(person)); // Person {}
 #### Remember - The prototype of a subclass is the superclass.
 
 `this` refers to the object currently within the scope of the Person function. It sets it’s own property name as the value of the parameter passed into the function.
+
+While creating an object with construtor pattern, without using `this` keyword function and variables are private.
 
 A new object person is created using the constructor function. When you use new , it binds a newly created object to the this keyword within the called constructor function. This binding allows the person object to reference all the functionality from within the constructor function.
 
