@@ -1,10 +1,10 @@
-const arr = [ 10, 20, 30, 40];
+const arr = [10, 20, 30, 40];
 
-// for (var i = 0; i < arr.length; i++ ) {
-//   setTimeout(() => {
-//     console.log('Index: ' + i + ', element : ' + arr[i]);
-//   }, 1000)
-// }
+for (var i = 0; i < arr.length; i++) {
+	setTimeout(() => {
+		console.log("Index: " + i + ", element : " + arr[i]);
+	}, 1000);
+}
 
 /* output -
 
@@ -20,6 +20,8 @@ The inner function has access not only to the outer function’s variables, but 
 
 Explanation - of above output from setTimeout()
 The setTimeout function creates a function (the closure) that has access to its outer scope, which is the loop that contains the index i. After 1 second go by, the function is executed and it prints out the value of i, which at the end of the loop is at 4 because it cycles through 0, 1, 2, 3, 4 and the loop finally stops at 4. And arr[4] does not exist, which is why you get undefined.
+
+The variable i is actually declared within the for loop and the inner function accesses it. So when the for loop is done running, each of the inner functions refers to the same variable i, which at the end of the loop is equal to 3. Our goal is for each inner function to maintain its reference to the variable i without the value of it being altered. We'll solve this using an IIFE
 
 */
 
@@ -37,19 +39,30 @@ The setTimeout function creates a function (the closure) that has access to its 
 //   }, 1000);
 // }
 
-
 // SOLUTION - 2 - To print all number from 0..4 after 1000 ms
 
 const arr2 = [10, 12, 15, 21];
 
-for (var i = 1; i <= arr2.length; i++ ) {
+for (var i = 1; i <= arr2.length; i++) {
+	// pass in the variable i so that each function
+	// has access to the correct index
 
-  // pass in the variable i so that each function
-  // has access to the correct index
-
-  setTimeout(function(i_local) {
-    return function() {
-      console.log('The index of this number is ' + i_local);
-    }
-  }(i), i * 1000)
+	setTimeout(
+		(function(i_local) {
+			return function() {
+				console.log("The index of this number is " + i_local);
+			};
+		})(i),
+		i * 1000
+	);
 }
+
+/*
+We pass the variable i into the outer function as a local variable named i_local, where we then return a function that will get the i_local for us.
+
+On the mechanics of setTimeOut() => setTimeout is a higher order function (i.e. a function that takes one or more functions as parameters - these function(s) passed as parameters are also known as callbacks). setTimeout has two arguments: the first argument is the function to be invoked (in this case the anonymous function with the alert call), and the second argument is a time interval in milliseconds.
+
+setTimeout's job, when called, is to immediately set a timer that will expire after a specified time interval (the second argument to setTimeout). When that timer expires, the code that is in the callback function of the first argument passed to setTimeout is executed (and when this callback function is executed, that's where the interesting effects of JS closures come in...
+
+setTimeout does not wait for the time interval to expire and then execute. setTimeout executes immediately. It is the callback function in setTimeout's first argument that waits/executes.
+*/

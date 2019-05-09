@@ -13,9 +13,9 @@ function Person(n) {
 }
 ```
 
--   All variables, which are defined with the "var" keyword and all the methods that a constructor function contains is private and therefore NOT accessible from outside of a created object. The same applies to all function arguments.
+-   All variables, which are defined with the "var" keyword (and NOT 'this') and all the methods that a constructor function contains is private and therefore NOT accessible from outside of a created object. The same applies to all function arguments.
 
--   One of the most important things in object-oriented programming (OOP) is data encapsulation, which means to make private properties and then define public access methods to change these.
+#### - One of the most important things in object-oriented programming (OOP) is data encapsulation, which means to make private properties and then define public access methods to change these.
 
 -   All public methods, which are defined inside a function object, have access to all defined private member variables and private methods in a created object.
 

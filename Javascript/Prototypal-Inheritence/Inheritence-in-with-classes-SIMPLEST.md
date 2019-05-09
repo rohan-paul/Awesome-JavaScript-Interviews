@@ -16,10 +16,8 @@ class ParentClass
 }
 
 /*Inheriting class*/
-class ChildClass extends ParentClass
-{
-    constructor(properties, classSpecificProperties)
-     {
+class ChildClass extends ParentClass {
+    constructor(properties, classSpecificProperties) {
          super(properties);
          this.classSpecificProperties = classSpecificProperties
      }
@@ -37,7 +35,7 @@ childClassObject.classSpecificeMethods();
 
 ### Points to note:
 
-**super()** method is mandatory to call if we have declared a custom constructor for Child Class, else not required.
+**super()** method is mandatory to call if we have declared a custom constructor for Child Class, else not required. In line 23 above, the super keyword is used as a “function” which calls the parent class Person with the parameters passed to Worker. This is a key step to be carried out in order to make sure that Worker is an instance of Person.
 
 super is used to call Parent Class methods inside Child Class
 
@@ -45,39 +43,40 @@ Child class will have access to all parent class methods.
 
 **this** will always point to current object
 
-
 ### Another example
 
 ```js
 /*Parent Class*/
 class Vehicle {
-     constructor(name, model) {
-               this.name = name;
-               this.model = model;
-             }
-       showModel() {
-              console.log(this.model);
-           }
-        getModel() {
-               return this.model;
-           }
-        getName() {
-               return this.name;
-            }
- }
+  constructor(name, model) {
+    this.name = name;
+    this.model = model;
+  }
+  showModel() {
+    console.log(this.model);
+  }
+  getModel() {
+    return this.model;
+  }
+  getName() {
+    return this.name;
+  }
+}
 /*Child Class inheriting parent class*/
 class FourWheelers extends Vehicle {
-          constructor(name, model, noOfSeats) {
-                  super(name, model);
-                  this.noOfSeats = noOfSeats;
-              }
-          showNoOfSeats() {
-                console.log(super.getName() + super.getModel() + "has " + this.noOfSeats + "seats");
-          }
- }
+  constructor(name, model, noOfSeats) {
+    super(name, model);
+    this.noOfSeats = noOfSeats;
+  }
+  showNoOfSeats() {
+    console.log(
+      super.getName() + super.getModel() + "has " + this.noOfSeats + "seats"
+    );
+  }
+}
 
 /*Creating Child class object*/
 let myCar = new FourWheelers("Audi", "R8", 5);
-myCar.showNoOfSeats();          // Child Class method
-myCar.showModel();              // Parent class method
+myCar.showNoOfSeats(); // Child Class method
+myCar.showModel(); // Parent class method
 ```

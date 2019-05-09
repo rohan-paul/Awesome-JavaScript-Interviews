@@ -7,7 +7,7 @@ In the global execution context (outside of any function), this refers to the gl
 /* Where a function uses the this keyword in its body, its value can be bound to a particular object in the call using the call() or apply() methods which all functions inherit from Function.prototype. */
 
 function add(c, d) {
-  return this.a + this.b + c + d;
+	return this.a + this.b + c + d;
 }
 
 var o = { a: 1, b: 3 };
@@ -27,7 +27,7 @@ add.apply(o, [10, 20]); // 34
 let obj1 = { name: "Rohan" };
 
 const greeting = function(a, b) {
-  return `welcome ${this.name} to ${a}, ${b}`;
+	return `welcome ${this.name} to ${a}, ${b}`;
 };
 
 // console.log(greeting.call(obj1, "Hitech City", "Hyd"));
@@ -50,12 +50,14 @@ D> When it is inside of an object’s method — the function’s owner is t
 // ***********************EXAMPLE - 3 **************************************//
 
 var car = {
-  regNo: "GA123",
-  brand: "Ford",
+	regNo: "GA123",
+	brand: "Ford",
 
-  displayDetails: function(ownerName) {
-    console.log(`${ownerName}, this is your car : ${this.regNo} ${this.brand}`);
-  }
+	displayDetails: function(ownerName) {
+		console.log(
+			`${ownerName}, this is your car : ${this.regNo} ${this.brand}`
+		);
+	}
 };
 // Now invoking the function normally will result
 car.displayDetails("Rohan");
