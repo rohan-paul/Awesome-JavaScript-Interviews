@@ -59,6 +59,8 @@ function Dog (name, energy, breed) {
 }
 
 Dog.prototype = Object.create(Animal.prototype)
+// In the above I could have also used the below format
+// Dog.prototype = new Animal()
 
 Dog.prototype.bark = function () {
   console.log('Woof Woof!')
@@ -97,5 +99,14 @@ We call `super()` inside of a subclass' constructor method in order to call the 
 
 Child class will have access to all parent class methods.
 
+Seperate Note - An important difference between function declarations and class declarations is that function declarations are hoisted and class declarations are not. You first need to declare your class and then access it, otherwise code like the following will throw a ReferenceError:
 
+```
+const p = new Rectangle(); // ReferenceError
 
+class Rectangle {}
+```
+
+#### Further Reading
+- 1. [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+- 2. [https://tylermcginnis.com/javascript-inheritance-and-the-prototype-chain/](https://tylermcginnis.com/javascript-inheritance-and-the-prototype-chain/)
