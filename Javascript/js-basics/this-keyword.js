@@ -1,10 +1,16 @@
 // *********************** EXPLANATION - 1 **************************************//
 /* By the official doc (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) - 'this' is just The JavaScript context object in which the current code is executing. In the global execution context (outside of any function), this refers to the global object whether in strict mode or not.
 
-In the global execution context (outside of any function), this refers to the global object whether in strict mode or not.
- */
-// Inside a function, the value of this depends on how the function is called.
+Inside a function, the value of this depends on how the function is called.
+
+Case-1 - WITHOUT STRICT MODE - Since the following code is not in strict mode, and because the value of this is not set by the call, this will default to the global object, which is window in a browser.
+
+Case-2 - In strict mode, however, the value of this remains at whatever it was set to when entering the execution context, so, in the following case, this will default to undefined. So, in strict mode, if this was not defined by the execution context, it remains undefined.
+
+*/
+
 // Case-1 - WITHOUT STRICT MODE - Since the following code is not in strict mode, and because the value of this is not set by the call, this will default to the global object, which is window in a browser.
+
 function f1() {
   return this;
 }
@@ -15,7 +21,7 @@ f1() === window; // true
 // In Node:
 f1() === global; // true
 
-// Case-2 - In strict mode, however, the value of this remains at whatever it was set to when entering the execution context, so, in the following case, this will default to undefined. So, in strict mode, if this was not defined by the execution context, it remains undefined. So, in strict mode, if this was not defined by the execution context, it remains undefined.
+// Case-2 - In strict mode, however, the value of this remains at whatever it was set to when entering the execution context, so, in the following case, this will default to undefined. So, in strict mode, if this was not defined by the execution context, it remains undefined.
 
 function f2() {
   "use strict"; // see strict mode

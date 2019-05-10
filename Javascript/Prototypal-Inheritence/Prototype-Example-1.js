@@ -34,6 +34,14 @@ p1Proto.hello();
 w1Proto.hello();
 
 /*
-When we call a function with new, it sets the returned object’s __proto__ property equal to the function’s prototype property. This is the key to inheritance.
+1- When we call a function with new, it sets the returned object’s __proto__ property equal to the function’s prototype property. This is the key to inheritance.
 
- */
+2 - `this` keyword - By the official doc (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) - 'this' is just The JavaScript context object in which the current code is executing. In the global execution context (outside of any function), this refers to the global object whether in strict mode or not.
+
+Inside a function, the value of this depends on how the function is called.
+
+Case-1 - WITHOUT STRICT MODE - Since the following code is not in strict mode, and because the value of this is not set by the call, this will default to the global object, which is window in a browser.
+
+Case-2 - In strict mode, however, the value of this remains at whatever it was set to when entering the execution context, so, in the following case, this will default to undefined. So, in strict mode, if this was not defined by the execution context, it remains undefined.
+
+*/
