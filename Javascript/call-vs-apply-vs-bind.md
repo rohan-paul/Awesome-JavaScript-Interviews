@@ -38,9 +38,29 @@ favFood.call(john, ['scarf down', 'sleep']) //It's time to scarf down,sleep pizz
 favFood.apply(bob, 'scarf down', 'sleep') //Uncaught TypeError... hard error
 
 ```
-Bind is used to return a function that can invoke at a later time.
+Bind is used to return a function that can be invoked at a later time. The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
 
 ```javascript
 var eatThenSomething = favFood.bind(bob)
 eatThenSomething('gobble', 'nap') //It's time to gobble spaghetti! Then nap.
 ```
+Next example of bind()
+
+
+```js
+const obj  = {
+    x: 42,
+    getX: function() {
+        return this.x;
+    }
+}
+
+const unBoundX = obj.getX
+console.log(unBoundX()); // => undefined
+
+// But to get it to work
+const boundX = unBoundX.bind(obj)
+console.log(boundX()); // => 42
+
+```
+

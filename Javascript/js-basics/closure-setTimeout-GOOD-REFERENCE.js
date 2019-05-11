@@ -1,9 +1,9 @@
 const arr = [10, 20, 30, 40];
 
 for (var i = 0; i < arr.length; i++) {
-	setTimeout(() => {
-		console.log("Index: " + i + ", element : " + arr[i]);
-	}, 1000);
+  setTimeout(() => {
+    console.log("Index: " + i + ", element : " + arr[i]);
+  }, 1000);
 }
 
 /* output -
@@ -44,17 +44,17 @@ The variable i is actually declared within the for loop and the inner function a
 const arr2 = [10, 12, 15, 21];
 
 for (var i = 1; i <= arr2.length; i++) {
-	// pass in the variable i so that each function
-	// has access to the correct index
+  // pass in the variable i so that each function
+  // has access to the correct index
 
-	setTimeout(
-		(function(i_local) {
-			return function() {
-				console.log("The index of this number is " + i_local);
-			};
-		})(i),
-		i * 1000
-	);
+  setTimeout(
+    (function(i_local) {
+      return function() {
+        console.log("The index of this number is " + i_local);
+      };
+    })(i),
+    i * 1000
+  );
 }
 
 /*
@@ -65,4 +65,6 @@ On the mechanics of setTimeOut() => setTimeout is a higher order function (i.e. 
 setTimeout's job, when called, is to immediately set a timer that will expire after a specified time interval (the second argument to setTimeout). When that timer expires, the code that is in the callback function of the first argument passed to setTimeout is executed (and when this callback function is executed, that's where the interesting effects of JS closures come in...
 
 setTimeout does not wait for the time interval to expire and then execute. setTimeout executes immediately. It is the callback function in setTimeout's first argument that waits/executes.
+
+Further Reading - https://medium.freecodecamp.org/3-questions-to-watch-out-for-in-a-javascript-interview-725012834ccb
 */

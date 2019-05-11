@@ -8,7 +8,7 @@
 - Undefined
 - Number
 - String
-- Symbol (new in ECMAScript 2015)
+- Symbol (a unique and immutable primitive new to ES6/2015)
 
 ## There are a variety of compound data types but the most common are: object; array; and function.
 
