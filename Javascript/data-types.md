@@ -32,7 +32,6 @@ console.log("function type:", typeof
 ```
 
 
-
 In JavaScript, there are no true integers, all numbers are implemented in double-precision 64-bit binary format IEEE 754. When we use binary floating-point numbers, it will have some side effects. Here is an example of these side effects.
 
 ```js
