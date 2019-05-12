@@ -2,17 +2,43 @@
 
 [The official Doc](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/) has some very good explanation.
 
-## 1> Some Key points noted on 10-June-2018 >>
+## 1> Some Key points >>
 
 - A> The simple ans is - With callback function and event-loop
 
-- B> With callback function and event-loop, Node transfer execution of the callback function (like, in setTimeout, Promise, fs.readFile) to a queue the output of which follows a FIFO design, while the rest of the code, will get executed. So that’s how its node is non-blocking.
+- B> With callback function and event-loop, Node transfer execution of the callback function (like, in setTimeout, Promise, fs.readFile) to a queue the output of which follows a FIFO design, while the rest of the code, will get executed. So that’s how node is non-blocking.
 
-And whatever was transferred to the separate queue for those callbacks will be executed on a FIFO basis, so an the code that was in the queue first, will return its result first. And then the next one in the queue.
+And whatever was transferred to the separate queue for those callbacks will be executed on a FIFO basis, so the code that was in the queue first, will return its result first. And then the next one in the queue.
 
 ## 2> https://codeburst.io/how-node-js-single-thread-mechanism-work-understanding-event-loop-in-nodejs-230f7440b0ea
 
-Node is single threaded and it is doing magical things with this model. Some of the popular server side technology like PHP, ASP.NET, Ruby & Java Servers all follow Multi-threaded where each client request results in the instantiation of a new thread or even a process, but in Node.js, requests are run on the same thread The main event loop is single-threaded but most of the I/O works run on separate threads, because the I/O APIs in Node.js are asynchronous/non-blocking by design, in order to accommodate the event loop.
+Some of the popular server side technology like PHP, ASP.NET, Ruby & Java Servers all follow Multi-threaded where each client request results in the instantiation of a new thread or even a process, but in Node.js, requests are run on the same thread.
+
+##### Misconception 1: The event loop runs in a separate thread than the user code -
+Many think, there is a main thread where the JavaScript code of the user (userland code) runs in and another one that runs the event loop. Every time an asynchronous operation takes place, the main thread will hand over the work to the event loop thread and once it is done, the event loop thread will ping the main thread to execute a callback.
+
+#### Reality
+**There is only one thread that executes JavaScript code AND ALSO the the event loop. The execution of callbacks (know that every userland code in a running Node.js application is a callback) is done by the event loop.**
+
+
+### Event Loop vs Worker Pool (Thread Pool)
+
+[https://nodejs.org/ja/docs/guides/dont-block-the-event-loop/(https://nodejs.org/ja/docs/guides/dont-block-the-event-loop/)
+
+Node uses a small number of threads to handle many clients. In Node there are two types of threads: one Event Loop (aka the main loop, main thread, event thread, etc.), and a pool of k Workers in a Worker Pool (aka the threadpool). Node uses the Event-Driven Architecture: it has an Event Loop for orchestration and a Worker Pool for expensive tasks.
+Event Loop executes the JavaScript callbacks registered for events, and is also responsible for fulfilling non-blocking asynchronous requests like network I/O.
+
+#### What code runs on the Worker Pool?
+
+Node's Worker Pool is implemented in libuv (docs), which exposes a general task submission API.
+
+Node uses the Worker Pool to handle "expensive" tasks. This includes I/O for which an operating system does not provide a non-blocking version, as well as particularly CPU-intensive tasks.
+
+Event loop is the mechanism that takes callbacks (functions) and registers them to be executed at some point in the future. It operates in the same thread as the proper JavaScript code. When a JavaScript operation blocks the thread, the event loop is blocked as well.
+
+Worker pool is an execution model that spawns and handles separate threads, which then synchronously perform the task and return the result to the event loop. The event loop then executes the provided callback with said result.
+
+===============================
 
 ## 3> Single Threaded Event Loop Model Processing Steps:
 
@@ -131,4 +157,7 @@ Node has a pool of Thread and you must be scratching your head wondering if Node
 
 Generally the web server and the database server are 2 different machines, because of Async nature, the event loop gets free after forwarding the read/write request to database server. That is why, a Node JS HTTP server can handle a large number of requests while the process of complex read/write operations could be inprocess on database server(s).
 
-### Further Resources - https://youtu.be/8aGhZQkoFbQ - Very famous video
+###
+
+- 1. Further Resources - https://youtu.be/8aGhZQkoFbQ - Very famous video
+- 2. [https://nodejs.org/ja/docs/guides/dont-block-the-event-loop/](https://nodejs.org/ja/docs/guides/dont-block-the-event-loop/)

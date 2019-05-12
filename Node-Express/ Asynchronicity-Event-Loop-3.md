@@ -2,7 +2,7 @@
 
 <img src=" Asynchronicity-Event-Loop.png">
 
-Any of the web APIs pushes the callback on to the task queue when it's done. Finally we get to the event loop, title of the talk, what the heck is the event loop is like the simplest little piece in this whole equation, and it has one very simple job. The event loop's job is to look at the stack and look at the task queue. If the stack is empty it takes the first thing on the queue and pushes it on to the stack which effectively run it. So here we can see that now the stack is clear, there's a callback on the task queue, the event loop runs, it says, oh, I get to do something, pushes the callback on to the stack.
+The event loop's job is to look at the stack and look at the task queue. If the stack is empty it takes the first thing on the queue and pushes it on to the stack which effectively run it. So here we can see that now the stack is clear, there's a callback on the task queue, the event loop runs, it says, oh, I get to do something, pushes the callback on to the stack.
 
 - Push main() onto the call stack.
 - Push console.log() onto the call stack. This then runs right away, and gets popped.

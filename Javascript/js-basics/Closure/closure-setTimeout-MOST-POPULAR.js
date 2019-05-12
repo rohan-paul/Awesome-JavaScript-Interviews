@@ -66,5 +66,7 @@ setTimeout's job, when called, is to immediately set a timer that will expire af
 
 setTimeout does not wait for the time interval to expire and then execute. setTimeout executes immediately. It is the callback function in setTimeout's first argument that waits/executes.
 
-Further Reading - https://medium.freecodecamp.org/3-questions-to-watch-out-for-in-a-javascript-interview-725012834ccb
+Further Reading -
+1. https://medium.freecodecamp.org/3-questions-to-watch-out-for-in-a-javascript-interview-725012834ccb
+
 */
