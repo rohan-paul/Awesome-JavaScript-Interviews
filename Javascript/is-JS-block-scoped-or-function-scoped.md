@@ -8,6 +8,10 @@
 
 ### Block-scoped exists when a declared variable inside a block of code (usually enclosed between curly brackets) is only visible/accessible within that block of code.
 
+## What is function-scoped?
+
+### Function-scoped exists when a declared variable inside a Function is visible/accessible ANYWHERE within thE function.
+
 Consider the following, where JS is **function-scoped**
 
 ```javascript
@@ -24,7 +28,7 @@ var testFunc = function() {
 testFunc();
 ```
 
-But that does not mean, that I can access a variable that has been declared within the function, out of the function in the global space. This is because this most fundamental principle of JavaScript - each new function creates a local scope. Variables created in the global scope can be accessed in the local scope. But variables created in the local scope cannot be referenced in the global scope.
+**But that does not mean, that I can access a variable that has been declared within the function, out of the function in the global space. This is because this most fundamental principle of JavaScript - each new function creates its own local scope. Variables created in the global scope can be accessed in the local scope. But variables created in the local scope cannot be referenced in the global scope.**
 
 ```js
 var testFunc = function() {
@@ -40,7 +44,7 @@ var testFunc = function() {
 // logs 9 - printed is available outside of block
 testFunc();
 
-console.log(someVariable);
+console.log(someVariable); // => ReferenceError: someVariable is not defined
 ```
 
 ### The below example where Javascript is block scoped.
@@ -55,7 +59,7 @@ var testFunc = function() {
     let printed = n;
   }
   // logging printed outside of block
-  console.log(printed);
+  console.log(printed); // => ReferenceError: printed is not defined
 };
 // logs printed is not defined
 testFunc();
@@ -86,7 +90,7 @@ var testFunc = function() {
     const printed = 1;
   }
   // logging printed outside of block
-  console.log(printed);
+  console.log(printed); // => ReferenceError: printed is not defined
 };
 // logs printed is not defined
 testFunc();
