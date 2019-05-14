@@ -7,6 +7,7 @@ A collection of super-popular Interview questions, along with answers, and some 
 There are many fantastic resources for JavaScript interview questions, videos, and blog posts on the web and that I have drawn from. I will cite as many as I can throughout so that additional information on each list item can be easily found.
 
 ### For Understanding the Theory and the fundamentals of some super-popular Algorithm questions
+
 - :link: [Big O Cheatsheet](http://bigocheatsheet.com/)
 - :link: [developers/sorting-algorithms](https://www.toptal.com/developers/sorting-algorithms)
 - :link: [tackling-javascript-algorithms](https://medium.com/@yanganif/tackling-javascript-algorithms-66f1ac9770dc)
@@ -20,9 +21,8 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - :link: [www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/](https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/)
 - :link: [best javascript-algorithms github repo](https://github.com/trekhleb/javascript-algorithms)
 
-
-
 ### Github Repositories with large collections of problems-and-solutions of some popular Interview challenges
+
 - :link: [Algorithms-Leetcode-Javascript](https://github.com/ignacio-chiazzo/Algorithms-Leetcode-Javascript)
 - :link: [Algorithm-in-JavaScript](https://github.com/rohan-paul/Algorithm-in-JavaScript)
 - :link: [Javascript-Challenges](https://github.com/rohan-paul/Javascript-Challenges)
@@ -30,11 +30,11 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - :link: [code-problems-solutions](https://github.com/mkshen/code-problems-solutions)
 - :link: [some common problems](https://gist.github.com/Smakar20?page=1)
 
-
-
 ### Overall multi-factor approach for winning this huge challenge and a great journey of getting the first Developer Job
+
 - :link: [medium.com/javascript-scene/every-developer-needs-a-code-portfolio](https://medium.com/javascript-scene/every-developer-needs-a-code-portfolio-cc79c3d92110)
 - :link: [/master-the-javascript-interview-soft-skills](https://medium.com/javascript-scene/master-the-javascript-interview-soft-skills-a8a5fb02c466)
+- :link: [google-lost-a-chance-to-hire-me-finally-amazon-hired-me](https://medium.com/@jayshah_84248/google-lost-a-chance-to-hire-me-finally-amazon-hired-me-e35076c73fe2)
 - :link: [the-best-way-to-learn-to-code-is-to-code-learn-app-architecture-by-building-apps](https://medium.com/javascript-scene/the-best-way-to-learn-to-code-is-to-code-learn-app-architecture-by-building-apps-7ec029db6e00)
 - :link: [7-key-steps-to-getting-your-first-software-engineering-job](https://medium.freecodecamp.org/7-key-steps-to-getting-your-first-software-engineering-job-6ef80543cad9)
 - :link: [5-key-learnings-from-the-post-bootcamp-job-search](https://medium.freecodecamp.org/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331)
@@ -54,8 +54,8 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - :link: [YouTube - How To Be A Well-Paid Programmer In 1 Year?](https://www.youtube.com/watch?v=V71Cv7mjgfI)
 - :link: [the-secret-to-being-a-top-developer-is-building-things-heres-a-list-of-fun-apps-to-build](https://medium.freecodecamp.org/the-secret-to-being-a-top-developer-is-building-things-heres-a-list-of-fun-apps-to-build-aac61ac0736c)
 
-
 ### Some other very very important resources
+
 - :link: [javascript cheatsheet](http://overapi.com/javascript)
 - :link: [Super useful es6-cheatsheet](https://github.com/DrkSephy/es6-cheatsheet)
 - :link: [freeCodeCamp Guide](https://guide.freecodecamp.org/)
@@ -71,6 +71,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - :link: [https://30secondsofcode.org/](https://30secondsofcode.org/)
 
 ### Coding Challenge Practice Platforms
+
 - :link: [Leetcode](https://leetcode.com/)
 - :link: [HackerRank](https://www.hackerrank.com/)
 - :link: [CodeForces](http://codeforces.com/)
@@ -92,7 +93,6 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - :link: [LintCode](https://www.lintcode.com/)
 - :link: [CodeCombat](https://codecombat.com/)
 
-
 ## -------------------------------------------------------------------------------
 
 **More curated list of general resources for JavaScript Interviews**
@@ -109,9 +109,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 [https://github.com/Chalarangelo/30-seconds-of-code](https://github.com/Chalarangelo/30-seconds-of-code) - Curated collection of useful Javascript snippets that you can understand in 30 seconds or less.
 
-
 [https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d) - A perfect guide for cracking a JavaScript interview - A developer’s perspective
-
 
 [https://github.com/yangshun/front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook) - Almost complete answers to "Front-end Job Interview Questions" which you can use to interview potential candidates, test yourself or completely ignore
 
@@ -132,4 +130,3 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 [https://www.toptal.com/javascript/interview-questions](https://www.toptal.com/javascript/interview-questions) - 37 Essential JavaScript Interview Questions
 
 [https://medium.com/coderbyte/a-tricky-javascript-interview-question-asked-by-google-and-amazon-48d212890703](https://medium.com/coderbyte/a-tricky-javascript-interview-question-asked-by-google-and-amazon-48d212890703) - A Tricky JavaScript Interview Question Asked by Google and Amazon
-
