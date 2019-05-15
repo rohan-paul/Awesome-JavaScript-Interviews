@@ -8,11 +8,24 @@ One approach to controlling changes is to favor immutable, persistent data struc
 
 The thing about immutable data structures is that, as the name implies, you can never mutate one, but only produce new versions of it. If you want to change an object's attribute, you'll need to make a new object with the new attribute, since you can't change the existing one. Because of the way persistent data structures work, this is actually much more efficient than it sounds.
 
-#### What this means in terms of change detection is that when a React component's state consists of immutable data only, there's an escape hatch: When you're re-rendering a component, and the component's state still points to the same data structure (Meaning nothing was changed, i.e. no new Object was created or Cloned becuase there was no change) as the last time you rendered it, you can skip re-rendering. You can just use the previous virtual DOM for that component and the whole component tree stemming from it. There's no need to dig in further, since nothing could possibly have changed in the state.
+#### What this means in terms of change detection is that when a React component's state consists of immutable data only, there's an escape hatch: When you're re-rendering a component, and the component's state still points to the same data structure (Meaning nothing was changed, i.e. no new Object was created or Cloned because there was no change) as the last time you rendered it, you can skip re-rendering. You can just use the previous virtual DOM for that component and the whole component tree stemming from it. There's no need to dig in further, since nothing could possibly have changed in the state.
 
-### Pass by reference vs pass by value
+### Pass by reference vs pass by value in pure JavaScript
 
-**To understand immutable data you need to understand that in JavaScript non-primitive types (objects, arrays, functions…) are passed by reference and primitive types (string, number, boolean, symbol, null and undefined) are passed by value. This means that primitive types are immutable by default and you can’t change them. Instead, when you pass a primitive type to another variable, it will get a new copy of that value.**
+**To understand immutable data you need to understand that in JavaScript non-primitive types (objects, arrays, functions…) are passed by reference and primitive types (string, number, boolean, symbol, null and undefined) are passed by value. This means that primitive types are immutable by default and you can’t change them. Instead, when you pass a primitive type to another variable, it will get a new copy of that value. On the other hand non-primitive or compound data types, which are mutable.**
+
+Lets see an example
+
+var a = {};
+var b = {};
+
+a === b // false
+
+When you create new objects, arrays, functions, etc., a brand new object is placed into memory. Creating a new object with the same internals as another object will not magically cause that object to point to one that already exists. The objects may look the same, but they do not point to the same instance.
+
+Non-Primitive data-types like Objects are not compared by value. This means that even if two objects have the same properties and values, they are not strictly equal. Same goes for arrays. Even if they have the same elements that are in the same order, they are not strictly equal.
+
+Non primitive values can also be referred to as reference types because they are being compared by reference instead of value. Two objects are only strictly equal if they refer to the same underlying object.
 
 ```js
 // Primitive types are immutable by default
@@ -38,7 +51,7 @@ console.log(animal === anotherAnimal); // true
 
 #### So, how should you handle immutable data in JavaScript?
 
-#### When you want to update an object you should create a completely new object, thus keeping it immutable. For that purpose you can use the Object.assign method or object spread syntax:
+**MOST IMPORTANT POINT - When you want to update an object you should create a completely new object, thus keeping it immutable. For that purpose you can use the Object.assign method or object spread syntax:**
 
 ```js
 const animal = { name: "Mouse" };
@@ -84,7 +97,11 @@ By virtue of using immutability approach your state will become more predictable
 
 **Redux takes a given state (object) and passes it to each reducer in a loop. And it expects a brand new object from the reducer if there are any changes. And it also expects to get the old object back if there are no changes.**
 
-**Redux simply checks whether the old object is the same as the new object by comparing the memory locations of the two objects. So if you mutate the old object’s property inside a reducer, the “new state” and the “old state” will both point to the same object. Because, in JavaScript non-primitive types (objects, arrays, functions…) are passed by reference. Hence Redux thinks nothing has changed! So this won’t work.**
+**Redux simply checks whether the old object is the same as the new object by comparing the memory locations of the two objects. Meaning if the memory-locations are different - its a change of State for Redux and re-rendering cycle is necessary, if memory-locations are same no change has occurred for Redux, so no re-rendering is required**
+
+**So if you mutate the old object’s property inside a reducer, the “new state” and the “old state” will both point to the same object.**
+
+**Because, in JavaScript non-primitive types (objects, arrays, functions…) are passed by reference. Hence Redux thinks nothing has changed! So this won’t work.**
 
 ##### Further Reading
 
