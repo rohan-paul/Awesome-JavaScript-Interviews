@@ -1,3 +1,13 @@
+#### Immutability Is Important for PureComponents
+
+By default, React components (both the functional type and the class type components, if it extends React.Component) will re-render whenever their parent re-renders, or whenever you change their state with setState.
+
+**An easy way to optimize a React component for performance is to make it a class, and make it extend React.PureComponent instead of React.Component. This way, the component will only re-render if it’s state is changed or if it’s props have changed. It will no longer mindlessly re-render every single time its parent re-renders; it will ONLY re-render if one of its props has changed since the last render.**
+
+Here’s where immutability comes in: if you’re passing props into a PureComponent, you have to make sure that those props are updated in an immutable way. That means, if they’re objects or arrays, you’ve gotta replace the entire value with a new (modified) object or array. Just like with Bob – kill it off and replace it with a clone.
+
+If you modify the internals of an object or array – by changing a property, or pushing a new item, or even modifying an item inside an array – then the object or array is referentially equal to its old self, and a PureComponent will not notice that it has changed, and will not re-render. Weird rendering bugs will ensue.
+
 #### PureComponent is exactly the same as Component except that it handles the shouldComponentUpdate method for you. When props or state changes, PureComponent will do a shallow comparison (see below notes for more details) on both props and state. Component on the other hand won’t compare current props and state to next out of the box. Thus, the component will re-render by default whenever shouldComponentUpdate is called.
 
 #### Now lets look at STATELESS Component vs Pure Component
@@ -53,9 +63,7 @@ When comparing previous props and state to next, a shallow comparison will check
 ### Further Reading
 
 1. [https://reactjs.org/docs/react-api.html#reactpurecomponent](https://reactjs.org/docs/react-api.html#reactpurecomponent)
-
 2. [https://reactjs.org/docs/shallow-compare.html](https://reactjs.org/docs/shallow-compare.html)
-
 3. [https://codeburst.io/when-to-use-component-or-purecomponent-a60cfad01a81](https://codeburst.io/when-to-use-component-or-purecomponent-a60cfad01a81)
-
 4. [https://logrocket.com/blog/pure-functional-components/](https://logrocket.com/blog/pure-functional-components/)
+5. [https://daveceddia.com/react-redux-immutability-guide/](https://daveceddia.com/react-redux-immutability-guide/)
