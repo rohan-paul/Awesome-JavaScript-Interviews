@@ -6,13 +6,11 @@ Given the return value from **useReducer** is in the form object, I can do de-st
 
 `const [state, dispatch] = useReducer(reducer, initialState)`
 
-By the [Official doc on the above array-destructuring synatax](https://reactjs.org/docs/hooks-state.html#tip-what-do-square-brackets-mean)
+By the [Official doc on the above array-destructuring syntax](https://reactjs.org/docs/hooks-state.html#tip-what-do-square-brackets-mean)
 
 It means that we’re making two new variables **state** and **dispatch**, where **state** is set to the first value returned by **useReducer**, and **dispatch** is the second. It is equivalent to this code:
 
-Every useReducer comes with its own dispatch function.
-
-The **useReducer** function is tightly coupled to its reducer and its dispatch function. We dispatch action objects to that reducer only.
+Every useReducer comes with its own dispatch function. The **useReducer** function is tightly coupled to its reducer and its dispatch function. We dispatch action objects to that reducer only that useReducer() function takes as its first argument.
 
 #### Now an example to convert a useState() to a useReducer()
 

@@ -96,6 +96,32 @@ The setState it returns is almost the same used by class components—it can acc
 
 Each call to useState is paired with a component, with its state persisting across renders. This means that you can call useState multiple times within a single function component to get multiple independent state values. Because the setState returned isn't scoped to a single component, we can define stateful behaviors independent of the component. This enables powerful new ways to abstract stateful logic.
 
+#### When we want to display the current count in a class, we read this.state.count:
+
+```js
+<p>You clicked {this.state.count} times</p>
+```
+
+**In a function, we can use count directly:**
+
+`<p>You clicked {count} times</p>`
+
+#### Updating State
+
+In a class, we need to call this.setState() to update the count state:
+
+```js
+<button onClick={() => this.setState({ count: this.state.count + 1 })}>
+  Click me
+</button>
+```
+
+**In a function, we already have setCount and count as variables so we don’t need this:**
+
+```js
+<button onClick={() => setCount(count + 1)}>Click me</button>
+```
+
 #### Further Reading
 
 - [https://medium.com/@vcarl/everything-you-need-to-know-about-react-hooks-8f680dfd4349](https://medium.com/@vcarl/everything-you-need-to-know-about-react-hooks-8f680dfd4349)
