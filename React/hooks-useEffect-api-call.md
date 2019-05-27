@@ -31,7 +31,7 @@ export default App;
 
 The effect hook called useEffect is used to fetch the data with axios from the API and to set the data in the local state of the component with the state hook’s update function. The promise resolving happens with async/await.
 
-However, when you run your application, you should stumble into a nasty loop with the above implementataion of **useEffect()**. The effect hook runs when the component mounts but also when the component updates. Because we are setting the state after every data fetch, the component updates and the effect runs again. It fetches the data again and again. That’s a bug and needs to be avoided. We only want to fetch data when the component mounts. That’s why you can provide an empty array as second argument to the effect hook to avoid activating it on component updates but only for the mounting of the component.
+However, when you run your application, you should stumble into a nasty loop with the above implementation of **useEffect()**. The effect hook runs when the component mounts but also when the component updates. Because we are setting the state after every data fetch, the component updates and the effect runs again. It fetches the data again and again. That’s a bug and needs to be avoided. **We only want to fetch data when the component mounts. That’s why you can provide an empty array as second argument to the effect hook to avoid activating it on component updates but only for the mounting of the component.**
 
 The second argument can be used to define all the variables (allocated in this array) on which the hook depends. If one of the variables changes, the hook runs again. If the array with the variables is empty, the hook doesn’t run when updating the component at all, because it doesn’t have to watch any variables.
 
@@ -88,7 +88,7 @@ useEffect(() => {
 }, [valueA]);
 ```
 
-**In react-hooks, To have the same result as componentDidMount() - which runs only once when the component completes its mounting - we can send an empty array. Knowing that an empty set does never change, the effect will run only once.**
+**In react-hooks, To have the same result as componentDidMount() - which runs only once when the component completes its mounting - we can send an empty array. Knowing that an empty set does never change, the effect will run only once. In other words, The effect depends on no variables, so it is only triggered when the component mounts.**
 
 ```js
 // With empty array
@@ -96,5 +96,7 @@ useEffect(() => {
   console.log("I will run only once");
 }, []);
 ```
+
+So basically passing empty array as the second argument, I am telling useEffect() that it should never re-run as I am assigning no value the change of which should fire useEffect()
 
 [Source](https://www.robinwieruch.de/react-hooks-fetch-data/)
