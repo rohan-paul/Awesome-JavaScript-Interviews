@@ -18,24 +18,6 @@ ReactDOM.render(
 **Rubrics.tsx- The main component to render**
 
 ```js
-const mapStateToProps = state => ({
-  rubrics: state.rubrics.items,
-  loading: state.rubrics.loading,
-  error: state.rubrics.error
-});
-
-// THIS IS INCORRECT WAY
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     getRubrics: () => dispatch(fetchRubrics())
-//   };
-// };
-
-// THIS IS CORRECT WAY - Now you won't be creating a new object every time your component re-renders
-const mapDispatchToProps = {
-  getRubrics: fetchRubrics
-};
-
 const Rubrics = props => {
   const { getRubrics, loading, error } = props;
 
@@ -61,6 +43,24 @@ const Rubrics = props => {
       </React.Fragment>
     </ul>
   );
+};
+
+const mapStateToProps = state => ({
+  rubrics: state.rubrics.items,
+  loading: state.rubrics.loading,
+  error: state.rubrics.error
+});
+
+// THIS IS INCORRECT WAY
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     getRubrics: () => dispatch(fetchRubrics())
+//   };
+// };
+
+// THIS IS CORRECT WAY - Now you won't be creating a new object every time your component re-renders
+const mapDispatchToProps = {
+  getRubrics: fetchRubrics
 };
 
 export default connect(
@@ -152,3 +152,7 @@ const rubricReducer = (state = initialState, action) => {
 };
 export default rubricReducer;
 ```
+
+#### Further Reading
+
+https://stackoverflow.com/questions/55633900/how-to-dispatch-an-redux-action-to-load-data-inside-useeffect-on-page-load

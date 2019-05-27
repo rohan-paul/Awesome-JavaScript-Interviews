@@ -4,14 +4,26 @@
 import React, { useState } from "react";
 
 const Message = () => {
-  const messageState = useState("");
-  const listState = useState([]);
+  const [messageState, setMessageState] = useState("");
+  const [listState, setListState] = useState([]);
 };
 ```
 
-**useState** takes an initial state as an argument, and returns the current state and an updater function.
+**useState** takes an initial state as an argument, and returns a pair (the current state and an updater function) as an array with two items. The first item is the current value, and the second is a function that lets us update it.
 
-You can pass the initial value of the state variable as an argument directly, as shown in the previous example, or use a function to lazily initialize the variable (useful when the initial state is the result of an expensive computation):
+In the above case the current state is 'messageState' and the updater function is 'setMessageState'. This is similar to this.state.messageState and this.setState in a class component. The **array destructuring** syntax lets us give different names to the state variables we declared by calling useState. These names aren’t a part of the useState API.
+
+By the [Official doc on the above array-destructuring syntax](https://reactjs.org/docs/hooks-state.html#tip-what-do-square-brackets-mean)
+
+It means that we’re making two new variables **messageState** and **setMessateState**, where **messageState** is set to the first value returned by **useState**, and **setMessageState** is the second. It is equivalent to this code:
+
+```js
+var messageStateVariable = useState("some message"); // Returns a pair
+var messageState = messageStateVariable[0]; // First item in a pair
+var setMessageState = messageStateVariable[1]; // Second item in a pair
+```
+
+**You can pass the initial value of the state variable as an argument directly, as shown in the previous example, or use a function to lazily initialize the variable (useful when the initial state is the result of an expensive computation):**
 
 ```js
 const Message = () => {
@@ -56,7 +68,7 @@ const Persons = props => {
 };
 ```
 
-The **setNameState** function is used to update the state. It accepts a new state value and enqueues a re-render of the component. Remember unlike the class-based component's `setState()` method, there is NO `setState()` in react-hooks. So whatever the name of the state is (in this case 'nameState') just add the keyword **set** to that with a proper camel-casing. So here that becomes **setNameState** but this **setNameState** can theoratically become anything.
+The **setNameState** function is used to update the state. It accepts a new state value, as its argument and enqueues a re-render of the component. Remember unlike the class-based component's `setState()` method, there is NO `setState()` in react-hooks. So whatever the name of the state is (in this case 'nameState') just add the keyword **set** to that with a proper camel-casing. So here that becomes **setNameState** but this **setNameState** can theoretically be any word.
 
 [https://stackoverflow.com/questions/54625831/how-to-sync-props-to-state-using-react-hook-setstate](https://stackoverflow.com/questions/54625831/how-to-sync-props-to-state-using-react-hook-setstate)
 

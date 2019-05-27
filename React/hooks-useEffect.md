@@ -2,6 +2,8 @@
 
 ### you can think of useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
 
+Mutations, subscriptions, timers, logging, and other side effects are not allowed inside the main body of a function component (referred to as React’s render phase). Doing so will lead to confusing bugs and inconsistencies in the UI. **According to doc function passed to useEffect fires after layout and paint.**
+
 [https://reactjs.org/docs/hooks-effect.html](https://reactjs.org/docs/hooks-effect.html) - The Effect Hook lets you perform side effects in function components. Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects.
 
 In React class components, the render method itself shouldn’t cause side effects. It would be too early — we typically want to perform our effects after React has updated the DOM.
@@ -19,32 +21,28 @@ This is why in React classes, we put side effects into `componentDidMount` and `
 
 ```js{9-15}
 class Example extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			count: 0
-		};
-	}
-	componentDidMount() {
-		document.title = `You clicked ${this.state.count} times`;
-	}
-	componentDidUpdate() {
-		document.title = `You clicked ${this.state.count} times`;
-	}
-	render() {
-		return (
-			<div>
-				<p>You clicked {this.state.count} times</p>
-				<button
-					onClick={() =>
-						this.setState({ count: this.state.count + 1 })
-					}
-				>
-					Click me
-				</button>
-			</div>
-		);
-	}
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+  }
+  componentDidMount() {
+    document.title = `You clicked ${this.state.count} times`;
+  }
+  componentDidUpdate() {
+    document.title = `You clicked ${this.state.count} times`;
+  }
+  render() {
+    return (
+      <div>
+        <p>You clicked {this.state.count} times</p>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          Click me
+        </button>
+      </div>
+    );
+  }
 }
 ```
 
@@ -59,16 +57,16 @@ We've already seen this example at the top of this page, but let's take a closer
 ```js{1,6-8}
 import React, { useState, useEffect } from "react";
 function Example() {
-	const [count, setCount] = useState(0);
-	useEffect(() => {
-		document.title = `You clicked ${count} times`;
-	});
-	return (
-		<div>
-			<p>You clicked {count} times</p>
-			<button onClick={() => setCount(count + 1)}>Click me</button>
-		</div>
-	);
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  });
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
 }
 ```
 
