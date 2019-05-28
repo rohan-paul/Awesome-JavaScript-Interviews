@@ -102,7 +102,7 @@ Each call to useState is paired with a component, with its state persisting acro
 <p>You clicked {this.state.count} times</p>
 ```
 
-**In a function, we can use count directly:**
+**In a function, we can use 'count. directly - no need to use `this.state.count` - And as far as passing down props are concerned there is no difference in usage with React Hooks.**
 
 `<p>You clicked {count} times</p>`
 
