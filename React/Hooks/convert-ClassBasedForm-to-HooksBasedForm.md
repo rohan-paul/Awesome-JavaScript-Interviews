@@ -80,12 +80,14 @@ const FunctionBasedForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // Note to declare function inside the function-based-component I have to user the keyword 'const'
   const handleSubmit = event => {
     event.preventDefault();
     console.log(email);
     console.log(password);
   };
 
+  // Note also NO 'this' keyword is needed to invoke the handleSubmit() function in the Form
   return (
     <Form onSubmit={handleSubmit}>
       <h1>Function Based Form</h1>

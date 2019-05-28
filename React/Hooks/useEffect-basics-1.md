@@ -80,7 +80,7 @@ The state and state update function come from the state hook called useState
 
 **Does `useEffect` run after every render?** Yes! By default, it runs both after the first render _and_ after every update. (We separately talk about below [how to customize this](#tip-optimizing-performance-by-skipping-effects). Instead of thinking in terms of "mounting" and "updating", you might find it easier to think that effects happen "after render". React guarantees the DOM has been updated by the time it runs the effects.
 
-#### Great explanation of the second array argument to useEffect() - so to control when useEffect() will run
+#### Great explanation of the second array (called the dependencies array) argument to useEffect() - so to control when useEffect() will run
 
 [https://medium.com/javascript-in-plain-english/state-management-with-react-hooks-no-redux-or-context-api-8b3035ceecf8](https://medium.com/javascript-in-plain-english/state-management-with-react-hooks-no-redux-or-context-api-8b3035ceecf8)
 

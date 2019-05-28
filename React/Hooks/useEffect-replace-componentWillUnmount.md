@@ -13,7 +13,11 @@ useEffect(() => {
 }, []);
 ```
 
-**IMPORTANT - When you return a function in the callback passed to useEffect, the returned function will be called before the component is removed from the UI. So to clean up the side effects you must return a function.**
+**IMPORTANT - When you return a function in the callback passed to useEffect, the returned function will be called before the component is removed from the UI. In other words, Whatever function we return from the useEffect will be treated as componentWillUnmount and will run either when the useEffect runs again or when the component is about to leave the UI.**
+**So to clean up the side effects you must return a function.**
+
+**we can also use as many useEffect we want to add. That means you can subscribe to an event and unsubscribe from it inside one useEffect and hit APIs in another useEffect**
+[Source](https://medium.com/recraftrelic/usestate-and-useeffect-explained-cdb5dc252baf)
 
 As we discussed previously, we need to pass an empty list as the second argument for useEffect so that the callback will only be called once. This apply to the returned function too.
 

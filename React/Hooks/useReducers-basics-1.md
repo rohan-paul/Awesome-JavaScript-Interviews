@@ -6,7 +6,13 @@ Given the return value from **useReducer** is in the form object, I can do de-st
 
 `const [state, dispatch] = useReducer(reducer, initialState)`
 
-By the [Official doc on the above array-destructuring syntax](https://reactjs.org/docs/hooks-state.html#tip-what-do-square-brackets-mean)
+**reducer** is a function that takes a state and action and returns a newState. So the above signature of useReducer() effectively becomes the below
+
+`const [state, dispatch] = useReducer((state, action) => newState)`
+
+The newState returned from the reducer is then consumed by the component via the state variable.
+
+[For the destructuring syntax by the](https://reactjs.org/docs/hooks-state.html#tip-what-do-square-brackets-mean)
 
 It means that we’re making two new variables **state** and **dispatch**, where **state** is set to the first value returned by **useReducer**, and **dispatch** is the second. It is equivalent to this code:
 
