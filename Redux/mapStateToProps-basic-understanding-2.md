@@ -31,8 +31,8 @@ ShoppingList.PropTypes = {
 };
 ```
 
-what mapStateToProps() does is, it allows us to take our item state (from itemReducer.js ) and turn this into a component property so I can use it in this ShoppingList component - like e.g.
-this.props.items
+what mapStateToProps() does is, it allows us to take our item state (from itemReducer.js ) and turn this into a component property so I can use it in this ShoppingList component - like e.g. `this.props.items`
+
 mapStateToProps() has the Store state as an argument and its used to link the component with certain part of the store state . In returned object from mapStateToProps() below, I am using 'item' as key because thats what I am calling it in my rootReducer (./reducers/index.js)
 
 ```js
@@ -52,7 +52,20 @@ export default connect(
 )(ShoppingList);
 ```
 
-mapStateToProps and mapDispatchToProps are both pure functions that are provided with the (or passed to them), the stores “state” and “dispatch” respectively. Furthermore, both functions have to return an object, whose keys will then be passed on as the props of the component they are connected to (ShoppingList in this case).
+mapStateToProps and mapDispatchToProps are both pure functions that are provided with (or passed to them), the stores “state” and “dispatch” respectively. Furthermore, both functions have to return an object, whose keys will then be passed on as the props of the component they are connected to (ShoppingList in this case).
+
+#### MOST IMPORTANT POINT (THAT BAFFLED ME INITIALLY) - How dows mapStateToProps know which is this 'item' variable that I am talking about.
+
+##### And the answer is from the rootReducer (./reducers/index.js) file. There, from combineReducers() functions I am returning all the state that ./itemReducer.js file is returning. by doing this
+
+```js
+import { combineReducers } from "redux";
+import itemReducer from "./itemReducer";
+
+export default combineReducers({
+  item: itemReducer
+});
+```
 
 ## 2. mapStateToProps - General Syntax - 2nd Example
 
@@ -109,7 +122,7 @@ On the other hand, when we want to retrieve data, we do not get it directly from
 
 This is precisely what connect does. It maps the store's state and dispatch to the props of a component :
 
-mapStateToProps and mapDispatchToProps are both pure functions that are provided with the (or passed to them), stores “state” and “dispatch” respectively. Furthermore, both functions have to return an object, whose keys will then be passed on as the props of the component they are connected to (ShoppingList in this case).
+**mapStateToProps** and **mapDispatchToProps** are both pure functions that are provided with the (or passed to them), stores “state” and “dispatch” respectively. Furthermore, both functions have to return an object, whose keys will then be passed on as the props of the component they are connected to (ShoppingList in this case).
 
 In this case, mapStateToProps returns an object with only one key : “item”.
 
