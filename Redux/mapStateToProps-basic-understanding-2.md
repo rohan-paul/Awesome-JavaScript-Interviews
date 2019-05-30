@@ -2,7 +2,21 @@
 
 ### mapDispatchToProps() is a utility which will help your component to fire an action event (dispatching action which may cause change of application state)
 
-## 1. mapStateToProps - General Syntax - 1st Example
+### 1. mapStateToProps - General Syntax - 1st Example
+
+[Per official dox](https://react-redux.js.org/using-react-redux/connect-mapstate) - mapStateToProps should be defined as a function with the below signature
+
+`function mapStateToProps(state, ownProps?)`
+
+It should take a first argument called **state**, optionally a second argument called ownProps, and return a plain object containing the data that the connected component needs.
+
+This function should be passed as the first argument to connect, and will be called every time when the Redux store state changes. If you do not wish to subscribe to the store, pass null or undefined to connect in place of mapStateToProps.
+
+**The state argument of mapStateToProps(state)**
+
+The first argument to a mapStateToProps function is the entire Redux store state (the same value returned by a call to store.getState()). Because of this, the first argument is traditionally just called state. We can give the argument any name you want.
+
+Your mapStateToProps functions are expected to return an object. This object, normally referred to as stateProps, will be merged as props to your connected component. You may define mapStateToProps and mapDispatchToProps as a factory function, i.e., you return a function instead of an object. In this case your returned function will be treated as the real mapStateToProps or mapDispatchToProps, and be called in subsequent calls.
 
 ### Small note - Because mapStateToProps() take the item state (from itemReducer.js ) and turns this into a component property. So I am applying PropTypes on item `item: PropTypes.object.isRequired`
 
@@ -105,8 +119,34 @@ The return value of mapStateToProps() will be an object derived from state (as i
 
 It's called "connecting" your component or "making it smart". It's by design. It allows you to decouple your component from your state an additional time which increases the modularity of your code. It also allows you to simplify your component state as a subset of your application state which, in fact, helps you comply with the redux pattern. Think about it this way: a store is supposed to contain the entire text of your application. For large applications, this could contain dozens of properties nested many layers deep. You don't want to haul all that around on each call (which will become too expensive for the appliaction's overal efficiency ).
 
+#### How mapStateToProps() determines if component should re-render
+
+[Official Doc says](https://react-redux.js.org/using-react-redux/connect-mapstate#return-values-determine-if-your-component-re-renders)
+
+React Redux internally implements the shouldComponentUpdate method such that the wrapper component re-renders precisely when the data your component needs has changed. By default, React Redux decides whether the contents of the object returned from mapStateToProps are different using === comparison (a "shallow equality" check) on each fields of the returned object. If any of the fields have changed, then your component will be re-rendered so it can receive the updated values as props. Note that returning a mutated object of the same reference is a common mistake that can result in your component not re-rendering when expected.
+
+##### Many common operations result in new object or array references being created:
+
+- Creating new arrays with someArray.map() or someArray.filter()
+- Merging arrays with array.concat
+- Selecting portion of an array with array.slice
+- Copying values with Object.assign
+- Copying values with the spread operator { ...oldState, ...newData }
+
+### What is Shallow Comparison
+
+- A> When shallow comparing scalar values (numbers, strings) it compares their values. When comparing objects, it does not compare their attributes - only their references are compared (e.g. "do they point to same object?).
+
+- B> Shallow comparison is when the properties of the objects being compared is done using "===" or strict equality and will not conduct comparisons deeper into the properties. So if you shallow compare a deep nested object it will just check the reference not the values inside that object.
+
+- C> shallowCompare performs a shallow equality check on the current props and nextProps objects as well as the current state and nextState objects.
+  It does this by iterating on the keys of the objects being compared and returning true when the values of a key in each object are not strictly equal.
+
+  shallowCompare returns true if the shallow comparison for props or state fails and therefore the component should update.
+  shallowCompare returns false if the shallow comparison for props and state both pass and therefore the component does not need to update.
+
 #### Other Resources
 
 1> [https://www.youtube.com/watch?v=IIMUXbkKzW0](https://www.youtube.com/watch?v=IIMUXbkKzW0)
 
-2>
+2> [Shallow compare official dox](https://reactjs.org/docs/shallow-compare.html)

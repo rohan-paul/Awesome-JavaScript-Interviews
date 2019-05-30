@@ -60,7 +60,16 @@ Stateless Components are easy and fast to implement. They are good for very smal
 
 ### What is Shallow Comparison
 
-When comparing previous props and state to next, a shallow comparison will check that primitives have the same value (eg, 1 equals 1 or that true equals true) and that the references are the same between more complex javascript values like objects and arrays.
+- A> When shallow comparing scalar values (numbers, strings) it compares their values. When comparing objects, it does not compare their attributes - only their references are compared (e.g. "do they point to same object?).
+
+- B> Shallow comparison is when the properties of the objects being compared is done using "===" or strict equality and will not conduct comparisons deeper into the properties. So if you shallow compare a deep nested object it will just check the reference not the values inside that object.
+
+- C> shallowCompare performs a shallow equality check on the current props and nextProps objects as well as the current state and nextState objects.
+  It does this by iterating on the keys of the objects being compared and returning true when the values of a key in each object are not strictly equal.
+
+  shallowCompare returns true if the shallow comparison for props or state fails and therefore the component should update.
+  shallowCompare returns false if the shallow comparison for props and state both pass and therefore the component does not need to update.
+  .
 
 ### Further Reading
 
