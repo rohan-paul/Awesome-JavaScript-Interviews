@@ -4,7 +4,7 @@ constructor: Function components don’t need a constructor. You can initialize 
 
 **getDerivedStateFromProps**: Schedule an update while rendering instead.
 
-**shouldComponentUpdate**: See React.memo below.
+**shouldComponentUpdate**: See React.memo.
 
 **render**: This is the function component body itself.
 

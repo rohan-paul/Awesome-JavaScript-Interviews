@@ -20,6 +20,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - :link: [Karp_algorithm](https://www.wikiwand.com/en/Rabin%E2%80%93Karp_algorithm)
 - :link: [www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/](https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/)
 - :link: [best javascript-algorithms github repo](https://github.com/trekhleb/javascript-algorithms)
+- :link: [14-patterns-to-ace-any-coding-interview-question](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
 
 ### Github Repositories with large collections of problems-and-solutions of some popular Interview challenges
 

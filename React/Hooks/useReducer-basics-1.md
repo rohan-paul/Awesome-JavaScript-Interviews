@@ -27,6 +27,7 @@ Every useReducer comes with its own dispatch function. The **useReducer** functi
 ```js
 function Counter({ initialCount }) {
   const [count, setCount] = useState(initialCount);
+
   return (
     <>
       Count: {count}

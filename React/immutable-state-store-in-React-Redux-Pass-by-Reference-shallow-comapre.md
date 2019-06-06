@@ -73,7 +73,7 @@ console.log(animal === anotherAnimal); // false
 console.log(animal === yetAnotherAnimal); // false
 ```
 
-When dealing with arrays you should not use methods that will mutate the given array such as push, shift, unshift,reverse,sort and other array methods. Instead, you should use their immutable equivalents. As you might have already noticed, in the beginning of every chapter I was using the spread operator instead of thepush method to add a new string into our devSkills array.
+When dealing with arrays you should not use methods that will mutate the given array such as push, shift, unshift, reverse,sort and other array methods. Instead, you should use their immutable equivalents. As you might have already noticed, in the beginning of every chapter I was using the spread operator instead of thepush method to add a new string into our devSkills array.
 
 ```js
 const animals = ["Mouse", "Elephant"];

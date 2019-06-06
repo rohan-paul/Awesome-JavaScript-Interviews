@@ -35,7 +35,11 @@ However, when you run your application, you should stumble into a nasty loop wit
 
 The second argument can be used to define all the variables (allocated in this array) on which the hook depends. If one of the variables changes, the hook runs again. If the array with the variables is empty, the hook doesn’t run when updating the component at all, because it doesn’t have to watch any variables.
 
-There is one last catch. In the code, we are using async/await to fetch data from a third-party API. According to the documentation every function annotated with async returns an implicit promise: “The async function declaration defines an asynchronous function, which returns an AsyncFunction object. An asynchronous function is a function which operates asynchronously via the event loop, using an implicit Promise to return its result. “. However, an effect hook should return nothing or a clean up function. That’s why you may see the following warning in your developer console log: 07:41:22.910 index.js:1452 Warning: useEffect function must return a cleanup function or nothing. Promises and useEffect(async () => …) are not supported, but you can call an async function inside an effect.. That’s why using async directly in the useEffect function isn’t allowed. Let’s implement a workaround for it, by using the async function inside the effect.
+There is one last catch. In the code, we are using async/await to fetch data from a third-party API. According to the documentation every function annotated with async returns an implicit promise: “The async function declaration defines an asynchronous function, which returns an AsyncFunction object. An asynchronous function is a function which operates asynchronously via the event loop, using an implicit Promise to return its result.
+
+**However, an useEffect() function must not return anything besides a function, which is used for clean-up. That when useEffect() does return a function that function is ONLY used for cleaning up, like what we will do under componentWillUnmount()**
+
+That’s why you may see the following warning in your developer console log: 07:41:22.910 index.js:1452 Warning: useEffect function must return a cleanup function or nothing. Promises and useEffect(async () => …) are not supported, but you can call an async function inside an effect.. That’s why using async directly in the useEffect function isn’t allowed. Let’s implement a workaround for it, by using the async function inside the effect.
 
 ```js
 import React, { useState, useEffect } from "react";

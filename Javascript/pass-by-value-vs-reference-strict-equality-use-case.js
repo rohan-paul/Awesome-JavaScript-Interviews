@@ -54,25 +54,44 @@ In the above we assign variable (a) the value of 5. The equals operator notices 
  */
 
 // Now pass-by-reference
-let a = { language: "Javascript" };
-let b = a;
+let c = { language: "Javascript" };
+let d = c;
 
-console.log(a); // => {language: "Javascript"}
-console.log(b); // => {language: "Javascript"}
+console.log(c); // => {language: "Javascript"}
+console.log(d); // => {language: "Javascript"}
 
-a.language = "Ruby";
+// Let's mutate our object 'd'
+d.language = "Ruby";
 
-console.log(a); // => {language: "Ruby"}
-console.log(b); // => {language: "Ruby"}
+console.log(c); // => {language: "Ruby"}
+console.log(d); // => {language: "Ruby"}
+
+// Meaning mutating the object d also mutates the object c - Because 'd' points to the same reference-location as 'c' .
+// So when I do d.language = 'Ruby' that instruction hits the same memory location which 'c' is referring to .
 
 /*
  2. Pass-By-Reference
 
-Passing by reference relates to objects in Javascript (ALL objects including functions).
+Explanation - A. Passing by reference relates to objects in Javascript (ALL objects including functions).
 
 When a variable (a) is set equal to an object the equals operator identifies that the value is an object, creates a new location in memory, and points (a) to the address (represented by 0x001). When we create a new variable (b) and assign it the value of variable (a) the equals operator knows we are dealing with an object and points it to the same address that (a) points to.
-Notice that no new location or object in memory is created (like in pass by value), rather variable (b) is simply pointed to the same address that variable (a) was pointed to.
+
+Notice that NO new location or object in memory is created (like in pass by value), rather variable (b) is simply pointed to the same address that variable (a) was pointed to.
 
 In sum, ALL objects interact by reference in Javascript so when setting equal to each other or passing to a function they all point to the same location so when you change one object you change them all. This is a stark difference compared to pass by value.
+
+Explanation - B. Think of it like this:
+
+Whenever you create an object in ECMAscript, this object is formed in a mystique ECMAscript universal place where no man will ever be able to get. All you get back is a reference to that object in this mystique place.
+
+var obj = { };
+
+Even obj is only a reference to the object (which is located in that special wonderful place) and hence, you can only pass this reference around. Effectively, any piece of code which accesses obj will modify the object which is far, far away.
+
+Explanation - C
+
+JavaScript is pass by value. For primitives, primitive's value is passed. For Objects, Object's reference "value" is passed. So when I say, objects are passed by reference > That reference is itself passed by value >
+
+So now the question is -  what is the value of the reference? - A "reference" means something like what "pointer" means in C or C++ (well C++ has both pointers and references). However in languages like JavaScript or Java for that matter a "value" that is a particular object can only be a reference to the object.
 
 */

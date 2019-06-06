@@ -1,4 +1,67 @@
-#### When to use useRef
+#### What is useRef()
+
+[By React Official documentation](https://reactjs.org/docs/hooks-faq.html#is-there-something-like-instance-variables)
+
+Yes! The useRef() Hook isn’t just for DOM refs. The “ref” object is a generic container whose current property is mutable and can hold any value, similar to an instance property on a class.
+
+**useRef** can be used to store and arbitrary value. E.g. you might want to use `useRef` to keep a mutable value for the entire life of the component. You can think of it as useState (in terms of hooks) but it doesn’t trigger a re-render. It’s similar to instance fields (e.g. this.timeoutId) in class components.
+
+You can write to it from inside useEffect:
+
+```js
+function Timer() {
+  const intervalRef = useRef();
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      // ...
+    });
+    intervalRef.current = id;
+
+    return () => {
+      clearInterval(intervalRef.current);
+    };
+  });
+
+  // ...
+}
+```
+
+If we just wanted to set an interval, we wouldn’t need the ref (id could be local to the effect), but it’s useful if we want to clear the interval from an event handler
+
+```js
+function handleCancelClick() {
+  clearInterval(intervalRef.current);
+}
+```
+
+#### Example use case in a DOM based situation
+
+In react useRef hooks helps us to access the dom nodes or elements so that we can interact with that dom element like accessing the input element value or focussing the input element.
+
+```js
+import React, { useRef } from "react";
+
+function TextInput() {
+  //creating the ref by passing initial value null
+  const nameRef = useRef(null);
+
+  function handleFocus() {
+    //current is pointing to input element when component is mounts to dom
+    nameRef.current.focus();
+  }
+  return (
+    <div>
+      <input ref={nameRef} placeholder="name" />
+      <button onClick={handleFocus}>Focus</button>
+    </div>
+  );
+}
+```
+
+In the above example we have imported useRef hook from the `react` then we invoked the useRef hooks by passing the initial value null.
+
+In input element we defined **ref** attribute by passing the nameRef so that we can access the input element in nameRef.current property.
 
 ##### First Explanation -
 
@@ -117,3 +180,4 @@ By Dan himself - **useRef() is basically useState({current: initialValue })[0]**
 
 - 1.  [https://reactjs.org/docs/hooks-reference.html#useref](https://reactjs.org/docs/hooks-reference.html#useref)
 - 2. [https://medium.com/@dai_shi/how-to-properly-use-the-react-useref-hook-in-concurrent-mode-38c54543857b](https://medium.com/@dai_shi/how-to-properly-use-the-react-useref-hook-in-concurrent-mode-38c54543857b)
+- 3. [https://reactgo.com/react-useref-hook-example/](https://reactgo.com/react-useref-hook-example/)
