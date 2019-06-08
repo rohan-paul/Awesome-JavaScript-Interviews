@@ -75,7 +75,7 @@ useEffect hooks takes the second parameter as an array of values which React nee
 ```js
 const [loading, setLoading] = useState(false);
 
-...
+....
 
 useEffect(() => {
 doSomething(); // This is be executed when `loading` state changes
@@ -140,3 +140,6 @@ const getNextPage = () => {
   setIsLoading(true);
 };
 ```
+
+So now the question is - in the case of having multiple **setStates** that we want to wait for, we need multiple **useEffect** hooks.
+If you want to take different actions when different states change then yes, we need multiple useEffect() hooks, but if you want to do the sme thing on any of those multiple states change, then you could pass multiple arguments like [isLoading, isUpdated, showError]

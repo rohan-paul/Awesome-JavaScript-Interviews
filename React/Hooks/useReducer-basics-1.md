@@ -96,6 +96,57 @@ There are a few rules of thumb to follow: If you state management doesn’t need
 - Use useState + useReducer + useContext for advanced/medium size applications.
 - Use useState/useReducer + Redux for complex/large size applications.
 
+#### Relation with useState
+
+[https://stackoverflow.com/a/55343617/1902852](https://stackoverflow.com/a/55343617/1902852)
+
+Digging thru the source code and the behavior is due to useState calling useReducer
+
+Internally, useState calls useReducer, which returns whatever state a reducer returns.
+
+https://github.com/facebook/react/blob/2b93d686e3/packages/react-reconciler/src/ReactFiberHooks.js#L1230
+
+```js
+
+    useState<S>(
+      initialState: (() => S) | S,
+    ): [S, Dispatch<BasicStateAction<S>>] {
+      currentHookNameInDev = 'useState';
+        ...
+      try {
+        return updateState(initialState);
+      } finally {
+        ...
+      }
+    },
+```
+
+where updateState is the internal implementation for useReducer.
+
+```js
+function updateState<S>(
+  initialState: (() => S) | S,
+): [S, Dispatch<BasicStateAction<S>>] {
+  return updateReducer(basicStateReducer, (initialState: any));
+}
+
+    useReducer<S, I, A>(
+      reducer: (S, A) => S,
+      initialArg: I,
+      init?: I => S,
+    ): [S, Dispatch<A>] {
+      currentHookNameInDev = 'useReducer';
+      updateHookTypesDev();
+      const prevDispatcher = ReactCurrentDispatcher.current;
+      ReactCurrentDispatcher.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
+      try {
+        return updateReducer(reducer, initialArg, init);
+      } finally {
+        ReactCurrentDispatcher.current = prevDispatcher;
+      }
+    },
+```
+
 #### Further Reading
 
 - 1.  [https://www.robinwieruch.de/redux-vs-usereducer/](https://www.robinwieruch.de/redux-vs-usereducer/)

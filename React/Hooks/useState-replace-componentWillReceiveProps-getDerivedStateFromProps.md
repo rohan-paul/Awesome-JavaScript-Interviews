@@ -34,7 +34,7 @@ const Message = () => {
 
 **The initial value will be assigned only on the initial render (if it’s a function, it will be executed only on the initial render).**
 
-**In subsequent renders (due to a change of state in the component or a parent component), the argument of the useState hook will be ignored and the current value will be retrieved. It is important to keep this in mind because, for example, if you want to update the state based on the new properties the component receives:**
+**In subsequent renders (due to a change of state in the component or a parent component), the argument of the useState hook will be ignored and the current value of the state will be retrieved. It is important to keep this in mind because, for example, if you want to update the state based on the new properties the component receives:**
 
 ```js
 const Message = props => {
@@ -89,8 +89,6 @@ const SomeComponent = props => {
 ```
 
 Pere [Hooks Official Docs](https://reactjs.org/docs/hooks-reference.html) - **During the initial render, the returned state (state) is the same as the value passed as the first argument (initialState). During subsequent re-renders (i.e. after invoking a setState (like setCount or whatever) inside useEffect()), the first value returned by useState will always be, whatever is the most recent state after applying updates.**
-
-**useState** takes an initial state as an argument, and returns the current state and an updater function.
 
 The setState it returns is almost the same used by class components—it can accept a callback that gets the current state as an argument, but it doesn't automatically merge top-level object keys.
 

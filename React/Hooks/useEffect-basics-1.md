@@ -97,3 +97,11 @@ useEffect(() => {
   console.log("I will run only when valueA changes");
 }, [valueA]);
 ```
+
+**The reason we need to pass in an empty array as the second argument to useEffect** -
+
+In order to register just once we need to pass in an empty array as the second argument to useEffect.
+
+This (passing the empty array) typically is used to control whether or not the useEffect needs to be re-applied. This array is diffed from the original creation of the effect and the new one being passed in. It will diff the array (just like it does the virtual DOM) and decide if it needs to re-apply the effect.
+
+Passing in an empty array tells React to diff, however there is nothing different between each render so the effect will only be run once. Be aware though, if you are calling a function from props, or relying on props inside the effect you will need to pass them into the array to re-apply the effect.

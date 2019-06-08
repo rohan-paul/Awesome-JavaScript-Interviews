@@ -21,6 +21,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - :link: [www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/](https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/)
 - :link: [best javascript-algorithms github repo](https://github.com/trekhleb/javascript-algorithms)
 - :link: [14-patterns-to-ace-any-coding-interview-question](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
+- :link: [Grokking the Coding Interview: Patterns for Coding Questions](https://www.educative.io/collection/5668639101419520/5671464854355968)
 
 ### Github Repositories with large collections of problems-and-solutions of some popular Interview challenges
 
