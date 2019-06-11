@@ -100,7 +100,12 @@ useEffect(() => {
 
 **The reason we need to pass in an empty array as the second argument to useEffect** -
 
-In order to register just once we need to pass in an empty array as the second argument to useEffect.
+From the react [docs](https://reactjs.org/docs/hooks-reference.html#conditionally-firing-an-effect):
+
+Passing in an empty array [] of inputs tells React that your effect doesn’t depend on any values from the component, so that effect would run only on mount and clean up on unmount; it won’t run on updates.
+If you want to run an effect and clean it up only once (on mount and unmount), you can pass an empty array ([]) as a second argument. This tells React that your effect doesn’t depend on any values from props or state, so it never needs to re-run. This isn’t handled as a special case — it follows directly from how the dependencies array always works.
+
+If you pass an empty array ([]), the props and state as inside the effect will always have their initial values. While passing [] as the second argument is closer to the familiar componentDidMount and componentWillUnmount mental model, there are usually better solutions to avoid re-running effects too often. Also, don’t forget that React defers running useEffect until after the browser has painted, so doing extra work is less of a problem.
 
 This (passing the empty array) typically is used to control whether or not the useEffect needs to be re-applied. This array is diffed from the original creation of the effect and the new one being passed in. It will diff the array (just like it does the virtual DOM) and decide if it needs to re-apply the effect.
 

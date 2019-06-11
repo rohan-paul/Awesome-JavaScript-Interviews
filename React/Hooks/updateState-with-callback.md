@@ -11,9 +11,11 @@ setState(prevState => {
 
 Another option is useReducer, which is more suited for managing state objects that contain multiple sub-values.
 
-The key point and guidance to update states
+### The key point and guidance to update states
 
-Just as with setState in a class component you need to be careful when updating state derived from something that already is in state. State updates using hooks are also batched and hence whenever you want to update state based on previous one its better to use the callback pattern.
+Just as with setState in a class component you need to be careful when updating state derived from something that already is in state i.e. your new state depends on the old state. State updates using hooks are also batched and hence whenever you want to update state based on previous one its better to use the callback pattern.
+
+The callback pattern to update state also comes in handy when the setter doesn't receive updated value from enclosed closure due to it being defined only once. An example of such as case if the useEffect being called only on initial render when adds a listener that updates state on an event.
 
 If you e.g. update a count twice in a row, it will not work as expected if you don't use the function version of updating the state.
 
