@@ -95,7 +95,7 @@ currentWeek: []
 };
 ```
 
-SO I PULL IN THE 'tides' VARIABLE WITH mapStateToProps() as below - NOTE, I HAVE TO HAVE THE ARGUMENT OF mapStateToProps() withing the curly braces to match exactly what the root-reducer returned inside combineReducers function - inside ../reducers/index.js file
+SO I PULL IN THE 'tides' VARIABLE WITH mapStateToProps() as below - NOTE, I HAVE TO HAVE THE ARGUMENT OF mapStateToProps() withing the curly braces to match exactly what the root-reducer returned inside combineReducers function - i.e. inside ../reducers/index.js file
 
 ```js
 const mapStateToProps = ({ tides }) => {
