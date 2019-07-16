@@ -81,7 +81,7 @@ export default combineReducers({
 });
 ```
 
-See, that for each of the reducers I am returning the state object specifying a single variable as the key. So for the tidalReducers, I am returning the key as 'tides'
+See, that for each of the reducers, I am returning the state object specifying a single variable as the key. So for the tidalReducers, I am returning the key as 'tides'
 
 #### And thats the most important point
 
@@ -122,3 +122,11 @@ export default connect(
   mapDispatchToProps
 )(withStyles(styles)(TidalsList));
 ```
+
+With respect to the above here's what the [official documentation](https://redux.js.org/recipes/structuring-reducers/using-combinereducers#defining-state-shape) says
+
+**Defining State Shape**
+
+There are two ways to define the initial shape and contents of your store's state. First, the createStore function can take preloadedState as its second argument. This is primarily intended for initializing the store with state that was previously persisted elsewhere, such as the browser's localStorage. The other way is for the root reducer to return the initial state value when the state argument is undefined. These two approaches are described in more detail in Initializing State, but there are some additional concerns to be aware of when using combineReducers.
+
+**combineReducers takes an object full of slice reducer functions, and creates a function that outputs a corresponding state object with the same keys. This means that if no preloaded state is provided to createStore, the naming of the keys in the input slice reducer object will define the naming of the keys in the output state object.**
