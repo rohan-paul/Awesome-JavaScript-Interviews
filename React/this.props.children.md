@@ -14,22 +14,19 @@ A simple example
 
 Here’s an example of a stateless function that is used to create a component. Again, since this is a function, there is no 'this' keyword so just use props.children
 
-
-
 ```js
-
-const Picture = (props) => {
+const Picture = props => {
     return (
         <div>
             <img src={props.src} />
             {props.children}
         </div>
-    )
-}
-
+    );
+};
 ```
 
 // App.js
+
 ```js
 function App () {
     render() {
@@ -38,6 +35,7 @@ function App () {
         <div className='container'>
             <Picture key={PIcture.id} src={picture.src} >
                 // whatever is placed here is passed as props.children
+                // Like I can place a <div></div> here and it will be rendered as a child to the Picture component.
             </Picture>
         </div>
     )
@@ -48,10 +46,15 @@ function App () {
 
 ```
 
-Anything inside the <Picture> JSX tag in the App component gets passed into the Picutrre component as a children.prop. Since Picture renders {props.children} inside a <div>, the passed elements appear in the final output.
+You might want to assume that App.js will render as its html within the App.js, but it’s already in another component Picture. It won’t render whatever goes in between in the App.js. UNLESS OFCOURSE I PUT {props.children} inside the Picture component itself
 
-So, Instead of invoking the component with a self-closing tag <Picture /> if you invoke it will full opening and closing tags <Picture> </Picture> you can then place more code between it.
+Anything inside the <Picture> JSX tag in the App component gets passed into the Picutre component as a children.prop. Since Picture renders {props.children} inside a <div>, the passed elements appear in the final output.
 
-This de-couples the <Picture> component from its content and makes it more reusable.
+This de-couples the <Picture> component from its content and makes it more reusable. So basically I take code out of <Picture> component and put them just-in-time, within <Picture> when this component itself is being called or rendered. See this example
+[https://medium.com/javascript-in-plain-english/how-to-use-props-children-in-react-7d6ab5836c9d](https://medium.com/javascript-in-plain-english/how-to-use-props-children-in-react-7d6ab5836c9d)
+
+#### Further Reading
 
 ### [Another simple example is here](https://codepen.io/rohanpaul/pen/bxoMxr)
+
+### [https://codeburst.io/a-quick-intro-to-reacts-props-children-cb3d2fce4891](https://codeburst.io/a-quick-intro-to-reacts-props-children-cb3d2fce4891)
