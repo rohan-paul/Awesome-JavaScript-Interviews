@@ -19,8 +19,6 @@ But a pure component, on the other hand, will not rerender if its parent rerende
 
 Using PureComponent will help you prevent this wasted re-render. For instance, if a prop is a string or boolean and it changes, a PureComponent is going to recognize that, but if a property within an object is changing, a PureComponent is not going to trigger a re-render.
 
-**An easy way to optimize a React component for performance is to make it a class, and make it extend React.PureComponent instead of React.Component. This way, the component will only re-render if it’s state is changed or if it’s props have changed. It will no longer mindlessly re-render every single time its parent re-renders; it will ONLY re-render if one of its props has changed since the last render.**
-
 Here’s where immutability comes in: if you’re passing props into a PureComponent, you have to make sure that those props are updated in an immutable way. That means, if they’re objects or arrays, you’ve gotta replace the entire value with a new (modified) object or array. Kill it off and replace it with a clone.
 
 **If you modify the internals of an object or array – by changing a property, or pushing a new item, or even modifying an item inside an array – then the object or array is referentially equal to its old self, and a PureComponent will not notice that it has changed, and will not re-render. Weird rendering bugs will ensue.**
@@ -75,10 +73,6 @@ Also in cases where you want to use lifecycle methods of Component then we have 
 
 Suppose you want to create a label with some beautiful UI which will be used to rate the credibility of a profile like BEGINNER, MODERATE, EXPERT. Since its a very small component whose re-render will hardly make any difference and creating a new component for such a small case will be time-consuming. Also if you keep making components for very small-small view, soon you will end up with so many components and it will be hard to manage when working with a big project. Also always keep in mind Pure Component comes with peculiarities of the shallowEqual.
 
-#### Conclusion
-
-Pure Components gives a considerable increase in performance because it reduces the number of render operation in the application which is a huge win for complex UI and therefore advised to use if possible. Also, there will be cases where you want to use the lifecycle methods of Component and in such cases, we cannot use stateless components.
-
 Stateless Components are easy and fast to implement. They are good for very small UI view where re-render cost won’t matter that much. They provide cleaner code and less number of files to deal with.
 
 ### What is Shallow Comparison
@@ -105,3 +99,4 @@ In other words, shallow comparison will check that primitives have the same valu
 4. [https://logrocket.com/blog/pure-functional-components/](https://logrocket.com/blog/pure-functional-components/)
 5. [https://daveceddia.com/react-redux-immutability-guide/](https://daveceddia.com/react-redux-immutability-guide/)
 6. [https://reactjs.org/docs/react-api.html#reactpurecomponent](https://reactjs.org/docs/react-api.html#reactpurecomponent)
+

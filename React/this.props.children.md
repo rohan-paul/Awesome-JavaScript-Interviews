@@ -36,6 +36,7 @@ function App () {
             <Picture key={PIcture.id} src={picture.src} >
                 // whatever is placed here is passed as props.children
                 // Like I can place a <div></div> here and it will be rendered as a child to the Picture component.
+                // Note, I am not including this extra divs in the Picture componet, but here in App component, where I am calling the picture component.
             </Picture>
         </div>
     )
@@ -50,11 +51,14 @@ You might want to assume that App.js will render as its html within the App.js, 
 
 Anything inside the <Picture> JSX tag in the App component gets passed into the Picutre component as a children.prop. Since Picture renders {props.children} inside a <div>, the passed elements appear in the final output.
 
-This de-couples the <Picture> component from its content and makes it more reusable. So basically I take code out of <Picture> component and put them just-in-time, within <Picture> when this component itself is being called or rendered. See this example
+This de-couples the <Picture> component from its content and makes it more reusable, because I will put the children when the Picture component renders inside a parent component, and not when its defined.
+
+So basically I take code out of <Picture> component and put them just-in-time, within <Picture> when this component itself is being called or rendered. See this example for a simple implementation.
+
 [https://medium.com/javascript-in-plain-english/how-to-use-props-children-in-react-7d6ab5836c9d](https://medium.com/javascript-in-plain-english/how-to-use-props-children-in-react-7d6ab5836c9d)
 
 #### Further Reading
 
-### [Another simple example is here](https://codepen.io/rohanpaul/pen/bxoMxr)
+#### [Another simple example is here](https://codepen.io/rohanpaul/pen/bxoMxr)
 
-### [https://codeburst.io/a-quick-intro-to-reacts-props-children-cb3d2fce4891](https://codeburst.io/a-quick-intro-to-reacts-props-children-cb3d2fce4891)
+#### [https://codeburst.io/a-quick-intro-to-reacts-props-children-cb3d2fce4891](https://codeburst.io/a-quick-intro-to-reacts-props-children-cb3d2fce4891)
