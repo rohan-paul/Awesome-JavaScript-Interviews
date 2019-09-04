@@ -9,6 +9,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 ### For Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
 -   :link: [Big O Cheatsheet](http://bigocheatsheet.com/)
+    :link: [Quick Big O understanding for coding interviews](https://medium.com/@jayshah_84248/big-o-for-coding-interviews-e6ca8897f926)
 -   :link: [developers/sorting-algorithms](https://www.toptal.com/developers/sorting-algorithms)
 -   :link: [tackling-javascript-algorithms](https://medium.com/@yanganif/tackling-javascript-algorithms-66f1ac9770dc)
 -   :link: [sorting-algorithms-in-javascript](https://github.com/benoitvallon/computer-science-in-javascript/tree/master/sorting-algorithms-in-javascript)
@@ -35,6 +36,8 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 ### Overall multi-factor approach for winning this huge challenge and a great journey of getting the first Developer Job
 
 -   :link: [medium.com/javascript-scene/every-developer-needs-a-code-portfolio](https://medium.com/javascript-scene/every-developer-needs-a-code-portfolio-cc79c3d92110)
+    :link: [Collection of Resources for Interview preparations and practices](https://medium.com/@jayshah_84248/how-to-do-well-in-a-coding-interview-2bcd67e93cb5)
+    :link: [How I got 7 Job Offers in 8 Weeks ](https://blog.usejournal.com/how-i-got-7-job-offers-in-8-weeks-part-1-please-interview-me-21e6f4ded106)
 -   :link: [/master-the-javascript-interview-soft-skills](https://medium.com/javascript-scene/master-the-javascript-interview-soft-skills-a8a5fb02c466)
 -   :link: [google-lost-a-chance-to-hire-me-finally-amazon-hired-me](https://medium.com/@jayshah_84248/google-lost-a-chance-to-hire-me-finally-amazon-hired-me-e35076c73fe2)
 -   :link: [the-best-way-to-learn-to-code-is-to-code-learn-app-architecture-by-building-apps](https://medium.com/javascript-scene/the-best-way-to-learn-to-code-is-to-code-learn-app-architecture-by-building-apps-7ec029db6e00)
