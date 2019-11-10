@@ -26,7 +26,9 @@ Create and change to new branch:
 
 Rename branch:
 
-## `git branch -m branchname new_branchname` or:
+## `git branch -m branchname new_branchname`
+
+or:
 
 `git branch --move branchname new_branchname`
 
@@ -109,26 +111,3 @@ Undo modifications (restore files from latest commited version):
 Restore file from a custom commit (in current branch):
 
 ## `git checkout 6eb715d -- index.html`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

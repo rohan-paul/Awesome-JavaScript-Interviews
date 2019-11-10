@@ -1,29 +1,24 @@
-Let two people have below branches on which they work.
+### Pulling the latest update from a specific branch
 
-master
-dev
-person A
-person B
+**The “pull”** command is used to download and integrate remote changes.
 
-We both keep working on our branches i.e. person A or person B (working on same project). 
+**The target** (to which branch the data should be integrated into) is always the currently checked out HEAD branch.
 
-#### How B can take the latest changes which A has done, from dev to his branch person B
+**The source** (from which branch the data should be downloaded from) can be specified in the command’s options.
+
+Before using **git pull**, make sure the correct local branch is checked out. Then, to perform the pull, simply specify which remote branch you want to integrate. Assuming I am in ‘master’ branch in my local machine, and I want to incorporate changes from a remote repository’s ‘dev’ branch into the local machine’s branch.
 
 ```
 git checkout dev
-
-git pull dev
+git pull origin dev
 ```
 
-### What's the difference between git fetch and git pull?
+The branch-name option can be omitted, however, if a tracking relationship with a remote branch is set up. In most cases, however, your local branch will already have a proper tracking connection with a remote branch set up. This configuration provides default values so that the pull command already knows where to pull from without any additional options:
 
-Before we talk about the differences between these two commands, let's stress their similarities: both are used to download new data from a remote repository.
+`git pull`
 
-**git fetch** really only downloads new data from a remote repository - but it doesn't integrate any of this new data into your working files. 
+It’s often clearer to separate the two actions git pull does. The first thing it does is update the local tracking branch that corresponds to the remote branch. This can be done with git fetch.
 
-`git pull origin master`
+The second is that it then merges in changes, so in its default mode, git pull is shorthand for git fetch followed by git merge FETCH_HEAD.
 
-git pull, in contrast, is used with a different goal in mind: to update your current HEAD branch with the latest changes from the remote server. This means that pull not only downloads new data; it also directly integrates it into your current working copy files. This has a couple of consequences:
-
-Since "git pull" tries to merge remote changes with your local ones, a so-called "merge conflict" can occur. Check out our in-depth tutorial on How to deal with merge conflicts for more information.
-Like for many other actions, it's highly recommended to start a "git pull" only with a clean working copy. This means that you should not have any uncommitted local changes before you pull. Use Git's Stash feature to save your local changes temporarily.
+More precisely, git pull runs git fetch with the given parameters and calls git merge to merge the retrieved branch heads into the current branch. With — rebase, it runs git rebase instead of git merge.

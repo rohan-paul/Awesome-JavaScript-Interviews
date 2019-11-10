@@ -14,7 +14,7 @@ But I knew I shouldn’t push the 2 commits in the first place.
 
 ### Steps to remove the 2 commits
 
-Firstly, find out the comit that you want to revert back to.
+Firstly, find out the commit that you want to revert back to.
 
 `git log`
 

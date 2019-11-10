@@ -1,4 +1,4 @@
-## To completely overwrite one branch's all files and commits with another branchScroll
+## To completely overwrite one branch's all files and commits with another branch
 
 I have two branches, **old-branch** and **new-dev-branch**. **new-dev-branch** is the latest one and I no more need the **old-branch** changes in **new-dev-branch** branch, yet I don't want to delete them.
 
@@ -32,7 +32,7 @@ So I just want to dump all the contents of **new-dev-branch** into **old-branch*
 
 #### The --squash option will squash all of your intermediate changes into one big change. So, it will appear to the other developers as if his changes coming from the dev branch were one giant commit.
 
-This will merge in the way that target branch would include only its own commits + merge commit and not include the commits from the second branch 
+This will merge in the way that target branch would include only its own commits + merge commit and not include the commits from the second branch
 
 [https://stackoverflow.com/questions/14824431/git-merge-without-including-commits-from-one-branch-to-another](https://stackoverflow.com/questions/14824431/git-merge-without-including-commits-from-one-branch-to-another)
 
