@@ -1,3 +1,5 @@
+#### As a side note - Redux need reducers to be “pure functions
+
 #### Basic example of mutations
 
 ```js
