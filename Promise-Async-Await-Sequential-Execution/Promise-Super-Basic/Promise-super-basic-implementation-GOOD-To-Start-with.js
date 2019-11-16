@@ -1,19 +1,5 @@
 // Both .then and .catch will return a new promise. That seems like a small detail but it’s important because it means that promises can be chained.
 
-let promise1 = new Promise((resolve, reject) => {
-  reject();
-});
-
-promise1
-  .then(() => {
-    console.log("Hey I am finished executing resolved()");
-  })
-  .catch(() => {
-    console.log("Hey this time rejected, but will hit again");
-  });
-
-// The above Will output - "Hey this time rejected, but will hit again"
-
 let promise2 = new Promise((resolve, reject) => {
   resolve();
 });
@@ -27,6 +13,20 @@ promise2
   });
 
 // The above Will output - Hey I am finished executing resolved()
+
+let promise1 = new Promise((resolve, reject) => {
+  reject();
+});
+
+promise1
+  .then(() => {
+    console.log("Hey I am finished executing resolved()");
+  })
+  .catch(() => {
+    console.log("Hey this time rejected, but will hit again");
+  });
+
+// The above Will output - "Hey this time rejected, but will hit again"
 
 let promise3 = new Promise((resolve, reject) => {
   reject();

@@ -19,6 +19,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "immutability-helper": "^2.7.1",
+    "lodash": "^4.17.15",
     "request": "^2.87.0"
   }
 }
