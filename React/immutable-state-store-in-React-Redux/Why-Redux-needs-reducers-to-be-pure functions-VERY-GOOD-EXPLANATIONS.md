@@ -58,6 +58,36 @@ A shallow equality check is therefore as simple (and as fast) as a === b, wherea
 
 It's for this improvement in performance that Redux uses shallow equality checking.
 
+#### However now a natural question is - Doesn't Redux mitigate deep comparisons with essentially deep cloning? Isn't it just moving the expensive operations to a different point in the lifecycle ?
+
+#### And the ans
+
+[https://redux.js.org/faq/immutable-data#how-does-redux-use-shallow-equality-checking](https://redux.js.org/faq/immutable-data#how-does-redux-use-shallow-equality-checking)
+
+**"Redux uses shallow equality checking in its combineReducers function to return either a new mutated copy of the root state object, or, if no mutations have been made, the current root state object. combineReducers() function, iterates through each of these key/value pairs. At each stage of the iteration, combineReducers performs a shallow equality check on the current state slice and the state slice returned from the reducer."**
+
+To update state immutability all the way down, a shallow copy at the level you're modifying and all its parent levels is all you need.
+
+```js
+let state = {
+  a: {
+    a1: "a1 initial value",
+    a2: "a2 initial value"
+  },
+  b: {
+    b1: "b1 initial value",
+    b2: "b2 initial value"
+  }
+};
+```
+
+Now, if you just want to update a1? To do that, you need a copy of a and of state (because if you don't copy state itself, you're modifying the state tree it refers to, violating the immutability principal):
+
+```js
+state = { ...state, a: { ...obj.a, a1: "updated a1" } };
+```
+
 #### Further Reading
 
-[https://www.freecodecamp.org/news/why-redux-needs-reducers-to-be-pure-functions-d438c58ae468/](https://www.freecodecamp.org/news/why-redux-needs-reducers-to-be-pure-functions-d438c58ae468/)
+- [https://www.freecodecamp.org/news/why-redux-needs-reducers-to-be-pure-functions-d438c58ae468/](https://www.freecodecamp.org/news/why-redux-needs-reducers-to-be-pure-functions-d438c58ae468/)
+- [https://blog.isquaredsoftware.com/2017/05/idiomatic-redux-tao-of-redux-part-1/#summarizing-redux-s-technical-requirements](https://blog.isquaredsoftware.com/2017/05/idiomatic-redux-tao-of-redux-part-1/#summarizing-redux-s-technical-requirements)
