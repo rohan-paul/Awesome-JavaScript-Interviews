@@ -56,17 +56,15 @@ G) Then in the next page, just put any comments that I may like to put, and , cl
 
 Thats it..
 
-# Create Pull Request in a Project - When I am one of the contributor as set by the Master Owner - Updated on 5-Mar-2018
+### Create Pull Request in a Project - When I am one of the contributor as set by the Master Owner - Updated on 5-Mar-2018
 
-## \$ git clone <repo .git >
+### \$ git clone repo.git
 
-# What to do when there’s a conflict as seen by the master branch owner after I (as a contributor) send the PR - Updated on 5June2018
+### What to do when there’s a conflict as seen by the master branch owner after I (as a contributor) send the PR - Updated on 5June2018
 
 Merge request official doc - https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/
 
 “Merge conflicts may occur if competing changes are made to the same line of a file or when a file is deleted that another person is attempting to edit.”
-
-The Master owner should - First Pull > then merge > then accept the PR request
 
 From official doc - https://help.github.com/articles/resolving-a-merge-conflict-on-github/
 
@@ -74,7 +72,7 @@ A> Under your repository name, click Pull requests.
 
 B> In the "Pull Requests" list, click the pull request with a merge conflict that you'd like to resolve.
 
-C> resolve merge conflicts button. Near the bottom of your pull request, click Resolve conflicts.
+C> Resolve merge conflicts button. Near the bottom of your pull request, click Resolve conflicts.
 
 ### Another step I may take before starting on new work, on say a branch named 'rohan-dev-v2' after merging my master branch with the upstream branch is to force reset the head of the 'rohan-dev-v2' branch to the just mergerd master.
 
@@ -83,3 +81,15 @@ Move to the to the other branch and reset that branch to master
 `git checkout rohan-dev-v2`
 
 `git reset --hard master`
+
+### Updating a Pull Request (that has already been raised) from my forked repo
+
+https://stackoverflow.com/questions/9790448/how-to-update-a-pull-request-from-forked-repo
+
+The case is as below and often repeated - So I first forked a repo and then made a commit to that forked repo. I then opened a pull request. The pull request listed all the changes I wanted.
+
+After reviewing my pull request, there were a number of changes that the repo owner wanted me to make before he accepted it. I have made those changes in my fork, now how do I update the pull request with those changes
+
+Ans is, basically I have to do nothing – just make changes of the forked repo, in that branch from which I sent the PR ( e.g. master ), i.e. just do a regular commit in your own local repo in local machine. Push this relevant branch of your fork to Github.
+
+And thats it, the PR will reflect this changes immediately.

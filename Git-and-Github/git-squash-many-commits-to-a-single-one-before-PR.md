@@ -1,3 +1,5 @@
+Some folks do it by hastily creating a new branch, porting all changes to it with a patch file and creating a separate pull request. But this is headache both for the contributor and project maintainer. There's an easier way, which is git squash
+
 [https://www.digitalocean.com/community/tutorials/how-to-rebase-and-update-a-pull-request](https://www.digitalocean.com/community/tutorials/how-to-rebase-and-update-a-pull-request)
 
 To find out the number of commits we have made, we can inspect the total number of commits that have been made to the project with the following command:
@@ -107,6 +109,8 @@ error: cannot 'squash' without a previous commit You can fix this with 'git reba
 **Solution :**
 
 #### When squashing commits , you should squash recent commits to old ones not vice versa thus in the example it will be something like this :
+
+### So put the 'squash' word before the latest comment and 'pick' word before the old ones
 
 ```
 s 01mn9h78 The lastest commit
