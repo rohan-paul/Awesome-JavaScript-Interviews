@@ -20,7 +20,7 @@ This used to be the default, but not since Git 2.0 (simple is the new default).
 
 **simple**: like upstream, but refuses to push if the upstream branch's name is different from the local one.
 
-#### To view the current configuration: (If I dont have any custom-configuratons setup, then I shall get nothing after running the below command )
+#### To view the which is your current configuration run the below command: (If I dont have any custom-configuratons setup, then I shall get nothing after running the below command )
 
 ```js
 git config --global push.default

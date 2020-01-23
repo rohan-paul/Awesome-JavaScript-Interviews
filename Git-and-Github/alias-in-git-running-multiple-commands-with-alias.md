@@ -24,7 +24,7 @@ will create a git alias to do that. It will add the following entry into your gl
 co = checkout;
 ```
 
-#### git alias setup, so that when I run the following command from my local machine’s feature_branch, it will push to remote repo by the same name (feature_branch)
+#### git alias setup, so that when I run the following command from my local machine’s feature_branch, it will push to remote repo's branch by the same name (feature_branch)
 
 ```js
 git c 'some message'
@@ -47,6 +47,9 @@ c = '!f(){ git add . && git commit -m "$1"; git push; };f';
 
 Now when you run `git c 'some message'` from **current_branch_i_am_in** it will actually run under the hood the following commands sequentially.
 
+```js
 git add -A
 git commit -m 'some message'
 git push origin current_branch_i_am_in
+
+```
