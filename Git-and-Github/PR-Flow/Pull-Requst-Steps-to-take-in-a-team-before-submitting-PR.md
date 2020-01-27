@@ -40,3 +40,9 @@ a6cd1e82..68ce35a3 master -> upstream/master
 2> Merge the changes from upstream/master into your local master branch. This brings your fork's master branch into sync with the upstream repository, without losing your local changes.
 
 `git merge upstream/master`
+
+#### Generally follow the below principles
+
+You will probably find things more manageable if you work on a feature branch rather than your own master branch. That is, start with git checkout -b my-spiffy-feature before you start making any changes. If you will be regularly contributing upstream, your life is easiest if your master branch always reflects the state of the upstream master branch at some point in time, because this permits you to update your local master branch with a simple git pull upstream master.
+
+Avoiding merging code into your feature branches. Regularly rebase on upstream/master if you need to incorporate upstream changes.
