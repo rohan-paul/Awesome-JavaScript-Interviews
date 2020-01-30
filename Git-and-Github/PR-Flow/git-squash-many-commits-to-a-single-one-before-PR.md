@@ -110,7 +110,7 @@ error: cannot 'squash' without a previous commit You can fix this with 'git reba
 
 #### When squashing commits , you should squash recent commits to old ones not vice versa thus in the example it will be something like this :
 
-### So put the 'squash' word before the latest comment and 'pick' word before the old ones
+### So put the 'squash' or 's' word before the latest comment and 'pick' word before the oldest one
 
 ```
 s 01mn9h78 The lastest commit
@@ -134,15 +134,15 @@ nothing to commit, working tree clean
 
 We will have to instead use the --force or -f flag to force-push the changes, informing Git that you are fully aware of what you are pushing.
 
-Let’s first insure that our push.default is simple, which is the default in Git 2.0+, by configuring it:
-
-git config --global push.default simple
 At this point, we should ensure that we are on the correct branch by checking out the branch we are working on:
 
-git checkout new-branch
+`git checkout new-branch`
+
+```
 Output
 Already on 'new-branch'
-. . .
+```
+
 Now we can perform the force-push:
 
 `git push -f`

@@ -72,6 +72,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - :link: [Super useful es6-cheatsheet](https://github.com/DrkSephy/es6-cheatsheet)
 - :link: [freeCodeCamp Guide](https://guide.freecodecamp.org/)
 - :link: [functional-programming-in-js-map-filter-reduce](https://hackernoon.com/functional-programming-in-js-map-filter-reduce-pt-5-308a205fdd5f)
+- :link: [you-must-understand-these-14-javasript-functions](https://medium.com/javascript-in-plain-english/you-must-understand-these-14-javasript-functions-1f4fa1c620e2)
 - :link: [developer.mozilla.org/JavaScript/A_re-introduction_to_JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
 - :link: [developer.mozilla.org/docs/JavaScript/Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 - :book: [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS)

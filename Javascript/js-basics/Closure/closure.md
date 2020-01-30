@@ -33,7 +33,7 @@ const getSecret = (secret) => {
 }
 ```
 
-In the example above, the `.getPrivileged()` method is defined inside the scope of `getSecret()`, which gives it access to any variables from `getSecret()`, and makes it a privileged method. In this case, the parameter, `secret`.
+In the example above, the `getPrivileged()` method is defined inside the scope of `getSecret()`, which gives it access to any variables from `getSecret()`, and makes it a privileged method. In this case, the parameter, `secret`.
 
 ### Another example of closure
 

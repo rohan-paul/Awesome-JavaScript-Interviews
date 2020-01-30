@@ -10,6 +10,50 @@
 - String
 - Symbol (a unique and immutable primitive new to ES6/2015)
 
+#### Null vs Undefined
+What is null? - There are two features of null you should understand:
+ - null is an empty or non-existent value.
+ - null must be assigned.
+
+Here’s an example. We assign the value of null to a:
+
+```js
+let a = null;
+console.log(a);
+// null
+```
+What is undefined? - Undefined most typically means a variable has been declared, but not defined. For example:
+
+```js
+let b;
+console.log(b);
+// undefined
+```
+
+[differences-between-null-and-undefined-keywords-2e2m](https://dev.to/nunocpnp/differences-between-null-and-undefined-keywords-2e2m)
+
+Difference no 2 - Null and undefined are both primitives and falsy values. However null is also an object. Interestingly, this was actually an error in the original JavaScript implementation.
+
+```js
+var a;
+console.log(typeof(a));
+// undefined
+
+var b = null;
+console.log(typeof(b));
+// object
+```
+
+Difference no 3! - As you can see so far, null and undefined are different, but share some similarities. Thus, it makes sense that null does not strictly equal undefined.
+
+```js
+console.log(null !== undefined);
+// true
+// But, and this may surprise you, null loosely equals undefined.
+console.log(null == undefined);
+// true
+```
+
 ## There are a variety of compound data types but the most common are: object; array; and function.
 
 ## So what does it mean for a value to be immutable?
@@ -88,4 +132,37 @@ let a = {
         return 0
     }
 }
+```
+
+#### A note on Symbol
+
+This primitive type is useful for so-called "unique" keys.
+
+Using a symbol, you know no one else who doesn't share this instance (instead of the string) will not be able to set a specific property on a map.
+
+Example without symbols:
+
+```js
+var map = {};
+setProp(map);
+setProp2(map);
+
+function setProp(map) {
+  map.prop = "hey";
+}
+function setProp2(map) {
+  map.prop = "hey, version 2";
+}
+```
+In this case, the 2nd function call will override the value in the first one.
+
+However, with symbols, instead of just using "the string prop", we use the instance itself:
+
+```js
+var map = {};
+var symbol1 = Symbol("prop");
+var symbol2 = Symbol("prop"); // same name, different instance – so it's a different symbol!
+map[symbol1] = 1;
+map[symbol2] = 2; // doesn't override the previous symbol's value
+console.log(map[symbol1] + map[symbol2]); // logs 3
 ```

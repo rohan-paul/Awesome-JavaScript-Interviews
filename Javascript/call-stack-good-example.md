@@ -22,7 +22,6 @@ function firstFunction(){
 }
 function secondFunction(){
     firstFunction();
-    console.l
 }
 function thirdFunction(){
     secondFunction();
@@ -44,9 +43,9 @@ thirdFunction @ VM4011:8
 (anonymous) @ VM4011:10
 ```
 
-I have purpose put in the firstFunction() to ``throw error`` so can se the full call stack of the sequence of function execution. Else, if I just return a console.log from that function, then it would get normally logged-out.
+I have on purpose put in the firstFunction() to ``throw error`` so can we see the full call stack of the sequence of function execution. Else, if I just return a console.log from that function, then it would get normally logged-out.
 
-You will notice that the arrangement of the functions as a stack begins with the firstFunction() (which is the last function that got into the stack, and is popped out to throw the error), followed by the secondFunction(), and then the thirdFunction() (which is the first function that gets pushed into the stack when the code is executed).
+Note the arrangement of the functions as the stack begins with the firstFunction() (which is the last function that got into the stack, but got executed the first. And is popped out to throw the error. Then followed by the secondFunction(), and then the thirdFunction() (which is the first function that gets pushed into the stack when the code is executed.
 
 Temporarily store: When a function is invoked (called), the function, its parameters, and variables are pushed into the call stack to form a stack frame. This stack frame is a memory location in the stack. The memory is cleared when the function returns as it is pop out of the stack.
 

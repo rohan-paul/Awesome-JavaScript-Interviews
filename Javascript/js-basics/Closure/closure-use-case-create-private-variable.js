@@ -10,7 +10,7 @@ const counter = () => {
       return _counter += increment;
     },
     retrieve: () => {
-      return "The counter curently is at " + _counter;
+      return "The counter currently is at " + _counter;
     }
   };
 };
@@ -19,3 +19,10 @@ const c = counter();
 console.log(c.add(5));
 c.add(9)
 console.log(c.retrieve());
+
+/*
+Output :
+
+5
+The counter currently is at 14
+ */
