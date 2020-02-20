@@ -1,0 +1,344 @@
+
+{
+  "header": {
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200209.024254.24169.001.json",
+    "dumpEventTime": "2020-02-09T02:42:54Z",
+    "dumpEventTimeStamp": "1581196374494",
+    "processId": 24169,
+    "commandLine": [
+      "/home/paul/.nvm/versions/node/v11.12.0/bin/node",
+      "/home/paul/.nvm/versions/node/v11.12.0/bin/prettier",
+      "--stdin",
+      "--no-config",
+      "--print-width",
+      "80",
+      "--tab-width",
+      "4",
+      "--single-quote",
+      "false",
+      "--trailing-comma",
+      "none",
+      "--bracket-spacing",
+      "true",
+      "--jsx-bracket-same-line",
+      "false",
+      "--parser",
+      "babel",
+      "--semi",
+      "true",
+      "--require-pragma",
+      "false",
+      "--prose-wrap",
+      "preserve",
+      "--arrow-parens",
+      "avoid",
+      "--html-whitespace-sensitivity",
+      "css",
+      "--quote-props",
+      "as-needed",
+      "--vue-indent-script-and-style",
+      "false",
+      "--use-tabs",
+      "true",
+      "--stdin-filepath",
+      "/home/paul/PAUL/ProgrammingCareer/Companies/Enhancio-1Feb2020-Exercise/country-city-js.js",
+      "--cursor-offset",
+      "1374788"
+    ],
+    "nodejsVersion": "v11.12.0",
+    "glibcVersionRuntime": "2.27",
+    "glibcVersionCompiler": "2.12",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "11.12.0",
+      "v8": "7.0.276.38-node.18",
+      "uv": "1.26.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "67",
+      "nghttp2": "1.34.0",
+      "napi": "4",
+      "llhttp": "1.1.1",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1b",
+      "cldr": "34.0",
+      "icu": "63.1",
+      "tz": "2018e",
+      "unicode": "11.0"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v11.12.0/node-v11.12.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v11.12.0/node-v11.12.0.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "5.2.11-050211-generic",
+    "osVersion": "#201908290731 SMP Thu Aug 29 07:33:42 UTC 2019",
+    "osMachine": "x86_64",
+    "host": "paul-Inspiron-5767"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000a6caaf",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [/home/paul/.nvm/versions/node/v11.12.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000959dd3",
+      "symbol": "node::OnFatalError(char const*, char const*) [/home/paul/.nvm/versions/node/v11.12.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b39fae",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/home/paul/.nvm/versions/node/v11.12.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b3a1e4",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/home/paul/.nvm/versions/node/v11.12.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f39832",
+      "symbol": " [/home/paul/.nvm/versions/node/v11.12.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f39938",
+      "symbol": "v8::internal::Heap::CheckIneffectiveMarkCompact(unsigned long, double) [/home/paul/.nvm/versions/node/v11.12.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f46058",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [/home/paul/.nvm/versions/node/v11.12.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f46b6b",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/home/paul/.nvm/versions/node/v11.12.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f498a1",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment) [/home/paul/.nvm/versions/node/v11.12.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f13ad4",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationSpace) [/home/paul/.nvm/versions/node/v11.12.0/bin/node]"
+    },
+    {
+      "pc": "0x00000000011c9dde",
+      "symbol": "v8::internal::Runtime_AllocateInNewSpace(int, v8::internal::Object**, v8::internal::Isolate*) [/home/paul/.nvm/versions/node/v11.12.0/bin/node]"
+    },
+    {
+      "pc": "0x00001fc7c2f4fc5d",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 1463623680,
+    "totalCommittedMemory": 1409267536,
+    "usedMemory": 1181429144,
+    "availableMemory": 75767928,
+    "memoryLimit": 1526909922,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 524288,
+        "committedMemory": 42224,
+        "capacity": 515584,
+        "used": 33520,
+        "available": 482064
+      },
+      "new_space": {
+        "memorySize": 33554432,
+        "committedMemory": 26038192,
+        "capacity": 16498688,
+        "used": 6448872,
+        "available": 10049816
+      },
+      "old_space": {
+        "memorySize": 1364922368,
+        "committedMemory": 1318882736,
+        "capacity": 1114558512,
+        "used": 1112416736,
+        "available": 2141776
+      },
+      "code_space": {
+        "memorySize": 1048576,
+        "committedMemory": 1004800,
+        "capacity": 939264,
+        "used": 939264,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 1060864,
+        "committedMemory": 786432,
+        "capacity": 504480,
+        "used": 504480,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 62513152,
+        "committedMemory": 62513152,
+        "capacity": 124180544,
+        "used": 61086272,
+        "available": 63094272
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 0,
+        "used": 0,
+        "available": 0
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 21681.5,
+    "kernelCpuSeconds": 755.748,
+    "cpuConsumptionPercent": 221.405,
+    "maxRss": 1539846144,
+    "pageFaults": {
+      "IORequired": 64,
+      "IONotRequired": 328153560
+    },
+    "fsActivity": {
+      "reads": 16128,
+      "writes": 0
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 5949.75,
+    "kernelCpuSeconds": 167.17,
+    "cpuConsumptionPercent": 60.3604,
+    "fsActivity": {
+      "reads": 16128,
+      "writes": 0
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "MANDATORY_PATH": "/usr/share/gconf/unity.mandatory.path",
+    "XDG_SESSION_DESKTOP": "unity",
+    "VSCODE_NODE_CACHED_DATA_DIR": "/home/paul/.config/Code/CachedData/ae08d5460b5a45169385ff3fd44208f431992451",
+    "GNOME_SESSION_XDG_SESSION_PATH": "/org/freedesktop/DisplayManager/Session0",
+    "GIO_LAUNCHED_DESKTOP_FILE": "/usr/share/applications/sublime_text.desktop",
+    "DEFAULTS_PATH": "/usr/share/gconf/unity.default.path",
+    "MM_NOTTTY": "1",
+    "GTK2_MODULES": "overlay-scrollbar",
+    "LOGNAME": "paul",
+    "NO_AT_BRIDGE": "1",
+    "XMODIFIERS": "@im=ibus",
+    "VSCODE_IPC_HOOK": "/run/user/1000/vscode-59fb05bf-1.42.0-main.sock",
+    "DISPLAY": ":0",
+    "SHLVL": "1",
+    "CHROME_DESKTOP": "code-url-handler.desktop",
+    "IM_CONFIG_PHASE": "2",
+    "SESSION_MANAGER": "local/paul-Inspiron-5767:@/tmp/.ICE-unix/4018,unix/paul-Inspiron-5767:/tmp/.ICE-unix/4018",
+    "_": "/usr/bin/dbus-update-activation-environment",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "INVOCATION_ID": "d5a28be77e2b44799692633e6c21639a",
+    "MANAGERPID": "3598",
+    "CLUTTER_IM_MODULE": "xim",
+    "UNITY_HAS_3D_SUPPORT": "true",
+    "VSCODE_NLS_CONFIG": "{\"locale\":\"en-us\",\"availableLanguages\":{},\"_languagePackSupport\":true}",
+    "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus",
+    "LANG": "en_US.UTF-8",
+    "GPG_AGENT_INFO": "/run/user/1000/gnupg/S.gpg-agent:0:1",
+    "JOURNAL_STREAM": "9:50736",
+    "VSCODE_PID": "7253",
+    "VSCODE_LOGS": "/home/paul/.config/Code/logs/20200208T204850",
+    "GDMSESSION": "unity",
+    "QT_ACCESSIBILITY": "1",
+    "QT_IM_MODULE": "ibus",
+    "GTK_CSD": "0",
+    "COMPIZ_BIN_PATH": "/usr/bin/",
+    "GNOME_DESKTOP_SESSION_ID": "this-is-deprecated",
+    "XAUTHORITY": "/home/paul/.Xauthority",
+    "XDG_GREETER_DATA_DIR": "/var/lib/lightdm-data/paul",
+    "GTK_IM_MODULE": "ibus",
+    "PATH": "/home/paul/.yarn/bin:/home/paul/.config/yarn/global/node_modules/.bin:/home/paul/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "DESKTOP_SESSION": "unity",
+    "XDG_DATA_DIRS": "/usr/share/unity:/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "XDG_SEAT_PATH": "/org/freedesktop/DisplayManager/Seat0",
+    "GIO_LAUNCHED_DESKTOP_FILE_PID": "23800",
+    "TEXTDOMAIN": "im-config",
+    "XDG_CONFIG_DIRS": "/etc/xdg/xdg-unity:/etc/xdg",
+    "QT4_IM_MODULE": "xim",
+    "TEXTDOMAINDIR": "/usr/share/locale/",
+    "GTK_MODULES": "gail:atk-bridge:unity-gtk-module",
+    "USER": "paul",
+    "HOME": "/home/paul",
+    "SSH_AUTH_SOCK": "/run/user/1000/keyring/ssh",
+    "UNITY_DEFAULT_PROFILE": "unity",
+    "SHELL": "/bin/bash",
+    "SSH_AGENT_LAUNCHER": "gnome-keyring",
+    "LANGUAGE": "en_US",
+    "XDG_SESSION_TYPE": "x11",
+    "XDG_CURRENT_DESKTOP": "Unity",
+    "XDG_SESSION_PATH": "/org/freedesktop/DisplayManager/Session0",
+    "LD_PRELOAD": "libgtk3-nocsd.so.0",
+    "COMPIZ_CONFIG_PROFILE": "ubuntu",
+    "XDG_MENU_PREFIX": "gnome-",
+    "GDM_LANG": "en_US",
+    "PWD": "/home/paul"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 16777216,
+      "hard": 16777216
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 4096,
+      "hard": 4096
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 63557,
+      "hard": 63557
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "linux-vdso.so.1",
+    "/usr/lib/x86_64-linux-gnu/libgtk3-nocsd.so.0",
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/lib/x86_64-linux-gnu/librt.so.1",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2"
+  ]
+}

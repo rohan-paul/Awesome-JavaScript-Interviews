@@ -3,7 +3,7 @@
 #### There are a few other options you can use if you don't know beforehand the height of a DIV:
 
 ```
-sampleDIV {
+div {
    height: auto;
 }
 ```
@@ -13,7 +13,7 @@ This will allow the DIV to grow (or shrink) vertically, according to the content
 You can also use min-height if you don't know the height beforehand, but know that you want it to be at least this amount.
 
 ```
-sampleDIV {
+div {
   min-height: 100px;
 }
 ```
