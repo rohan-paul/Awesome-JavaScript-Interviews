@@ -9,22 +9,21 @@ There is not big difference in performance. But we can say call is bit faster as
 ### Both call() and apply() are methods we can use to assign the this pointer for the duration of a method invocation.
 
 ```js
-global.x = 10;
-// To run this file in my vs-code or in terminal (i.e. where I am in node env)
-// I have to use global . where as < var x = 10 > will work in browser dev-tool
+global.x = 10
+/* To run this file in my vs-code or in terminal (i.e. where I am in node env),
+I have to use global . where as < var x = 10 > will work in browser dev-tool
 
-// var x = 10
+var x = 10 */
 
-var o = { x: 15 };
+var o = { x: 15 }
 
-function f () {
-    console.log(this.x);
+function f() {
+  console.log(this.x)
 }
 
-f();  // => 10
+f() // => 10
 
-f.call(o);  // => 15
-
+f.call(o) // => 15
 ```
 
 The first invocation of f() will display the value of 10, because this references the global object. The second invocation (via the call method) however, will display the value 15. 15 is the value of the x property inside object o.
@@ -41,19 +40,18 @@ A> https://stackoverflow.com/questions/1986896/what-is-the-difference-between-ca
 
 ### The value of this can never be null or undefined when a function is called. When null or undefined is supplied as the receiver to call() or apply(), the global object is used as the value for receiver instead.
 
-
 B> The apply function is used to call another function, with a given context and arguments, provided as an array. The min and max functions can take an arbitrary number of input arguments: Math.max(val1, val2, ..., valN)
 
 So if we call:
 
-``Math.min.apply(Math, [1,2,3,4]);``
+`Math.min.apply(Math, [1,2,3,4]);`
 
 The apply function will execute:
 
-``Math.min(1,2,3,4);``
+`Math.min(1,2,3,4);`
 
 Note that the first parameter, the context, is not important for these functions since they are static, they will work regardless of what is passed as the context.
 
-### Special note - With ES6, the equivalent code for the above is ``Math.max(...Arr)``
+### Special note - With ES6, the equivalent code for the above is `Math.max(...Arr)`
 
 Replacing “Math” with “null” would output same output
