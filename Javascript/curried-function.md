@@ -1,3 +1,7 @@
+#### Is a technique for converting function calls with N arguments into chains of N function calls with a single argument for each function call?
+
+#### Currying always returns another function with only one argument until all of the arguments have been applied. So, we just keep calling the returned function until we’ve exhausted all the arguments and the final value gets returned.
+
 Example
 
 ```js

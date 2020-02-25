@@ -26,9 +26,31 @@ f() // => 10
 f.call(o) // => 15
 ```
 
+### Very Importantly note, the call() method as above will NOT work in arrow function. And this.x will produce undefined. Because, Unlike regular functions, arrow functions do not have their own 'this'
+
+```js
+global.x = 10
+
+const obj = {
+  x: 15,
+  func: () => console.log(this.x),
+  func2: function() {
+    console.log(this.x)
+  },
+}
+
+const func = () => console.log(this.x)
+
+func() // => undefined
+func.call(obj) // => undefined
+obj.func.call(obj) // => undefined
+// But the following will work as expected
+obj.func2.call(obj) // => 15, accessing the
+```
+
 The first invocation of f() will display the value of 10, because this references the global object. The second invocation (via the call method) however, will display the value 15. 15 is the value of the x property inside object o.
 
-### The call() method invokes the function and uses its first parameter as the this pointer inside the body of the function. In other words - we've told the runtime what object to reference as this while executing inside of function f().
+### The call() method invokes the function and uses its first parameter as the this pointer inside the body of the function. In other words - we've told the runtime what object to reference as 'this' while executing inside of function f().
 
 ### The apply() method is identical to call(), except apply() requires an array as the second parameter. The array represents the arguments for the target method.
 
