@@ -9,9 +9,7 @@ SO WITH REST THING 'PACKING ELEMENTS' - Collects multiple elements and condenses
 
 */
 
-
-
-Example - Display the array of passed arguments.*/
+/* Example 1 - Display the array of passed arguments.*/
 
 function printArguments (...theArguments) {
 	console.log(theArguments);
@@ -95,6 +93,14 @@ const [x, ...rest] = arr;
 console.log(x);       // → 10
 console.log(rest);    // → [20, 30]
 
+// The same above for objects
+
+const obj = { a: 1, b: 2, c: 3, d: 4 };
+
+const { a, ...rest } = obj;
+console.log(a); // => 1
+console.log(rest); // => { b: 2, c: 3, d: 4 }
+
 /* Here, the first item in arr is assigned to x, and remaining elements are assigned to the rest variable. This pattern, called array destructuring, became so popular that the Ecma Technical Committee decided to bring similar functionality to objects: */
 
 // Example - 8  - Rest parameter to objects - VERY IMPORTANT
@@ -110,7 +116,12 @@ const {a, ...rest} = obj;
 console.log(a);       // → 10
 console.log(rest);    // → {b: 20, c: 30}
 
-/* The above code uses the rest properties in a destructuring assignment to copy the remaining own enumerable properties into a new object. Note that rest properties must always appear at the end of the object, otherwise an error is thrown: */
+/* The above code uses the rest properties in a destructuring assignment to copy the remaining own enumerable properties into a new object. Note that rest properties must always appear at the end of the object, otherwise an error is thrown:
+What enumerable means
+It simply means that the property will show up if you iterate over the object using for..in loop or Object.keys.
+
+Enumerable properties are those properties whose internal enumerable flag is set to true, which is the default for properties created via simple assignment or via a property initializer (properties defined via Object.defineProperty
+ */
 
 const obj = {
   a: 10,
