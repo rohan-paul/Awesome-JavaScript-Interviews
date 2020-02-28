@@ -32,7 +32,7 @@ let newObj = {
 
 console.log(newObj);    // => { key1: 'value1', key2: 'value2', key3: 'value3' }
 
-// Example - 3 - MERGE OBJECTS - Spread properties also provide a new way to merge two or more objects, which can be used as an alternative to the Object.assign() method: - This is VERY IMPORTANT
+// Example - 3 - IMP - MERGE OBJECTS - Spread properties also provide a new way to merge two or more objects, which can be used as an alternative to the Object.assign() method: - This is VERY IMPORTANT
 
 const obj1 = {a: 10};
 const obj2 = {b: 20};

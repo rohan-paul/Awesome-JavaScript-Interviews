@@ -26,7 +26,7 @@ console.log(a)
 
 Behind the scenes 'var a' is hoisted to the top of the file. There's it is not declared yet, and so remains undefined, but no longer has a reference error.
 
-# Hoisting for Function Declaration
+### Hoisting for Function Declaration
 
 ### Similarly, if a function is declared via functional declaration (using the keyword function) it is hoisted to the top.
 
