@@ -66,6 +66,70 @@ export default class App extends Component {
 }
 ```
 
+#### The API is very simple. You first define a ref, assign it to the element you want to manipulate and call focus on ref’s current property.
+
+Calling the focus() method isn’t a React.js thing… it’s a normal JavaScript thing! 💃🏻💃🏻 For example, this is how it’s done with vanilla JavaScript:
+
+`document.getElementById('myInput').focus();`
+
+Now, this is how to achieve the same example above using callback refs:
+
+```js
+class SimpleCallbackRef extends Component {
+  onClick() {
+    this.inputRef.focus()
+  }
+
+  render() {
+    return (
+      <div>
+        <input
+          ref={ref => {
+            this.inputRef = ref
+          }}
+        />
+        <button onClick={this.onClick.bind(this)}>Click to Focus</button>
+      </div>
+    )
+  }
+}
+```
+
+Notice that although you don’t need to manually create a ref anymore, the callback function ref => { this.inputRef = ref; } looks less natural.
+
+### Refs with React Hooks Using useRef
+
+Refs in React Hooks aren’t much different than class components. It’s achieved using the useRef hook. Just remember to omit this and you are golden
+
+```JS
+function App() {
+
+  const myInput = useRef(null);
+
+  return (
+    <div>
+      <input ref={myInput}/>
+      <button onClick={() => {
+        myInput.current.focus();
+      }}>
+        focus!
+      </button>
+    </div>
+  );
+}
+
+```
+
+#### Multiple APIs
+
+When refs were first born, the React team encouraged the use of string refs. This is no longer the case as this API will be deprecated. A powerful alternative was introduced: callback refs. But all this power came with a price – callback refs are more verbose and may behave oddly. In order to simplify things, the createRef API came into play. And finally, after Hooks were introduced, useRef emerged. But, because there are four ways of doing the same thing, people started losing faith in refs. Let’s fix this.
+
+#### should we use callback refs or the createRef API?
+
+The short answer is that most of the time you can safely use the createRef API. Although you can always achieve the same result using callback refs, recall that this new API was specially crafted in order to simplify your experience. You can look at its RFC in order to understand the React team’s motivations behind it. In short, the goal was to maintain the simplicity of the deprecated string refs and purposely keep a simple API, leaving callback refs for more complex use cases.
+
+**Note, You can't use createRef for pure functional components since they lack many of the React-y features like state & lifecycle components**
+
 #### Further Reading
 
 [https://moduscreate.com/blog/everything-you-need-to-know-about-refs-in-react/](https://moduscreate.com/blog/everything-you-need-to-know-about-refs-in-react/)
