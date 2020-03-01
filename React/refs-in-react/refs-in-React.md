@@ -130,6 +130,17 @@ The short answer is that most of the time you can safely use the createRef API. 
 
 **Note, You can't use createRef for pure functional components since they lack many of the React-y features like state & lifecycle components**
 
+#### Finally, as a rule of thumb:
+
+- Don’t overuse refs
+- Abolish string refs
+- Use callback refs when you have to dynamically set them
+- When in a class component, use createRef in all other cases
+- When in a function component, use useRef in all other cases
+- Use forwardRef when you need access to a child ref
+- Use Hooks to empower your function component
+- If the child ref must not be a function component, then use a custom method to trigger focus programmatically from the parent (remember you will get a component instance, not a DOM element)
+
 #### Further Reading
 
 [https://moduscreate.com/blog/everything-you-need-to-know-about-refs-in-react/](https://moduscreate.com/blog/everything-you-need-to-know-about-refs-in-react/)
