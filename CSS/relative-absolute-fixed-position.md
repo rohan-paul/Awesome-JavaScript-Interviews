@@ -1,4 +1,25 @@
+There are five different position values:
+
+static
+relative
+fixed
+absolute
+sticky
+
+position: static;
+HTML elements are positioned static by default.
+
+Static positioned elements are not affected by the top, bottom, left, and right properties.
+
+An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:
+
+Note - Z-index doesn’t work with position: static or without a declared position
+
 ## Absolute CSS Positioning
+
+An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+
+Note: A "positioned" element is one whose position is anything except static.
 
 This is a very powerful type of positioning that allows you to literally place any page element exactly where you want it. You use the positioning attributes top, left, bottom. and right to set the location. Remember that these values will be relative to the next parent element with relative (or absolute) positioning. If there is no such parent, it will default all the way back up to the <html> element itself meaning it will be placed relatively to the page itself.
 
@@ -15,6 +36,8 @@ This element will then always display 10px from the top of the page regardless o
 ### Absolute vs Fixed
 
 Absolutely positioned elements are removed entirely from the document flow. That means they have no effect at all on their parent element or on the elements that occur after them in the source code. An absolutely positioned element will therefore overlap other content unless you take action to prevent it. Sometimes, of course, this overlap is exactly what you desire, but you should be aware of it, to make sure you are getting the layout you want!
+
+An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
 
 Fixed positioning is really just a specialized form of absolute positioning; elements with fixed positioning are fixed relative to the viewport/browser window rather than the containing element; even if the page is scrolled, they stay in exactly the same position inside the browser window.
 
