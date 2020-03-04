@@ -17,7 +17,7 @@ Note - Z-index doesn’t work with position: static or without a declared positi
 
 ## Absolute CSS Positioning
 
-An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+**An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.**
 
 Note: A "positioned" element is one whose position is anything except static.
 
@@ -40,15 +40,6 @@ Absolutely positioned elements are removed entirely from the document flow. That
 An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
 
 Fixed positioning is really just a specialized form of absolute positioning; elements with fixed positioning are fixed relative to the viewport/browser window rather than the containing element; even if the page is scrolled, they stay in exactly the same position inside the browser window.
-
-### The four positioning properties are:
-
-top
-right
-bottom
-left
-
-To use them, you need to think of them as offset properties. In other words, an element positioned right: 2px is not moved right 2px. It's right side is offset from the right side of the window (or its position overriding parent) by 2px. The same is true for the other three.
 
 ## Relative.
 
