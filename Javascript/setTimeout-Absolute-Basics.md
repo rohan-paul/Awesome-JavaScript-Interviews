@@ -86,6 +86,7 @@ Again - From MDN setTimeout(): - "Code executed by setTimeout() is run in a sepa
 
 #### But does this mean it executes in parallel to any other code that is currently in process?
 
-No, it doesn't. "Execution context" doesn't mean "thread". setTimeout code has absolutely no parallelism going on
+No, it doesn't. "Execution context" doesn't mean "thread". setTimeout code has absolutely no parallelism going on inside it. The "separate execution context" mentioned in the documentation just means that the this reference will be different than in the function where setTimeout() is called.
+A Javascript engine simply processes a queue of events sequentially on a single thread. When the event queue is empty, that thread idles. In a browser, events are added to the queue by user input, page loading, etc. In node.js events can also be HTTP requests or hardware events. And setTimeout() simply adds another kind of event with the additional condition that it should only be added to the queue after a certain time has passed.
 
 [https://johnresig.com/blog/how-javascript-timers-work/](https://johnresig.com/blog/how-javascript-timers-work/)
