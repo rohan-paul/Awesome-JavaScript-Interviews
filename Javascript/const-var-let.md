@@ -47,7 +47,7 @@ discountPrices([100, 200, 300], 0.5) // ReferenceError: i is not defined
 
 We get ReferenceError: i is not defined. What this tells us is that variables declared with let are block scoped, not function scoped. So trying to access i (or discountedPrice or finalPrice) outside of the “block” they were declared in is going to give us a reference error as we just barely saw.
 
-### const
+### const - In constants mutation is allowed but reassignment is not allowed.
 
 const person = {
 name: 'Kim Kardashian'
@@ -58,3 +58,23 @@ person.name = 'Kim Kardashian West' // ✅
 person = {} // ❌ Assignment to constant variable.
 
 Notice that changing a property on an object isn’t reassigning it, so even though an object is declared with const, that doesn’t mean you can’t mutate any of its properties. It only means you can’t reassign it to a new value.
+
+#### Very Important - There is another great advantage using let as it creates a new lexical environment and also binds fresh value rather than keeping an old reference.
+
+```js
+for (var i = 1; i < 6; i++) {
+  setTimeout(function() {
+    console.log(i)
+  }, 1000)
+}
+
+// Now the same with 'let'
+
+for (let i = 1; i < 6; i++) {
+  setTimeout(function() {
+    console.log(i)
+  }, 1000)
+}
+```
+
+The first for loop will print the last value 5 times, with let it creates a new scope and bind fresh values printing us 1, 2, 3, 4, 5.
