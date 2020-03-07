@@ -26,7 +26,7 @@ The event loop is a special queue for callback functions. When an async code is 
 
 **The event loop is a first-in-first-out type of queue – callbacks are processed in order they were added to the queue.**
 
-## The Call Stack - Its a LIFO queue .
+## The Call Stack - Its a LIFO data structure .
 
 The event loop (Which on the other hand is FIFO) continuously checks the call stack to see if there’s any function that needs to run.
 

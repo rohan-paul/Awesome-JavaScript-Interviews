@@ -1,6 +1,6 @@
 ## What is the Execution Context?
 
-## Execution context is a concept in the language spec that—in layman's terms—roughly equates to the 'environment' a function executes in; that is, variable scope (and the scope chain, variables in closures from outer scopes), function arguments, and the value of the this object.
+## Execution context is a concept in the language spec that roughly equates to the 'environment' a function executes in; that is, variable scope (and the scope chain, variables in closures from outer scopes), function arguments, and the value of the this object.
 
 ## The call stack is a collection of execution contexts.
 
@@ -29,12 +29,13 @@ Eval code – Text to be executed inside the internal eval function.
 ## Scope is literally that: the scope in which a variable can be accessed. Simplistically:
 
 ```js
-var x;
+var x
 
 function a() {
-    var y;
+  var y
 }
 ```
+
 x can be accessed from anywhere. When a is invoked, x will be in the outer scope. (Stored in the scope chain.)
 
 In contrast, y can only be accessed by code in a() because it is limited to a's scope. This is what the var keyword does: restricts a variable to the local scope. If we omitted var, y would end up in the global scope, generally considered a bad thing.

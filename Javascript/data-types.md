@@ -1,4 +1,5 @@
 ## JavaScript has two types of data types:
+
 ## “primitive data types”, which are immutable; and, compound data types, which are mutable.
 
 ## Six primitive data types are:
@@ -11,22 +12,25 @@
 - Symbol (a unique and immutable primitive new to ES6/2015)
 
 #### Null vs Undefined
+
 What is null? - There are two features of null you should understand:
- - null is an empty or non-existent value.
- - null must be assigned.
+
+- null is an empty or non-existent value.
+- null must be assigned.
 
 Here’s an example. We assign the value of null to a:
 
 ```js
-let a = null;
-console.log(a);
+let a = null
+console.log(a)
 // null
 ```
+
 What is undefined? - Undefined most typically means a variable has been declared, but not defined. For example:
 
 ```js
-let b;
-console.log(b);
+let b
+console.log(b)
 // undefined
 ```
 
@@ -35,22 +39,22 @@ console.log(b);
 Difference no 2 - Null and undefined are both primitives and falsy values. However null is also an object. Interestingly, this was actually an error in the original JavaScript implementation.
 
 ```js
-var a;
-console.log(typeof(a));
+var a
+console.log(typeof a)
 // undefined
 
-var b = null;
-console.log(typeof(b));
+var b = null
+console.log(typeof b)
 // object
 ```
 
 Difference no 3! - As you can see so far, null and undefined are different, but share some similarities. Thus, it makes sense that null does not strictly equal undefined.
 
 ```js
-console.log(null !== undefined);
+console.log(null !== undefined)
 // true
 // But, and this may surprise you, null loosely equals undefined.
-console.log(null == undefined);
+console.log(null == undefined)
 // true
 ```
 
@@ -63,18 +67,16 @@ Imagine that you have a variable called myInt and it holds the number value 5. N
 #### [Built-in Types - from MDN ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Data_types)
 
 ```js
-console.log("\"string\" type:", typeof "string"); // Logs: "string" type: string
-console.log("7 type:", typeof 7); // Logs: 7 type is: number
-console.log("7.5 type:", typeof 7.5); // Logs: 7.5 type is: number
-console.log("true type:", typeof true); // Logs: true type: boolean
-console.log("undefined type:", typeof undefined); // Logs: undefined type: undefined
-console.log("null type:", typeof null); // Logs: null type: object
-console.log("{} type:", typeof {}); // Logs: {} type: object
-console.log("[] type:", typeof []); // Logs: [] type: object
-console.log("function type:", typeof
-    function() {}); // Logs: function type: function
+console.log('"string" type:', typeof "string") // Logs: "string" type: string
+console.log("7 type:", typeof 7) // Logs: 7 type is: number
+console.log("7.5 type:", typeof 7.5) // Logs: 7.5 type is: number
+console.log("true type:", typeof true) // Logs: true type: boolean
+console.log("undefined type:", typeof undefined) // Logs: undefined type: undefined
+console.log("null type:", typeof null) // Logs: null type: object
+console.log("{} type:", typeof {}) // Logs: {} type: object
+console.log("[] type:", typeof []) // Logs: [] type: object
+console.log("function type:", typeof function() {}) // Logs: function type: function
 ```
-
 
 In JavaScript, there are no true integers, all numbers are implemented in double-precision 64-bit binary format IEEE 754. When we use binary floating-point numbers, it will have some side effects. Here is an example of these side effects.
 
@@ -92,17 +94,19 @@ a.toString() // converted to object when necessary
 # Typeof
 
 `typeof` can always display the correct type of primitive types, except `null`:
+
 ```js
 typeof 1 // 'number'
-typeof '1' // 'string'
+typeof "1" // 'string'
 typeof undefined // 'undefined'
 typeof true // 'boolean'
 typeof Symbol() // 'symbol'
 typeof b // b is not declared,but it still can be displayed as undefined
 ```
 
-For object,  `typeof` will always display `object`, except **function**:
-```js
+For object, `typeof` will always display `object`, except **function**:
+
+````js
 typeof [] // 'object'
 typeof {} // 'object'
 typeof console.log // 'function'
@@ -114,7 +118,7 @@ let a = { name: 'FE' }
 let b = a
 b.name = 'EF'
 console.log(a.name) // EF
-```
+````
 
 # Type Conversion
 
@@ -128,9 +132,9 @@ When objects are converted, `valueOf` and `toString` will be called, respectivel
 
 ```js
 let a = {
-    valueOf() {
-        return 0
-    }
+  valueOf() {
+    return 0
+  },
 }
 ```
 
@@ -143,26 +147,42 @@ Using a symbol, you know no one else who doesn't share this instance (instead of
 Example without symbols:
 
 ```js
-var map = {};
-setProp(map);
-setProp2(map);
+var map = {}
 
 function setProp(map) {
-  map.prop = "hey";
+  map.prop = "hey"
 }
 function setProp2(map) {
-  map.prop = "hey, version 2";
+  map.prop = "hey, version 2"
 }
+
+setProp(map)
+setProp2(map)
 ```
+
 In this case, the 2nd function call will override the value in the first one.
 
 However, with symbols, instead of just using "the string prop", we use the instance itself:
 
 ```js
-var map = {};
-var symbol1 = Symbol("prop");
-var symbol2 = Symbol("prop"); // same name, different instance – so it's a different symbol!
-map[symbol1] = 1;
-map[symbol2] = 2; // doesn't override the previous symbol's value
-console.log(map[symbol1] + map[symbol2]); // logs 3
+var map = {}
+var symbol1 = Symbol("prop")
+var symbol2 = Symbol("prop") // same name, different instance – so it's a different symbol!
+map[symbol1] = 1
+map[symbol2] = 2 // doesn't override the previous symbol's value
+console.log(map[symbol1] + map[symbol2]) // logs 3
+```
+
+### More general notes on Symobls
+
+The Symbol() function returns a value of type symbol, has static properties that expose several members of built-in objects, has static methods that expose the global symbol registry, and resembles a built-in object class, but is incomplete as a constructor because it does not support the syntax "new Symbol()".
+
+```js
+var map = {}
+var symbol1 = Symbol("prop")
+console.log(symbol1) // => Symbol(prop)
+```
+
+```js
+Symbol("foo") === Symbol("foo") // false
 ```
