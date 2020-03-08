@@ -1,6 +1,6 @@
 ### let vs var
 
-So to recap, var is function scoped and if you try to use a variable declared with var before the actual declaration, you’ll just get undefined. const and let are blocked scoped and if you try to use variable declared with let or const before the declaration you’ll get a ReferenceError.
+var is function scoped and if you try to use a variable declared with var before the actual declaration, you’ll just get undefined. const and let are blocked scoped and if you try to use variable declared with let or const before the declaration you’ll get a "ReferenceError variable is not defined".
 
 ```js
 function discountPrices(prices, discount) {
@@ -78,3 +78,23 @@ for (let i = 1; i < 6; i++) {
 ```
 
 The first for loop will print the last value 5 times, with let it creates a new scope and bind fresh values printing us 1, 2, 3, 4, 5.
+
+### Difference between Object.freeze() and const
+
+**const** and **Object.freeze** are two completely different things.
+
+const applies to bindings ("variables"). It creates an immutable binding, i.e. you cannot assign a new value to the binding.
+
+Object.freeze works on values, and more specifically, object values. Object.freeze() is a method which accepts an object and returns the same object. Now the object cannot have any of its properties removed or any new properties added. It makes an object immutable, i.e. you cannot change its properties.
+
+On the other hand if I use const to declare and object, it doesn't "freeze" them, you just can't redeclare the whole object, but you can modify its keys freely. On the other hand you can redeclare frozen objects.
+
+```js
+const obj = {
+  name: "rohan",
+}
+
+obj.name = "paul"
+
+console.log(obj)
+```
