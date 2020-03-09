@@ -1,4 +1,6 @@
-Both .then and .catch will return a new promise. That seems like a small detail but it’s important because it means that promises can be chained.
+And note some fundamentals of Promise - When you create a new Promise, you're really just creating a plain old JavaScript object. This object can invoke two methods, then, and catch. Both .then() and .catch() will return a new promise. That means that promises can be chained.
+
+A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending. Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.
 
 **Below, the most generic way I declare a Promise**
 
@@ -51,12 +53,13 @@ new Promise(function(res, rej) {
 
 A value returned inside a then() handler becomes the resolution value of the promise returned from that then().
 
-The only difference is that you're creating an unnecessary promise (by doging <return Promise.resolve("bbb")>) when you do return Promise.resolve("bbb").
+The only difference is that you're creating an unnecessary promise (by doing <return Promise.resolve("bbb")>) when you do return Promise.resolve("bbb").
 
-So the following are all identical for a promise or plain value X:
+**So the following are all identical for a promise or plain value x:**
 
 ```js
 Promise.resolve(x)
+
 new Promise(function(resolve, reject) {
   resolve(x)
 })
@@ -68,24 +71,24 @@ Promise.all([x]).then(function(arr) {
 })
 ```
 
----
-
-In simple terms, inside a then handler function:
+**In simple terms, inside a .then() handler function:**
 
 A) When x is a value (number, string, etc):
 
 return x is equivalent to return Promise.resolve(x)
 throw x is equivalent to return Promise.reject(x)
+
 B) When x is a Promise that is already settled (not pending anymore):
 
 return x is equivalent to return Promise.resolve(x), if the Promise was already resolved.
 return x is equivalent to return Promise.reject(x), if the Promise was already rejected.
+
 C) When x is a Promise that is pending:
 
 return x will return a pending Promise, and it will be evaluated on the subsequent then.
-Read more on this topic on the Promise.prototype.then() docs.
+Read more on this topic on the [Promise.prototype.then()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) docs.
 
-A super basic implementation of Promise function, returning the resolve() immediately. Of note here how if a single string is passed to resolve() - then that would be returned
+### Another super basic implementation of Promise function, returning the resolve() immediately. Of note here how if a single string is passed to resolve() - then that would be returned
 
 ```js
 const a3 = new Promise(resolve => {
@@ -100,7 +103,7 @@ Output of above :-
 
 #### EXPLANATION - Promise resolve() method:
 
-Promise.resolve() method in JS returns a Promise object that is resolved with a given value. Any of the three things can happen:
+Promise.resolve() method in JS returns a Promise object that is resolved with a given value. Any of the following three things can happen:
 
 - 1.  If the value is a promise - then promise is returned.
 - 2. If the value has a “then” attached to the promise - then the returned promise will follow that “then” to till the final state.

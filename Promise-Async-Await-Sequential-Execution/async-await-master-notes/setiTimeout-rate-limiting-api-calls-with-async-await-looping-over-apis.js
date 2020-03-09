@@ -14,8 +14,9 @@ const doRequest = async uris => {
   for (let uri of uris) {
     let response = await axios.get(uri)
     console.log(response.data)
-
-    // await wait(1000);
+    const ms = 300 * uris.indexOf(uri)
+    console.log(uris.indexOf(uri))
+    await wait(ms)
   }
 }
 
