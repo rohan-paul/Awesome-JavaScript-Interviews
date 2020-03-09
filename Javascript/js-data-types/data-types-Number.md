@@ -56,3 +56,13 @@ function foo(x, y) {
 
 foo(0.1, 0.2) // "0.10.2"
 ```
+
+And
+
+```js
+function foo(x, y) {
+  return x.toFixed(2) + y.toFixed(2)
+}
+
+console.log(foo(0.1, 0.2))
+```

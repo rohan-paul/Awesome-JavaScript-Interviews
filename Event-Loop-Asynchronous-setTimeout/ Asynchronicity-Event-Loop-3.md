@@ -1,4 +1,4 @@
- ### A quick step-by-step explanation of how the JavaScript Event Loop works.
+### A quick step-by-step explanation of how the JavaScript Event Loop works.
 
 <img src=" Asynchronicity-Event-Loop.png">
 
@@ -19,3 +19,5 @@ The event loop's job is to look at the stack and look at the task queue. If the 
 Any of the web APIs pushes the callback on to the task queue when it's done.
 The event loop is like the simplest little piece in this whole equation, and it has one very simple job.
 The event loop's job is to look at the stack and look at the task queue. If the stack is empty it takes the first thing on the task-queue and pushes it on to the stack which effectively run it. When the event loop sees that the stack is clear, there's a callback on the task queue, the event loop runs, it says, oh, I get to do something, pushes the callback on to the stack.
+
+#### A side point - Most of what you write in JavaScript, that is NOT asynchronous code, is Synchronous procedural code read from top to bottom and executed in the single main thread of the JavaScript process. Because, at its base, JavaScript is a synchronous, blocking, single-threaded language.
