@@ -1,4 +1,6 @@
-console.log('1 == "1" is ', 1 == "1"); // => true
+// Understanding these is extremely important fot gettting how shouldComponentUpdate() and useMemo() works
+
+console.log('1 == "1" is ', 1 == "1") // => true
 
 // console.log(1 === "1" ); // false
 
@@ -13,6 +15,8 @@ console.log('1 == "1" is ', 1 == "1"); // => true
 // console.log({0: 1} == {0: 1}); // => false
 
 // console.log({0: 1} === {0: 1}); // => false
+
+// console.log({} === {}); // false
 
 /*
 Explanation - 1 - Why console.log([1] == [1]); // => false
@@ -35,16 +39,16 @@ Non primitive values can also be referred to as reference types because they are
 // To understand better of the concept of 'pass-by-value' vs 'pass-by-reference'
 // https://codeburst.io/javascript-passing-by-value-vs-reference-explained-in-plain-english-8d00fd06a47c
 // The below example is one of pass-by-value
-let a = 5;
-let b = a;
+let a = 5
+let b = a
 
-console.log(a); // => 5
-console.log(b); // => 5
+console.log(a) // => 5
+console.log(b) // => 5
 
-a = 1;
+a = 1
 
-console.log(a); // => 1
-console.log(b); // => 5
+console.log(a) // => 1
+console.log(b) // => 5
 
 /*
 1. Pass-by-Value
@@ -54,17 +58,17 @@ In the above we assign variable (a) the value of 5. The equals operator notices 
  */
 
 // Now pass-by-reference
-let c = { language: "Javascript" };
-let d = c;
+let c = { language: "Javascript" }
+let d = c
 
-console.log(c); // => {language: "Javascript"}
-console.log(d); // => {language: "Javascript"}
+console.log(c) // => {language: "Javascript"}
+console.log(d) // => {language: "Javascript"}
 
 // Let's mutate our object 'd'
-d.language = "Ruby";
+d.language = "Ruby"
 
-console.log(c); // => {language: "Ruby"}
-console.log(d); // => {language: "Ruby"}
+console.log(c) // => {language: "Ruby"}
+console.log(d) // => {language: "Ruby"}
 
 // Meaning mutating the object d also mutates the object c - Because 'd' points to the same reference-location as 'c' .
 // So when I do d.language = 'Ruby' that instruction hits the same memory location which 'c' is referring to .

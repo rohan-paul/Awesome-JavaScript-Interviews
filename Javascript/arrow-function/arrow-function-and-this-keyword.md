@@ -6,11 +6,11 @@ let user = {
   gfg1: () => {
     console.log("hello " + **this**.name) // no '**this**' binding here
   },
-  gfg2() {
+  gfg2: function() {
     console.log("Welcome to " + **this**.name) // '**this**' binding works here
   },
 }
-user.gfg1() // => undefined
+user.gfg1() // => hello undefined
 user.gfg2() // 'Welcome to GFG'
 ```
 

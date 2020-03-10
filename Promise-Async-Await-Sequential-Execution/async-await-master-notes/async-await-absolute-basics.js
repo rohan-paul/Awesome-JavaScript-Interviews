@@ -18,7 +18,8 @@ const asyncFunc = async () => {
 const getValueFromAsync = async () => {
   const value = await asyncFunc()
   console.log(value)
-  return value // Note this will print Promise { <pending> } - Because this line is in the main execution thread of the function, and will get executed before the asynchronous Promise thread (run in Event Loop). And when it get executed the variable 'value' is still a Pending Promise
+  return value
+  // Note this will print Promise { <pending> } - Because this line is in the main execution thread of the function, and will get executed before the asynchronous Promise thread (run in Event Loop). And when it get executed the variable 'value' is still a Pending Promise
 }
 
 console.log(getValueFromAsync())

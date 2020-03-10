@@ -5,15 +5,17 @@ Inside a function, the value of this depends on how the function is called.
 
 Case-1 - WITHOUT STRICT MODE - If a function is not in strict mode, and if the value of this is not set by the call, this will default to the global object, which is window in a browser.
 
-Case-2 - In strict mode, however, the value of this remains at whatever it was set to when entering the execution context, 'this' will default to undefined. So, in strict mode, if this was not defined by the execution context, it remains undefined.
+Case-2 - In strict mode, however, the value of this remains at whatever it was set to when entering the execution context, 'this' will default to undefined. So, in strict mode, if this was not defined by the execution context, it remains undefined. The global object refers to 'undefined' in place of the windows object.
 
 */
 
-// Case-1 - WITHOUT STRICT MODE - Since the following code is not in strict mode, and because the value of this is not set by the call, this will default to the global object, which is window in a browser.
+// Case-1 - WITHOUT STRICT MODE - Since the following code is not in strict mode, and because the value of this is not set by the call, this will default to the global object, which is window in a browser, or global in node environment.
 
 function f1() {
   return this
 }
+
+// console.log(f1()); will print a very long list of Object of which the top-most property will bel 'global'
 
 // In a browser:
 f1() === window // true
@@ -21,7 +23,7 @@ f1() === window // true
 // In Node:
 f1() === global // true
 
-// Case-2 - In strict mode, however, the value of this remains at whatever it was set to when entering the execution context, so, in the following case, this will default to undefined. So, in strict mode, if this was not defined by the execution context, it remains undefined.
+// Case-2 - In strict mode, however, the value of this remains at whatever it was set to when entering the execution context, so, in the following case, this will default to undefined. So, in strict mode, if this was not defined by the execution context, it remains undefined. And also, f2 was called directly and not as a method or property of an object (e.g. window.f2())
 
 function f2() {
   "use strict"
@@ -30,9 +32,31 @@ function f2() {
 
 f2() === undefined // true
 
-// In the Case-2 above, `this` was returned to be undefined, because f2 was called directly and not as a method or property of an object (e.g. window.f2()).
+/* Now the case when “this” Refers to a New Instance
 
-// To pass the value of this from one context to another, use call(), or apply():
+When a function is invoked with the new keyword, then the function is known as a constructor function and returns a new instance. In such cases, the value of this refers to a newly created instance.
+For example: */
+
+function Person(first, last) {
+  this.first = first
+  this.last = last
+
+  this.displayName = function() {
+    console.log(`Full name : ${this.first} ${this.last}`)
+  }
+}
+
+// Note in above, I can not use arrow function as I can not create a constructor function with arrow syntax
+
+let person1 = new Person("John", "Reed")
+let person2 = new Person("Rohan", "Paul")
+
+person1.displayName() // Full name : John Reed
+person2.displayName() // Full name : Rohan Paul
+
+/* In the case of person.displayName, this refers to a new instance person, and in case of person2.displayName(), this refers to person2 (which is a different instance than Person).  */
+
+// NOW AS A SIDE POINT - To pass the value of this from one context to another, use call(), or apply():
 
 // An object can be passed as the first argument to call or apply and this will be bound to it.
 var obj = { a: "Custom" }
