@@ -82,6 +82,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - :link: [Dzone](https://dzone.com/)
 - :link: [https://scotch.io/](https://scotch.io/)
 - :link: [https://30secondsofcode.org/](https://30secondsofcode.org/)
+- :link: [https://blog.webf.zone/front-end-javascript-interviews-in-2018-19-e17b0b10514](https://blog.webf.zone/front-end-javascript-interviews-in-2018-19-e17b0b10514)
 
 ### Coding Challenge Practice Platforms
 

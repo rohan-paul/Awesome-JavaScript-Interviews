@@ -3,7 +3,26 @@
 // Write a function to replace a single space with a "-"
 
 String.prototype.dasherize = function() {
-    return this.replace(/\s/g, '-')
+  return this.replace(/\s/g, "-")
 }
 
-console.log('Hello world'.dasherize());
+// console.log("Hello world".dasherize())
+
+/* Another custom Prototype example
+const a = [1, 2, 3, 4, 5];
+Implement this
+a.multiply();
+console.log(a); // [1, 2, 3, 4, 5, 1, 4, 9, 16, 25]
+*/
+
+Array.prototype.multiply = function() {
+  let result = []
+  for (let i = 0; i < this.length; i++) {
+    result.push(this[i] ** 2)
+  }
+  return [...this, ...result]
+}
+
+let myArr = [1, 2, 3, 4, 5]
+
+console.log(myArr.multiply())
