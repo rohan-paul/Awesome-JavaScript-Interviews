@@ -8,16 +8,26 @@ String.prototype.dasherize = function() {
 
 // console.log("Hello world".dasherize())
 
-/* Another custom Prototype example
+/* Another custom Prototype example - Popular Interview Question
+
 const a = [1, 2, 3, 4, 5];
 Implement this
 a.multiply();
 console.log(a); // [1, 2, 3, 4, 5, 1, 4, 9, 16, 25]
 */
 
-Array.prototype.multiply = function() {
+// Here I am using the old iteration syntax with i
+/* Array.prototype.multiply = function() {
   let result = []
   for (let i = 0; i < this.length; i++) {
+    result.push(this[i] ** 2)
+  }
+  return [...this, ...result]
+} */
+
+Array.prototype.multiply = function() {
+  let result = []
+  for (i of this) {
     result.push(this[i] ** 2)
   }
   return [...this, ...result]
