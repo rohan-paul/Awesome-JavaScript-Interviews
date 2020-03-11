@@ -24,9 +24,18 @@ The crux of the problem is that numbers are represented in this format as a whol
 
 For 0.1 in the standard binary64 format, the representation can be written exactly as
 
+```
 0.1000000000000000055511151231257827021181583404541015625 in decimal, or
 0x1.999999999999ap-4 in C99 hexfloat notation.
+
+```
+
 In contrast, the rational number 0.1, which is 1/10, can be written exactly as
 
+```
 0.1 in decimal, or
-0x1.99999999999999...p-4 in an analogue of C99 hexfloat notation, where the ... represents an unending sequence of 9's.
+0x1.99999999999999...p-4
+
+```
+
+in an analogue of C99 hexfloat notation, where the ... represents an unending sequence of 9's.

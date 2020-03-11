@@ -32,7 +32,15 @@ function f2() {
 
 f2() === undefined // true
 
-/* Now the case when “this” Refers to a New Instance
+/* Now the case when “this” Refers to a New Instance - HERE, `this` will refer to an object that inherits from `instance.prototype` . Meaning with exact JS syntax
+
+Object.getPrototypeOf(instance)
+
+OR
+
+instance.__proto__
+
+( I can print the above 2 expression to get the prototype of the instance)
 
 When a function is invoked with the new keyword, then the function is known as a constructor function and returns a new instance. In such cases, the value of this refers to a newly created instance.
 For example: */
@@ -54,7 +62,17 @@ let person2 = new Person("Rohan", "Paul")
 person1.displayName() // Full name : John Reed
 person2.displayName() // Full name : Rohan Paul
 
-/* In the case of person.displayName, this refers to a new instance person, and in case of person2.displayName(), this refers to person2 (which is a different instance than Person).  */
+/* In the case of person1.displayName, this refers to a new instance of person1, and in case of person2.displayName(), this refers to person2 (which is a different instance than Person).
+
+I can check what the the prototype object of person1 with below
+
+console.log(person1.prototype) // undefined
+
+Object.getPrototypeOf(person1) // Person {}
+
+person1.__proto__ // Person {}
+
+*/
 
 // NOW AS A SIDE POINT - To pass the value of this from one context to another, use call(), or apply():
 
