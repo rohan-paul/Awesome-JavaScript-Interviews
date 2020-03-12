@@ -4,15 +4,20 @@ Git’s rebase command reapplies your changes onto another branch. As opposed to
 
 Let’s look at an example. While working on a branch named login, based on the master branch, one of your team members pushed some changes to master. You need these changes to finish the login feature in your branch.
 
-Merging the master branch back into yours would result in a merge commit, which includes the changes between both branches and exists to show where a merge occured. We won’t need to know when we merged the master into the login branch in the future. Instead, we’d like to pretend that all commits on the login branch happened based on the new state of the master branch.
+Merging the master branch back into yours would result in a merge commit, which includes the changes between both branches and exists to show where a merge occurred. We won’t need to know when we merged the master into the login branch in the future. Instead, we’d like to pretend that all commits on the login branch happened based on the new state of the master branch.
 
 <img src="git-rebase.png">
 
-Git’s rebase command temporarily rewinds the commits on your current branch, pulls in the commits from the other branch and reapplies the rewinded commits back on top. By switching the current This bases the current branch onto the other branch.
+**Git’s rebase command temporarily rewinds the commits on your current branch, pulls in the commits from the other branch and reapplies the rewinded commits back on top. By switching the current This bases the current branch onto the other branch.**
 
 `$ git rebase master`
 
-It’s as if you didn’t start working in the login branch before the commits you pulled in were made. You can also pull with rebase so you don’t have to switch out of your current branch.
+```
+First, rewinding head to replay your work on top of it...
+Fast-forwarded login to master.
+```
+
+**It’s as if you didn’t start working in the login branch before the commits you pulled in were made. You can also pull with rebase so you don’t have to switch out of your current branch.**
 
 ## More Explanation
 
