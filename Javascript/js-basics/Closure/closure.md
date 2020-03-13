@@ -3,18 +3,34 @@ A closure is the combination of a function bundled together (enclosed) with **re
 **A closure is a function** that retains access to variables of the context it was created in even after said function call has returned.
 
 ```js
-var awFunc = function (first) {
-    var someFunc = function (second) {
-        return first + second;
-    }
-    return someFunc;  // note that I did not invoke this function, but I did return the function
+function init() {
+  var name = "Mozilla" // name is a local variable created by init
+  function displayName() {
+    // displayName() is the inner function, a closure
+    alert(name) // use variable declared in the parent function
+  }
+  displayName()
+}
+init()
+```
+
+init() creates a local variable called name and a function called displayName(). The displayName() function is an inner function that is defined inside init() and is available only within the body of the init() function. Note that the displayName() function has no local variables of its own. However, since inner functions have access to the variables of outer functions, displayName() can access the variable name declared in the parent function, init().
+
+This is an example of lexical scoping, which describes how a parser resolves variable names when functions are nested. The word lexical refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that variable is available. Nested functions have access to variables declared in their outer scope.
+
+```js
+var awFunc = function(first) {
+  var someFunc = function(second) {
+    return first + second
+  }
+  return someFunc // note that I did not invoke this function i.e. I did not use someFunc(), but I did returned the function itself
 }
 
-var someMoreFunc = awFunc('awe') // At this point awFunc has finished running
+var someMoreFunc = awFunc("awe") // At this point awFunc has finished running
 
-console.log(someMoreFunc())  // This will return 'aweundefined'
+console.log(someMoreFunc()) // This will return 'aweundefined'
 
-console.log(someMoreFunc('some'))  // returns awesome
+console.log(someMoreFunc("some")) // returns awesome
 ```
 
 ## Using Closures (Examples)
@@ -26,10 +42,10 @@ To use a closure, simply define a function inside another function and expose it
 #### In JavaScript, closures are the primary mechanism used to enable data privacy. When you use closures for data privacy, the enclosed variables are only in scope within the containing (outer) function. You can’t get at the data from an outside scope except through the object’s privileged methods. In JavaScript, any exposed method defined within the closure scope is privileged. For example:
 
 ```js
-const getSecret = (secret) => {
-    return {
-        getPrivileged: () => secret
-    }
+const getSecret = secret => {
+  return {
+    getPrivileged: () => secret,
+  }
 }
 ```
 
@@ -39,17 +55,17 @@ In the example above, the `getPrivileged()` method is defined inside the scope o
 
 ```js
 const outerFunc = () => {
-    let name = 'Rohan'
+  let name = "Rohan"
 
-    const closureFunc = () => {
-        console.log(name);
-    }
-    return closureFunc()
+  const closureFunc = () => {
+    console.log(name)
+  }
+  return closureFunc()
 }
 
-var name = 'Paul'
+var name = "Paul"
 
-outerFunc()  // => Will Print 'Rohan'
+outerFunc() // => Will Print 'Rohan'
 ```
 
 ### So whats going on above
@@ -67,12 +83,13 @@ If a variable is not found anywhere, that’s an error in strict mode. Without u
 ### Some overall key points
 
 ### Closure
-  * A closure is a function that remembers its outer variables and can access them.
-  * Combination of a function and the lexical environment within which that function was declared
-  * The `closure` is the function object itself.
-  * Accessing variables outside of the immediate lexical scope creates a closure.
-  * Happens when we have a nested functions.
-  * JavaScript engines also may optimize, discard variables that are unused to save memory.
-  * A `Lexical Environment` object lives in the `heap` as long as there is a function which may use it. And when there are none, it is cleared.
-  * All functions in JavaScript are closures.
-  * The internal property `[[Environment]]` of a function, refers to the outer lexical environment
+
+- A closure is a function that remembers its outer variables and can access them.
+- Combination of a function and the lexical environment within which that function was declared
+- The `closure` is the function object itself.
+- Accessing variables outside of the immediate lexical scope creates a closure.
+- Happens when we have a nested functions.
+- JavaScript engines also may optimize, discard variables that are unused to save memory.
+- A `Lexical Environment` object lives in the `heap` as long as there is a function which may use it. And when there are none, it is cleared.
+- All functions in JavaScript are closures.
+- The internal property `[[Environment]]` of a function, refers to the outer lexical environment
