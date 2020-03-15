@@ -103,7 +103,7 @@ console.log(rest); // => { b: 2, c: 3, d: 4 }
 
 /* Here, the first item in arr is assigned to x, and remaining elements are assigned to the rest variable. This pattern, called array destructuring, became so popular that the Ecma Technical Committee decided to bring similar functionality to objects: */
 
-// Example - 8  - Rest parameter to objects - VERY IMPORTANT
+// Example - 8  - Rest parameter to objects - VERY IMPORTANT - common interview question, that extract the first key-value pair from an object with ...rest
 
 const obj = {
   a: 10,
@@ -148,6 +148,8 @@ const {b: {x, ...rest1}, ...rest2} = obj;    // no error
 const {...rest, ...rest2} = obj;    // → SyntaxError: Rest element must be last element
 
 /* Further Reading
-[css-tricks.com/new-es2018-features-every-javascript-developer-should-know/](https://css-tricks.com/new-es2018-features-every-javascript-developer-should-know/)
+https://css-tricks.com/new-es2018-features-every-javascript-developer-should-know/
+
+https://dev.to/sagar/three-dots---in-javascript-26ci
  */
 
