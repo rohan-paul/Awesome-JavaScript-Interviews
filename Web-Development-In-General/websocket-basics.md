@@ -18,3 +18,21 @@ WebSocket represents a single TCP socket connection, thus eliminating the proble
 - 8. WebSocket works better, where client-server communicates over the same TCP connection for the life of web socket connection whereas, for HTTP request, a new TCP connection is initiated.
 - 9. WebSocket communication allows client and server to talk independently of each other whereas with the REST based approach, either client is talking to the client or server is talking to the client at any given time.
 - 10. WebSocket communication cost is lower whereas REST-based communication is comparatively higher end on the cost.
+
+### Interfaces
+
+#### WebSocket
+
+The primary interface for connecting to a WebSocket server and then sending and receiving data on the connection.
+
+#### CloseEvent
+
+The event sent by the WebSocket object when the connection closes.
+
+#### MessageEvent
+
+The event sent by the WebSocket object when a message is received from the server.
+
+The WebSocket object provides the API for creating and managing a WebSocket connection to a server, as well as for sending and receiving data on the connection.
+
+To construct a WebSocket, use the WebSocket() constructor.
