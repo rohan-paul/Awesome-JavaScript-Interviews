@@ -10,4 +10,8 @@ function logThis() {
   }
 }
 logThis()
-console.log("null")
+
+/* It logs msg2. y === "Bob" will be true. But !(x) will be false since x is "null" and hence is true (all non empty strings are truthy
+
+  console.log("null") // => 'null'
+ */
