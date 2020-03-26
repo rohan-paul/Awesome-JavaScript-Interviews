@@ -3,7 +3,7 @@
 
 Inside a function, the value of this depends on how the function is called.
 
-Case-1 - WITHOUT STRICT MODE - If a function is not in strict mode, and if the value of this is not set by the call, this will default to the global object, which is window in a browser.
+Case-1 - WITHOUT STRICT MODE - If a function is not in strict mode, and if the value of this is not set by the call, this will default to the global object, which is window in a browser or global in Node environment
 
 Case-2 - In strict mode, however, the value of this remains at whatever it was set to when entering the execution context, 'this' will default to undefined. So, in strict mode, if this was not defined by the execution context, it remains undefined. The global object refers to 'undefined' in place of the windows object.
 
@@ -12,10 +12,10 @@ Case-2 - In strict mode, however, the value of this remains at whatever it was s
 // Case-1 - WITHOUT STRICT MODE - Since the following code is not in strict mode, and because the value of this is not set by the call, this will default to the global object, which is window in a browser, or global in node environment.
 
 function f1() {
-  return this
+  return this === global
 }
 
-// console.log(f1()); will print a very long list of Object of which the top-most property will bel 'global'
+console.log(f1()) // => true
 
 // In a browser:
 f1() === window // true
@@ -27,10 +27,10 @@ f1() === global // true
 
 function f2() {
   "use strict"
-  return this
+  return this === undefined
 }
 
-f2() === undefined // true
+console.log(f2()) // true
 
 /* Now the case when “this” Refers to a New Instance - HERE, `this` will refer to an object that inherits from `instance.prototype` . Meaning with exact JS syntax
 
