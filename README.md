@@ -146,3 +146,29 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 [https://medium.com/coderbyte/a-tricky-javascript-interview-question-asked-by-google-and-amazon-48d212890703](https://medium.com/coderbyte/a-tricky-javascript-interview-question-asked-by-google-and-amazon-48d212890703) - A Tricky JavaScript Interview Question Asked by Google and Amazon
 
 [Many tricky and common javascript-questions](https://github.com/lydiahallie/javascript-questions)
+
+### Key Fundamental concepts list, before you go for that Front End Engineering Interview
+
+Frontend/UI Engineer Interviews:
+
+1. call, apply and bind method
+2. Polyfill for bind method
+3. Currying
+4. Debouncing
+5. async vs defer
+6. Event Bubbling & Capturing
+7. Prototype & Prototypal Inheritance
+8. Throttling
+9. Thinking Recursively
+10. Local Storage and Session Storage
+11. CORS
+12. sum(a)(b)(c)...(n)
+13. Web Storage APIs
+14. Event Loop
+15. Web Sockets
+16. Closures
+17. Callbacks & Promises
+18. Revise everything again
+19. Difference between deep clone and shallow clone and how to write your own deep clone fucntion/polyfill for deepclone
+20. ES6 data structures such as Map and Set. In certain cases, Map is much better suited than an Object. Probably even Server Sent Events would be a good thing to know.
+21. Observable and subscribers, subject, behaviour subject and repeatable subject

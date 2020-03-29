@@ -2,6 +2,8 @@
 
 console.log('1 == "1" is ', 1 == "1") // => true
 
+console.log({} === {}) // false
+
 // console.log(1 === "1" ); // false
 
 // console.log(true == "true"); // => false
