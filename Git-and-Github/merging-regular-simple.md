@@ -12,7 +12,7 @@ git pull
 git merge dev
 ```
 
-### Merge Conflicts after doing git merge
+### How to resolve Merge Conflicts after doing git merge
 
 if two people changed the same lines in that same file, or if one person decided to delete it while the other person decided to modify it, Git simply cannot know what is correct. Git will then mark the file as having a conflict — which you’ll have to solve before you can continue your work. And in terminal you will see something like this.
 
@@ -43,4 +43,34 @@ The contents after the first marker originate from our current working branch. A
 
 This means the version in HEAD (our master branch, because that was what I had checked out when I ran the git merge command) is the top part of that block (everything above the =======). This is the receiving branch.
 And the version in my dev branch looks like everything in the bottom part.
+
 Our job is now to clean up these lines. In a team its advisable to consult other teammate who wrote the conflicting changes to decide which code is finally correct.
+
+At this stage (i.e. after manually resolving all the conflicts) - If I do < git merge > it will give me error as below
+
+```
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+```
+
+This is because my current branch has changes that has NOT been committed.
+
+So when you've successfully solved all conflicts, you need to do two more things:
+
+-1. So now, you'll have to mark the file as resolved by executing a "git add <filename>" command. OR a `git add -A` command.
+
+-2. AND then, after solving all conflicts, a merge conflict situation needs to be absolutely finally concluded by a regular commit. Just as you would commit any other change with the "git commit" command.
+
+### How to Undo a Merge
+
+You should always keep in mind that you can return to the state before you started the merge at any time. This should give you the confidence that you can't break anything. On the command line, a simple "git merge --abort" will do this for you.
+
+In case you've made a mistake while resolving a conflict and realize this only after completing the merge, you can still easily undo it: just roll back to the commit before the merge happened with "git reset --hard " and start over again.
+
+Overall remember - Fetch Remote Changes Frequently to Avoid Big Conflicts
+
+##### Further Reading
+
+[merge-conflicts](https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/merge-conflicts)
