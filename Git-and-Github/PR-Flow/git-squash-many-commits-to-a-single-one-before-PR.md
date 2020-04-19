@@ -77,7 +77,7 @@ pick a1f29a6 Adding a new feature
 squash 79c0e80 Here is another new feature
 ```
 
-**At this point, you can save and close the file ( Choosing the option shown in the Termianl, Control + O for writing out, then just press Enter for chosing the default file to write to and then fianally Control+X to exit). After first exit, it will open the secon editor inside Terminal where I should be able to edit and add the comments for my commit. So the same flow here as well. Edit inside Terminal Editor > press Control+O to write out > Prsss Enter to save to default file > Control+X to Exit**
+**At this point, you can save and close the file ( Choosing the option shown in the Terminal, Control + O for writing out, then just press Enter for choosing the default file to write to and then finally Control+X to exit). After first exit, it will open the section editor inside Terminal where I should be able to edit and add the comments for my commit. So the same flow here as well. Edit inside Terminal Editor > press Control+O to write out > Press Enter to save to default file > Control+X to Exit**
 
 ### ISSUE - If I get Error - Git: “Cannot 'squash' without a previous commit” error while rebase
 

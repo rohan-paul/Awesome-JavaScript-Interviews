@@ -13,3 +13,13 @@ Before we talk about the differences between these two commands, lets stress the
 Since **git pull** tries to merge remote changes with your local ones, a so-called “merge conflict” can occur. Check out our in-depth tutorial on How to deal with merge conflicts for more information.
 
 Like for many other actions, it’s highly recommended to start a **git pull** only with a clean working copy. This means that you should not have any uncommitted local changes before you pull. Use Git’s Stash feature to save your local changes temporarily.
+
+So when you are working on Forked Repo, after fetching from the remote branch, you would still have to merge the commits. So you can actually replace
+
+`$ git fetch upstream`
+
+with
+
+`$ git pull upstream master`
+
+since git pull is essentially git fetch + git merge.

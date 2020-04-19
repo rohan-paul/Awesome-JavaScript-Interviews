@@ -15,3 +15,7 @@ obj.bar() // `this` will refer to `obj`
 // as constructor function
 new foo() // `this` will refer to an object that inherits from `foo.prototype`
 ```
+
+#### Further Reading
+
+[https://blog.bitsrc.io/what-is-this-in-javascript-3b03480514a7](https://blog.bitsrc.io/what-is-this-in-javascript-3b03480514a7)
