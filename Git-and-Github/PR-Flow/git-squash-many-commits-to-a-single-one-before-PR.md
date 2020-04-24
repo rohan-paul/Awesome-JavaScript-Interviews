@@ -1,8 +1,11 @@
+One of the feature git, has enabled us to record all changes by the commit. And saved it as our history. So when something unexpected happens, you can rollback to specific commits.
+But, too many commits may mess your git history. If you have a lot of fixup commits, and you merge all of them directly into master, the git history will be bloated (which is something we don't want). So, if your change consists of two commits X and Y, we want to squash them into a single commit Z
+
 Some folks do it by hastily creating a new branch, porting all changes to it with a patch file and creating a separate pull request. But this is headache both for the contributor and project maintainer. There's an easier way, which is git squash
 
 [https://www.digitalocean.com/community/tutorials/how-to-rebase-and-update-a-pull-request](https://www.digitalocean.com/community/tutorials/how-to-rebase-and-update-a-pull-request)
 
-To find out the number of commits we have made, we can inspect the total number of commits that have been made to the project with the following command:
+So before we start the process of squashing, first find out the number of commits we have made, we can inspect the total number of commits that have been made to the project with the following command:
 
 `git log`
 
@@ -147,13 +150,13 @@ Now we can perform the force-push:
 
 `git push -f`
 
-I could also do below, assuming I am in master branch, and all my sqashing activities were in master branch
+I could also do below, assuming I am in master branch, and all my squashing activities were in master branch
 
 `git push origin master --force`
 
 And now if I go to the exiting PR in Github, I will see the same PR has got fully updated with my latest changes, with just a single commit.
 
-Note, all these squashing activities could have been done by the Rep's Manager as well. The repository's manager can squash all the commits in a pull request into a single commit by selecting "Squash and merge" on a pull request.
+Note, all these squashing activities could have been done by the Repo's Manager as well. The repository's manager can squash all the commits in a pull request into a single commit by selecting "Squash and merge" on a pull request.
 
 #### ISSUE - How to squash commits after the pull request has been opened ? That is, after I have created a PR, then squash my commits in my local machine and then when I go to the PR of the upstream Repo, I still see all the committs that were there previously.
 
