@@ -6,7 +6,7 @@ Examples: The following selector represents a p element that is child of body:
 body > p
 The following example combines descendant combinators and child combinators.
 
-div ol>li p
+`div ol>li p`
 
 It represents a p element that is a descendant of an li element; the li element must be the child of an ol element; the ol element must be a descendant of a div. Notice that the optional white space around the ">" combinator has been left out.
 
