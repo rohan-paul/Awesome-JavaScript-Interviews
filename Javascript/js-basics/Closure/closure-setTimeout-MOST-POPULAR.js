@@ -1,9 +1,9 @@
-const arr = [10, 20, 30, 40];
+const arr = [10, 20, 30, 40]
 
 for (var i = 0; i < arr.length; i++) {
   setTimeout(() => {
-    console.log("Index: " + i + ", element : " + arr[i]);
-  }, 1000);
+    console.log("Index: " + i + ", element : " + arr[i])
+  }, 1000)
 }
 
 /* output -
@@ -25,7 +25,7 @@ The variable i is actually declared within the for loop and the inner function a
 
 */
 
-//SOLUTION - 1 - To print all number from 0..4 after 1000 ms
+//SOLUTION - 1 - To print all number from 0..4 after 1000 ms - use let instead of var
 
 // const arr1 = [10, 12, 15, 21];
 
@@ -41,20 +41,20 @@ The variable i is actually declared within the for loop and the inner function a
 
 // SOLUTION - 2 - To print all number from 0..4 after 1000 ms
 
-const arr2 = [10, 12, 15, 21];
+const arr2 = [10, 12, 15, 21]
 
 for (var i = 1; i <= arr2.length; i++) {
   // pass in the variable i so that each function
   // has access to the correct index
 
   setTimeout(
-    (function(i_local) {
-      return function() {
-        console.log("The index of this number is " + i_local);
-      };
+    (function (i_local) {
+      return function () {
+        console.log("The index of this number is " + i_local)
+      }
     })(i),
-    i * 1000
-  );
+    i * 1000,
+  )
 }
 
 /*
@@ -70,3 +70,34 @@ Further Reading -
 1. https://medium.freecodecamp.org/3-questions-to-watch-out-for-in-a-javascript-interview-725012834ccb
 
 */
+
+// SOLUTION - 3 - Use different iterator variable i and j
+
+for (var i = 1; i <= 3; i++) {
+  setTimeout(function () {
+    console.log(`i: ${i}`)
+  }, i * 1000)
+}
+
+/*  OUTPUT
+
+i: 4
+i: 4
+i: 4
+
+The reason the result gives 4,4,4 instead of 1,2,3 is because i is only one variable, and as we studied earlier, closure preserves access to variables (not value), so it preserves the value of the last instance of i.e. 4.
+
+To receive 3 different values, we needed 3 different variables, which can be achieved by using a block scoped declaration */
+
+for (var i = 1; i <= 3; i++) {
+  let j = i
+  setTimeout(function () {
+    console.log(`j: ${j}`)
+  }, j * 1000)
+}
+
+/* OUTPUT -
+j: 1
+j: 2
+j: 3
+It preserves separate values of j in each iteration. j runs every time as the loop iterates New j is created in every iteration */
