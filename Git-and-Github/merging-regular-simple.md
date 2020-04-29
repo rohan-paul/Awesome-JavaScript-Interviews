@@ -4,13 +4,18 @@ This is probably the most important and sensitive area to deal with when working
 Lets say we are working in “dev” branch and want to integrate the changes from “dev” branch back into “master”.
 
 Before merging our code of master branch into one of our project’s long-running branches (i.e. in this case the “dev” and “master” branch), make sure that your local repository is up to date. Both our local feature / bugfix / “dev” branch and the receiving branch should be updated with the latest changes from our remote server.
-The target of this integration (i.e. the branch that receives changes) is always the currently checked out HEAD branch. So, all we have to do is check out the branch we wish to merge into and then run the git merge command:
+The target of this integration (i.e. the branch that receives changes) is always the currently checked out HEAD branch (in the below case its 'dev' branch). Meaning in below I want to merge the latest pulled-in master branch to my currenty WIP branch named 'dev'. This is the set of commands you will most often do during a regular day, to keep your branch updated with the master branch.
 
 ```js
 git checkout master
 git pull
-git merge dev
+git checkout dev
+git merge master
 ```
+
+Similarly, if you are currently working in a branch named dev and would like to merge any new changes that were made in a branch named new-features, you would issue the following command:
+
+`git merge new-features`
 
 ### How to resolve Merge Conflicts after doing git merge
 
