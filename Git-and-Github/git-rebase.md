@@ -8,9 +8,9 @@ Merging the master branch back into yours would result in a merge commit, which 
 
 <img src="git-rebase.png">
 
-**Git’s rebase command temporarily rewinds the commits on your current branch, pulls in the commits from the other branch and reapplies the rewinded commits back on top. By switching the current This bases the current branch onto the other branch.**
+**Git’s rebase command temporarily rewinds the commits on your current branch, pulls in the commits from the other branch and reapplies the rewinded commits back on top. By switching the current, this bases the current branch onto the other branch.**
 
-`$ git rebase master`
+### `$ git rebase master`
 
 ```
 First, rewinding head to replay your work on top of it...
@@ -64,6 +64,8 @@ Rebasing a branch in Git is a way to move the entirety of a branch to another po
 ### Additional Resources
 
 [https://jeffkreeftmeijer.com/git-rebase/](https://jeffkreeftmeijer.com/git-rebase/)
+
+[https://medium.com/osedea/git-rebase-powerful-command-507bbac4a234](https://medium.com/osedea/git-rebase-powerful-command-507bbac4a234)
 
 [https://git-scm.com/book/en/v2/Git-Branching-Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
 
