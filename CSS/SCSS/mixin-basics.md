@@ -74,8 +74,8 @@ Mixins can also take arguments, which allows their behavior to be customized eac
         color: #ffffff;
     }
 }
-
-.sdk-background-color-primary-100 {
+// And then consume this mixin with @include directive in a regular scss/css class, as below
+.my-background-color-primary-100 {
     @include set-background-color-primary($theme-primary, 100);
 }
 ```

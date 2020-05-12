@@ -7,6 +7,12 @@ Margin - Clears an area outside the border. The margin is transparent
 
 ##### When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.
 
+**In other words, all standards-fearing browsers default to the "content-box" box model. In this model, the width of an element does not include padding or borders. For example:**
+
+`.foo { width: 10em; padding: 2em; border: 1em; }`
+
+**will actually be 16em wide: 10em + 2em padding for each side, + 1em border for each edge.**
+
 This <div> element will have a total width of 350px:
 
 ```
@@ -22,10 +28,10 @@ Here is the calculation:
 
 320px (width)
 
-- 20px (left + right padding)
-- 10px (left + right border)
-- 0px (left + right margin)
-  = 350px
+-   20px (left + right padding)
+-   10px (left + right border)
+-   0px (left + right margin)
+    = 350px
 
 If the box-sizing property is set to content-box (default) and if the element is a block element, then below is the formulae
 
