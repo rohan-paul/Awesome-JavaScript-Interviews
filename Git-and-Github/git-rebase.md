@@ -1,10 +1,21 @@
-In Git, there are two main ways to integrate changes from one branch into another: the merge and the rebase
+In Git, there are two main ways to integrate changes from one branch into another: the merge and the rebase.
+
+#### Rebasing is often used as an alternative to merging. Rebasing a branch updates one branch with another by applying the commits of one branch on top of the commits of another branch. For example, if working on a `feature` branch that is out of date with a `dev` branch, rebasing the `feature` branch onto `dev` will allow all the new commits from `dev` to be included in `feature`.
 
 Git’s rebase command reapplies your changes onto another branch. As opposed to merging, which pulls the differences from the other branch into yours, rebasing switches your branch’s base to the other branch’s position and walks through your commits one by one to apply them again.
 
-Let’s look at an example. While working on a branch named login, based on the master branch, one of your team members pushed some changes to master. You need these changes to finish the login feature in your branch.
+First checkout a branch and then run the rebase command with the name of the branch you wish to rebase on to:
 
-Merging the master branch back into yours would result in a merge commit, which includes the changes between both branches and exists to show where a merge occurred. We won’t need to know when we merged the master into the login branch in the future. Instead, we’d like to pretend that all commits on the login branch happened based on the new state of the master branch.
+```
+git checkout feature
+git rebase dev
+```
+
+In most regular cases, the `git rebase dev` command will be `git rebase master` as most of the cases on a regular day, I would have to rebase on top of master branch.
+
+**Let’s look at an example. While working on a branch named login, based on the master branch, one of your team members pushed some changes to master. You need these changes to finish the login feature in your branch.**
+
+**Merging the master branch back into yours would result in a merge commit, which includes the changes between both branches and exists to show where a merge occurred. We won’t need to know when we merged the master into the login branch in the future. Instead, we’d like to pretend that all commits on the login branch happened based on the new state of the master branch.**
 
 <img src="git-rebase.png">
 
@@ -13,13 +24,15 @@ Merging the master branch back into yours would result in a merge commit, which 
 ### `$ git rebase master`
 
 ```
+
 First, rewinding head to replay your work on top of it...
 Fast-forwarded login to master.
+
 ```
 
 **It’s as if you didn’t start working in the login branch before the commits you pulled in were made. You can also pull with rebase so you don’t have to switch out of your current branch.**
 
-## More Explanation
+## [More Explanation](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
 
 How the `git merge` works - It performs a three-way merge between the two latest branch snapshots (C3 and C4) and the most recent common ancestor of the two (C2), creating a new snapshot (and commit).
 
@@ -27,7 +40,7 @@ How the `git merge` works - It performs a three-way merge between the two latest
 
 However in `git rebase` you can take the patch of the change that was introduced in C4 and reapply it on top of C3. In Git, this is called rebasing. With the rebase command, you can take all the changes that were committed on one branch and replay them on another one.
 
-In this example, you’d run the following:
+#### For this example, you would check out the experiment branch, and then rebase it onto the master branch as follows:
 
 ```js
 $ git checkout experiment
@@ -60,6 +73,12 @@ Often, you’ll do this to make sure your commits apply cleanly on a remote bran
 Rebasing a branch in Git is a way to move the entirety of a branch to another point in the tree. The simplest example is moving a branch further up in the tree. Say we have a branch that diverged from the master branch at point A:
 
 <img src="./git-rebase-4.png>">
+
+Use `git rebase --abort` to completely cancel a rebase, and other useful commands to abort or to continue
+
+```
+git rebase --continue | --skip | --abort | --edit-todo
+```
 
 ### Additional Resources
 
