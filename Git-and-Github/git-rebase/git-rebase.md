@@ -11,7 +11,16 @@ git checkout feature
 git rebase dev
 ```
 
-In most regular cases, the `git rebase dev` command will be `git rebase master` as most of the cases on a regular day, I would have to rebase on top of master branch.
+**In most regular day-to-day cases (i.e. when I am rebasing on top of master), the commands will be**
+
+`git rebase dev`
+`git rebase master`
+
+As most of the cases on a regular day, I would have to rebase on top of master branch.
+
+#### And then after rebasing, if you DON'T get any conflict, and `git status` shows `nothing to commit, working tree clean` - then just do a forced push of your branch
+
+`git push origin dev --force`
 
 **Let’s look at an example. While working on a branch named login, based on the master branch, one of your team members pushed some changes to master. You need these changes to finish the login feature in your branch.**
 
