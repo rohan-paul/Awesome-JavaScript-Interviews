@@ -1,22 +1,6 @@
 ## css class definition with multiple identifiers in a single line – Understaning how it works
 
-For example -
-
-```js
-.card-flipped .back {
-  transform: rotate3d(0,1,0,0deg);
-}
-```
-
-1> http://www.w3schools.com/cssref/css_selectors.asp
-
-Per Official doc - element element div p Selects all <p> elements inside <div> elements
-
-So, .card-flipped .back would mean select all .back class inside .card-flipped class
-
-The meaning of a selector with more classes depends on how you combine them in your declarations:
-
-## 2> Chain Selectors -
+## 1> Chain Selectors -
 
 https://stackoverflow.com/questions/13444647/css-class-definition-with-multiple-identifiers
 
@@ -39,18 +23,7 @@ https://stackoverflow.com/questions/13444647/css-class-definition-with-multiple-
 
 ```
 
-### `.class1 .class2` will match only the elements with class2 within elements with class1.
-
-```js
-.class1 .class2 { background: blue; }
-
-<div class="class1">
-    <div class="class2"></div>
-</div>
-
-```
-
-## 3> Chain selectors are not limited just to classes, you can do it for both classes and ids.
+Chain selectors are not limited just to classes, you can do it for both classes and ids.
 
 ### Classes
 
@@ -78,3 +51,30 @@ https://stackoverflow.com/questions/13444647/css-class-definition-with-multiple-
 /*style here*/
 }
 ```
+
+### 2> Descendant Selector
+
+### `.class1 .class2` will match only the elements with class2 within elements with class1.
+
+```js
+.class1 .class2 { background: blue; }
+
+<div class="class1">
+    <div class="class2"></div>
+</div>
+
+```
+
+### 3> Child Selector
+
+The child selector selects all elements that are the children of a specified element.
+
+The following example selects all <p> elements that are children of a <div> element:
+
+```css
+div > p {
+    background-color: yellow;
+}
+```
+
+The meaning of a selector with more classes depends on how you combine them in your declarations:
