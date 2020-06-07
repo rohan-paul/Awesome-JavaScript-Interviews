@@ -13,7 +13,7 @@ git rebase dev
 
 **In most regular day-to-day cases (i.e. when I am rebasing on top of master), the commands will be**
 
-`git rebase dev`
+`git checkout dev`
 `git rebase master`
 
 As most of the cases on a regular day, I would have to rebase on top of master branch.

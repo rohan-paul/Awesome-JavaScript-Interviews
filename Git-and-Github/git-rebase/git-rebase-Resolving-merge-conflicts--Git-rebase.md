@@ -28,6 +28,8 @@ And then continue the rebasing process
 
 `$ git rebase --continue`
 
+And in a single cycle of rebasing you may get these conflicts multiple times.
+
 #### Now most probably when you try to push to remote - you will be stopped from pushing to branch after rebase
 
 [stackoverflow.com/questions/15143042/cant-push-to-branch-after-rebase](https://stackoverflow.com/questions/15143042/cant-push-to-branch-after-rebase)
