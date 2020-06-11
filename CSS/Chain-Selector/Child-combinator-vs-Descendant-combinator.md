@@ -15,7 +15,7 @@ So in the above **descendant** means an elmenent can be a child or grandchild or
 #### The main point is **>** is the **child combinator**, which means it must be the direct child of a parent element. 
 #### Whereas a descendant combinator is whitespace that separates two compound selectors.
 
-### A good example from production grade real-life app - to declare the styles of a parent class with ALL its direct children to have this styles. A blanket declaration of capture all direct childrent with the "*"
+### A good example from production grade real-life app - to declare the styles of a parent class with ALL its direct children to have this styles. A blanket declaration to capture all direct childrent with the "*"
 
 parent.component.scss
 
@@ -42,10 +42,16 @@ Then the html will be like below, (this is an Angular .html file)
       [disabled]="disabled"      
     >
     </child-component>
+
+    <another-child-component
+      [item]="data"
+      [disabled]="disabled"      
+    >
+    </another-child-component>
 </div>
 ```
 
-So in the above case all the direct children of "parent-wrapping-class" will get the styles as delacred in the .scss file
+So in the above case all the direct children of "parent-wrapping-class" ( e.g. `child-component` and `another-child-component` )will get the styles as delacred in the .scss file
 
 #### Descendant combinator
 

@@ -97,6 +97,28 @@ The & in this case allows us to position .button directly next to pseudo classes
 
 which isn’t the same.
 
+
+And thats why at the root of the .scss file I can not have an ampersand &
+
+```
+
+&.sdk-ng-select .ng-dropdown-panel {
+  @include sdk-ng-select();
+}
+```
+It will give me following error 
+
+```
+SassError: Base-level rules cannot contain the parent-selector-referencing character
+```
+
+[Relevant issue in Saas github repo](https://github.com/sass/sass/issues/1873#issuecomment-152293725)
+
+"This error has existed since 3.0 which was released in May 2010.
+
+It's nonsensical to refer to a parent selector at the base-level of a stylesheet. Inferring that & should be the universal selector at the root level is not at all a safe assumption. Additionally, this is often indicative of a coding mistake. So we consider it an error."
+
+
 #### Further Reading
 
 [https://css-tricks.com/the-sass-ampersand/](https://css-tricks.com/the-sass-ampersand/)

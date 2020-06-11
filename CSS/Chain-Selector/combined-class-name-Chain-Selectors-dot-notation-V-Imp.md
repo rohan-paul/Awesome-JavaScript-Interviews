@@ -13,7 +13,7 @@ https://stackoverflow.com/questions/13444647/css-class-definition-with-multiple-
 
 ```
 
-### `.class1, .class2` (i.e. a comma in between) will match the elements with .class1 or .class2
+### `.class1, .class2` (i.e. a comma and a space in between) will match the elements with .class1 or .class2
 
 ```js
 .class1, class2 { background: yellow; }
