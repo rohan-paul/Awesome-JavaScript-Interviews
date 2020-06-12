@@ -34,16 +34,6 @@ The Sass transpiler will convert the above to normal CSS:
 }
 ```
 
-```css
-@mixin set-background-color-primary($color, $emphasis) {
-    background-color: mat-color($color, $emphasis);
-    @if ($emphasis < 300) {
-        color: #505050;
-    } @else {
-        color: #ffffff;
-    }
-}
-```
 
 ### [Arguments](https://sass-lang.com/documentation/at-rules/mixin#arguments)
 
