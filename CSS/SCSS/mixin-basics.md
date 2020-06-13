@@ -75,7 +75,3 @@ Mixins can also take arguments, which allows their behavior to be customized eac
 [https://www.w3schools.com/sass/sass_mixin_include.asp](https://www.w3schools.com/sass/sass_mixin_include.asp)
 
 [https://sass-lang.com/documentation/at-rules/mixin](https://sass-lang.com/documentation/at-rules/mixin)
-
-```
-
-```

@@ -1,4 +1,4 @@
-I was working `ng-select` Angular package, and here my purpose is to target the below classes
+I was working `ng-select` Angular package, and for my case here, I am trying to target the below classes
 
 ```css
 class="ng-select ng-dropdown-panel"
@@ -21,13 +21,7 @@ Here's my overall structur of the @mixin in .scss file
       @extend .sdk-text-body-light-2;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 0;
-      height: $sdk-ng-select-height;
-      border-width: thin;
-      border-top: 1px solid #ccc;
-      background-color: white;
-      color: #1b91fb;
+      justify-content: center;      
     }
 ...many styles here
 }
@@ -45,7 +39,7 @@ Then in an .html file of Angular component was consuming the above style as belo
 >
 </ng-select>
 
-The above will work, but its the wrong way to handle.
+### The above will work, but its the wrong way to handle.
 
 
 ### Problem with above 
@@ -56,7 +50,10 @@ I could simply do
 
 ```css
 // The first selector in below matches "ng-dropdown-panel" inside the "ng-select"
-// the second selector matches <div class="ng-dropdown-panel sdk-ng-select">
+// the second selector matches <div class="ng-dropdown-panel sdk-ng-select"> i.e. both the classes
+// .ng-dropdown-panel.sdk-ng-select
+// Note from the way, ampersand work, that it Sass will replace "&" with `.parent-class`, which becomes
+// .ng-dropdown-panel.sdk-ng-select in our generated CSS.
 
 .ng-dropdown-panel, &.ng-dropdown-panel
 
