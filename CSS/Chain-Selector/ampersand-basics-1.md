@@ -38,7 +38,9 @@ div > p {
 
 The meaning of a selector with more classes depends on how you combine them in your declarations:
 
-#Basic Nesting
+### dot notation vs ampersand
+
+### Basic Nesting with dot (".")
 
 ```css
 .parent {
@@ -53,9 +55,7 @@ This compiles to:
 
 You can nest as deep as you’d like, but it’s a good practice to keep it only a level or two to prevent overly specific selectors (which are less useful and harder to override).
 
-## So the scss ampersand "&" symbol implements Chain Selector but it adds more benefits beyond it
-
-The & comes in handy when you’re nesting and you want to create a more specific selector, like an element that has **both** of two classes, like this:
+### The & comes in handy when you’re nesting and you want to create a more specific selector, like an element that has **both** of two classes, like this:
 
 `.some-class.another-class { }`
 
@@ -64,6 +64,12 @@ The & comes in handy when you’re nesting and you want to create a more specifi
     &.another-class {
     }
 }
+```
+
+This will compile to 
+
+```css
+.some-class.another-class
 ```
 
 #### The & always refers to the parent selector when nesting. We can think of the & as a mechanism that allows us to place the parent selector wherever we need it in our child selector.

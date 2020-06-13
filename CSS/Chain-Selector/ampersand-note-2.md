@@ -49,15 +49,14 @@ Then in an .html file of Angular component was consuming the above style as belo
 I could simply do 
 
 ```css
-// The first selector in below matches "ng-dropdown-panel" inside the "ng-select"
-// the second selector matches <div class="ng-dropdown-panel sdk-ng-select"> i.e. both the classes
-// .ng-dropdown-panel.sdk-ng-select
-// Note from the way, ampersand work, that it Sass will replace "&" with `.parent-class`, which becomes
-// .ng-dropdown-panel.sdk-ng-select in our generated CSS.
-
 .ng-dropdown-panel, &.ng-dropdown-panel
-
 ```
+
+In the above, the first selector in below matches "ng-dropdown-panel" inside the "ng-select"
+the second selector matches <div class="ng-dropdown-panel sdk-ng-select"> i.e. both the classes
+`.ng-dropdown-panel.sdk-ng-select`
+Note the way ampersand work, that it will replace "&" with `.parent-class`, which becomes
+`.ng-dropdown-panel.sdk-ng-select` in our generated CSS.
 
 The downside to repeating the .sdk-ng-select selector here is that mixin is made in a way where it does not know about the class .sdk-ng-select, instead, it is used inside it, and having the selector inside the mixin breaks this structure.
 
