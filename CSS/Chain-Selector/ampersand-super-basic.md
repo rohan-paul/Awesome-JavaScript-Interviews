@@ -81,7 +81,7 @@ But with the ampersand, Sass allows us to do the same thing without leaving the 
 Both of these Sass snippets will result in the following CSS:
 
 ```css
-  .hoverable {
+.hoverable {
   color: #fff;
 }
 

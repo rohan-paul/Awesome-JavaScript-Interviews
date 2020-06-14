@@ -1,4 +1,4 @@
-I was working `ng-select` Angular package, and for my case here, I am trying to target the below classes
+I was working `ng-select` Angular package, and for my case here, I am trying to target both the below 2 classes
 
 ```css
 class="ng-select ng-dropdown-panel"
@@ -7,12 +7,11 @@ class="ng-select ng-dropdown-panel"
 class="ng-dropdown-panel sdk-ng-select"
 ```
 
-Note when I use <ng-select> component in .html file all ng-select related classes will have the ultimate parent 'ng-select'
+Note when I use <ng-select> component (which is the popular angular package) in .html file all ng-select related classes will have the ultimate parent 'ng-select'
 
 Here's my overall structur of the @mixin in .scss file 
 
 ```css
-
 @mixin sdk-ng-select {
     ...many styles here
 .ng-dropdown-panel,
@@ -52,16 +51,28 @@ I could simply do
 .ng-dropdown-panel, &.ng-dropdown-panel
 ```
 
-In the above, the first selector in below matches "ng-dropdown-panel" inside the "ng-select"
-the second selector matches <div class="ng-dropdown-panel sdk-ng-select"> i.e. both the classes
+#### In the above, the first selector (.ng-dropdown-panel) matches "ng-dropdown-panel" inside the "ng-select"
+
+#### The second selector (&.ng-dropdown-panel) matches <div class="ng-dropdown-panel sdk-ng-select"> i.e. both the classes
+
 `.ng-dropdown-panel.sdk-ng-select`
-Note the way ampersand work, that it will replace "&" with `.parent-class`, which becomes
+
+
+### Recollect, the way ampersand work, that it will replace "&" with `.parent-class`, which becomes
+
 `.ng-dropdown-panel.sdk-ng-select` in our generated CSS.
 
-The downside to repeating the .sdk-ng-select selector here is that mixin is made in a way where it does not know about the class .sdk-ng-select, instead, it is used inside it, and having the selector inside the mixin breaks this structure.
+The downside to repeating the `.sdk-ng-select` selector inside the mixing (as I was doing in the top of this page) is that mixin is made in a way where it does not know about the class `.sdk-ng-select`, instead, it is used inside it, like below. 
+
+```css
+  .sdk-ng-select {
+  @include sdk-ng-select();
+}
+```
+
+And having the selector `.sdk-ng-select` inside the mixin breaks this structure.
 
 So the correct version would be
-
 
 ```css
   .ng-dropdown-panel,
