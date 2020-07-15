@@ -42,14 +42,18 @@ The compiled CSS will be
   color: #ff0;
 }
 ```
+### Nested ampersand - Very useful
 
-The cool thing about ampersands is that they don't only have to be at the beginning of a nested style definition. Wherever you put an ampersand into your Sass selector definitions, it is interpreted to mean the parent scope of the current style being defined. 
+The cool thing about ampersands is that they don't only have to be at the beginning of a nested style definition. 
+
+### Wherever you put an ampersand into your Sass selector definitions, it is interpreted to mean the parent scope of the current style being defined.
+
 An application of the above is - sometimes you need to define a style that takes the context of the existing style, but only applies in a special case. For example, what if we need a different border treatment for our `.hoverable`element when the parent class is `.special`
 
 The SASS without a nested "&" would be below
 
 ```css
-  .hoverable {
+.hoverable {
   color: #fff;
   &:hover {
     color: #ff0;
@@ -67,7 +71,7 @@ Doing this required us to step out of our .hoverable selector and then re-define
 But with the ampersand, Sass allows us to do the same thing without leaving the scope of the .hoverable selector:
 
 ```css
-  .hoverable {
+.hoverable {
   color: #fff;
   &:hover {
     color: #ff0;

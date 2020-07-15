@@ -2,7 +2,7 @@
 
 # Awesome JavaScript Interviews
 
-A collection of super-popular Interview questions, along with answers, and some code-snippets that I am putting together for myself while preparing for JavaScript interviews. Many of these questions are what I have actually faced in real interview. It is by no means comprehensive, and the answers are relatively short ( and for each of the concepts, there are probably better and/or more in depth coverage in the web), but I see this repo as reference tool, so I can continue a technical talk with the interviewer for two to three hours.
+A collection of super-popular Interview questions, along with answers, and some code-snippets that I was putting together for myself while preparing for JavaScript interviews. Many of these questions are what I have actually faced in real interview. It is by no means comprehensive, and the answers are relatively short ( and for each of the concepts, there are probably better and/or more in depth coverage in the web), but I see this repo as reference tool, so I can continue a technical talk with the interviewer for two to three hours.
 
 There are many fantastic resources for JavaScript interview questions, videos, and blog posts on the web and that I have drawn from. I will cite as many as I can throughout so that additional information on each list item can be easily found.
 

@@ -4,19 +4,10 @@
   "description": "**A curated list of resources for JavaScript Interviews**",
   "main": "random-code-1.js",
   "dependencies": {
-    "axios": "^0.19.2",
-    "es6-promise": "^4.2.5",
-    "https": "^1.0.0",
-    "isomorphic-fetch": "^2.2.1",
-    "lodash.flatten": "^4.4.0",
-    "lodash.map": "^4.6.0",
-    "lodash.omit": "^4.5.0",
-    "lodash.orderby": "^4.6.0",
-    "lodash.partialright": "^4.2.1",
-    "lodash.pick": "^4.4.0",
-    "lodash.sortby": "^4.7.0",
-    "moment": "^2.22.2",
-    "request": "^2.88.0"
+    "axios": "^0.18.1",
+    "immutability-helper": "^2.7.1",
+    "lodash": "^4.17.15",
+    "request": "^2.87.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -31,10 +22,8 @@
     "url": "https://github.com/rohan-paul/Awesome-JavaScript-Interviews/issues"
   },
   "homepage": "https://github.com/rohan-paul/Awesome-JavaScript-Interviews#readme",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "immutability-helper": "^2.7.1",
-    "lodash": "^4.17.15",
-    "request": "^2.87.0"
+  "devDependencies": {
+    "tslint": "^6.1.2",
+    "typescript": "^4.0.0-beta"
   }
 }

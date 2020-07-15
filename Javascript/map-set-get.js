@@ -30,9 +30,6 @@ map.set(0, 'val-1')
 console.log(map)  // => Map { 0 => 'val-1' }
 
 
-
-
-
 // EXAMPLE-2 Map can also use objects as keys
 
 let john = { name: "John" };
