@@ -1,5 +1,13 @@
 The bind() method creates a new function that, when called, has its **this** keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
 
+The value of this is determined by how a function is called. If it is you who calls the function then there is usually no need to use .bind, since you have control over how to call the function, and therefore its this value.
+
+However, often it is not you who calls the function. Functions are passed to other functions as callbacks and event handlers. They are called by other code and you have no control over how the function is called, and therefore cannot control what this will refer to.
+
+If your function requires this to be set to a specific value and you are not the one calling the function, you need to .bind the function to a specific this value.
+
+In other words: .bind allows you to set the value of this without calling the function now.
+
 The bind() function creates a new bound function, which is an exotic function object (a term from ECMAScript 2015) that wraps the original function object. Calling the bound function generally results in the execution of its wrapped function.
 
 `let boundFunc = func.bind(thisArg[, arg1[, arg2[, ...argN]]])`
