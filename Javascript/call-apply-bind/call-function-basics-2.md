@@ -48,7 +48,7 @@ obj.func.call(obj) // => undefined
 obj.func2.call(obj) // => 15, accessing the
 ```
 
-The first invocation of f() will display the value of 10, because this references the global object. The second invocation (via the call method) however, will display the value 15. 15 is the value of the x property inside object o.
+The first invocation of f() will display the value of 10, because this references the global object. The second invocation (via the call method) however, will display the value 15. 15 is the value of the x property inside object obj.
 
 ### The call() method invokes the function and uses its first parameter as the this pointer inside the body of the function. In other words - we've told the runtime what object to reference as 'this' while executing inside of function f().
 

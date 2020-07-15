@@ -2,7 +2,7 @@
 
 In JavaScript all functions are object methods.
 
-If a function is not a method of a JavaScript object, it is a function of the global object (see previous chapter).
+If a function is not a method of a JavaScript object, it is a function of the global object.
 
 ```js
 var person = {

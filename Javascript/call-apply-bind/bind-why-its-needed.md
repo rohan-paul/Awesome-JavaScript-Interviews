@@ -35,3 +35,5 @@ console.log(retrieveX()) // => 9 Because here the function gets invoked at the g
 const boundX = retrieveX.bind(obj)
 console.log(boundX()) // => 70
 ```
+### Further Reading
+[https://stackoverflow.com/questions/41391288/why-is-javascript-bind-necessary](https://stackoverflow.com/questions/41391288/why-is-javascript-bind-necessary)
