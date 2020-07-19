@@ -75,3 +75,11 @@ random-code-1.js
 random-code-2.js
 random-code-3.js
 performance-1.js
+
+#ignore file name ending in "-bkp.js" OR "-bkp.ts"  OR "-bkp.py"  or "-test.js" OR "-test.ts" in its name. So I will have to put "-test.js" at all files that is just for my development-time random testing code .
+**/*-bkp.js
+**/*-bkp.ts
+**/*-bkp.py
+**/*-test.js
+**/*-test.ts
+**/*-test.py
