@@ -86,6 +86,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 ### Coding Challenge Practice Platforms
 
+- :link: [interviewing.io](https://interviewing.io/)
 - :link: [Leetcode](https://leetcode.com/)
 - :link: [HackerRank](https://www.hackerrank.com/)
 - :link: [CodeForces](http://codeforces.com/)
