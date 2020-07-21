@@ -149,7 +149,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 ### Key Fundamental concepts list, before you go for that Front End Engineering Interview
 
-Frontend/UI Engineer Interviews:
+##### Frontend/UI Engineer Interviews:
 
 1. call, apply and bind method
 2. Polyfill for bind method
@@ -172,3 +172,92 @@ Frontend/UI Engineer Interviews:
 19. Difference between deep clone and shallow clone and how to write your own deep clone fucntion/polyfill for deepclone
 20. ES6 data structures such as Map and Set. In certain cases, Map is much better suited than an Object. Probably even Server Sent Events would be a good thing to know.
 21. Observable and subscribers, subject, behaviour subject and repeatable subject
+
+### List of sites where you can hunt for a developer job
+
+- :link: AngelList - https://angel.co
+- :link: GitHub: http://jobs.github.com
+- :link: Mashable: http://jobs.mashable.com/jobs
+- :link: Indeed: http://indeed.com
+- :link: StackOverflow: http://stackoverflow.com/jobs
+- :link: LinkedIn: http://linkedIn.com
+- :link: Glassdoor: http://glassdoor.com
+- :link: Dice: http://dice.com
+- :link: Monster: http://monster.com
+- :link: Simply Hired: http://simplyhired.com
+- :link: Toptal: https://toptal.com
+- :link: Hired - https://hired.com
+- :link: Muse: http://themuse.com/jobs
+- :link: Tuts+: http://jobs.tutsplus.com
+- :link: Krop: http://krop.com
+- :link: PowerToFly: http://powertofly.com/jobs
+- :link: Developers for Hire: http://developersforhire.com
+- :link: Codepen job board: https://codepen.io/jobs
+- :link: http://Joblist.app: http://joblist.app
+- :link: Fullstack Job: http://fullstackjob.com
+- :link: Authentic jobs: http://authenticjobs.com
+- :link: Jobspresso: http://jobspresso.co
+- :link: Jobs in Europe: http://landing.jobs
+- :link: TripleByte: https://triplebyte.com
+
+### Want a startup job?
+
+- :link: AngelList: http://angel.co/jobs
+- :link: Product Hunt: http://producthunt.com/jobs
+- :link: Startup Hire: http://startuphire.com
+- :link: Startupers: http://startupers.com
+- :link: YCombinator: http://news.ycombinator.com/jobs
+
+#### Best places to job hunt for remote jobs:
+
+- :link: FlexJobs: http://flexjobs.com
+- :link: WeWorkRemotely: http://weworkremotely.com
+- :link: RemoteOk: http://remoteok.io/remote-dev-jobs
+- :link: Stackoverflow: http://stackoverflow.com/jobs/remote-developer-jobs
+- :link: Working Nomads: http://workingnomads.co/remote-development-jobs
+- :link: Remote . co - https://remote.co/remote-jobs/developer/
+- :link: Remoters: http://remoters.net/jobs/software-development
+- :link: JS Remotely: http://jsremotely.com
+- :link: Front-end remote: http://frontendremotejobs.com
+- :link: IWantRemote: http://iwantremote.com
+- :link: DailyRemote - https://dailyremote.com
+- :link: Remotive: https://remotive.io/remote-jobs/software-dev
+- :link: Outsourcely: http://outsourcely.com/remote-web-development-jobs
+- :link: Pangian: https://pangian.com/job-travel-remote/
+- :link: RemoteLeads: http://remoteleads.io
+- :link: Remote Talent: http://remotetalent.co/jobs
+- :link: JustRemote: https://justremote.co/remote-developer-jobs
+- :link: RemoteLeaf - https://remoteleaf.com
+- :link: Sitepoint - https://sitepoint.com/jobs/
+
+### Here are a few places to hunt for ios, react, vue and more
+
+- :link: iOS: http://iosdevjobs.com
+- :link: React: http://reactjobboard.com
+- :link: Vue jobs: http://vuejobs.com
+- :link: Ember: http://jobs.emberjs.com
+- :link: Python Jobs - http://python.org/jobs
+
+### Want a list of just JavaScript jobs?
+
+- :link: JavaScript job XYZ: http://javascriptjob.xyz
+- :link: Javascript remotely: http://jsremotely.com
+
+### Are you looking for a junior dev job?
+
+- :link: JrDevJobs: http://jrdevjobs.com
+- :link: Stackoverflow Junior jobs: https://stackoverflow.com/jobs/junior-developer-jobs
+
+### Women focused job boards!
+
+- :link: Women Who Code: http://womenwhocode.com/jobs
+- :link: Tech Ladies - https://hiretechladies.com
+
+### Want a job as a freelance dev? Here's a list
+
+- :link: Freelancer: http://freelancer.com/jobs
+- :link: Upwork: http://upwork.com
+- :link: FlexJobs: http://flexjobs.com/jobs
+- :link: FreelancerMap: http://freelancermap.com
+- :link: http://Gun.io: http://gun.io
+- :link: Guru: http://guru.com/d/jobs
