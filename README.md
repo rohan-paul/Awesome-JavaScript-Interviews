@@ -112,6 +112,8 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 **More curated list of general resources for JavaScript Interviews**
 
+[Follow this list in Twitter - These are some great developers who regularly gives a lot of useful advice for a wannabe dev regularly](https://twitter.com/i/lists/1273224332521717761)
+
 [https://www.thatjsdude.com/interview/js1.html](https://www.thatjsdude.com/interview/js1.html) - JS: Interview Algorithm Part-1
 
 [https://www.thatjsdude.com/interview/js2.html](https://www.thatjsdude.com/interview/js2.html) - JS: Basics and Tricky Questions Part-2: intermediate
