@@ -24,6 +24,11 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - :link: [14-patterns-to-ace-any-coding-interview-question](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
 - :link: [Grokking the Coding Interview: Patterns for Coding Questions](https://www.educative.io/collection/5668639101419520/5671464854355968)
 - :link: [https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript](https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript)
+- :link: [coding-interview-university](https://github.com/jwasham/coding-interview-university)
+- :link: [reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions)
+- :link: [Front-end-Developer-Interview-Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
+- :link: [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook) - Almost complete answers to "Front-end Job Interview Questions" which you can use to interview potential candidates, test yourself or completely ignore
+- 
 
 ### Github Repositories with large collections of problems-and-solutions of them most popular Interview challenges
 
@@ -128,7 +133,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 [https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d) - A perfect guide for cracking a JavaScript interview - A developer’s perspective
 
-[https://github.com/yangshun/front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook) - Almost complete answers to "Front-end Job Interview Questions" which you can use to interview potential candidates, test yourself or completely ignore
+
 
 [https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9) - Master the JavaScript Interview: What’s the Difference Between Class & Prototypal Inheritance?
 
