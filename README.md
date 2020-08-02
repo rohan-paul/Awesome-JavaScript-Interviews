@@ -4,7 +4,10 @@
 
 A collection of super-popular Interview questions, along with answers, and some code-snippets that I was putting together for myself while preparing for JavaScript interviews. Many of these questions are what I have actually faced in real interview. It is by no means comprehensive, and the answers are relatively short ( and for each of the concepts, there are probably better and/or more in depth coverage in the web), but I see this repo as reference tool, so I can continue a technical talk with the interviewer for two to three hours.
 
-There are many fantastic resources for JavaScript interview questions, videos, and blog posts on the web and that I have drawn from. I will cite as many as I can throughout so that additional information on each list item can be easily found.
+There are many fantastic resources for JavaScript interview questions, videos,
+and blog posts on the web and that I have drawn from. I will cite as many as I
+can throughout so that additional information on each list item can be easily
+found
 
 ### For Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
@@ -28,7 +31,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - :link: [reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions)
 - :link: [Front-end-Developer-Interview-Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
 - :link: [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook) - Almost complete answers to "Front-end Job Interview Questions" which you can use to interview potential candidates, test yourself or completely ignore
-- 
+-
 
 ### Github Repositories with large collections of problems-and-solutions of them most popular Interview challenges
 

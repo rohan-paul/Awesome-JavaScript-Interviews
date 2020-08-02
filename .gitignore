@@ -83,3 +83,6 @@ performance-1.js
 **/*-test.js
 **/*-test.ts
 **/*-test.py
+**/*-test.ipynb
+**/*-test.md
+**/*-test.json
