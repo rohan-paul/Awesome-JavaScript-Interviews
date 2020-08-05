@@ -120,43 +120,41 @@ found
 
 **More curated list of general resources for JavaScript Interviews**
 
-[Follow this list in Twitter - These are some great developers who regularly gives a lot of useful advice for a wannabe dev regularly](https://twitter.com/i/lists/1273224332521717761)
+- :link: [Follow this list in Twitter - These are some great developers who regularly gives a lot of useful advice for a wannabe dev regularly](https://twitter.com/i/lists/1273224332521717761)
 
-[https://www.thatjsdude.com/interview/js1.html](https://www.thatjsdude.com/interview/js1.html) - JS: Interview Algorithm Part-1
+- :link: [https://www.thatjsdude.com/interview/js1.html](https://www.thatjsdude.com/interview/js1.html) - JS: Interview Algorithm Part-1
 
-[https://www.thatjsdude.com/interview/js2.html](https://www.thatjsdude.com/interview/js2.html) - JS: Basics and Tricky Questions Part-2: intermediate
+- :link: [https://www.thatjsdude.com/interview/js2.html](https://www.thatjsdude.com/interview/js2.html) - JS: Basics and Tricky Questions Part-2: intermediate
 
-[https://www.thatjsdude.com/interview/dom.html](https://www.thatjsdude.com/interview/dom.html) - JS: Interview Questions Part-3
+- :link: [https://www.thatjsdude.com/interview/dom.html](https://www.thatjsdude.com/interview/dom.html) - JS: Interview Questions Part-3
 
-[https://medium.freecodecamp.org/3-questions-to-watch-out-for-in-a-javascript-interview-725012834ccb](https://medium.freecodecamp.org/3-questions-to-watch-out-for-in-a-javascript-interview-725012834ccb) - 3 JavaScript questions to watch out for during coding interviews
+- :link: [https://medium.freecodecamp.org/3-questions-to-watch-out-for-in-a-javascript-interview-725012834ccb](https://medium.freecodecamp.org/3-questions-to-watch-out-for-in-a-javascript-interview-725012834ccb) - 3 JavaScript questions to watch out for during coding interviews
 
-[https://github.com/ggomaeng/awesome-js](https://github.com/ggomaeng/awesome-js) - A curated list of javascript fundamentals and algorithms
+- :link: [https://github.com/ggomaeng/awesome-js](https://github.com/ggomaeng/awesome-js) - A curated list of javascript fundamentals and algorithms
 
-[https://github.com/Chalarangelo/30-seconds-of-code](https://github.com/Chalarangelo/30-seconds-of-code) - Curated collection of useful Javascript snippets that you can understand in 30 seconds or less.
+- :link: [https://github.com/Chalarangelo/30-seconds-of-code](https://github.com/Chalarangelo/30-seconds-of-code) - Curated collection of useful Javascript snippets that you can understand in 30 seconds or less.
 
-[https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d) - A perfect guide for cracking a JavaScript interview - A developer’s perspective
+- :link: [https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d) - A perfect guide for cracking a JavaScript interview - A developer’s perspective
 
+- :link: [master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9) - Master the JavaScript Interview: What’s the Difference Between Class & Prototypal Inheritance?
 
+- :link: [https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36) - Master the JavaScript Interview: What is a Closure?
 
-[https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9) - Master the JavaScript Interview: What’s the Difference Between Class & Prototypal Inheritance?
+- :link: [https://medium.com/javascript-scene/master-the-javascript-interview-what-is-function-composition-20dfb109a1a0](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-function-composition-20dfb109a1a0) - Master the JavaScript Interview: What is Function Composition?
 
-[https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36) - Master the JavaScript Interview: What is a Closure?
+- :link: [https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a](https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a) - Common Misconceptions About Inheritance in JavaScript
 
-[https://medium.com/javascript-scene/master-the-javascript-interview-what-is-function-composition-20dfb109a1a0](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-function-composition-20dfb109a1a0) - Master the JavaScript Interview: What is Function Composition?
+- :link: [https://dev.to/arnavaggarwal/10-javascript-concepts-you-need-to-know-for-interviews?utm_source=hashnode.com](https://dev.to/arnavaggarwal/10-javascript-concepts-you-need-to-know-for-interviews?utm_source=hashnode.com) - 10 JavaScript concepts you need to know for interviews
 
-[https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a](https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a) - Common Misconceptions About Inheritance in JavaScript
+- :link: [https://hackernoon.com/a-quick-introduction-to-functional-javascript-7e6fe520e7fa](https://hackernoon.com/a-quick-introduction-to-functional-javascript-7e6fe520e7fa) - A Quick Introduction to Functional Javascript
 
-[https://dev.to/arnavaggarwal/10-javascript-concepts-you-need-to-know-for-interviews?utm_source=hashnode.com](https://dev.to/arnavaggarwal/10-javascript-concepts-you-need-to-know-for-interviews?utm_source=hashnode.com) - 10 JavaScript concepts you need to know for interviews
+- :link: [https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Question](https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions) - 123-Essential-JavaScript-Interview-Question
 
-[https://hackernoon.com/a-quick-introduction-to-functional-javascript-7e6fe520e7fa](https://hackernoon.com/a-quick-introduction-to-functional-javascript-7e6fe520e7fa) - A Quick Introduction to Functional Javascript
+- :link: [https://www.toptal.com/javascript/interview-questions](https://www.toptal.com/javascript/interview-questions) - 37 Essential JavaScript Interview Questions
 
-[https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Question](https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions) - 123-Essential-JavaScript-Interview-Question
+- :link: [https://medium.com/coderbyte/a-tricky-javascript-interview-question-asked-by-google-and-amazon-48d212890703](https://medium.com/coderbyte/a-tricky-javascript-interview-question-asked-by-google-and-amazon-48d212890703) - A Tricky JavaScript Interview Question Asked by Google and Amazon
 
-[https://www.toptal.com/javascript/interview-questions](https://www.toptal.com/javascript/interview-questions) - 37 Essential JavaScript Interview Questions
-
-[https://medium.com/coderbyte/a-tricky-javascript-interview-question-asked-by-google-and-amazon-48d212890703](https://medium.com/coderbyte/a-tricky-javascript-interview-question-asked-by-google-and-amazon-48d212890703) - A Tricky JavaScript Interview Question Asked by Google and Amazon
-
-[Many tricky and common javascript-questions](https://github.com/lydiahallie/javascript-questions)
+- :link: [Many tricky and common javascript-questions](https://github.com/lydiahallie/javascript-questions)
 
 ### Key Fundamental concepts list, before you go for that Front End Engineering Interview
 
@@ -272,3 +270,5 @@ found
 - :link: FreelancerMap: http://freelancermap.com
 - :link: http://Gun.io: http://gun.io
 - :link: Guru: http://guru.com/d/jobs
+
+### Some useful websites for programmers
