@@ -276,6 +276,7 @@ found
 <li><a href="#when-you-get-stuck">When you get stuck</a></li>
 <li><a href="#for-small-project-ideas">For small project ideas</a></li>
 <li><a href="#general-coding-advice">General Coding advice</a></li>
+<li><a href="#coding-style">Coding Style</a></li>
 
 ## When you get stuck
 
@@ -312,3 +313,24 @@ found
 - [What every computer science major should know](http://matt.might.net/articles/what-cs-majors-should-know/) : The Principles of Good Programming
 - [Working as a Software Developer](https://henrikwarne.com/2012/12/12/working-as-a-software-developer/) : Henrik Warne's blog
 - [The Open Web Application Security Project (OWASP)](https://www.owasp.org) : OWASP is an open community dedicated to enabling organizations to conceive, develop, acquire, operate, and maintain applications that can be trusted.
+
+## Coding Style
+
+- [Airbnb JS Style Guide](https://github.com/airbnb/javascript) : A mostly reasonable approach to JavaScript
+- [Airbnb Ruby Style Guide](https://github.com/airbnb/ruby) : A ruby style guide by Airbnb
+- [Ruby coding style guide](https://github.com/bbatsov/ruby-style-guide) : A community-driven Ruby coding style guide
+- [Angular 1 Style Guide](https://github.com/johnpapa/angular-styleguide/tree/master/a1) : Officially endorsed style guide by John Pappa
+- [CS 106B Coding Style Guide](http://stanford.edu/class/archive/cs/cs106b/cs106b.1158/styleguide.shtml) : must see for those who create spaghetti
+- [Debugging Faqs](http://www.umich.edu/~eecs381/generalFAQ/Debugging.html) : Check out how to debug your program
+- [Directory of CS Courses (many with online lectures)](https://github.com/prakhar1989/awesome-courses) : Another online CS courses
+- [Directory of Online CS Courses](https://github.com/ossu/computer-science) : Free online CS courses
+- [Good C programming habits. • /r/C_Programming](https://www.reddit.com/r/C_Programming/comments/1vuubw/good_c_programming_habits/) : C programming habits to adopt
+- [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
+- [How to Report Bugs Effectively](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html) : Want to report a bug but you don't how? Check out this post
+- [What are some bad coding habits you would recommend a beginner avoid getting into?](https://www.reddit.com/r/learnprogramming/comments/1i4ds4/what_are_some_bad_coding_habits_you_would/) : Bad habits to avoid when you get start
+- [PEP8 - Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) : Style Guide for Python Code
+- [Standard JS Style Guide](https://standardjs.com) : JavaScript style guide, with linter & automatic code fixer
+- [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html) : Google Python Style Guide
+- [Aurelia Style Guide](https://github.com/behzad888/Aurelia-styleguide) : An Aurelia style guide by Behzad Abbasi(Behzad888)
+- [Source Making ](https://sourcemaking.com/): Design Patterns & Refactoring
+- [Refactoring Guru](https://refactoring.guru/): Refactoring And Design Patterns
