@@ -277,6 +277,7 @@ found
 <li><a href="#for-small-project-ideas">For small project ideas</a></li>
 <li><a href="#general-coding-advice">General Coding advice</a></li>
 <li><a href="#coding-style">Coding Style</a></li>
+<li><a href="#general-good-articles">General Good Articles</a></li>
 
 ## When you get stuck
 
@@ -334,3 +335,32 @@ found
 - [Aurelia Style Guide](https://github.com/behzad888/Aurelia-styleguide) : An Aurelia style guide by Behzad Abbasi(Behzad888)
 - [Source Making ](https://sourcemaking.com/): Design Patterns & Refactoring
 - [Refactoring Guru](https://refactoring.guru/): Refactoring And Design Patterns
+
+## General Good Articles
+
+- [14 Things I Wish I’d Known When Starting with MongoDB](https://www.infoq.com/articles/Starting-With-MongoDB/)
+- [40 Keys Computer Science Concepts Explained In Layman’s Terms](http://carlcheo.com/compsci)
+- [A Gentle Introduction To Graph Theory](https://dev.to/vaidehijoshi/a-gentle-introduction-to-graph-theory)
+- [A programmer-friendly language that compiles to Lua.](http://moonscript.org)
+- [A Software Developer’s Reading List](https://stevewedig.com/2014/02/03/software-developers-reading-list/) : Some good books and links in there.
+- [Code a TCP/IP stack](http://www.saminiir.com/lets-code-tcp-ip-stack-5-tcp-retransmission/) : Let's code a TCP/IP stack, 5: TCP Retransmission
+- [Codewords.recurse](https://codewords.recurse.com/issues/four/the-language-of-choice) : The language of choice
+- [Data structure and Algorithms](https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-practice-problems-and-their-solutions) : List of some algorithms and data structures with their solutions.
+- [Dive into the byte code](https://www.wikiwand.com/en/Java_bytecode)
+- [Expectations of a Junior Developer](http://blog.thefirehoseproject.com/posts/expectations-of-a-junior-developer/)
+- [Getting Started with MongoDB – An Introduction](https://studio3t.com/knowledge-base/articles/mongodb-getting-started/)
+- [Linux Inside](https://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-1.html)
+- [List of algorithms](https://www.wikiwand.com/en/List_of_algorithms)
+- [Step by Step Guide to Database Normalization](https://www.databasestar.com/normalization-in-dbms/): A guide to database normalization.
+- [The Key To Accelerating Your Coding Skills](http://blog.thefirehoseproject.com/posts/learn-to-code-and-be-self-reliant/)
+- [Unicode](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
+- [We are reinventing the retail industry through innovative technology](http://multithreaded.stitchfix.com)
+- [What every programmer absolutely, positively needs to know about encodings and character sets to work with text](http://kunststube.net/encoding/)
+- [What every programmer should know about memory - PDF](http://futuretech.blinkenlights.nl/misc/cpumemory.pdf)
+- [Why fast pages are important](https://fly.io/articles/why-fast-pages-are-important/) : Why App Speed Matters, Revenue
+- [qotoqot - improving-focus](https://qotoqot.com/blog/improving-focus/) : How I got to 200 productive hours a month
+- [Pixel Beat - Unix](http://www.pixelbeat.org/docs/unix-parallel-tools.html) : Parallel processing with Unix tools
+- [Learning Vim](https://hackernoon.com/learning-vim-what-i-wish-i-knew-b5dca186bef7) : What I Wish I Knew
+- [Write a Kernel](http://arjunsreedharan.org/post/82710718100/kernel-101-lets-write-a-kernel) : Kernel 101 – Let’s write a Kernel
+- [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/) : the online version of the Learning JavaScript Design Patterns published by O'Reilly, released by the author Addy Osmani under CC BY-NC-ND 3.0
+- [Working with Webhooks](https://requestbin.com/blog/working-with-webhooks/) : a comprehensive guide on webhooks
