@@ -367,10 +367,19 @@ found
 
 ## Collection of Leetcode Problem solution
 
-- [github.com/AlanWei/LeetCode](https://github.com/AlanWei/LeetCode)
-
-- [github.com/LiuL0703/algorithm/tree/master/LeetCode/JavaScript](https://github.com/LiuL0703/algorithm/tree/master/LeetCode/JavaScript)
-
+[github.com/AlanWei/LeetCode](https://github.com/AlanWei/LeetCode)
+[github.com/LiuL0703/algorithm/tree/master/LeetCode/JavaScript](https://github.com/LiuL0703/algorithm/tree/master/LeetCode/JavaScript)
 [github.com/ecmadao/algorithms/tree/master/leetcode](https://github.com/ecmadao/algorithms/tree/master/leetcode)
-
 [github.com/paopao2/leetcode-js](https://github.com/paopao2/leetcode-js)
+[github.com/cs1707/leetcode](https://github.com/cs1707/leetcode)
+[github.com/EasyHard/leetcodejs](https://github.com/EasyHard/leetcodejs)
+[github.com/fa-ge/leetcode](https://github.com/fa-ge/leetcode)
+[github.com/ktorng/AlgoInterviewPrep/tree/master/misc/LeetCode](https://github.com/ktorng/AlgoInterviewPrep/tree/master/misc/LeetCode)
+[github.com/bluesh/LeetCode](https://github.com/bluesh/LeetCode)
+[github.com/chihungyu1116/leetcode-javascript](https://github.com/chihungyu1116/leetcode-javascript)
+[github.com/didi0613/leetcode-javascript](https://github.com/didi0613/leetcode-javascript)
+[github.com/dnshi/Leetcode/tree/master/algorithms](https://github.com/dnshi/Leetcode/tree/master/algorithms)
+[github.com/xiaoyu2er/leetcode-js](https://github.com/xiaoyu2er/leetcode-js)
+[blog.sodhanalibrary.com/search/label/JavaScript](http://blog.sodhanalibrary.com/search/label/JavaScript)
+[github.com/imcoddy/leetcode](https://github.com/imcoddy/leetcode)
+[github.com/iwantooxxoox/leetcode](https://github.com/iwantooxxoox/leetcode)
