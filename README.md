@@ -364,3 +364,13 @@ found
 - [Write a Kernel](http://arjunsreedharan.org/post/82710718100/kernel-101-lets-write-a-kernel) : Kernel 101 – Let’s write a Kernel
 - [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/) : the online version of the Learning JavaScript Design Patterns published by O'Reilly, released by the author Addy Osmani under CC BY-NC-ND 3.0
 - [Working with Webhooks](https://requestbin.com/blog/working-with-webhooks/) : a comprehensive guide on webhooks
+
+## Collection of Leetcode Problem solution
+
+- [github.com/AlanWei/LeetCode](https://github.com/AlanWei/LeetCode)
+
+- [github.com/LiuL0703/algorithm/tree/master/LeetCode/JavaScript](https://github.com/LiuL0703/algorithm/tree/master/LeetCode/JavaScript)
+
+[github.com/ecmadao/algorithms/tree/master/leetcode](https://github.com/ecmadao/algorithms/tree/master/leetcode)
+
+[github.com/paopao2/leetcode-js](https://github.com/paopao2/leetcode-js)
