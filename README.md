@@ -390,3 +390,7 @@ found
 [github.com/loatheb/leetcode-javascript](https://github.com/loatheb/leetcode-javascript)
 [github.com/paopao2/leetcode-js](https://github.com/paopao2/leetcode-js)
 [github.com/theFool32/LeetCode](https://github.com/theFool32/LeetCode)
+[github.com/whwei/LeetCode](https://github.com/whwei/LeetCode)
+[github.com/jiangxiaoli/leetcode-javascript](https://github.com/jiangxiaoli/leetcode-javascript)
+[skyyen999.gitbooks.io/-leetcode-with-javascript/content/questions/299md.html](https://skyyen999.gitbooks.io/-leetcode-with-javascript/content/questions/299md.html)
+[github.com/HandsomeOne/LeetCode/tree/master/Algorithms](https://github.com/HandsomeOne/LeetCode/tree/master/Algorithms)
