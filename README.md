@@ -22,6 +22,28 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 6. [More curated list of general resources for JavaScript Interviews](#more-curated-list-of-general-resources-for-javascript-interviews)
 
+7. [Most frequently asked concepts for Front End Engineering Interview](#most-frequently-asked-concepts-for-front-end-engineering-interview)
+
+8. [List of sites where you can hunt for a developer job](#list-of-sites-where-you-can-hunt-for-a-developer-job)
+
+9. [Want a startup job?](#want-a-startup-job)
+
+10. [Best places to job hunt for remote jobs](#best-places-to-job-hunt-for-remote-jobs)
+
+11. [Here are a few places to hunt for ios, react, vue and more](#here-are-a-few-places-to-hunt-for-ios-react-vue-and-more)
+
+12. [Want a list of just JavaScript jobs?](#want-a-list-of-just-javascript-jobs)
+
+13. [Are you looking for a junior dev job?](#are-you-looking-for-a-junior-dev-job)
+
+14. [Women focused job boards!](#women-focused-job-boards)
+
+15. [Want a job as a freelance dev? Here's a list](#want-a-job-as-a-freelance-dev-heres-a-list)
+
+16. [Some useful websites for programmers](#some-useful-websites-for-programmers)
+
+17. [When you get stuck](#when-you-get-stuck)
+
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
 - :link: [Big O Cheatsheet](http://bigocheatsheet.com/)
