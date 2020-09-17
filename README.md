@@ -44,6 +44,14 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 17. [When you get stuck](#when-you-get-stuck)
 
+18. [For small project ideas](for-small-project-ideas)
+
+19. [General Coding advice](general-coding-advice)
+
+20. [Coding Style](#coding-style)
+
+21. [General Good Articles](#general-good-articles)
+
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
 - :link: [Big O Cheatsheet](http://bigocheatsheet.com/)
