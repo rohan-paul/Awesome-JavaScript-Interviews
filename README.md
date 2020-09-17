@@ -2,14 +2,13 @@
 
 # Awesome JavaScript Interviews
 
+#### Classified topic wise in different folders
+
 A collection of super-popular Interview questions, along with answers that I was putting together for myself while preparing for my first Full-Stack JavaScript job interviews. Many of these questions are what I have actually faced in real interview. It is by no means comprehensive, and the answers are relatively short ( and for each of the concepts, there are probably better and/or more in depth coverage in the web), but I see this repo as reference tool, so I can continue a technical talk with the interviewer for two to three hours.
 
-There are many fantastic resources for JavaScript interview questions, videos,
-and blog posts on the web and that I have drawn from. I will cite as many as I
-can throughout so that additional information on each list item can be easily
-found
+There are many fantastic resources for JavaScript interview questions, videos, and blog posts on the web and that I have drawn from. I will cite as many as I can throughout so that additional information on each list item can be easily found
 
-## Table of Contents
+## Table of Contents of this Readme file
 
 1. [Understanding the Theory and the fundamentals of some super-popular Algorithm questions](#understanding-the-theory-and-the-fundamentals-of-some-super-popular-algorithm-questions)
 
@@ -17,6 +16,7 @@ found
 
 3. [Overall multi-factor approach for winning this huge challenge and a great journey of getting the first Developer Job](#overall-multi-factor-approach-for-winning-this-huge-challenge-and-a-great-journey-of-getting-the-first-developer-job)
 4. [Other important resources](#other-important-resources)
+5. [Coding Challenge Practice Platforms](#coding-challenge-practice-platforms)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
@@ -126,7 +126,7 @@ found
 
 ## -------------------------------------------------------------------------------
 
-**More curated list of general resources for JavaScript Interviews**
+## More curated list of general resources for JavaScript Interviews
 
 - :link: [Follow this list in Twitter - These are some great developers who regularly gives a lot of useful advice for a wannabe dev regularly](https://twitter.com/i/lists/1273224332521717761)
 
