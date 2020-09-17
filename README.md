@@ -15,8 +15,12 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 2. [Github Repositories with large collections of problems-and-solutions of them most popular Interview challenges](#github-repositories-with-large-collections-of-problems-and-solutions-of-them-most-popular-interview-challenges)
 
 3. [Overall multi-factor approach for winning this huge challenge and a great journey of getting the first Developer Job](#overall-multi-factor-approach-for-winning-this-huge-challenge-and-a-great-journey-of-getting-the-first-developer-job)
+
 4. [Other important resources](#other-important-resources)
+
 5. [Coding Challenge Practice Platforms](#coding-challenge-practice-platforms)
+
+6. [More curated list of general resources for JavaScript Interviews](#more-curated-list-of-general-resources-for-javascript-interviews)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
@@ -164,7 +168,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 - :link: [Many tricky and common javascript-questions](https://github.com/lydiahallie/javascript-questions)
 
-### Key Fundamental concepts list, before you go for that Front End Engineering Interview
+### Most frequently asked concepts for Front End Engineering Interview
 
 ##### Frontend/UI Engineer Interviews:
 
