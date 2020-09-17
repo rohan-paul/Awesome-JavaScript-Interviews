@@ -1,0 +1,66 @@
+<!-- Problem / Case Statement -
+A web page is created with a textarea and an input text box for accessing both a search string and a pattern. The pattern is used to create a RegExp object, which is then applied against the string. A result string is built, consisting of both the unmatched text and the matched text, except the matched text is surrounded by a span element (with a CSS class used to highlight the text). The resulting string is then inserted into the page, using the innerHTML for a div element.
+
+Run this html file and put some text in the large input box and then searh for a word in the "Search pattern" box
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Searching for string</title>
+<style>
+.found
+{
+  background-color: #ff0;
+}
+</style>
+</head>
+<body>
+  <form id="textsearch">
+    <textarea id="incoming" cols="150" rows="10">
+    </textarea>
+  <p>
+    Search pattern: <input id="pattern" type="text" />
+  </p>
+  </form>
+  <button id="searchSubmit">Search for pattern</button>
+  <div id="searchResult"></div>
+
+  <script>
+
+  document.getElementById("searchSubmit").onclick=function() {
+
+    // get pattern
+    var pattern = document.getElementById("pattern").value;
+    var re = new RegExp(pattern, "g");
+
+    // get string
+    var searchString = document.getElementById("incoming").value;
+
+    var matchArray;
+    var resultString = "<pre>";
+    var first=0;
+    var last=0;
+
+    // find each of match of the search pattern
+    while((matchArray = re.exec(searchString)) != null) {
+      last = matchArray.index;
+
+      // get all the string upto this match and concatenate
+      resultString += searchString.substring(first, last);
+
+      // Then to the above concatenated string add the match with class
+      resultString += "<span class='found'>" + matchArray[0] + "</span>";
+      first = re.lastIndex;
+    }
+
+    // finish off the full input string
+    resultString += searchString.substring(first, searchString.length);
+    resultString += "<pre>";
+
+    // insert into page
+    document.getElementById("searchResult").innerHTML = resultString;
+  }
+  </script>
+</body>
+</html>

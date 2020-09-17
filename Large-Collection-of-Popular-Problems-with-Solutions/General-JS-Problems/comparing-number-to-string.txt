@@ -1,0 +1,39 @@
+Question 2 of 56
+
+What will be the result of the following line of JavaScript code?
+var result = "a" < 3;
+alert(result);
+Support your answer with detailed reasoning. Be as explicit as possible.
+
+var result = "a" < 3;
+alert(result);
+
+Will output - false
+
+JavaScript defines >= and <= (and several other operators) in a way that allows them to coerce their operands to different types. It's just part of the definition of the operator.
+
+In the case of <, >, <=, and >= check §11.8.5 of the specification.
+
+If both operands are strings (after having been coerced from objects, if necessary), it does a string comparison.
+
+Otherwise, it coerces the operands to numbers and does a numeric comparison.
+
+This works because of typecasting and the fact that NaN < 3 is false.
+
+When applying to the < operator, both operands are cast to Numbers, so that comparison becomes
+
+Number("string") < 3
+
+which is equivalent to NaN < 3 which evaluates to false
+
+
+Question 14 of 56
+
+var num = -10;
+alert(num.toString(2));
+
+Will output >> -1010
+
+The toString() function is used with a number num as shown in above syntax using the ‘.’ operator. This function will convert num to a string.
+
+Parameters Used: This function accepts a single optional parameter base. This parameter specifies the base in which the integer is represented in string. It is an integer between 2 and 36 which is used to specify the base for representing numeric values.
