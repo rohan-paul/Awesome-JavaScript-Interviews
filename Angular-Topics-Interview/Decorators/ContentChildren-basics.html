@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>What Is ContentChildren?</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h4 id="what-is-contentchildren">What Is ContentChildren?</h4>
+<p>ContentChildren is a parameter decorator that is used to fetch the QueryList of elements or directives from the content DOM. The QueryList is updated whenever the child element/component is added or removed.</p>
+<p>The child element reference is set in QueryList just before the ngAfterContentInit lifecycle Hook method.</p>
+<p><strong>Below, we are using the ContentChildren to get the QueryList containing the list of the child component ChildComp. The list is stored in the contentChildren variable in the Parent component.</strong></p>
+<pre><code class="language-ts"><div><span class="hljs-meta">@ContentChildren</span>(ChildComp) contentChildren : QueryList&lt;ChildComp&gt;;
+
+</div></code></pre>
+<p>Let’s see an example that utilizes the power of ContentChildren…
+We are creating a child component <code>TabComponent</code> with an input property object <code>tab</code> and a function that prints the title property of the tab object. The template just displays the properties.</p>
+<p>Component structure is as below</p>
+<p>AppComponent
+--- TabListComponent
+--- TabComponent</p>
+<pre><code> ---
+</code></pre>
+<pre><code class="language-ts"><div><span class="hljs-keyword">import</span> { Component, Input } <span class="hljs-keyword">from</span> <span class="hljs-string">"@angular/core"</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">"app-tab"</span>,
+  template: <span class="hljs-string">`&lt;h4&gt;{{ tab.title }}&lt;/h4&gt;
+    &lt;p&gt;{{ tab.content }}&lt;/p&gt;`</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TabComponent {
+  <span class="hljs-meta">@Input</span>() tab: object
+  printTitle() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.tab.title)
+  }
+}
+</div></code></pre>
+
+    </body>
+    </html>

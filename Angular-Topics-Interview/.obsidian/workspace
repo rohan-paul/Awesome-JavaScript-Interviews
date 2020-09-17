@@ -1,0 +1,81 @@
+{
+  "main": {
+    "id": "b554914d206c9eba",
+    "type": "split",
+    "children": [
+      {
+        "id": "ab552ad4c953389d",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "AsyncPipe/converting-a-subscribe-to-asyncPipe-Simplest-use-case.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6e802666c60f3786",
+    "type": "split",
+    "children": [
+      {
+        "id": "23d9eebdd9a62f63",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ec5a87cc6c1c0e9a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "4d5c741702b4063a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 457
+  },
+  "right": {
+    "id": "f371019dec6eab04",
+    "type": "split",
+    "children": [
+      {
+        "id": "cdd8ead1e3f7d6e9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ce695accff463a75",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "AsyncPipe/converting-a-subscribe-to-asyncPipe-Simplest-use-case.md",
+    "AsyncPipe/AsyncPipe-fundamentals.md",
+    "AsyncPipe/Converting-a-subscribe-to-asyncPipe-3.md",
+    "AsyncPipe/converting-a-subscribe-to-asyncPipe-1.md",
+    "rx-js/best-practices-common-pattern/when_using_async_pipe_no_need_to_unsubscribe.md"
+  ]
+}
