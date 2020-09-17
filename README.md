@@ -9,7 +9,16 @@ and blog posts on the web and that I have drawn from. I will cite as many as I
 can throughout so that additional information on each list item can be easily
 found
 
-### For Understanding the Theory and the fundamentals of some super-popular Algorithm questions
+## Table of Contents
+
+1. [Understanding the Theory and the fundamentals of some super-popular Algorithm questions](#understanding-the-theory-and-the-fundamentals-of-some-super-popular-algorithm-questions)
+
+2. [Github Repositories with large collections of problems-and-solutions of them most popular Interview challenges](#github-repositories-with-large-collections-of-problems-and-solutions-of-them-most-popular-interview-challenges)
+
+3. [Overall multi-factor approach for winning this huge challenge and a great journey of getting the first Developer Job](#overall-multi-factor-approach-for-winning-this-huge-challenge-and-a-great-journey-of-getting-the-first-developer-job)
+4. [Other important resources](#other-important-resources)
+
+## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
 - :link: [Big O Cheatsheet](http://bigocheatsheet.com/)
   :link: [Quick Big O understanding for coding interviews](https://medium.com/@jayshah_84248/big-o-for-coding-interviews-e6ca8897f926)
@@ -31,9 +40,8 @@ found
 - :link: [reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions)
 - :link: [Front-end-Developer-Interview-Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
 - :link: [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook) - Almost complete answers to "Front-end Job Interview Questions" which you can use to interview potential candidates, test yourself or completely ignore
--
 
-### Github Repositories with large collections of problems-and-solutions of them most popular Interview challenges
+## Github Repositories with large collections of problems-and-solutions of them most popular Interview challenges
 
 - :link: [Algorithms-Leetcode-Javascript](https://github.com/ignacio-chiazzo/Algorithms-Leetcode-Javascript)
 - :link: [Algorithm-in-JavaScript](https://github.com/rohan-paul/Algorithm-in-JavaScript)
@@ -74,7 +82,7 @@ found
 - :link: [YouTube - How To Be A Well-Paid Programmer In 1 Year?](https://www.youtube.com/watch?v=V71Cv7mjgfI)
 - :link: [the-secret-to-being-a-top-developer-is-building-things-heres-a-list-of-fun-apps-to-build](https://medium.freecodecamp.org/the-secret-to-being-a-top-developer-is-building-things-heres-a-list-of-fun-apps-to-build-aac61ac0736c)
 
-### Some other very very important resources
+### Other important resources
 
 - :link: [javascript cheatsheet](http://overapi.com/javascript)
 - :link: [Super useful es6-cheatsheet](https://github.com/DrkSephy/es6-cheatsheet)
@@ -405,3 +413,5 @@ found
 - [github.com/hijiangtao/LeetCode-with-JavaScript/tree/master/src](https://github.com/hijiangtao/LeetCode-with-JavaScript/tree/master/src)
 - [www.cnblogs.com/Liok3187/default.html?page=1](https://www.cnblogs.com/Liok3187/default.html?page=1)
 - [github.com/yuguo/LeetCode](https://github.com/yuguo/LeetCode)
+
+## Collection of Cracking the Coding Interview Book Problem solution
