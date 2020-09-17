@@ -454,7 +454,6 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 ## Collection of Cracking the Coding Interview Book Problem solution
 
-[github.com/careercup/ctci](https://github.com/careercup/ctci)
 [github.com/sharlatta/cracking](https://github.com/sharlatta/cracking)
 [github.com/ammiranda/CrackingTheCodingInterview](https://github.com/ammiranda/CrackingTheCodingInterview)
 [github.com/bryclee/ctci](https://github.com/bryclee/ctci)
@@ -464,3 +463,9 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 [github.com/SashaBayan/CCI](https://github.com/SashaBayan/CCI)
 [github.com/careercup/CtCI-6th-Edition-JavaScript-ES2015](https://github.com/careercup/CtCI-6th-Edition-JavaScript-ES2015)
 [github.com/ktorng/AlgoInterviewPrep/tree/master/CrackingTheCodingInterview](https://github.com/ktorng/AlgoInterviewPrep/tree/master/CrackingTheCodingInterview)
+[github.com/muddybarefeet/Cracking-the-Coding-Interview-Problems/tree/master/toyProblems](https://github.com/muddybarefeet/Cracking-the-Coding-Interview-Problems/tree/master/toyProblems)
+[github.com/randy909/coding-interview/tree/master/cracking](https://github.com/randy909/coding-interview/tree/master/cracking)
+[github.com/rohan-paul/Awesome-JavaScript-Interviews#collection-of-cracking-the-coding-interview-book-problem-solution](https://github.com/rohan-paul/Awesome-JavaScript-Interviews#collection-of-cracking-the-coding-interview-book-problem-solution)
+[github.com/careercup/ctci/tree/master/javascript/lib/data-structures](https://github.com/careercup/ctci/tree/master/javascript/lib/data-structures)
+[github.com/miguelmota/ctci-js](https://github.com/miguelmota/ctci-js)
+[github.com/ChirpingMermaid/CTCI](https://github.com/ChirpingMermaid/CTCI)
