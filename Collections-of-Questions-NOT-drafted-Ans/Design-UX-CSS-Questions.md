@@ -1,0 +1,9 @@
+- Talk about the pros and cons of flat and skeuomorphic design trends in regards to accessibility.
+- Explain the importance of color contrast in designing for inclusion.
+- Besides :hover, name other states an actionable element (links, buttons, form controls, etc.) could have styles for, and why providing them is important?
+- When might it be appropriate to remove the visual outline from a focused element?
+- If a form or form field were to return an error message, where might you want those error messages to be located?
+- How can utilizing animation in an interface affect the user experience?
+- Explain how you could make an infographic accessible for screen reader users.
+- Why is color alone insufficient to draw attention to actionable elements, or to convey state?
+- What are some of the inclusive UX problems that need to be solved when content (static or actionable) is revealed on :hover, and how would you propose solving for them?
