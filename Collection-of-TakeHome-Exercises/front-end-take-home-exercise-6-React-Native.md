@@ -1,6 +1,6 @@
-![](2020-09-27-14-14-55.png)
+![](assets/2020-09-27-14-14-55.png)
 
-![](2020-09-27-14-16-26.png)
+![](assets/2020-09-27-14-16-26.png)
 
 ### Example of how the app may look like
 
