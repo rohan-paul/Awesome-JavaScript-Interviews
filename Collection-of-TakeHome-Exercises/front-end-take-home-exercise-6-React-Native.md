@@ -2,6 +2,11 @@
 
 ![](2020-09-27-14-16-26.png)
 
+### Example of how the app may look like
+
+![](assets/1.png)
+![](assets/2.png)
+
 ### Evaluation Criteria
 
 1. Design implemented according to attached files using React Components
