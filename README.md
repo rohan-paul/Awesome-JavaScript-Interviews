@@ -470,3 +470,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 - [github.com/careercup/ctci/tree/master/javascript/lib/data-structures](https://github.com/careercup/ctci/tree/master/javascript/lib/data-structures)
 - [github.com/miguelmota/ctci-js](https://github.com/miguelmota/ctci-js)
 - [github.com/ChirpingMermaid/CTCI](https://github.com/ChirpingMermaid/CTCI)
+
+## UX-CSS-Design Sense Related
+
+- [Accessibility Interview Questions](https://scottaohara.github.io/accessibility_interview_questions/)
