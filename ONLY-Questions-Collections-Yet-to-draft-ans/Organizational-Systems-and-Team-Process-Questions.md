@@ -24,3 +24,46 @@
   - Does your code review process promote empathy?
 
 - Does your team encourage the use of SOLID and DRY design principles to avoid cyclomatic complexity?
+
+* Do you have established code style rules?
+  - Did you create your own style guide, or are you using a third party's (PEP8, PSRs, Standard JS, etc)
+  - Is there an automated linting process to validate your styles?
+  - Tabs or spaces? (If relevant)
+  - Allman or BSD braces? (If relevant)
+  - Semicolons? (If relevant)
+
+- How is QA/testing done?
+
+  - Are developers expected to do testing as well? To what extent?
+  - If there is a separate testing team, how is the co-ordination done between testing and development?
+  - How is the decision made that a release is ready?
+
+- Who designs the User Interface?
+
+  - Are developers expected to do it?
+  - Are there graphics designers in the company?
+  - Are there UX designers in the company?
+
+- Are there compliance requirements in the company like CMM or SOC?
+
+- Do you have an SLA (Service Level Agreement)?
+  - Do you guarantee any of the following? If so, how long?
+    - Turn Around Time (TAT)?
+    - Average Speed to Answer (ASA)
+    - Time Service Factor (TSF)
+  - What is the escalation plan? What are the consequences if the plan is not followed?
+
+* Do you have an automated test suite?
+
+  - What libraries and tools do you use?
+  - What sorts of tests do you use? (unit, integration, system, load, ...)
+  - What is your testing methodology? (BDD, TDD, Spike & Stabilize, ...)
+  - What is your current level of test coverage? Are you happy with it?
+
+* Do you regularly correct technical debt?
+
+* On a scale of 1 to 10, how much spaghetti code do you have?
+
+* How well-documented is your codebase?
+  - Do you use automated documentation systems like PHPDoc or JSDoc?
+  - Do you maintain a wiki?
