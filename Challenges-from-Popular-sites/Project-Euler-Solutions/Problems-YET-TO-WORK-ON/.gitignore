@@ -1,0 +1,52 @@
+# Ignore docs files
+_gh_pages
+.ruby-version
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.zip
+*.vi
+*~
+*.~lock*
+.~lock*
+
+# OS or Editor folders
+.DS_Store
+._*
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+.idea
+
+# Komodo
+*.komodoproject
+.komodotools
+
+# grunt-html-validation
+validation-status.json
+validation-report.json
+
+# Folders to ignore
+node_modules
+
+# Ignore all logfiles and tempfiles.
+!/log/.keep
+/tmp
+/.gems
+
+testing-code-3.js
+testing-scribling-code.js
+testing-code-1.js
+Cracking-The-Coding-Interview-Note-Gitignore-IT.odt
