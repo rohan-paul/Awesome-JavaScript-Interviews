@@ -71,6 +71,12 @@ There are many fantastic resources for JavaScript interview questions, videos, a
   - [OOP-Basics-1](Javascript/OOP-Prototypal-Inheritence/OOP-Basics-1.md)
   - [OOP-basics-2](Javascript/OOP-Prototypal-Inheritence/OOP-basics-2.md)
   - [OOP-Encapsulation-example-1](Javascript/OOP-Prototypal-Inheritence/OOP-Encapsulation-example-1.md)
+  - [OOP-Encapsulation-example-2](Javascript/OOP-Prototypal-Inheritence/OOP-Encapsulation-example-2.md)
+  - [OOP-Encapsulation-Theory-GOOD-Explanations-Private-Methods](Javascript/OOP-Prototypal-Inheritence/OOP-Encapsulation-Theory-GOOD-Explanations-Private-Methods.md)
+  - [print-All-Prototypes-of-Objects](Javascript/OOP-Prototypal-Inheritence/print-All-Prototypes-of-Objects.js)
+  - [Prototype-Example-Really-GOOD-Explanations](Javascript/OOP-Prototypal-Inheritence/Prototype-Example-Really-GOOD-Explanations.js)
+  - [Prototype-Example-1](Javascript/OOP-Prototypal-Inheritence/Prototype-Example-1.js)
+  - [Prototype-Example-2](Javascript/OOP-Prototypal-Inheritence/Prototype-Example-2.js)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
