@@ -63,6 +63,7 @@ There are many fantastic resources for JavaScript interview questions, videos, a
   - [more-on-this-keyword](Javascript/this-keyword/this-example-custom-Array-Prototype-method.md)
   - [more-on-this-keyword](Javascript/this-keyword/this-keyword-simplest-catagories.md)
   - [more-on-this-keyword](Javascript/this-keyword/this-keyword-1.js)
+- [Explain how prototypal inheritance works](Javascript/OOP-Prototypal-Inheritence/README.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
