@@ -64,6 +64,13 @@ There are many fantastic resources for JavaScript interview questions, videos, a
   - [more-on-this-keyword](Javascript/this-keyword/this-keyword-simplest-catagories.md)
   - [more-on-this-keyword](Javascript/this-keyword/this-keyword-1.js)
 - [Explain how prototypal inheritance works](Javascript/OOP-Prototypal-Inheritence/README.md)
+  - [how-to-get-prototype-of-an-object](Javascript/OOP-Prototypal-Inheritence/how-to-get-prototype-of-an-object.md)
+  - [Inheritence-OOP-Class-vs-Prototypes-Example](Javascript/OOP-Prototypal-Inheritence/Inheritence-OOP-Class-vs-Prototypes-Example-BEST.md)
+  - [Inheritence-OOP-Class-vs-Prototypes-Theory](Javascript/OOP-Prototypal-Inheritence/Inheritence-OOP-Class-vs-Prototypes-Theory.md)
+  - [Inheritence-with-classes-super-keyword-Exhaustive-Explanation](Javascript/OOP-Prototypal-Inheritence/Inheritence-with-classes-super-keyword-SIMPLEST-EXHAUSTIVE.md)
+  - [OOP-Basics-1](Javascript/OOP-Prototypal-Inheritence/OOP-Basics-1.md)
+  - [OOP-basics-2](Javascript/OOP-Prototypal-Inheritence/OOP-basics-2.md)
+  - [OOP-Encapsulation-example-1](Javascript/OOP-Prototypal-Inheritence/OOP-Encapsulation-example-1.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
