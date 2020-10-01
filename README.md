@@ -59,6 +59,10 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 ## Contents Across the Repository
 
 - [Explain event delegation](Javascript/event-delegation-propagation-bubbling.md)
+- [Explain how `this` works in JavaScript](Javascript/this-keyword/this-keyword-2nd-example-GREAT-Example.md)
+  - [more-on-this-keyword](Javascript/this-keyword/this-example-custom-Array-Prototype-method.md)
+  - [more-on-this-keyword](Javascript/this-keyword/this-keyword-simplest-catagories.md)
+  - [more-on-this-keyword](Javascript/this-keyword/this-keyword-1.js)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
