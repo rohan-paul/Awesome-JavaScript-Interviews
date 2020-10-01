@@ -18,13 +18,14 @@ Let’s start with event propagation. This is the blanket term for both event bu
     <li><a href="..."><img src="..." alt=""></a>
 </ul>
 ```
+
 A click on an image does not only generate a click event for the corresponding IMG element, but also for the parent A, for the grandfather LI and so on, going all the way up through all the element’s ancestors, before terminating at the window object.
 
 In DOM terminology, the image is the event target, the innermost element over which the click originated. The event target, plus its ancestors, from its parent up through to the window object, form a branch in the DOM tree. For example, in the image gallery, this branch will be composed of the nodes: IMG, A, LI, UL, BODY, HTML, document, window.
 
 Note that window is not actually a DOM node but it implements the EventTarget interface, so, for simplicity, we are handling it like it was the parent node of the document object.
 
-This branch is important because it is the path along which the events propagate (or flow). This propagation is the process of calling all the listeners for the given event type, attached to the nodes on the branch. Each listener will be called with an event object that gathers information relevant to the event 
+This branch is important because it is the path along which the events propagate (or flow). This propagation is the process of calling all the listeners for the given event type, attached to the nodes on the branch. Each listener will be called with an event object that gathers information relevant to the event
 
 Remember that several listeners can be registered on a node for the same event type. When the propagation reaches one such node, listeners are invoked in the order of their registration.
 
@@ -41,4 +42,5 @@ From the event target parent back to the window: the bubble phase
 Imagine an HTML table with 10 columns and 100 rows in which you want something to happen when the user clicks on a table cell. For example, I once had to make each cell of a table of that size editable when clicked. Adding event handlers to each of the 1000 cells would be a major performance problem and, potentially, a source of browser-crashing memory leaks. Instead, using event delegation, you would add only one event handler to the table element, intercept the click event and determine which cell was clicked.
 
 ### More Resoureces to read
+
 https://www.sitepoint.com/event-bubbling-javascript/

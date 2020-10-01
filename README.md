@@ -56,6 +56,10 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 
 23. [Collection of Cracking the Coding Interview Book Problem solution](#collection-of-cracking-the-coding-interview-book-problem-solution)
 
+## Contents Across the Repository
+
+- [Explain event delegation](Javascript/event-delegation-propagation-bubbling.md)
+
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
 - :link: [Big O Cheatsheet](http://bigocheatsheet.com/)
