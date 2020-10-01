@@ -77,6 +77,10 @@ There are many fantastic resources for JavaScript interview questions, videos, a
   - [Prototype-Example-Really-GOOD-Explanations](Javascript/OOP-Prototypal-Inheritence/Prototype-Example-Really-GOOD-Explanations.js)
   - [Prototype-Example-1](Javascript/OOP-Prototypal-Inheritence/Prototype-Example-1.js)
   - [Prototype-Example-2](Javascript/OOP-Prototypal-Inheritence/Prototype-Example-2.js)
+  - [prototype-func-print-array-elements](Javascript/OOP-Prototypal-Inheritence/prototype-func-print-array-elements.js)
+  - [Prototype-func-String-dasherize](Javascript/OOP-Prototypal-Inheritence/Prototype-func-String-dasherize.js)
+  - [Prototypes-Benefits-Handling-Memory-Leaks](Javascript/OOP-Prototypal-Inheritence/Prototypes-Benefits-Handling-Memory-Leaks.md)
+  - [Prototypes-Prevents-Memory-Leaks-1-Good-Explanation](Javascript/OOP-Prototypal-Inheritence/Prototypes-Prevents-Memory-Leaks-1-Good-Explanation.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
