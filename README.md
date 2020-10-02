@@ -37,6 +37,8 @@ A collection of super-popular Interview questions, along with explanations and i
 - [arrow-vs-regular-functions](Javascript/arrow-function/arrow-vs-regular-functions.md)
 - [when-not-to-use-arrow-function](Javascript/arrow-function/when-not-to-use-arrow-function.md)
 - [arrow-function-and-this-keyword](arrow-function-and-this-keyword)
+- [Destructuring - some examples](Javascript/ES6-Array-Helper-Methods/Destructuring_Geneal.md)
+- [filter method implementation](Javascript/ES6-Array-Helper-Methods/filter-implement.js)
 
 ## Table of Contents of this Readme file
 
