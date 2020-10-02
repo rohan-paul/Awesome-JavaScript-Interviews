@@ -34,6 +34,9 @@ A collection of super-popular Interview questions, along with explanations and i
   - [More on Call, Apply and Bind](Javascript/call-apply-bind/call-function-basics-2.md)
   - [call-vs-apply-vs-bind](Javascript/call-apply-bind/call-vs-apply-vs-bind.md)
   - [Why bind function is needed](bind-why-its-needed)
+- [arrow-vs-regular-functions](Javascript/arrow-function/arrow-vs-regular-functions.md)
+- [when-not-to-use-arrow-function](Javascript/arrow-function/when-not-to-use-arrow-function.md)
+- [arrow-function-and-this-keyword](arrow-function-and-this-keyword)
 
 ## Table of Contents of this Readme file
 
