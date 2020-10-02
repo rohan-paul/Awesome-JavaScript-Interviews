@@ -2,11 +2,38 @@
 
 # Awesome JavaScript Interviews
 
-#### Classified topic wise in different folders
+A collection of super-popular Interview questions, along with explanations and implementation examples that I was putting together for myself while preparing for my first Full-Stack JavaScript job interviews.
 
-A collection of super-popular Interview questions, along with answers that I was putting together for myself while preparing for my first Full-Stack JavaScript job interviews. Many of these questions are what I have actually faced in real interview. It is by no means comprehensive, and the answers are relatively short ( and for each of the concepts, there are probably better and/or more in depth coverage in the web), but I see this repo as reference tool, so I can continue a technical talk with the interviewer for two to three hours.
+## Most common Interview Topics and Questions along with explanations (Link across this whole Repository)
 
-There are many fantastic resources for JavaScript interview questions, videos, and blog posts on the web and that I have drawn from. I will cite as many as I can throughout so that additional information on each list item can be easily found
+- [Explain event delegation](Javascript/event-delegation-propagation-bubbling.md)
+- [Explain how `this` works in JavaScript](Javascript/this-keyword/this-keyword-2nd-example-GREAT-Example.md)
+  - [more-on-this-keyword](Javascript/this-keyword/this-example-custom-Array-Prototype-method.md)
+  - [more-on-this-keyword](Javascript/this-keyword/this-keyword-simplest-catagories.md)
+  - [more-on-this-keyword](Javascript/this-keyword/this-keyword-1.js)
+- [Explain how prototypal inheritance works](Javascript/OOP-Prototypal-Inheritence/README.md)
+  - [how-to-get-prototype-of-an-object](Javascript/OOP-Prototypal-Inheritence/how-to-get-prototype-of-an-object.md)
+  - [Inheritence-OOP-Class-vs-Prototypes-Example](Javascript/OOP-Prototypal-Inheritence/Inheritence-OOP-Class-vs-Prototypes-Example-BEST.md)
+  - [Inheritence-OOP-Class-vs-Prototypes-Theory](Javascript/OOP-Prototypal-Inheritence/Inheritence-OOP-Class-vs-Prototypes-Theory.md)
+  - [Inheritence-with-classes-super-keyword-Exhaustive-Explanation](Javascript/OOP-Prototypal-Inheritence/Inheritence-with-classes-super-keyword-SIMPLEST-EXHAUSTIVE.md)
+  - [OOP-Basics-1](Javascript/OOP-Prototypal-Inheritence/OOP-Basics-1.md)
+  - [OOP-basics-2](Javascript/OOP-Prototypal-Inheritence/OOP-basics-2.md)
+  - [OOP-Encapsulation-example-1](Javascript/OOP-Prototypal-Inheritence/OOP-Encapsulation-example-1.md)
+  - [OOP-Encapsulation-example-2](Javascript/OOP-Prototypal-Inheritence/OOP-Encapsulation-example-2.md)
+  - [OOP-Encapsulation-Theory-GOOD-Explanations-Private-Methods](Javascript/OOP-Prototypal-Inheritence/OOP-Encapsulation-Theory-GOOD-Explanations-Private-Methods.md)
+  - [print-All-Prototypes-of-Objects](Javascript/OOP-Prototypal-Inheritence/print-All-Prototypes-of-Objects.js)
+  - [Prototype-Example-Really-GOOD-Explanations](Javascript/OOP-Prototypal-Inheritence/Prototype-Example-Really-GOOD-Explanations.js)
+  - [Prototype-Example-1](Javascript/OOP-Prototypal-Inheritence/Prototype-Example-1.js)
+  - [Prototype-Example-2](Javascript/OOP-Prototypal-Inheritence/Prototype-Example-2.js)
+  - [prototype-func-print-array-elements](Javascript/OOP-Prototypal-Inheritence/prototype-func-print-array-elements.js)
+  - [Prototype-func-String-dasherize](Javascript/OOP-Prototypal-Inheritence/Prototype-func-String-dasherize.js)
+  - [Prototypes-Benefits-Handling-Memory-Leaks](Javascript/OOP-Prototypal-Inheritence/Prototypes-Benefits-Handling-Memory-Leaks.md)
+  - [Prototypes-Prevents-Memory-Leaks-1-Good-Explanation](Javascript/OOP-Prototypal-Inheritence/Prototypes-Prevents-Memory-Leaks-1-Good-Explanation.md)
+- [Explain the concepts around and the difference between Call, Apply and Bind](Javascript/call-apply-bind/call-function-basics-1.md)
+  - [More on Call, Apply and Bind](Javascript/call-apply-bind/call-function-basics-2.md)
+  - [More on Call, Apply and Bind](Javascript/call-apply-bind/call-function-basics-2.md)
+  - [call-vs-apply-vs-bind](Javascript/call-apply-bind/call-vs-apply-vs-bind.md)
+  - [Why bind function is needed](bind-why-its-needed)
 
 ## Table of Contents of this Readme file
 
@@ -55,32 +82,6 @@ There are many fantastic resources for JavaScript interview questions, videos, a
 22. [Collection of Leetcode Problem solution](#collection-of-leetcode-problem-solution)
 
 23. [Collection of Cracking the Coding Interview Book Problem solution](#collection-of-cracking-the-coding-interview-book-problem-solution)
-
-## Contents Across the Repository
-
-- [Explain event delegation](Javascript/event-delegation-propagation-bubbling.md)
-- [Explain how `this` works in JavaScript](Javascript/this-keyword/this-keyword-2nd-example-GREAT-Example.md)
-  - [more-on-this-keyword](Javascript/this-keyword/this-example-custom-Array-Prototype-method.md)
-  - [more-on-this-keyword](Javascript/this-keyword/this-keyword-simplest-catagories.md)
-  - [more-on-this-keyword](Javascript/this-keyword/this-keyword-1.js)
-- [Explain how prototypal inheritance works](Javascript/OOP-Prototypal-Inheritence/README.md)
-  - [how-to-get-prototype-of-an-object](Javascript/OOP-Prototypal-Inheritence/how-to-get-prototype-of-an-object.md)
-  - [Inheritence-OOP-Class-vs-Prototypes-Example](Javascript/OOP-Prototypal-Inheritence/Inheritence-OOP-Class-vs-Prototypes-Example-BEST.md)
-  - [Inheritence-OOP-Class-vs-Prototypes-Theory](Javascript/OOP-Prototypal-Inheritence/Inheritence-OOP-Class-vs-Prototypes-Theory.md)
-  - [Inheritence-with-classes-super-keyword-Exhaustive-Explanation](Javascript/OOP-Prototypal-Inheritence/Inheritence-with-classes-super-keyword-SIMPLEST-EXHAUSTIVE.md)
-  - [OOP-Basics-1](Javascript/OOP-Prototypal-Inheritence/OOP-Basics-1.md)
-  - [OOP-basics-2](Javascript/OOP-Prototypal-Inheritence/OOP-basics-2.md)
-  - [OOP-Encapsulation-example-1](Javascript/OOP-Prototypal-Inheritence/OOP-Encapsulation-example-1.md)
-  - [OOP-Encapsulation-example-2](Javascript/OOP-Prototypal-Inheritence/OOP-Encapsulation-example-2.md)
-  - [OOP-Encapsulation-Theory-GOOD-Explanations-Private-Methods](Javascript/OOP-Prototypal-Inheritence/OOP-Encapsulation-Theory-GOOD-Explanations-Private-Methods.md)
-  - [print-All-Prototypes-of-Objects](Javascript/OOP-Prototypal-Inheritence/print-All-Prototypes-of-Objects.js)
-  - [Prototype-Example-Really-GOOD-Explanations](Javascript/OOP-Prototypal-Inheritence/Prototype-Example-Really-GOOD-Explanations.js)
-  - [Prototype-Example-1](Javascript/OOP-Prototypal-Inheritence/Prototype-Example-1.js)
-  - [Prototype-Example-2](Javascript/OOP-Prototypal-Inheritence/Prototype-Example-2.js)
-  - [prototype-func-print-array-elements](Javascript/OOP-Prototypal-Inheritence/prototype-func-print-array-elements.js)
-  - [Prototype-func-String-dasherize](Javascript/OOP-Prototypal-Inheritence/Prototype-func-String-dasherize.js)
-  - [Prototypes-Benefits-Handling-Memory-Leaks](Javascript/OOP-Prototypal-Inheritence/Prototypes-Benefits-Handling-Memory-Leaks.md)
-  - [Prototypes-Prevents-Memory-Leaks-1-Good-Explanation](Javascript/OOP-Prototypal-Inheritence/Prototypes-Prevents-Memory-Leaks-1-Good-Explanation.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
