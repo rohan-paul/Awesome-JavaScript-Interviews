@@ -39,6 +39,13 @@ A collection of super-popular Interview questions, along with explanations and i
 - [arrow-function-and-this-keyword](arrow-function-and-this-keyword)
 - [Destructuring - some examples](Javascript/ES6-Array-Helper-Methods/Destructuring_Geneal.md)
 - [filter method implementation](Javascript/ES6-Array-Helper-Methods/filter-implement.js)
+- [forEach-vs-map](Javascript/ES6-Array-Helper-Methods/forEach-vs-map.md)
+- [Pure-functions-basics](Javascript/Functional-Programming_Pure-Function/Pure-functions-basics.md)
+- [closure-MOST-POPULAR-Interview Question on setTimeout](Javascript/js-basics/Closure/closure-setTimeout-MOST-POPULAR.js)
+  - [Basics closure concepts involving setTimeout](Javascript/js-basics/Closure/closure-setTimeout.js)
+  - [closure-tricky and great Example](Javascript/js-basics/Closure/closure-tricky-GREAT-EXAMPLE.JS)
+  - [closure-use-case-for-creating-private-variable](Javascript/js-basics/Closure/closure-use-case-create-private-variable.js)
+  - [closure-why-its-needed at ll](Javascript/js-basics/Closure/closure-why-its-needed.js)
 
 ## Table of Contents of this Readme file
 
