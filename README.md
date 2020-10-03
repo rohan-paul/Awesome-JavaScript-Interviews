@@ -6,51 +6,59 @@ A collection of super-popular Interview questions, along with explanations and i
 
 ## Table of Contents of this Readme file
 
-1. [Understanding the Theory and the fundamentals of some super-popular Algorithm questions](#understanding-the-theory-and-the-fundamentals-of-some-super-popular-algorithm-questions)
+1. [Most common Fundamental JavaScript Interview Topics & Questions](#most-common-fundamental-javascript-interview-topics--questions)
 
-2. [Github Repositories with large collections of problems-and-solutions of them most popular Interview challenges](#github-repositories-with-large-collections-of-problems-and-solutions-of-them-most-popular-interview-challenges)
+2. [Most common Async/Await and Promise related Interview Topics & Questions](#most-common-asyncawait-and-promise-related-interview-topics--questions)
 
-3. [Overall multi-factor approach for winning this huge challenge and a great journey of getting the first Developer Job](#overall-multi-factor-approach-for-winning-this-huge-challenge-and-a-great-journey-of-getting-the-first-developer-job)
+3. [Most common Node Interview Topics & Questions](most-common-node-interview-topics--questions)
 
-4. [Other important resources](#other-important-resources)
+4. [Most common Web-Development Architecture related Interview Topics & Questions](most-common-web-development-architecture-related-interview-topics--questions)
 
-5. [Coding Challenge Practice Platforms](#coding-challenge-practice-platforms)
+5. [Understanding the Theory and the fundamentals of some super-popular Algorithm questions](#understanding-the-theory-and-the-fundamentals-of-some-super-popular-algorithm-questions)
 
-6. [More curated list of general resources for JavaScript Interviews](#more-curated-list-of-general-resources-for-javascript-interviews)
+6. [Github Repositories with large collections of problems-and-solutions of them most popular Interview challenges](#github-repositories-with-large-collections-of-problems-and-solutions-of-them-most-popular-interview-challenges)
 
-7. [Most frequently asked concepts for Front End Engineering Interview](#most-frequently-asked-concepts-for-front-end-engineering-interview)
+7. [Overall multi-factor approach for winning this huge challenge and a great journey of getting the first Developer Job](#overall-multi-factor-approach-for-winning-this-huge-challenge-and-a-great-journey-of-getting-the-first-developer-job)
 
-8. [List of sites where you can hunt for a developer job](#list-of-sites-where-you-can-hunt-for-a-developer-job)
+8. [Other important resources](#other-important-resources)
 
-9. [Want a startup job?](#want-a-startup-job)
+9. [Coding Challenge Practice Platforms](#coding-challenge-practice-platforms)
 
-10. [Best places to job hunt for remote jobs](#best-places-to-job-hunt-for-remote-jobs)
+10. [More curated list of general resources for JavaScript Interviews](#more-curated-list-of-general-resources-for-javascript-interviews)
 
-11. [Here are a few places to hunt for ios, react, vue and more](#here-are-a-few-places-to-hunt-for-ios-react-vue-and-more)
+11. [Most frequently asked concepts for Front End Engineering Interview](#most-frequently-asked-concepts-for-front-end-engineering-interview)
 
-12. [Want a list of just JavaScript jobs?](#want-a-list-of-just-javascript-jobs)
+12. [List of sites where you can hunt for a developer job](#list-of-sites-where-you-can-hunt-for-a-developer-job)
 
-13. [Are you looking for a junior dev job?](#are-you-looking-for-a-junior-dev-job)
+13. [Want a startup job?](#want-a-startup-job)
 
-14. [Women focused job boards!](#women-focused-job-boards)
+14. [Best places to job hunt for remote jobs](#best-places-to-job-hunt-for-remote-jobs)
 
-15. [Want a job as a freelance dev? Here's a list](#want-a-job-as-a-freelance-dev-heres-a-list)
+15. [Here are a few places to hunt for ios, react, vue and more](#here-are-a-few-places-to-hunt-for-ios-react-vue-and-more)
 
-16. [Some useful websites for programmers](#some-useful-websites-for-programmers)
+16. [Want a list of just JavaScript jobs?](#want-a-list-of-just-javascript-jobs)
 
-17. [When you get stuck](#when-you-get-stuck)
+17. [Are you looking for a junior dev job?](#are-you-looking-for-a-junior-dev-job)
 
-18. [For small project ideas](for-small-project-ideas)
+18. [Women focused job boards!](#women-focused-job-boards)
 
-19. [General Coding advice](general-coding-advice)
+19. [Want a job as a freelance dev? Here's a list](#want-a-job-as-a-freelance-dev-heres-a-list)
 
-20. [Coding Style](#coding-style)
+20. [Some useful websites for programmers](#some-useful-websites-for-programmers)
 
-21. [General Good Articles](#general-good-articles)
+21. [When you get stuck](#when-you-get-stuck)
 
-22. [Collection of Leetcode Problem solution](#collection-of-leetcode-problem-solution)
+22. [For small project ideas](for-small-project-ideas)
 
-23. [Collection of Cracking the Coding Interview Book Problem solution](#collection-of-cracking-the-coding-interview-book-problem-solution)
+23. [General Coding advice](general-coding-advice)
+
+24. [Coding Style](#coding-style)
+
+25. [General Good Articles](#general-good-articles)
+
+26. [Collection of Leetcode Problem solution](#collection-of-leetcode-problem-solution)
+
+27. [Collection of Cracking the Coding Interview Book Problem solution](#collection-of-cracking-the-coding-interview-book-problem-solution)
 
 ## Most common Fundamental JavaScript Interview Topics & Questions
 
