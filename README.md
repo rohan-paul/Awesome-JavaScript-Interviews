@@ -157,6 +157,13 @@ A collection of super-popular Interview questions, along with explanations and i
 - [More on error-handling-in-node](Node-Express/error-handling-in-node.md)
 - [express-js-why-do-i-need-it](Node-Express/express-js-why-do-i-need-it.md)
 - [gracefully-shut-down-node-app](Node-Express/gracefully-shut-down-node-app.md)
+- [jwt-how-it-works](Node-Express/jwt-how-it-works.md)
+- [jwt-where-to-save-localStorage-vs-sessionStorage-vs-cookie](Node-Express/jwt-where-to-save-localStorage-vs-sessionStorage-vs-cookie.md)
+- [localForage-what-does-it-do](Node-Express/localForage-what-does-it-do.md)
+- [How would you do node-debugging](Node-Express/node-debugging.md)
+- [passport-authentication-middleware-BASIC-FLOW](Node-Express/passport-authentication-middleware-BASIC-FLOW.md)
+- [passport-express-session-Fundamentals-and-params](Node-Express/passport-express-session-Fundamentals-and-params.md)
+- [passport-express-session-how-it-works](Node-Express/passport-express-session-how-it-works.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
