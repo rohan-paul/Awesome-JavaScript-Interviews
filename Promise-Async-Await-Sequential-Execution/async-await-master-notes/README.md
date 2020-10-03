@@ -1,4 +1,4 @@
-Async/await is a language structure that complements promises. It allows us to work with promises with less boilerplate.
+#### Async/await is a language structure that complements promises. It allows us to work with promises with less boilerplate.
 
 For example, the following definitions are equivalent:
 

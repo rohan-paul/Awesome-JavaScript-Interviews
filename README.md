@@ -136,7 +136,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [map-set-get](Javascript/map-set-get.js)
 - [Null-Coalescing-operator](Javascript/Null-Coalescing-operator.md)
 - [truthy-falsy-1](Javascript/truthy-falsy-1.js)
-- [truthy-falsy-2](Javascript/truthy-falsy-2.js)
+- [truthy-falsy-2](Javascript/truthy-falsy-2.md)
 - [truthy-falsy-pass-by-value-vs-reference-strict-equality-use-case](Javascript/truthy-falsy-pass-by-value-vs-reference-strict-equality-use-case.js)
 - [undefined-vs-not_defined](Javascript/undefined-vs-not_defined.md)
 - [Why-eval-function-considered-dangerous](Javascript/Why-eval-function-considered-dangerous.md)
@@ -146,6 +146,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 (along with explanations - Links are across this whole Repository)
 
+- [Async/Await - Understanding the fundamentals](Promise-Async-Await-Sequential-Execution/async-await-master-notes/README.md)
 - [asyn-await-how-its-called-asynchronous-when-it-makes-possible-to-execute-in-synchrounous-manner](Promise-Async-Await-Sequential-Execution/async-await-master-notes/asyn-await-how-its-called-asynchronous-when-it-makes-possible-to-execute-in-synchrounous-manner.md)
 - [Example async-await-1](Promise-Async-Await-Sequential-Execution/async-await-master-notes/async-await-1.js)
 - [Example async-await-2](Promise-Async-Await-Sequential-Execution/async-await-master-notes/async-await-2.js)
@@ -154,6 +155,14 @@ A collection of super-popular Interview questions, along with explanations and i
 - [async-await-example-when-Promise-is-preferred](Promise-Async-Await-Sequential-Execution/async-await-master-notes/async-await-example-when-Promise-is-preferred.js)
 - [converting-callback-to-Promise-and-async-await-1](Promise-Async-Await-Sequential-Execution/async-await-master-notes/converting-callback-to-Promise-and-async-await-1.md)
 - [converting-callback-to-Promise-and-async-await-2](Promise-Async-Await-Sequential-Execution/async-await-master-notes/converting-callback-to-Promise-and-async-await-2.md)
+- [setTimeout-rate-limiting-api-calls-IMP-with-async-await-looping-over-apis-1](Promise-Async-Await-Sequential-Execution/async-await-master-notes/setTimeout-rate-limiting-api-calls-IMP-with-async-await-looping-over-apis-1.js)
+- [setTimeout-rate-limiting-api-calls-IMP-with-async-await-looping-over-apis-2](Promise-Async-Await-Sequential-Execution/async-await-master-notes/setTimeout-rate-limiting-api-calls-IMP-with-async-await-looping-over-apis-2.js)
+- [Promise - Fundamental Understanding](Promise-Async-Await-Sequential-Execution/Promise-async-await-master-notes/README.md)
+- [calback-hell-resolved-with-promise](Promise-Async-Await-Sequential-Execution/Promise-async-await-master-notes/calback-hell-resolved-with-promise.js)
+- [More callback-hell-examples](Promise-Async-Await-Sequential-Execution/Promise-async-await-master-notes/callback-hell-examples.js)
+- [How-Promise-makes-code-Asynchronous-non-blocking](Promise-Async-Await-Sequential-Execution/Promise-async-await-master-notes/How-Promise-makes-code-Asynchronous-non-blocking.md)
+- [Promise Super simple-Examples](Promise-Async-Await-Sequential-Execution/Promise-async-await-master-notes/Promise-simple-Example.js)
+- [Understanding then in Promise](Promise-Async-Await-Sequential-Execution/Promise-async-await-master-notes/then-in-Promise-GOOD-Explanations.md)
 
 ## Most common Node Interview Topics & Questions
 
