@@ -140,6 +140,11 @@ A collection of super-popular Interview questions, along with explanations and i
 
 - [why-nodejs-required-at-all-and-difference-vs-plain-js](Node-Express/why-nodejs-required-at-all-and-difference-vs-plain-js.md)
 - [How-nodejs-works](Node-Express/How-nodejs-works.md)
+- [What-is-an-error-first-callback](Node-Express/What-is-an-error-first-callback.md)
+- [Authentication vs Authorization](Node-Express/Authentication-vs-Authorization.md)
+- [What is Middleware-1](Node-Express/app.use-Middleware-1.md)
+- [What is Middleware-2](Node-Express/app.use-Middleware-2.md)
+- [app.use-vs-app.get](Node-Express/app.use-vs-app.get.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 

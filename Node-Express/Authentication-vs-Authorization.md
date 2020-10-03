@@ -2,7 +2,6 @@
 
 ### jwt module creates the token and passport actually Authenticates / validates it.
 
-
 Authentication is the process of verifying the identity of a user by obtaining some sort of credentials and using those credentials to verify the user's identity. If the credentials are valid, the authorization process starts. Authentication process always proceeds to Authorization process.
 
 # Authorization
