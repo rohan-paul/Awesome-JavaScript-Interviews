@@ -159,11 +159,18 @@ A collection of super-popular Interview questions, along with explanations and i
 - [gracefully-shut-down-node-app](Node-Express/gracefully-shut-down-node-app.md)
 - [jwt-how-it-works](Node-Express/jwt-how-it-works.md)
 - [jwt-where-to-save-localStorage-vs-sessionStorage-vs-cookie](Node-Express/jwt-where-to-save-localStorage-vs-sessionStorage-vs-cookie.md)
+- [session-cookies-vs-JWT-Tokens-2-ways-to-authenticate](Node-Express/session-cookies-vs-JWT-Tokens-2-ways-to-authenticate.md)
+- [sesstionStorage-vs-localStorage-vs-Cookie](Node-Express/sesstionStorage-vs-localStorage-vs-Cookie.md)
 - [localForage-what-does-it-do](Node-Express/localForage-what-does-it-do.md)
 - [How would you do node-debugging](Node-Express/node-debugging.md)
 - [passport-authentication-middleware-BASIC-FLOW](Node-Express/passport-authentication-middleware-BASIC-FLOW.md)
 - [passport-express-session-Fundamentals-and-params](Node-Express/passport-express-session-Fundamentals-and-params.md)
 - [passport-express-session-how-it-works](Node-Express/passport-express-session-how-it-works.md)
+- [passport-workflow-with-passport-local-strategy](Node-Express/passport-workflow-with-passport-local-strategy.md)
+- [pipe concepts in node](Node-Express/pipe-in-node.md)
+- [REST-architectural-concepts](Node-Express/REST-architectural-concepts.md)
+- [significance-of-file-bin-www](Node-Express/significance-of-file-bin-www.md)
+- [Streams Concepts in Node](Node-Express/Streams.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
