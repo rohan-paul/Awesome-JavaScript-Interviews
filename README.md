@@ -134,6 +134,19 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Why-eval-function-considered-dangerous](Javascript/Why-eval-function-considered-dangerous.md)
 - [pitfall-of-using-typeof](Javascript/Tricky-JS-Problems/pitfall-of-using-typeof.md)
 
+## Most common Async/Await and Promise related Interview Topics & Questions
+
+(along with explanations - Links are across this whole Repository)
+
+- [asyn-await-how-its-called-asynchronous-when-it-makes-possible-to-execute-in-synchrounous-manner](Promise-Async-Await-Sequential-Execution/async-await-master-notes/asyn-await-how-its-called-asynchronous-when-it-makes-possible-to-execute-in-synchrounous-manner.md)
+- [Example async-await-1](Promise-Async-Await-Sequential-Execution/async-await-master-notes/async-await-1.js)
+- [Example async-await-2](Promise-Async-Await-Sequential-Execution/async-await-master-notes/async-await-2.js)
+- [Example async-await-3](Promise-Async-Await-Sequential-Execution/async-await-master-notes/async-await-3.js)
+- [async-await-absolute-basics](async-await-absolute-basics.js)
+- [async-await-example-when-Promise-is-preferred](Promise-Async-Await-Sequential-Execution/async-await-master-notes/async-await-example-when-Promise-is-preferred.js)
+- [converting-callback-to-Promise-and-async-await-1](Promise-Async-Await-Sequential-Execution/async-await-master-notes/converting-callback-to-Promise-and-async-await-1.md)
+- [converting-callback-to-Promise-and-async-await-2](Promise-Async-Await-Sequential-Execution/async-await-master-notes/converting-callback-to-Promise-and-async-await-2.md)
+
 ## Most common Node Interview Topics & Questions
 
 (along with explanations - Links are across this whole Repository)
