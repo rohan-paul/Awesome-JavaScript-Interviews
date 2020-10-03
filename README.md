@@ -145,6 +145,16 @@ A collection of super-popular Interview questions, along with explanations and i
 - [What is Middleware-1](Node-Express/app.use-Middleware-1.md)
 - [What is Middleware-2](Node-Express/app.use-Middleware-2.md)
 - [app.use-vs-app.get](Node-Express/app.use-vs-app.get.md)
+- [bcrypt-How-it-works-de-hashing](Node-Express/bcrypt-How-it-works-de-hashing.md)
+- [bcrypt-manually-generate-a-salted-and-encrypted-password](Node-Express/bcrypt-manually-generate-a-salted-and-encrypted-password.md)
+- [bodyParser_what-does-it-do](Node-Express/bodyParser_what-does-it-do.md)
+- [buffer-class-what-is-it](Node-Express/buffer-class-what-is-it.md)
+- [busboy-why-its-needed](Node-Express/busboy-why-its-needed.md)
+  - [busboy-why-I-use-stream-to-upload-file](Node-Express/busboy-why-I-use-stream-to-upload-file.md)
+- [cookie-parser-what-does-it-do](Node-Express/cookie-parser-what-does-it-do.md)
+- [cors_Why_its_needed](Node-Express/cors_Why_its_needed.md)
+- [error-handling-in-node-Theory](Node-Express/error-handling-in-node-Theory.md)
+- [More on error-handling-in-node](Node-Express/error-handling-in-node.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
