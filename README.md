@@ -56,6 +56,13 @@ A collection of super-popular Interview questions, along with explanations and i
   - [BigInt-data-type](Javascript/js-data-types/BigInt-data-type.md)
   - [check-data-type-with-typeof](Javascript/js-data-types/check-data-type-with-typeof.js)
   - [data-type-mutability](Javascript/js-data-types/data-type-mutability.md)
+  - [data-types of Number-A very popular Interview Question](Javascript/js-data-types/data-types-Number-Famous-Question.md)
+  - [More on data-types of Number](Javascript/js-data-types/data-types-Number.md)
+  - [data-types-symbol](Javascript/js-data-types/data-types-symbol.md)
+  - [what-is-type-coercion](Javascript/js-data-types/what-is-type-coercion.md)
+- [spread-operator-vs-rest-parameters](Javascript/rest-spread-destructuring/spread-operator-vs-rest-parameters.md)
+- [rest-spread-basic-techniques](Javascript/rest-spread-destructuring/rest-spread-basic-techniques.js)
+- [More on rest and spread operator](Javascript/rest-spread-destructuring/rest-spread-2.js)
 
 ## Table of Contents of this Readme file
 
