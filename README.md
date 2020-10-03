@@ -138,7 +138,8 @@ A collection of super-popular Interview questions, along with explanations and i
 
 (along with explanations - Links are across this whole Repository)
 
-- [Why-eval-function-considered-dangerous](Javascript/Why-eval-function-considered-dangerous.md)
+- [why-nodejs-required-at-all-and-difference-vs-plain-js](Node-Express/why-nodejs-required-at-all-and-difference-vs-plain-js.md)
+- [How-nodejs-works](Node-Express/How-nodejs-works.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
