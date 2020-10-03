@@ -41,11 +41,21 @@ A collection of super-popular Interview questions, along with explanations and i
 - [filter method implementation](Javascript/ES6-Array-Helper-Methods/filter-implement.js)
 - [forEach-vs-map](Javascript/ES6-Array-Helper-Methods/forEach-vs-map.md)
 - [Pure-functions-basics](Javascript/Functional-Programming_Pure-Function/Pure-functions-basics.md)
+- [closure explanations](Javascript/js-basics/Closure/closure.md)
 - [closure-MOST-POPULAR-Interview Question on setTimeout](Javascript/js-basics/Closure/closure-setTimeout-MOST-POPULAR.js)
   - [Basics closure concepts involving setTimeout](Javascript/js-basics/Closure/closure-setTimeout.js)
   - [closure-tricky and great Example](Javascript/js-basics/Closure/closure-tricky-GREAT-EXAMPLE.JS)
   - [closure-use-case-for-creating-private-variable](Javascript/js-basics/Closure/closure-use-case-create-private-variable.js)
-  - [closure-why-its-needed at ll](Javascript/js-basics/Closure/closure-why-its-needed.js)
+  - [closure-why-its-needed at all](Javascript/js-basics/Closure/closure-why-its-needed.js)
+  - [More on Closure](Javascript/js-basics/Closure/closures-retains-values-of-outer-function-after-outer-returns.md)
+- [Custom Callback Function-1](Javascript/js-basics/custom_Callback-1.js)
+- [Custom Callback Function-2](Javascript/js-basics/custom_Callback-2.js)
+- [IIFE function in 10 different ways](Javascript/js-basics/IIFE-10-ways.js)
+- [scope in JS - A basic-understanding](Javascript/js-basics/scope-basic-understanding.md)
+- [Data Types in JS](Javascript/js-data-types/data-types.md)
+  - [BigInt-data-type](Javascript/js-data-types/BigInt-data-type.md)
+  - [check-data-type-with-typeof](Javascript/js-data-types/check-data-type-with-typeof.js)
+  - [data-type-mutability](Javascript/js-data-types/data-type-mutability.md)
 
 ## Table of Contents of this Readme file
 

@@ -2,13 +2,12 @@ Lets look at this function
 
 ```js
 function outer() {
-var b = 10;
-   function inner() {
-
-         var a = 20;
-         console.log(a+b);
-    }
-   return inner;
+  var b = 10
+  function inner() {
+    var a = 20
+    console.log(a + b)
+  }
+  return inner
 }
 
 /*
@@ -21,8 +20,9 @@ The scope of variable b is limited to the outer function, and the scope of varia
 Let us now invoke the outer() function, and store the result of the outer() function in a variable X
  */
 
-var X = outer();
+var X = outer()
 ```
+
 Since the variables X is functions, we can **execute** them. In JavaScript, a function can be executed by adding **()** after the function name, such as **X()**.
 
 When we execute X(), we are essentially executing the `inner` function.
@@ -32,7 +32,7 @@ If I run < console.log(X()) > the output will be below
 30
 undefined
 
-So the closure function **inner**() is getting the value of **b = 10** from its enclosing **outer()** function ever after **outer()**  function has returned.
+So the closure function **inner**() is getting the value of **b = 10** from its enclosing **outer()** function ever after **outer()** function has returned.
 
 #### Let’s see step-by-step what happens when the outer() function is first invoked:
 
@@ -45,15 +45,16 @@ So the closure function **inner**() is getting the value of **b = 10** from its 
 Thus, X will store the following:
 
 function inner() {
- var a=20;
+var a=20;
 console.log(a+b);
 }
 
 This can be easily verified by adding the following to the JavaScript code:
 
 ```js
-console.log(typeof(X)); //X is of type function
+console.log(typeof X) //X is of type function
 ```
+
 - 6. Function outer() finishes execution, and all variables within the scope of outer() now no longer exist.
 - 7. This last part is important to understand. Once a function completes its execution, any variables that were defined inside the function scope cease to exist.
 
@@ -73,7 +74,8 @@ This is the most important point to realize. The variables inside the functions 
 30
 undefined
 ```
-- C. So the closure function **inner**() is getting the value of **b = 10** from its enclosing **outer()** function ever after **outer()**  function has returned.
+
+- C. So the closure function **inner**() is getting the value of **b = 10** from its enclosing **outer()** function ever after **outer()** function has returned.
 
 #### Let us examine step-by-step what happens when X() is executed the first time:
 
@@ -97,4 +99,5 @@ access to the outer function’s variables — variable b, which it enclosed
 access to any global variables that may be defined
 
 ##### Further Reading
+
 [https://medium.freecodecamp.org/javascript-closures-simplified-d0d23fa06ba4](https://medium.freecodecamp.org/javascript-closures-simplified-d0d23fa06ba4)
