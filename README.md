@@ -178,6 +178,14 @@ A collection of super-popular Interview questions, along with explanations and i
 
 - [critical-render-path](Web-Development-In-General/critical-render-path.md)
 - [How-to-Check-HTTP-Request-Response-on-Chrome](Web-Development-In-General/How-to-Check-HTTP-Request-Response-on-Chrome.md)
+- [HTTP-and-TCP-Difference](Web-Development-In-General/HTTP-and-TCP-Difference.md)
+- [HTTP-methods-put-vs-post](Web-Development-In-General/HTTP-methods-put-vs-post.md)
+- [HTTP-Protocol](Web-Development-In-General/HTTP-Protocol.md)
+- [HTTP-Status-Codes-Understanding-Express-res.status](Web-Development-In-General/HTTP-Status-Codes-Understanding-Express-res.status.md)
+- [More on HTTP-Status-Codes](Web-Development-In-General/HTTP-Status-Codes.md)
+- [http-vs-https](Web-Development-In-General/http-vs-https.md)
+- [minimmize-page-load-time](Web-Development-In-General/minimmize-page-load-time.md)
+-
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
