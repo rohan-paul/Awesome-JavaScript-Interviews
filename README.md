@@ -60,9 +60,18 @@ A collection of super-popular Interview questions, along with explanations and i
   - [More on data-types of Number](Javascript/js-data-types/data-types-Number.md)
   - [data-types-symbol](Javascript/js-data-types/data-types-symbol.md)
   - [what-is-type-coercion](Javascript/js-data-types/what-is-type-coercion.md)
+  - [More on coercion](Javascript/coercion.md)
 - [spread-operator-vs-rest-parameters](Javascript/rest-spread-destructuring/spread-operator-vs-rest-parameters.md)
 - [rest-spread-basic-techniques](Javascript/rest-spread-destructuring/rest-spread-basic-techniques.js)
 - [More on rest and spread operator](Javascript/rest-spread-destructuring/rest-spread-2.js)
+- [logical-and-operator-Tricky Question](Javascript/Tricky-JS-Problems/logical-and-operator.js)
+- [Value of Null](Javascript/Tricky-JS-Problems/value-of-null.js)
+- [Example of Call Stack](Javascript/call-stack-good-example.md)
+- [const-var-let](Javascript/const-var-let.md)
+- [curried-function](Javascript/curried-function.md)
+- [execution-context-call-stack.md](Javascript/execution-context-call-stack.md)
+- [hashing-vs-encrypting.md](Javascript/hashing-vs-encrypting.md)
+- [Hoisting - The supre important concept](Javascript/hoisting.md)
 
 ## Table of Contents of this Readme file
 
