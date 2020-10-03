@@ -51,6 +51,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Custom Callback Function-1](Javascript/js-basics/custom_Callback-1.js)
 - [Custom Callback Function-2](Javascript/js-basics/custom_Callback-2.js)
 - [IIFE function in 10 different ways](Javascript/js-basics/IIFE-10-ways.js)
+- [IIFE](Javascript/IIFE.md)
 - [scope in JS - A basic-understanding](Javascript/js-basics/scope-basic-understanding.md)
 - [Data Types in JS](Javascript/js-data-types/data-types.md)
   - [BigInt-data-type](Javascript/js-data-types/BigInt-data-type.md)
@@ -72,6 +73,14 @@ A collection of super-popular Interview questions, along with explanations and i
 - [execution-context-call-stack.md](Javascript/execution-context-call-stack.md)
 - [hashing-vs-encrypting.md](Javascript/hashing-vs-encrypting.md)
 - [Hoisting - The supre important concept](Javascript/hoisting.md)
+- [is-javascript-static-or-dynamically-typed](Javascript/is-javascript-static-or-dynamically-typed.md)
+- [is-JS-block-scoped-or-function-scoped](Javascript/is-JS-block-scoped-or-function-scoped.md)
+- [map-set-get](Javascript/map-set-get.js)
+- [Null-Coalescing-operator](Javascript/Null-Coalescing-operator.md)
+- [truthy-falsy-1](Javascript/truthy-falsy-1.js)
+- [truthy-falsy-2](Javascript/truthy-falsy-2.js)
+- [truthy-falsy-pass-by-value-vs-reference-strict-equality-use-case](Javascript/truthy-falsy-pass-by-value-vs-reference-strict-equality-use-case.js)
+- [undefined-vs-not_defined](Javascript/undefined-vs-not_defined.md)
 
 ## Table of Contents of this Readme file
 
