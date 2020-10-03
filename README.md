@@ -4,7 +4,57 @@
 
 A collection of super-popular Interview questions, along with explanations and implementation examples that I was putting together for myself while preparing for my first Full-Stack JavaScript job interviews.
 
-## Most common Interview Topics and Questions along with explanations (Link across this whole Repository)
+## Table of Contents of this Readme file
+
+1. [Understanding the Theory and the fundamentals of some super-popular Algorithm questions](#understanding-the-theory-and-the-fundamentals-of-some-super-popular-algorithm-questions)
+
+2. [Github Repositories with large collections of problems-and-solutions of them most popular Interview challenges](#github-repositories-with-large-collections-of-problems-and-solutions-of-them-most-popular-interview-challenges)
+
+3. [Overall multi-factor approach for winning this huge challenge and a great journey of getting the first Developer Job](#overall-multi-factor-approach-for-winning-this-huge-challenge-and-a-great-journey-of-getting-the-first-developer-job)
+
+4. [Other important resources](#other-important-resources)
+
+5. [Coding Challenge Practice Platforms](#coding-challenge-practice-platforms)
+
+6. [More curated list of general resources for JavaScript Interviews](#more-curated-list-of-general-resources-for-javascript-interviews)
+
+7. [Most frequently asked concepts for Front End Engineering Interview](#most-frequently-asked-concepts-for-front-end-engineering-interview)
+
+8. [List of sites where you can hunt for a developer job](#list-of-sites-where-you-can-hunt-for-a-developer-job)
+
+9. [Want a startup job?](#want-a-startup-job)
+
+10. [Best places to job hunt for remote jobs](#best-places-to-job-hunt-for-remote-jobs)
+
+11. [Here are a few places to hunt for ios, react, vue and more](#here-are-a-few-places-to-hunt-for-ios-react-vue-and-more)
+
+12. [Want a list of just JavaScript jobs?](#want-a-list-of-just-javascript-jobs)
+
+13. [Are you looking for a junior dev job?](#are-you-looking-for-a-junior-dev-job)
+
+14. [Women focused job boards!](#women-focused-job-boards)
+
+15. [Want a job as a freelance dev? Here's a list](#want-a-job-as-a-freelance-dev-heres-a-list)
+
+16. [Some useful websites for programmers](#some-useful-websites-for-programmers)
+
+17. [When you get stuck](#when-you-get-stuck)
+
+18. [For small project ideas](for-small-project-ideas)
+
+19. [General Coding advice](general-coding-advice)
+
+20. [Coding Style](#coding-style)
+
+21. [General Good Articles](#general-good-articles)
+
+22. [Collection of Leetcode Problem solution](#collection-of-leetcode-problem-solution)
+
+23. [Collection of Cracking the Coding Interview Book Problem solution](#collection-of-cracking-the-coding-interview-book-problem-solution)
+
+## Most common Fundamental JavaScript Interview Topics & Questions
+
+(along with explanations - Links are across this whole Repository)
 
 - [Explain event delegation](Javascript/event-delegation-propagation-bubbling.md)
 - [Explain how `this` works in JavaScript](Javascript/this-keyword/this-keyword-2nd-example-GREAT-Example.md)
@@ -81,54 +131,14 @@ A collection of super-popular Interview questions, along with explanations and i
 - [truthy-falsy-2](Javascript/truthy-falsy-2.js)
 - [truthy-falsy-pass-by-value-vs-reference-strict-equality-use-case](Javascript/truthy-falsy-pass-by-value-vs-reference-strict-equality-use-case.js)
 - [undefined-vs-not_defined](Javascript/undefined-vs-not_defined.md)
+- [Why-eval-function-considered-dangerous](Javascript/Why-eval-function-considered-dangerous.md)
+- [pitfall-of-using-typeof](Javascript/Tricky-JS-Problems/pitfall-of-using-typeof.md)
 
-## Table of Contents of this Readme file
+## Most common Node Interview Topics & Questions
 
-1. [Understanding the Theory and the fundamentals of some super-popular Algorithm questions](#understanding-the-theory-and-the-fundamentals-of-some-super-popular-algorithm-questions)
+(along with explanations - Links are across this whole Repository)
 
-2. [Github Repositories with large collections of problems-and-solutions of them most popular Interview challenges](#github-repositories-with-large-collections-of-problems-and-solutions-of-them-most-popular-interview-challenges)
-
-3. [Overall multi-factor approach for winning this huge challenge and a great journey of getting the first Developer Job](#overall-multi-factor-approach-for-winning-this-huge-challenge-and-a-great-journey-of-getting-the-first-developer-job)
-
-4. [Other important resources](#other-important-resources)
-
-5. [Coding Challenge Practice Platforms](#coding-challenge-practice-platforms)
-
-6. [More curated list of general resources for JavaScript Interviews](#more-curated-list-of-general-resources-for-javascript-interviews)
-
-7. [Most frequently asked concepts for Front End Engineering Interview](#most-frequently-asked-concepts-for-front-end-engineering-interview)
-
-8. [List of sites where you can hunt for a developer job](#list-of-sites-where-you-can-hunt-for-a-developer-job)
-
-9. [Want a startup job?](#want-a-startup-job)
-
-10. [Best places to job hunt for remote jobs](#best-places-to-job-hunt-for-remote-jobs)
-
-11. [Here are a few places to hunt for ios, react, vue and more](#here-are-a-few-places-to-hunt-for-ios-react-vue-and-more)
-
-12. [Want a list of just JavaScript jobs?](#want-a-list-of-just-javascript-jobs)
-
-13. [Are you looking for a junior dev job?](#are-you-looking-for-a-junior-dev-job)
-
-14. [Women focused job boards!](#women-focused-job-boards)
-
-15. [Want a job as a freelance dev? Here's a list](#want-a-job-as-a-freelance-dev-heres-a-list)
-
-16. [Some useful websites for programmers](#some-useful-websites-for-programmers)
-
-17. [When you get stuck](#when-you-get-stuck)
-
-18. [For small project ideas](for-small-project-ideas)
-
-19. [General Coding advice](general-coding-advice)
-
-20. [Coding Style](#coding-style)
-
-21. [General Good Articles](#general-good-articles)
-
-22. [Collection of Leetcode Problem solution](#collection-of-leetcode-problem-solution)
-
-23. [Collection of Cracking the Coding Interview Book Problem solution](#collection-of-cracking-the-coding-interview-book-problem-solution)
+- [Why-eval-function-considered-dangerous](Javascript/Why-eval-function-considered-dangerous.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
