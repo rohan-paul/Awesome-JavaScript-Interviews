@@ -185,7 +185,11 @@ A collection of super-popular Interview questions, along with explanations and i
 - [More on HTTP-Status-Codes](Web-Development-In-General/HTTP-Status-Codes.md)
 - [http-vs-https](Web-Development-In-General/http-vs-https.md)
 - [minimmize-page-load-time](Web-Development-In-General/minimmize-page-load-time.md)
--
+- [Postman-checking-protected-routes-from-backend](Web-Development-In-General/Postman-checking-protected-routes-from-backend.md)
+- [websocket-basics](Web-Development-In-General/websocket-basics.md)
+- [What-happens-when-you-navigate-to-an-URL](Web-Development-In-General/What-happens-when-you-navigate-to-an-URL.md)
+- [What-happens-when-you-navigate-to-google](Web-Development-In-General/What-happens-when-you-navigate-to-google.md)
+- [what-is-AJAX](Web-Development-In-General/what-is-AJAX.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
