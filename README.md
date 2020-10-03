@@ -172,6 +172,13 @@ A collection of super-popular Interview questions, along with explanations and i
 - [significance-of-file-bin-www](Node-Express/significance-of-file-bin-www.md)
 - [Streams Concepts in Node](Node-Express/Streams.md)
 
+## Most common Web-Development Architecture related Interview Topics & Questions
+
+(along with explanations - Links are across this whole Repository)
+
+- [critical-render-path](Web-Development-In-General/critical-render-path.md)
+- [How-to-Check-HTTP-Request-Response-on-Chrome](Web-Development-In-General/How-to-Check-HTTP-Request-Response-on-Chrome.md)
+
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
 - :link: [Big O Cheatsheet](http://bigocheatsheet.com/)
