@@ -155,6 +155,8 @@ A collection of super-popular Interview questions, along with explanations and i
 - [cors_Why_its_needed](Node-Express/cors_Why_its_needed.md)
 - [error-handling-in-node-Theory](Node-Express/error-handling-in-node-Theory.md)
 - [More on error-handling-in-node](Node-Express/error-handling-in-node.md)
+- [express-js-why-do-i-need-it](Node-Express/express-js-why-do-i-need-it.md)
+- [gracefully-shut-down-node-app](Node-Express/gracefully-shut-down-node-app.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
