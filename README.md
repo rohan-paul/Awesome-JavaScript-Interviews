@@ -162,7 +162,11 @@ A collection of super-popular Interview questions, along with explanations and i
 - [More callback-hell-examples](Promise-Async-Await-Sequential-Execution/Promise-async-await-master-notes/callback-hell-examples.js)
 - [How-Promise-makes-code-Asynchronous-non-blocking](Promise-Async-Await-Sequential-Execution/Promise-async-await-master-notes/How-Promise-makes-code-Asynchronous-non-blocking.md)
 - [Promise Super simple-Examples](Promise-Async-Await-Sequential-Execution/Promise-async-await-master-notes/Promise-simple-Example.js)
+- [More Promise Super simple Examples](Promise-Async-Await-Sequential-Execution/Promise-Super-Basic/absolute-super-basic-Promise-creation.md)
+- [More Promise Super simple Examples](Promise-Async-Await-Sequential-Execution/Promise-Super-Basic/Promise-super-basic-implementation-Absolute-Basics.js)
 - [Understanding then in Promise](Promise-Async-Await-Sequential-Execution/Promise-async-await-master-notes/then-in-Promise-GOOD-Explanations.md)
+- [Promise-super-basic-example-transform-values-with-Promise](Promise-Async-Await-Sequential-Execution/Promise-Super-Basic/Promise-super-basic-example-transform-values-with-Promise.md)
+- [Promise-Absolute basic-syntax](Promise-Async-Await-Sequential-Execution/Promise-Super-Basic/Promise-super-basic-syntax-GOOD.md)
 
 ## Most common Node Interview Topics & Questions
 
