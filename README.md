@@ -167,6 +167,14 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Understanding then in Promise](Promise-Async-Await-Sequential-Execution/Promise-async-await-master-notes/then-in-Promise-GOOD-Explanations.md)
 - [Promise-super-basic-example-transform-values-with-Promise](Promise-Async-Await-Sequential-Execution/Promise-Super-Basic/Promise-super-basic-example-transform-values-with-Promise.md)
 - [Promise-Absolute basic-syntax](Promise-Async-Await-Sequential-Execution/Promise-Super-Basic/Promise-super-basic-syntax-GOOD.md)
+- [Async-await-API-call-Simple-Example-synchronous-Fetch](Promise-Async-Await-Sequential-Execution/sequential-execution-of-codes-React-Node-Context-Master-Notes/Async-await-API-call-Simple-Example-synchronous-Fetchl-Simple-Good-Example.md)
+- [Async-Event-Handler-both-async-await-and-with-Promise-1](Promise-Async-Await-Sequential-Execution/sequential-execution-of-codes-React-Node-Context-Master-Notes/Async-Event-Handler-both-async-await-and-with-Promise-1.md)
+- [multiple-API-calls-before-executing-next-function-in-React-Promise-2](Promise-Async-Await-Sequential-Execution/sequential-execution-of-codes-React-Node-Context-Master-Notes/multiple-API-calls-before-executing-next-function-in-React-Promise-2.md)
+- [multiple-API-fetch-before-executing-next-function-in-React-Promise-1](Promise-Async-Await-Sequential-Execution/sequential-execution-of-codes-React-Node-Context-Master-Notes/multiple-API-fetch-before-executing-next-function-in-React-Promise-1.md)
+- [multiple-sequential-axios-request](Promise-Async-Await-Sequential-Execution/sequential-execution-of-codes-React-Node-Context-Master-Notes/multiple-sequential-axios-request.md)
+- [sequential-execution-async-await-in-Express-routes](Promise-Async-Await-Sequential-Execution/sequential-execution-of-codes-React-Node-Context-Master-Notes/sequential-execution-async-await-in-Express-routes.md)
+- [sequential-execution-fundamental_working-THEORY](Promise-Async-Await-Sequential-Execution/sequential-execution-of-codes-React-Node-Context-Master-Notes/sequential-execution-fundamental_working-THEORY.md)
+- [sequential-execution-plain-callback-in-Express-routes](Promise-Async-Await-Sequential-Execution/sequential-execution-of-codes-React-Node-Context-Master-Notes/sequential-execution-plain-callback-in-Express-routes.md)
 
 ## Most common Node Interview Topics & Questions
 
