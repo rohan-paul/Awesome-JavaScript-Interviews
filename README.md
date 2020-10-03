@@ -10,9 +10,9 @@ A collection of super-popular Interview questions, along with explanations and i
 
 2. [Most common Async/Await and Promise related Interview Topics & Questions](#most-common-asyncawait-and-promise-related-interview-topics--questions)
 
-3. [Most common Node Interview Topics & Questions](most-common-node-interview-topics--questions)
+3. [Most common Node Interview Topics & Questions](#most-common-node-interview-topics--questions)
 
-4. [Most common Web-Development Architecture related Interview Topics & Questions](most-common-web-development-architecture-related-interview-topics--questions)
+4. [Most common Web-Development Architecture related Interview Topics & Questions](#most-common-web-development-architecture-related-interview-topics--questions)
 
 5. [Understanding the Theory and the fundamentals of some super-popular Algorithm questions](#understanding-the-theory-and-the-fundamentals-of-some-super-popular-algorithm-questions)
 
