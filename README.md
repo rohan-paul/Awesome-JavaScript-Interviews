@@ -272,6 +272,18 @@ A collection of super-popular Interview questions, along with explanations and i
 - [rx-js-best-practice - Dont-pass-streams-to-components-directly](Angular-Topics-Interview/rx-js/best-practices-common-pattern/Dont-pass-streams-to-components-directly.md)
 - [subscribe_pattern-with-take(1)](<Angular-Topics-Interview/rx-js/best-practices-common-pattern/subscribe_pattern-with-take(1).md>)
 - [Best Practice - when_using_async_pipe_no_need_to_unsubscribe](Angular-Topics-Interview/rx-js/best-practices-common-pattern/when_using_async_pipe_no_need_to_unsubscribe.md)
+- [Is there a need to unsubscribe from the Observable the Angular HttpClient's methods return?](Angular-Topics-Interview/rx-js/angular-httpclient-unsubscribe.md)
+- [combineLatest-basics](Angular-Topics-Interview/rx-js/combineLatest-basics.md)
+- [debounceTime-usecase-input-validation](Angular-Topics-Interview/rx-js/debounceTime-usecase-input-validation.md)
+- [pipe-basics-how-it-works-with-example](Angular-Topics-Interview/rx-js/pipe-basics-how-it-works-with-simple-good-example.md)
+- [More on pipe-function-1](Angular-Topics-Interview/rx-js/pipe-function-1.md)
+- [More on pipe-function-2](Angular-Topics-Interview/rx-js/pipe-function-2.md)
+- [More on pipe-function-3](Angular-Topics-Interview/rx-js/pipe-function-3.md)
+- [retryWhen - I want to retry an api call 10 times (waiting one second since it fails until next execution)](Angular-Topics-Interview/rx-js/retryWhen-1.md)
+- [More on retryWhen-basics](Angular-Topics-Interview/rx-js/retryWhen-basics-2.md)
+- [switchMap-get-route-params](Angular-Topics-Interview/rx-js/switchMap-get-route-params.md)
+- [switchMap-good-example-for-user-input](Angular-Topics-Interview/rx-js/switchMap-good-example-for-user-input.md)
+- [take(1)](<Angular-Topics-Interview/rx-js/take(1).md>)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
