@@ -255,6 +255,12 @@ A collection of super-popular Interview questions, along with explanations and i
 - [What is mapDispatchToProps](Redux/mapDispatchToProps.md)
 - [mapStateToProps-basic-understanding-1](Redux/mapStateToProps-basic-understanding-1.md)
 - [mapStateToProps-basic-understanding-2](Redux/mapStateToProps-basic-understanding-2.md)
+- [mapStateToProps-how-exactly-it-gets-the-state-from-reducers](Redux/mapStateToProps-how-exactly-it-gets-the-state-from-reducers.md)
+- [What is Provider](Redux/Provider.md)
+- [What is Reducers](Redux/Reducers.md)
+- [What is Redux Thunk](Redux/redux-thunk-basics.md)
+- [what-is-thunk-in-programming](Redux/redux-thunk-what-is-thunk-in-programming.md)
+- [What is Store](Redux/Store.md)
 
 ## Most common Fundamental Angular Interview Topics & Questions
 
