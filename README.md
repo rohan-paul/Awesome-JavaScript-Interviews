@@ -243,6 +243,9 @@ A collection of super-popular Interview questions, along with explanations and i
 - [converting-a-subscribe-to-asyncPipe-1](Angular-Topics-Interview/AsyncPipe/converting-a-subscribe-to-asyncPipe-1.md)
 - [converting-a-subscribe-to-asyncPipe-Simplest-use-case](Angular-Topics-Interview/AsyncPipe/converting-a-subscribe-to-asyncPipe-Simplest-use-case.md)
 - [Converting-a-subscribe-to-asyncPipe-3](Converting-a-subscribe-to-asyncPipe-3)
+- [Component-Communications-via-Input](Angular-Topics-Interview/Component-Data-Communications/Component-Communications-via-Input.md)
+- [Component-Communications-via-Output-EventEmitter](Angular-Topics-Interview/Component-Data-Communications/Component-Communications-via-Output-EventEmitter.md)
+- []
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
