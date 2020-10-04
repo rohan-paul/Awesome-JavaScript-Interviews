@@ -293,6 +293,12 @@ A collection of super-popular Interview questions, along with explanations and i
 - [ViewEncapsulation-Basics](Angular-Topics-Interview/ViewEncapsulation/ViewEncapsulation-Basics.md)
 - [ViewEncapsulation-None](Angular-Topics-Interview/ViewEncapsulation/ViewEncapsulation-None.md)
 - [component-selectors-different-way](Angular-Topics-Interview/component-selectors-different-way.md)
+- [ControlValueAccessor_basics](Angular-Topics-Interview/ControlValueAccessor_basics.md)
+- [directive-basics](Angular-Topics-Interview/directive-basics.md)
+- [host-selector](Angular-Topics-Interview/host-selector.md)
+- [ng-content](Angular-Topics-Interview/ng-content.md)
+- [ngModel-basics-1](Angular-Topics-Interview/ngModel-basics-1.md)
+- [ngModel-basics-2](Angular-Topics-Interview/ngModel-basics-2.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
