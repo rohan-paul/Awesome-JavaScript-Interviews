@@ -245,7 +245,10 @@ A collection of super-popular Interview questions, along with explanations and i
 
 (along with explanations - Links are across this whole Repository)
 
-- [Component-Life-Cycle-Fundamentals](React/Component-Life-Cycle/README.md)
+- [Life-Cycle-Fundamentals](React/Component-Life-Cycle/README.md)
+- [Life Cycle Methods - getDerivedStateFromProps](React/Component-Life-Cycle/getDerivedStateFromProps.md)
+- [Life Cycle Methods - shouldComponentUpdate-what-does-it-do](React/Component-Life-Cycle/shouldComponentUpdate-what-does-it-do.md)
+- [Life Cycle Methods - constructor-vs-componentwillmount](React/Component-Life-Cycle/constructor-vs-componentwillmount.md)
 
 ## Most common Redux Interview Topics & Questions
 
@@ -273,6 +276,9 @@ A collection of super-popular Interview questions, along with explanations and i
 - [What is Redux Thunk](Redux/redux-thunk-basics.md)
 - [what-is-thunk-in-programming](Redux/redux-thunk-what-is-thunk-in-programming.md)
 - [What is Store](Redux/Store.md)
+- [Why-Redux-needs-reducers-to-be-pure functions](React/immutable-state-store-in-React-Redux/Why-Redux-needs-reducers-to-be-pure-functions-VERY-GOOD-EXPLANATIONS.md)
+- [immutable-state-store-in-React-Redux-2](React/immutable-state-store-in-React-Redux/immutable-state-store-in-React-Redux-2.md)
+- [immutable-state-store-in-React-Redux-Pass-by-Reference-shallow-comapre](React/immutable-state-store-in-React-Redux/immutable-state-store-in-React-Redux-Pass-by-Reference-shallow-comapre.md)
 
 ## Most common Angular Interview Topics & Questions
 
