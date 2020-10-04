@@ -268,6 +268,10 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Observable-simple-implementation-1](Angular-Topics-Interview/Observables/Observable-simple-implementation-1.md)
 - [Observable-vs-Promises](Angular-Topics-Interview/Observables/Observable-vs-Promises.md)
 - [subscribe-method](Angular-Topics-Interview/Observables/subscribe-method.md)
+- [Reading-Route-Parameters in Angular](Angular-Topics-Interview/Routing/Reading-Route-Parameters.md)
+- [rx-js-best-practice - Dont-pass-streams-to-components-directly](Angular-Topics-Interview/rx-js/best-practices-common-pattern/Dont-pass-streams-to-components-directly.md)
+- [subscribe_pattern-with-take(1)](<Angular-Topics-Interview/rx-js/best-practices-common-pattern/subscribe_pattern-with-take(1).md>)
+- [Best Practice - when_using_async_pipe_no_need_to_unsubscribe](Angular-Topics-Interview/rx-js/best-practices-common-pattern/when_using_async_pipe_no_need_to_unsubscribe.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
