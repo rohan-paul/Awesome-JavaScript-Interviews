@@ -142,6 +142,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [undefined-vs-not_defined](Javascript/undefined-vs-not_defined.md)
 - [Why-eval-function-considered-dangerous](Javascript/Why-eval-function-considered-dangerous.md)
 - [pitfall-of-using-typeof](Javascript/Tricky-JS-Problems/pitfall-of-using-typeof.md)
+- [use-strict-describe](Javascript/use-strict-describe.md)
 
 ## Most common Async/Await and Promise related Interview Topics & Questions
 
@@ -284,6 +285,14 @@ A collection of super-popular Interview questions, along with explanations and i
 - [switchMap-get-route-params](Angular-Topics-Interview/rx-js/switchMap-get-route-params.md)
 - [switchMap-good-example-for-user-input](Angular-Topics-Interview/rx-js/switchMap-good-example-for-user-input.md)
 - [take(1)](<Angular-Topics-Interview/rx-js/take(1).md>)
+- [class-in-typescript](Angular-Topics-Interview/TypeScript/Class-Definitions/class-in-typescript.md)
+- [generic-typescript-class-definition](Angular-Topics-Interview/TypeScript/Class-Definitions/generic-typescript-class-definition.md)
+- [get-method-in-typescript](Angular-Topics-Interview/TypeScript/Class-Definitions/get-method-in-typescript.md)
+- [proxy-in-typescript](Angular-Topics-Interview/TypeScript/Class-Definitions/proxy-in-ts.md)
+- [typescript - when-a-method-returns-boolean](Angular-Topics-Interview/Useful_Pattern_Observable/when-a-method-returns-boolean.md)
+- [ViewEncapsulation-Basics](Angular-Topics-Interview/ViewEncapsulation/ViewEncapsulation-Basics.md)
+- [ViewEncapsulation-None](Angular-Topics-Interview/ViewEncapsulation/ViewEncapsulation-None.md)
+- [component-selectors-different-way](Angular-Topics-Interview/component-selectors-different-way.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
