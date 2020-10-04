@@ -14,51 +14,57 @@ A collection of super-popular Interview questions, along with explanations and i
 
 4. [Most common Web-Development Architecture related Interview Topics & Questions](#most-common-web-development-architecture-related-interview-topics--questions)
 
-5. [Understanding the Theory and the fundamentals of some super-popular Algorithm questions](#understanding-the-theory-and-the-fundamentals-of-some-super-popular-algorithm-questions)
+5. [Most common React Interview Topics & Questions](#most-common-react-interview-topics--questions)
 
-6. [Github Repositories with large collections of problems-and-solutions of them most popular Interview challenges](#github-repositories-with-large-collections-of-problems-and-solutions-of-them-most-popular-interview-challenges)
+6. [Most common Redux Interview Topics & Questions](#most-common-redux-interview-topics--questions)
 
-7. [Overall multi-factor approach for winning this huge challenge and a great journey of getting the first Developer Job](#overall-multi-factor-approach-for-winning-this-huge-challenge-and-a-great-journey-of-getting-the-first-developer-job)
+7. [Most common Angular Interview Topics & Questions](#most-common-angular-interview-topics--questions)
 
-8. [Other important resources](#other-important-resources)
+8. [Understanding the Theory and the fundamentals of some super-popular Algorithm questions](#understanding-the-theory-and-the-fundamentals-of-some-super-popular-algorithm-questions)
 
-9. [Coding Challenge Practice Platforms](#coding-challenge-practice-platforms)
+9. [Github Repositories with large collections of problems-and-solutions of them most popular Interview challenges](#github-repositories-with-large-collections-of-problems-and-solutions-of-them-most-popular-interview-challenges)
 
-10. [More curated list of general resources for JavaScript Interviews](#more-curated-list-of-general-resources-for-javascript-interviews)
+10. [Overall multi-factor approach for winning this huge challenge and a great journey of getting the first Developer Job](#overall-multi-factor-approach-for-winning-this-huge-challenge-and-a-great-journey-of-getting-the-first-developer-job)
 
-11. [Most frequently asked concepts for Front End Engineering Interview](#most-frequently-asked-concepts-for-front-end-engineering-interview)
+11. [Other important resources](#other-important-resources)
 
-12. [List of sites where you can hunt for a developer job](#list-of-sites-where-you-can-hunt-for-a-developer-job)
+12. [Coding Challenge Practice Platforms](#coding-challenge-practice-platforms)
 
-13. [Want a startup job?](#want-a-startup-job)
+13. [More curated list of general resources for JavaScript Interviews](#more-curated-list-of-general-resources-for-javascript-interviews)
 
-14. [Best places to job hunt for remote jobs](#best-places-to-job-hunt-for-remote-jobs)
+14. [Most frequently asked concepts for Front End Engineering Interview](#most-frequently-asked-concepts-for-front-end-engineering-interview)
 
-15. [Here are a few places to hunt for ios, react, vue and more](#here-are-a-few-places-to-hunt-for-ios-react-vue-and-more)
+15. [List of sites where you can hunt for a developer job](#list-of-sites-where-you-can-hunt-for-a-developer-job)
 
-16. [Want a list of just JavaScript jobs?](#want-a-list-of-just-javascript-jobs)
+16. [Want a startup job?](#want-a-startup-job)
 
-17. [Are you looking for a junior dev job?](#are-you-looking-for-a-junior-dev-job)
+17. [Best places to job hunt for remote jobs](#best-places-to-job-hunt-for-remote-jobs)
 
-18. [Women focused job boards!](#women-focused-job-boards)
+18. [Here are a few places to hunt for ios, react, vue and more](#here-are-a-few-places-to-hunt-for-ios-react-vue-and-more)
 
-19. [Want a job as a freelance dev? Here's a list](#want-a-job-as-a-freelance-dev-heres-a-list)
+19. [Want a list of just JavaScript jobs?](#want-a-list-of-just-javascript-jobs)
 
-20. [Some useful websites for programmers](#some-useful-websites-for-programmers)
+20. [Are you looking for a junior dev job?](#are-you-looking-for-a-junior-dev-job)
 
-21. [When you get stuck](#when-you-get-stuck)
+21. [Women focused job boards!](#women-focused-job-boards)
 
-22. [For small project ideas](for-small-project-ideas)
+22. [Want a job as a freelance dev? Here's a list](#want-a-job-as-a-freelance-dev-heres-a-list)
 
-23. [General Coding advice](general-coding-advice)
+23. [Some useful websites for programmers](#some-useful-websites-for-programmers)
 
-24. [Coding Style](#coding-style)
+24. [When you get stuck](#when-you-get-stuck)
 
-25. [General Good Articles](#general-good-articles)
+25. [For small project ideas](for-small-project-ideas)
 
-26. [Collection of Leetcode Problem solution](#collection-of-leetcode-problem-solution)
+26. [General Coding advice](general-coding-advice)
 
-27. [Collection of Cracking the Coding Interview Book Problem solution](#collection-of-cracking-the-coding-interview-book-problem-solution)
+27. [Coding Style](#coding-style)
+
+28. [General Good Articles](#general-good-articles)
+
+29. [Collection of Leetcode Problem solution](#collection-of-leetcode-problem-solution)
+
+30. [Collection of Cracking the Coding Interview Book Problem solution](#collection-of-cracking-the-coding-interview-book-problem-solution)
 
 ## Most common Fundamental JavaScript Interview Topics & Questions
 
@@ -66,8 +72,8 @@ A collection of super-popular Interview questions, along with explanations and i
 
 - [Explain event delegation](Javascript/event-delegation-propagation-bubbling.md)
 - [Explain how `this` works in JavaScript](Javascript/this-keyword/this-keyword-2nd-example-GREAT-Example.md)
-  - [more-on-this-keyword](Javascript/this-keyword/this-example-custom-Array-Prototype-method.md)
-  - [more-on-this-keyword](Javascript/this-keyword/this-keyword-simplest-catagories.md)
+  - [more-on `this` keyword](Javascript/this-keyword/this-example-custom-Array-Prototype-method.md)
+  - [more on `this` keyword](Javascript/this-keyword/this-keyword-simplest-catagories.md)
   - [more-on-this-keyword](Javascript/this-keyword/this-keyword-1.js)
 - [Explain how prototypal inheritance works](Javascript/OOP-Prototypal-Inheritence/README.md)
   - [how-to-get-prototype-of-an-object](Javascript/OOP-Prototypal-Inheritence/how-to-get-prototype-of-an-object.md)
@@ -235,7 +241,13 @@ A collection of super-popular Interview questions, along with explanations and i
 - [What-happens-when-you-navigate-to-google](Web-Development-In-General/What-happens-when-you-navigate-to-google.md)
 - [what-is-AJAX](Web-Development-In-General/what-is-AJAX.md)
 
-## Most common Fundamental Redux Interview Topics & Questions
+## Most common React Interview Topics & Questions
+
+(along with explanations - Links are across this whole Repository)
+
+- [Component-Life-Cycle-Fundamentals](React/Component-Life-Cycle/README.md)
+
+## Most common Redux Interview Topics & Questions
 
 (along with explanations - Links are across this whole Repository)
 
@@ -262,7 +274,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [what-is-thunk-in-programming](Redux/redux-thunk-what-is-thunk-in-programming.md)
 - [What is Store](Redux/Store.md)
 
-## Most common Fundamental Angular Interview Topics & Questions
+## Most common Angular Interview Topics & Questions
 
 (along with explanations - Links are across this whole Repository)
 
