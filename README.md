@@ -248,6 +248,13 @@ A collection of super-popular Interview questions, along with explanations and i
 - [ContentChildren-basics](Angular-Topics-Interview/Decorators/ContentChildren-basics.md)
 - [decorators-basics-in-angular](Angular-Topics-Interview/Decorators/decorators-basics-in-angular.md)
 - [decorators-basics-in-typescript](Angular-Topics-Interview/Decorators/decorators-basics-in-typescript.md)
+- [Property-decorators-basics-in-angular-1](Angular-Topics-Interview/Decorators/Property-decorators-basics-in-angular-1.md)
+- [Property-Decorators-Typescript-1](Angular-Topics-Interview/Decorators/Property-Decorators-Typescript-1.md)
+- [Property-Decorators-Typescript-2](Angular-Topics-Interview/Decorators/Property-Decorators-Typescript-2.md)
+- [QueryList-basics](Angular-Topics-Interview/Decorators/QueryList-basics.md)
+- [TemplateRef-basics-1](Angular-Topics-Interview/Decorators/TemplateRef-basics-1.md)
+- [TemplateRef-basics-2](Angular-Topics-Interview/Decorators/TemplateRef-basics-2.md)
+- [ViewChild-basics](Angular-Topics-Interview/Decorators/ViewChild-basics.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
