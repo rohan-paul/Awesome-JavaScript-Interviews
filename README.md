@@ -255,6 +255,12 @@ A collection of super-popular Interview questions, along with explanations and i
 - [TemplateRef-basics-1](Angular-Topics-Interview/Decorators/TemplateRef-basics-1.md)
 - [TemplateRef-basics-2](Angular-Topics-Interview/Decorators/TemplateRef-basics-2.md)
 - [ViewChild-basics](Angular-Topics-Interview/Decorators/ViewChild-basics.md)
+- [AfterViewInit-hook](Angular-Topics-Interview/Life-Cycle-Hooks/AfterViewInit-hook.md)
+- [ngOnChanges-Fundamentals](Angular-Topics-Interview/Life-Cycle-Hooks/ngOnChanges-Fundamentals.md)
+- [ngOnChanges-SimpleChanges_interface](Angular-Topics-Interview/Life-Cycle-Hooks/ngOnChanges-SimpleChanges_interface.md)
+- [ngOnInit-vs-Constructor](Angular-Topics-Interview/Life-Cycle-Hooks/ngOnInit-vs-Constructor.md)
+- [ngOnInit-vs-ngAfterViewInit](Angular-Topics-Interview/Life-Cycle-Hooks/ngOnInit-vs-ngAfterViewInit.md)
+- [ngOnChange-BestPractice](Angular-Topics-Interview/ng-Best_Practice/ngOnChange-BestPractice.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
