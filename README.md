@@ -246,6 +246,15 @@ A collection of super-popular Interview questions, along with explanations and i
 - [What is bindActionCreators](Redux/bindActionCreators.md)
 - [What is combine-Recucer](Redux/combine-Recucer.md)
 - [What is compose-function](Redux/compose-function.md)
+- [What is Connect function](Redux/Connect.md)
+- [What is container-component](Redux/container-component.md)
+- [What is createStore](Redux/createStore.md)
+- [Example of Currying](Redux/currying.md)
+- [What is dispatch](Redux/dispatch.md)
+- [flux-vs-redux](Redux/flux-vs-redux.md)
+- [What is mapDispatchToProps](Redux/mapDispatchToProps.md)
+- [mapStateToProps-basic-understanding-1](Redux/mapStateToProps-basic-understanding-1.md)
+- [mapStateToProps-basic-understanding-2](Redux/mapStateToProps-basic-understanding-2.md)
 
 ## Most common Fundamental Angular Interview Topics & Questions
 
