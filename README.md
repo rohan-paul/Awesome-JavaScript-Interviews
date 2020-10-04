@@ -261,6 +261,13 @@ A collection of super-popular Interview questions, along with explanations and i
 - [ngOnInit-vs-Constructor](Angular-Topics-Interview/Life-Cycle-Hooks/ngOnInit-vs-Constructor.md)
 - [ngOnInit-vs-ngAfterViewInit](Angular-Topics-Interview/Life-Cycle-Hooks/ngOnInit-vs-ngAfterViewInit.md)
 - [ngOnChange-BestPractice](Angular-Topics-Interview/ng-Best_Practice/ngOnChange-BestPractice.md)
+- [cold-vs-hot-observable](Angular-Topics-Interview/Observables/cold-vs-hot-observable.md)
+- [examples-cancellable-with-takeUntil](Angular-Topics-Interview/Observables/examples-cancellable-with-takeUntil.ts)
+- [examples-observable-is-Lazy](Angular-Topics-Interview/Observables/examples-observable-is-Lazy.ts)
+- [Observable-basics](Angular-Topics-Interview/Observables/Observable-basics.md)
+- [Observable-simple-implementation-1](Angular-Topics-Interview/Observables/Observable-simple-implementation-1.md)
+- [Observable-vs-Promises](Angular-Topics-Interview/Observables/Observable-vs-Promises.md)
+- [subscribe-method](Angular-Topics-Interview/Observables/subscribe-method.md)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
