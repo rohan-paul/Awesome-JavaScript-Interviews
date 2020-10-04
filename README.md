@@ -138,6 +138,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [truthy-falsy-1](Javascript/truthy-falsy-1.js)
 - [truthy-falsy-2](Javascript/truthy-falsy-2.md)
 - [truthy-falsy-pass-by-value-vs-reference-strict-equality-use-case](Javascript/truthy-falsy-pass-by-value-vs-reference-strict-equality-use-case.js)
+- [passing-by-value-and-by-reference](Javascript/passing-by-value-and-by-reference.md)
 - [undefined-vs-not_defined](Javascript/undefined-vs-not_defined.md)
 - [Why-eval-function-considered-dangerous](Javascript/Why-eval-function-considered-dangerous.md)
 - [pitfall-of-using-typeof](Javascript/Tricky-JS-Problems/pitfall-of-using-typeof.md)
