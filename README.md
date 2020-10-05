@@ -423,6 +423,12 @@ A collection of super-popular Interview questions, along with explanations and i
 - [More on referencing-another-schema-in-Mongoose-1](MongoDB/referencing-another-schema-in-Mongoose-2.md)
 - [sharding-in-mongodb](MongoDB/sharding-in-mongodb.md)
 
+## Most common HTML Interview Topics & Questions
+
+(along with explanations - Links are across this whole Repository)
+
+- [DOM-fundamentals](HTML/DOM-fundamentals.md)
+
 ## Most common System-Design Interview Topics & Questions
 
 (along with explanations - Links are across this whole Repository)
