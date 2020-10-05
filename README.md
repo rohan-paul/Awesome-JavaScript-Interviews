@@ -418,6 +418,10 @@ A collection of super-popular Interview questions, along with explanations and i
 - [indexing-in-mongo](MongoDB/indexing-in-mongo.md)
 - [mongodb-quick-comands-cheat-sheet](MongoDB/mongodb-quick-comands-cheat-sheet.md)
 - [mongoose-exec-method](MongoDB/mongoose-exec-method.md)
+- [referencing-other-model-populate-method-mongoose](MongoDB/populate-method-mongoose-referencing-other-model.md)
+- [referencing-another-schema-in-Mongoose-1](MongoDB/referencing-another-schema-in-Mongoose-1.md)
+- [More on referencing-another-schema-in-Mongoose-1](MongoDB/referencing-another-schema-in-Mongoose-2.md)
+- [sharding-in-mongodb](MongoDB/sharding-in-mongodb.md)
 
 ## Most common System-Design Interview Topics & Questions
 
