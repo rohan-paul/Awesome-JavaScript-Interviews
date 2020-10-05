@@ -16,5 +16,5 @@ Now you are comparing "" == 1 and still left and right is not same type. Hence l
 
 Finally, they are of same type, you are comparing 0 === 1 which will be false.
 
-ref: [angus croll: truth and eqality in JS](https://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/),
+ref: [truth and eqality in JS](https://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/),
 ref: [truthy and falsy](http://www.sitepoint.com/javascript-truthy-falsy/)
