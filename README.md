@@ -283,6 +283,9 @@ A collection of super-popular Interview questions, along with explanations and i
 - [More Destructuring explanations and examples](React/Destructuring_General.md)
 - [destructuring_in_react-1](React/destructuring_in_react-1.md)
 - [More destructuring_in_react](React/destructuring_in_react-2.md)
+- [What is e.target.value](React/e.target.value.md)
+- [Explain-whats-wrong-with-this-React-code](React/Explain-whats-wrong-with-this-React-code.md)
+- [functional-component-declaration-syntax-1](React/functional-component-declaration-syntax-1.md)
 
 ## Most common Redux Interview Topics & Questions
 
