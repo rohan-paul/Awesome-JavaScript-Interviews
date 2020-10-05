@@ -236,7 +236,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [http-vs-https](Web-Development-In-General/http-vs-https.md)
 - [minimmize-page-load-time](Web-Development-In-General/minimmize-page-load-time.md)
 - [Postman-checking-protected-routes-from-backend](Web-Development-In-General/Postman-checking-protected-routes-from-backend.md)
-- [websocket-basics](Web-Development-In-General/websocket-basics.md)
+- [websocket-basics](Web-Development-In-General/websocket-basics.md
 - [What-happens-when-you-navigate-to-an-URL](Web-Development-In-General/What-happens-when-you-navigate-to-an-URL.md)
 - [What-happens-when-you-navigate-to-google](Web-Development-In-General/What-happens-when-you-navigate-to-google.md)
 - [what-is-AJAX](Web-Development-In-General/what-is-AJAX.md)
@@ -245,6 +245,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 (along with explanations - Links are across this whole Repository)
 
+- [Element-vs-Component-in-React](React/Element-vs-Component-in-React.md)
 - [Life-Cycle-Fundamentals](React/Component-Life-Cycle/README.md)
 - [Life Cycle Methods - getDerivedStateFromProps](React/Component-Life-Cycle/getDerivedStateFromProps.md)
 - [Life Cycle Methods - shouldComponentUpdate-what-does-it-do](React/Component-Life-Cycle/shouldComponentUpdate-what-does-it-do.md)
@@ -285,7 +286,13 @@ A collection of super-popular Interview questions, along with explanations and i
 - [More destructuring_in_react](React/destructuring_in_react-2.md)
 - [What is e.target.value](React/e.target.value.md)
 - [Explain-whats-wrong-with-this-React-code](React/Explain-whats-wrong-with-this-React-code.md)
-- [functional-component-declaration-syntax-1](React/functional-component-declaration-syntax-1.md)
+- [functional-component-declaration-syntax](React/functional-component-declaration-syntax.md)
+- [More examples on functional-component-declaration-syntax](React/functional-component-declaration-syntax-1.md)
+- [HOC - Higher Order Component](React/HOC.md)
+- [how-react-decide-to-re-render-a-component](React/how-react-decide-to-re-render-a-component.md)
+- [Unique keys-for-li-elements-why-its-needed](React/keys-for-li-elements-why-its-needed.md)
+- [onChange-updating-state-from-child](React/onChange-updating-state-from-child.md)
+- [pass-prop-to-component-rendered-by-React-Router](React/pass-prop-to-component-rendered-by-React-Router.md)
 
 ## Most common Redux Interview Topics & Questions
 
