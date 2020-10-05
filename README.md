@@ -253,6 +253,8 @@ A collection of super-popular Interview questions, along with explanations and i
   - [hooks-updateState-with-callback](React/Hooks/updateState-with-callback.md)
   - [lifeCycle-methods-for-various-hooks](React/Hooks/lifeCycle-methods-for-various-hooks.md)
   - [Shallow-comparison-React-useEffect-compare-array-in-second-argument](React/Hooks/Shallow-comparison-React-useEffect-compare-array-in-second-argument.md)
+  - [useEffect-api-call-with-async-inside-useEffect](React/Hooks/useEffect-api-call-with-async-inside-useEffect.md)
+  - [More on useEffect-async-call-inside](React/Hooks/useEffect-async-call-inside.md)
 
 ## Most common Redux Interview Topics & Questions
 
