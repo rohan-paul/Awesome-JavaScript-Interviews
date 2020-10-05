@@ -249,6 +249,9 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Life Cycle Methods - getDerivedStateFromProps](React/Component-Life-Cycle/getDerivedStateFromProps.md)
 - [Life Cycle Methods - shouldComponentUpdate-what-does-it-do](React/Component-Life-Cycle/shouldComponentUpdate-what-does-it-do.md)
 - [Life Cycle Methods - constructor-vs-componentwillmount](React/Component-Life-Cycle/constructor-vs-componentwillmount.md)
+- [React-Hooks-convert-ClassBasedForm-to-HooksBasedForm](React/Hooks/convert-ClassBasedForm-to-HooksBasedForm.md)
+  - [lifeCycle-methods-for-various-hooks](React/Hooks/lifeCycle-methods-for-various-hooks.md)
+  - [Shallow-comparison-React-useEffect-compare-array-in-second-argument](React/Hooks/Shallow-comparison-React-useEffect-compare-array-in-second-argument.md)
 
 ## Most common Redux Interview Topics & Questions
 
