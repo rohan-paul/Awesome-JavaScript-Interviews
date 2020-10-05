@@ -271,10 +271,18 @@ A collection of super-popular Interview questions, along with explanations and i
 - [snapshot-testing](React/React-Testing-Jest/snapshot-testing.md)
 - [React Testing - where-should-enzyme-setup-file-be-written](React/React-Testing-Jest/where-should-enzyme-setup-file-be-written.md)
 - [refs-in-React](React/refs-in-react/refs-in-React.md)
-- [refs-Call-child-method-from-parent](React/refs-in-react/refs-Call-child-method-from-parent.md)
-- [execute-child-function-from-parent](React/refs-in-react/execute-child-function-from-parent.md)
-- [refs-vs-keys-when-to-use-ref](React/refs-in-react/refs-vs-keys-when-to-use-ref.md)
-- [useRef-basics](React/refs-in-react/useRef-basics.md)
+  - [refs-Call-child-method-from-parent](React/refs-in-react/refs-Call-child-method-from-parent.md)
+  - [execute-child-function-from-parent](React/refs-in-react/execute-child-function-from-parent.md)
+  - [refs-vs-keys-when-to-use-ref](React/refs-in-react/refs-vs-keys-when-to-use-ref.md)
+  - [useRef-basics](React/refs-in-react/useRef-basics.md)
+- [context-api-basics](React/context-api-basics.md)
+- [controlled-unContolled-Component](React/controlled-unContolled-Component.md)
+- [Create-Class-avoiding-binding-in-constructor](React/Create-Class-avoiding-binding-in-constructor.md)
+- [destructuring_basics-js](React/destructuring_basics-js.md)
+- [More destructuring_example](React/destructuring_example.md)
+- [More Destructuring explanations and examples](React/Destructuring_General.md)
+- [destructuring_in_react-1](React/destructuring_in_react-1.md)
+- [More destructuring_in_react](React/destructuring_in_react-2.md)
 
 ## Most common Redux Interview Topics & Questions
 
