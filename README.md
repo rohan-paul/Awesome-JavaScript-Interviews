@@ -270,6 +270,11 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Testing-react-shallow-renderer-basics](React/React-Testing-Jest/Testing-react-shallow-renderer-basics.md)
 - [snapshot-testing](React/React-Testing-Jest/snapshot-testing.md)
 - [React Testing - where-should-enzyme-setup-file-be-written](React/React-Testing-Jest/where-should-enzyme-setup-file-be-written.md)
+- [refs-in-React](React/refs-in-react/refs-in-React.md)
+- [refs-Call-child-method-from-parent](React/refs-in-react/refs-Call-child-method-from-parent.md)
+- [execute-child-function-from-parent](React/refs-in-react/execute-child-function-from-parent.md)
+- [refs-vs-keys-when-to-use-ref](React/refs-in-react/refs-vs-keys-when-to-use-ref.md)
+- [useRef-basics](React/refs-in-react/useRef-basics.md)
 
 ## Most common Redux Interview Topics & Questions
 
