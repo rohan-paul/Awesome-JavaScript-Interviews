@@ -163,6 +163,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Why-eval-function-considered-dangerous](Javascript/Why-eval-function-considered-dangerous.md)
 - [pitfall-of-using-typeof](Javascript/Tricky-JS-Problems/pitfall-of-using-typeof.md)
 - [use-strict-describe](Javascript/use-strict-describe.md)
+- [How would you compare two objects in JavaScript?](Large-Collection-of-Popular-Problems-with-Solutions/Objects-Master-List-of-Problems-Super-Useful-Daily-Techniques/compare-two-objects.md)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 

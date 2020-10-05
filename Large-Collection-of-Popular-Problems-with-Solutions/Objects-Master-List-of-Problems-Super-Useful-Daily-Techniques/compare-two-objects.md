@@ -23,3 +23,10 @@ function isEqual(a, b) {
   return true
 }
 ```
+
+Limitation:
+If one of the property values is itself an object
+If one of the property values is NaN (the only value in JavaScript that is not equal to itself?)
+If one object has a property with value undefined, while another object doesn't have the property (which thus evaluates as undefined). Btw, you can solve this problem by using hasOwnProperty
+
+ref: [object equality in JS](http://designpepper.com/blog/drips/object-equality-in-javascript.html), [Underscore.js isEqual function](http://underscorejs.org/docs/underscore.html#section-90)
