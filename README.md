@@ -240,6 +240,8 @@ A collection of super-popular Interview questions, along with explanations and i
 - [significance-of-file-bin-www](Node-Express/significance-of-file-bin-www.md)
 - [Streams Concepts in Node](Node-Express/Streams.md)
 
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
 ## Most common Web-Development Architecture related Interview Topics & Questions
 
 (along with explanations - Links are across this whole Repository)
@@ -258,6 +260,8 @@ A collection of super-popular Interview questions, along with explanations and i
 - [What-happens-when-you-navigate-to-an-URL](Web-Development-In-General/What-happens-when-you-navigate-to-an-URL.md)
 - [What-happens-when-you-navigate-to-google](Web-Development-In-General/What-happens-when-you-navigate-to-google.md)
 - [what-is-AJAX](Web-Development-In-General/what-is-AJAX.md)
+
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
 
 ## Most common React Interview Topics & Questions
 
@@ -327,6 +331,8 @@ A collection of super-popular Interview questions, along with explanations and i
 - [this.props.children](React/this.props.children.md)
 - [Virtual-DOM-and-Reconciliation-Algorithm](React/Virtual-DOM-and-Reconciliation-Algorithm.md)
 
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
 ## Most common Redux Interview Topics & Questions
 
 (along with explanations - Links are across this whole Repository)
@@ -356,6 +362,8 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Why-Redux-needs-reducers-to-be-pure functions](React/immutable-state-store-in-React-Redux/Why-Redux-needs-reducers-to-be-pure-functions-VERY-GOOD-EXPLANATIONS.md)
 - [immutable-state-store-in-React-Redux-2](React/immutable-state-store-in-React-Redux/immutable-state-store-in-React-Redux-2.md)
 - [immutable-state-store-in-React-Redux-Pass-by-Reference-shallow-comapre](React/immutable-state-store-in-React-Redux/immutable-state-store-in-React-Redux-Pass-by-Reference-shallow-comapre.md)
+
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
 
 ## Most common Angular Interview Topics & Questions
 
@@ -422,6 +430,8 @@ A collection of super-popular Interview questions, along with explanations and i
 - [ngModel-basics-1](Angular-Topics-Interview/ngModel-basics-1.md)
 - [ngModel-basics-2](Angular-Topics-Interview/ngModel-basics-2.md)
 
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
 ## Most common MongoDB Interview Topics & Questions
 
 (along with explanations - Links are across this whole Repository)
@@ -437,6 +447,8 @@ A collection of super-popular Interview questions, along with explanations and i
 - [More on referencing-another-schema-in-Mongoose-1](MongoDB/referencing-another-schema-in-Mongoose-2.md)
 - [sharding-in-mongodb](MongoDB/sharding-in-mongodb.md)
 
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
 ## Most common HTML Interview Topics & Questions
 
 (along with explanations - Links are across this whole Repository)
@@ -444,11 +456,15 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Collection-of-HTML-Interview-Questions](HTML/Collection-of-HTML-Interview-Questions.md)
 - [DOM-fundamentals](HTML/DOM-fundamentals.md)
 
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
 ## Most common CSS Interview Topics & Questions
 
 (along with explanations - Links are across this whole Repository)
 
 - [Collection-of-CSS-Questions](CSS/Collection-of-CSS-Questions.md)
+
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
 
 ## Understanding the Theory and the fundamentals of some super-popular Algorithm questions
 
@@ -488,7 +504,9 @@ A collection of super-popular Interview questions, along with explanations and i
 - :link: [30-seconds-of-interview](https://github.com/30-seconds/30-seconds-of-interviews)
 - :link: [js--interview-questions](https://github.com/vvscode/js--interview-questions)
 
-### Overall multi-factor approach for winning this huge challenge and a great journey of getting the first Developer Job
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
+## Overall multi-factor approach for winning this huge challenge and a great journey of getting the first Developer Job
 
 - :link: [medium.com/javascript-scene/every-developer-needs-a-code-portfolio](https://medium.com/javascript-scene/every-developer-needs-a-code-portfolio-cc79c3d92110)
   :link: [Collection of Resources for Interview preparations and practices](https://medium.com/@jayshah_84248/how-to-do-well-in-a-coding-interview-2bcd67e93cb5)
@@ -515,6 +533,8 @@ A collection of super-popular Interview questions, along with explanations and i
 - :link: [YouTube - How To Be A Well-Paid Programmer In 1 Year?](https://www.youtube.com/watch?v=V71Cv7mjgfI)
 - :link: [the-secret-to-being-a-top-developer-is-building-things-heres-a-list-of-fun-apps-to-build](https://medium.freecodecamp.org/the-secret-to-being-a-top-developer-is-building-things-heres-a-list-of-fun-apps-to-build-aac61ac0736c)
 
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
 ### Other important resources
 
 - :link: [javascript cheatsheet](http://overapi.com/javascript)
@@ -533,7 +553,9 @@ A collection of super-popular Interview questions, along with explanations and i
 - :link: [https://30secondsofcode.org/](https://30secondsofcode.org/)
 - :link: [Front-end JavaScript Interviews in 2018–19](https://blog.webf.zone/front-end-javascript-interviews-in-2018-19-e17b0b10514)
 
-### Coding Challenge Practice Platforms
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
+## Coding Challenge Practice Platforms
 
 - :link: [interviewing.io](https://interviewing.io/)
 - :link: [Leetcode](https://leetcode.com/)
@@ -557,7 +579,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - :link: [LintCode](https://www.lintcode.com/)
 - :link: [CodeCombat](https://codecombat.com/)
 
-## -------------------------------------------------------------------------------
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
 
 ## More curated list of general resources for JavaScript Interviews
 
@@ -597,9 +619,9 @@ A collection of super-popular Interview questions, along with explanations and i
 
 - :link: [Many tricky and common javascript-questions](https://github.com/lydiahallie/javascript-questions)
 
-### Most frequently asked concepts for Front End Engineering Interview
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
 
-##### Frontend/UI Engineer Interviews:
+## Most frequently asked concepts for Front End Engineering Interview
 
 1. call, apply and bind method
 2. Polyfill for bind method
@@ -623,7 +645,9 @@ A collection of super-popular Interview questions, along with explanations and i
 20. ES6 data structures such as Map and Set. In certain cases, Map is much better suited than an Object. Probably even Server Sent Events would be a good thing to know.
 21. Observable and subscribers, subject, behaviour subject and repeatable subject
 
-### List of sites where you can hunt for a developer job
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
+## List of sites where you can hunt for a developer job
 
 - :link: AngelList - https://angel.co
 - :link: GitHub: http://jobs.github.com
@@ -650,7 +674,9 @@ A collection of super-popular Interview questions, along with explanations and i
 - :link: Jobs in Europe: http://landing.jobs
 - :link: TripleByte: https://triplebyte.com
 
-### Want a startup job?
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
+## Want a startup job?
 
 - :link: AngelList: http://angel.co/jobs
 - :link: Product Hunt: http://producthunt.com/jobs
@@ -658,7 +684,9 @@ A collection of super-popular Interview questions, along with explanations and i
 - :link: Startupers: http://startupers.com
 - :link: YCombinator: http://news.ycombinator.com/jobs
 
-#### Best places to job hunt for remote jobs:
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
+## Best places to job hunt for remote jobs:
 
 - :link: FlexJobs: http://flexjobs.com
 - :link: WeWorkRemotely: http://weworkremotely.com
@@ -680,7 +708,9 @@ A collection of super-popular Interview questions, along with explanations and i
 - :link: RemoteLeaf - https://remoteleaf.com
 - :link: Sitepoint - https://sitepoint.com/jobs/
 
-### Here are a few places to hunt for ios, react, vue and more
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
+## Here are a few places to hunt for ios, react, vue and more
 
 - :link: iOS: http://iosdevjobs.com
 - :link: React: http://reactjobboard.com
@@ -688,22 +718,30 @@ A collection of super-popular Interview questions, along with explanations and i
 - :link: Ember: http://jobs.emberjs.com
 - :link: Python Jobs - http://python.org/jobs
 
-### Want a list of just JavaScript jobs?
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
+## Want a list of just JavaScript jobs?
 
 - :link: JavaScript job XYZ: http://javascriptjob.xyz
 - :link: Javascript remotely: http://jsremotely.com
 
-### Are you looking for a junior dev job?
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
+## Are you looking for a junior dev job?
 
 - :link: JrDevJobs: http://jrdevjobs.com
 - :link: Stackoverflow Junior jobs: https://stackoverflow.com/jobs/junior-developer-jobs
 
-### Women focused job boards!
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
+## Women focused job boards!
 
 - :link: Women Who Code: http://womenwhocode.com/jobs
 - :link: Tech Ladies - https://hiretechladies.com
 
-### Want a job as a freelance dev? Here's a list
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
+## Want a job as a freelance dev? Here's a list
 
 - :link: Freelancer: http://freelancer.com/jobs
 - :link: Upwork: http://upwork.com
@@ -712,13 +750,17 @@ A collection of super-popular Interview questions, along with explanations and i
 - :link: http://Gun.io: http://gun.io
 - :link: Guru: http://guru.com/d/jobs
 
-### Some useful websites for programmers
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
+## Some useful websites for programmers
 
 <li><a href="#when-you-get-stuck">When you get stuck</a></li>
 <li><a href="#for-small-project-ideas">For small project ideas</a></li>
 <li><a href="#general-coding-advice">General Coding advice</a></li>
 <li><a href="#coding-style">Coding Style</a></li>
 <li><a href="#general-good-articles">General Good Articles</a></li>
+
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
 
 ## When you get stuck
 
@@ -728,7 +770,9 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Quora](https://www.quora.com) : A place to share knowledge and better understand the world
 - [Stack Overflow](https://stackoverflow.com) : subscribe to their weekly newsletter and any other topic which you find interesting
 
-## For small project ideas
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
+## Ideas For small project ideas
 
 - [freeCodeCamp | React project ideas](https://medium.freecodecamp.org/every-time-you-build-a-to-do-list-app-a-puppy-dies-505b54637a5d?gi=c786640fbd11) : 27 fun app ideas you can build while learning React.
 - [martyr2s-mega-project-ideas-list](http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/) : contains about 125 project ideas from beginner to intermediate level.
@@ -737,6 +781,8 @@ A collection of super-popular Interview questions, along with explanations and i
 - [vicky002/1000-Projects](https://github.com/vicky002/1000_Projects) : Mega List of practical projects that one can solve in any programming language!
 - [reddit.com/r/AppIdeas](https://www.reddit.com/r/AppIdeas/) : A place to discuss ideas for applications, for bored developers.
 - [reddit.com/r/SomebodyMakeThis](https://www.reddit.com/r/SomebodyMakeThis/) : A home for ideas by people who lack time, money, or skills.
+
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
 
 ## General Coding advice
 
@@ -755,30 +801,6 @@ A collection of super-popular Interview questions, along with explanations and i
 - [What every computer science major should know](http://matt.might.net/articles/what-cs-majors-should-know/) : The Principles of Good Programming
 - [Working as a Software Developer](https://henrikwarne.com/2012/12/12/working-as-a-software-developer/) : Henrik Warne's blog
 - [The Open Web Application Security Project (OWASP)](https://www.owasp.org) : OWASP is an open community dedicated to enabling organizations to conceive, develop, acquire, operate, and maintain applications that can be trusted.
-
-## Coding Style
-
-- [Airbnb JS Style Guide](https://github.com/airbnb/javascript) : A mostly reasonable approach to JavaScript
-- [Airbnb Ruby Style Guide](https://github.com/airbnb/ruby) : A ruby style guide by Airbnb
-- [Ruby coding style guide](https://github.com/bbatsov/ruby-style-guide) : A community-driven Ruby coding style guide
-- [Angular Style Guide](https://github.com/johnpapa/angular-styleguide/tree/master/a1) : Officially endorsed style guide by John Pappa
-- [CS 106B Coding Style Guide](http://stanford.edu/class/archive/cs/cs106b/cs106b.1158/styleguide.shtml) : must see for those who create spaghetti
-- [Debugging Faqs](http://www.umich.edu/~eecs381/generalFAQ/Debugging.html) : Check out how to debug your program
-- [Directory of CS Courses (many with online lectures)](https://github.com/prakhar1989/awesome-courses) : Another online CS courses
-- [Directory of Online CS Courses](https://github.com/ossu/computer-science) : Free online CS courses
-- [Good C programming habits. • /r/C_Programming](https://www.reddit.com/r/C_Programming/comments/1vuubw/good_c_programming_habits/) : C programming habits to adopt
-- [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
-- [How to Report Bugs Effectively](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html) : Want to report a bug but you don't how? Check out this post
-- [What are some bad coding habits you would recommend a beginner avoid getting into?](https://www.reddit.com/r/learnprogramming/comments/1i4ds4/what_are_some_bad_coding_habits_you_would/) : Bad habits to avoid when you get start
-- [PEP8 - Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) : Style Guide for Python Code
-- [Standard JS Style Guide](https://standardjs.com) : JavaScript style guide, with linter & automatic code fixer
-- [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html) : Google Python Style Guide
-- [Aurelia Style Guide](https://github.com/behzad888/Aurelia-styleguide) : An Aurelia style guide by Behzad Abbasi(Behzad888)
-- [Source Making ](https://sourcemaking.com/): Design Patterns & Refactoring
-- [Refactoring Guru](https://refactoring.guru/): Refactoring And Design Patterns
-
-## General Good Articles
-
 - [14 Things I Wish I’d Known When Starting with MongoDB](https://www.infoq.com/articles/Starting-With-MongoDB/)
 - [40 Keys Computer Science Concepts Explained In Layman’s Terms](http://carlcheo.com/compsci)
 - [A Gentle Introduction To Graph Theory](https://dev.to/vaidehijoshi/a-gentle-introduction-to-graph-theory)
@@ -805,6 +827,31 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Write a Kernel](http://arjunsreedharan.org/post/82710718100/kernel-101-lets-write-a-kernel) : Kernel 101 – Let’s write a Kernel
 - [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/) : the online version of the Learning JavaScript Design Patterns published by O'Reilly, released by the author Addy Osmani under CC BY-NC-ND 3.0
 - [Working with Webhooks](https://requestbin.com/blog/working-with-webhooks/) : a comprehensive guide on webhooks
+
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
+## Coding Style
+
+- [Airbnb JS Style Guide](https://github.com/airbnb/javascript) : A mostly reasonable approach to JavaScript
+- [Airbnb Ruby Style Guide](https://github.com/airbnb/ruby) : A ruby style guide by Airbnb
+- [Ruby coding style guide](https://github.com/bbatsov/ruby-style-guide) : A community-driven Ruby coding style guide
+- [Angular Style Guide](https://github.com/johnpapa/angular-styleguide/tree/master/a1) : Officially endorsed style guide by John Pappa
+- [CS 106B Coding Style Guide](http://stanford.edu/class/archive/cs/cs106b/cs106b.1158/styleguide.shtml) : must see for those who create spaghetti
+- [Debugging Faqs](http://www.umich.edu/~eecs381/generalFAQ/Debugging.html) : Check out how to debug your program
+- [Directory of CS Courses (many with online lectures)](https://github.com/prakhar1989/awesome-courses) : Another online CS courses
+- [Directory of Online CS Courses](https://github.com/ossu/computer-science) : Free online CS courses
+- [Good C programming habits. • /r/C_Programming](https://www.reddit.com/r/C_Programming/comments/1vuubw/good_c_programming_habits/) : C programming habits to adopt
+- [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
+- [How to Report Bugs Effectively](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html) : Want to report a bug but you don't how? Check out this post
+- [What are some bad coding habits you would recommend a beginner avoid getting into?](https://www.reddit.com/r/learnprogramming/comments/1i4ds4/what_are_some_bad_coding_habits_you_would/) : Bad habits to avoid when you get start
+- [PEP8 - Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) : Style Guide for Python Code
+- [Standard JS Style Guide](https://standardjs.com) : JavaScript style guide, with linter & automatic code fixer
+- [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html) : Google Python Style Guide
+- [Aurelia Style Guide](https://github.com/behzad888/Aurelia-styleguide) : An Aurelia style guide by Behzad Abbasi(Behzad888)
+- [Source Making ](https://sourcemaking.com/): Design Patterns & Refactoring
+- [Refactoring Guru](https://refactoring.guru/): Refactoring And Design Patterns
+
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
 
 ## Collection of Leetcode Problem solution
 
@@ -847,6 +894,8 @@ A collection of super-popular Interview questions, along with explanations and i
 - [www.cnblogs.com/Liok3187/default.html?page=1](https://www.cnblogs.com/Liok3187/default.html?page=1)
 - [github.com/yuguo/LeetCode](https://github.com/yuguo/LeetCode)
 
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
 ## Collection of Cracking the Coding Interview Book Problem solution
 
 - [github.com/sharlatta/cracking](https://github.com/sharlatta/cracking)
@@ -865,6 +914,8 @@ A collection of super-popular Interview questions, along with explanations and i
 - [github.com/miguelmota/ctci-js](https://github.com/miguelmota/ctci-js)
 - [github.com/ChirpingMermaid/CTCI](https://github.com/ChirpingMermaid/CTCI)
 
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
 ## UX-CSS-Design Sense Related
 
 - [Accessibility Interview Questions](https://scottaohara.github.io/accessibility_interview_questions/)
@@ -876,6 +927,8 @@ A collection of super-popular Interview questions, along with explanations and i
 - [design-url-shortner](system-design/design-url-shortner.md)
 - [e-Commerce-site](system-design/e-Commerce-site.md)
 - [Whatsapp-Basic-Features-of-a-chat-app](system-design/Whatsapp-Basic-Features-of-a-chat-app.md)
+
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
 
 ## System-Design related topics-Some very useful articles
 
@@ -982,6 +1035,8 @@ Reference:
 **Design a cache system**
 
 - [Introduction to Memcached](http://www.slideshare.net/oemebamo/introduction-to-memcached)
+
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
 
 ## System-Design-Company engineering blog
 
