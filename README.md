@@ -253,8 +253,23 @@ A collection of super-popular Interview questions, along with explanations and i
   - [hooks-updateState-with-callback](React/Hooks/updateState-with-callback.md)
   - [lifeCycle-methods-for-various-hooks](React/Hooks/lifeCycle-methods-for-various-hooks.md)
   - [Shallow-comparison-React-useEffect-compare-array-in-second-argument](React/Hooks/Shallow-comparison-React-useEffect-compare-array-in-second-argument.md)
+  - [useEffect-basics-1](React/Hooks/useEffect-basics-1.md)
   - [useEffect-api-call-with-async-inside-useEffect](React/Hooks/useEffect-api-call-with-async-inside-useEffect.md)
   - [More on useEffect-async-call-inside](React/Hooks/useEffect-async-call-inside.md)
+  - [useEffect-compare-array-in-second-argument-replace-ComonentDidMount-with-useRef](React/Hooks/useEffect-compare-array-in-second-argument-replace-ComonentDidMount-with-useRef.md)
+  - [useEffect-compare-array-in-second-argument-shallow](React/Hooks/useEffect-compare-array-in-second-argument-shallow.md)
+  - [useEffect-replace-componentDidMount-and-Update](React/Hooks/useEffect-replace-componentDidMount-and-Update.md)
+  - [useEffect-replace-componentWillUnmount](React/Hooks/useEffect-replace-componentWillUnmount.md)
+  - [useEffect-running-callback-after-setState-IMPORTANT](React/Hooks/useEffect-running-callback-after-setState-IMPORTANT.md)
+  - [useEffect-with-Redux-actions](React/Hooks/useEffect-with-Redux-actions-GOOD.md)
+  - [useReducer-basics-1](React/Hooks/useReducer-basics-1.md)
+  - [userReducer-vs-redux-reducer](React/Hooks/userReducer-vs-redux-reducer.md)
+  - [useState-replace-componentWillReceiveProps-getDerivedStateFromProps](React/Hooks/useState-replace-componentWillReceiveProps-getDerivedStateFromProps.md)
+- [styled-component-basics](React/React-Styled-Component/styled-component-basics.md)
+- [styled-component-a-clean-example](React/React-Styled-Component/styled-component-a-clean-example.md)
+- [Testing-react-shallow-renderer-basics](React/React-Testing-Jest/Testing-react-shallow-renderer-basics.md)
+- [snapshot-testing](React/React-Testing-Jest/snapshot-testing.md)
+- [React Testing - where-should-enzyme-setup-file-be-written](React/React-Testing-Jest/where-should-enzyme-setup-file-be-written.md)
 
 ## Most common Redux Interview Topics & Questions
 
