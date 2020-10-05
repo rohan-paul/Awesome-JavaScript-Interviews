@@ -57,7 +57,7 @@ works with mouse clicks. Your task is to:
 Uncomment the relevant sections in `index.js` and `index.html` to implement a
 demo that looks like this:
 
-![Demo example screenshot](demo-example.png)
+![Demo example screenshot](assets/demo-example.png)
 
 ## Requirements
 
