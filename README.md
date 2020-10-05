@@ -246,6 +246,7 @@ A collection of super-popular Interview questions, along with explanations and i
 (along with explanations - Links are across this whole Repository)
 
 - [Element-vs-Component-in-React](React/Element-vs-Component-in-React.md)
+- [What is a Prop - props-Absolute-Basics](React/props-Absolute-Basics.md)
 - [Life-Cycle-Fundamentals](React/Component-Life-Cycle/README.md)
 - [Life Cycle Methods - getDerivedStateFromProps](React/Component-Life-Cycle/getDerivedStateFromProps.md)
 - [Life Cycle Methods - shouldComponentUpdate-what-does-it-do](React/Component-Life-Cycle/shouldComponentUpdate-what-does-it-do.md)
@@ -292,7 +293,14 @@ A collection of super-popular Interview questions, along with explanations and i
 - [how-react-decide-to-re-render-a-component](React/how-react-decide-to-re-render-a-component.md)
 - [Unique keys-for-li-elements-why-its-needed](React/keys-for-li-elements-why-its-needed.md)
 - [onChange-updating-state-from-child](React/onChange-updating-state-from-child.md)
-- [pass-prop-to-component-rendered-by-React-Router](React/pass-prop-to-component-rendered-by-React-Router.md)
+- [pass-props-from-Parent-To-Child-Component-communication](React/pass-props-from-Parent-To-Child-Component-communication.md)
+  - [pass-prop-to-component-rendered-by-React-Router](React/pass-prop-to-component-rendered-by-React-Router.md)
+  - [More on pass-props-from-Child-to-parent-Component-communication](React/pass-props-from-Child-to-parent-Component-communication.md)
+  - [More on pass-props-from-Child-to-parent-Component-communication-2](React/pass-props-from-Child-to-parent-Component-communication-2.md)
+- [preventDefault-in-React](React/preventDefault-in-React.md)
+- [pureComponent - What they are](React/pureComponent.md)
+- [pureComponent-Performance-benefit](React/pureComponent-Performance-benefit.md)
+- [react-hot-loader](React/react-hot-loader.md)
 
 ## Most common Redux Interview Topics & Questions
 
