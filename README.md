@@ -427,6 +427,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 (along with explanations - Links are across this whole Repository)
 
+- [Collection-of-HTML-Interview-Questions](HTML/Collection-of-HTML-Interview-Questions.md)
 - [DOM-fundamentals](HTML/DOM-fundamentals.md)
 
 ## Most common System-Design Interview Topics & Questions
