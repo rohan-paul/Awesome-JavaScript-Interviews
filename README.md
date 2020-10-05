@@ -165,6 +165,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [use-strict-describe](Javascript/use-strict-describe.md)
 - [How would you compare two objects in JavaScript?](Large-Collection-of-Popular-Problems-with-Solutions/Objects-Master-List-of-Problems-Super-Useful-Daily-Techniques/compare-two-objects.md)
 - [Memoize a function](Large-Collection-of-Popular-Problems-with-Solutions/Objects-Master-List-of-Problems-Super-Useful-Daily-Techniques/Memoize-a-function.md)
+- [repaint-reflow](Javascript/repaint-reflow.md)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
