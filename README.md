@@ -66,6 +66,10 @@ A collection of super-popular Interview questions, along with explanations and i
 
 30. [Collection of Cracking the Coding Interview Book Problem solution](#collection-of-cracking-the-coding-interview-book-problem-solution)
 
+31. [System-Design related topics-Some very useful articles](#system-design-related-topics-some-very-useful-articles)
+
+32. [System-Design-Company engineering blog](#system-design-company-engineering-blog)
+
 ## Most common Fundamental JavaScript Interview Topics & Questions
 
 (along with explanations - Links are across this whole Repository)
