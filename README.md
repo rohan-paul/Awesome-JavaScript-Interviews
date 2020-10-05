@@ -1,4 +1,4 @@
-<img src="character-animated-2.gif">
+<img src="office.jpg">
 
 # Awesome JavaScript Interviews
 
