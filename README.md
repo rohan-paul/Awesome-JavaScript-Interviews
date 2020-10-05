@@ -333,6 +333,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [super(props)-why-its-required](<React/super(props)-why-its-required.md>)
 - [this.props.children](React/this.props.children.md)
 - [Virtual-DOM-and-Reconciliation-Algorithm](React/Virtual-DOM-and-Reconciliation-Algorithm.md)
+- [What are the approaches to include polyfills in your create-react-app](React/include-polyfills.md)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
