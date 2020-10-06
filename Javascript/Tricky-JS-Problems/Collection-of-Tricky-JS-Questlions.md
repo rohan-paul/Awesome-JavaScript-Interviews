@@ -14,11 +14,11 @@
 
 **Answer**: 69. If one of the operands of the plus (+) operator is string it will convert other number or boolean to string and perform a concatenation. For the same reason, "2"+true will return "2true"
 
-#### Question: What is the value of 4+3+2+"1"
+#### Question: What is the value of `4+3+2+"1"`
 
 **Answer**: 91 . The addition starts from the left, 4+3 results 7 and 7+2 is 9. So far, the plus operator is performing addition as both the operands are number. After that 9 + "1" where one of the operands is string and plus operator will perform concatenation.
 
-#### Question: What is the value of "1"+2+4
+#### Question: What is the value of `"1"+2+4`
 
 **Answer**: "124". For this one "1" + 2 will produce "12" and "12"+4 will generates "124".
 
@@ -30,10 +30,22 @@
 
 **Answer**: NaN. The plus (+) operator in front of a string is an unary operator that will try to convert the string to number. Here, JavaScript will fail to convert the "dude" to a number and will produce NaN.
 
-#### Question: If you have var y = 1, x = y = typeof x; What is the value of x?
+#### Question: If you have var `y = 1, x = y = typeof x;` What is the value of x?
 
 **Answer**: "undefined"
 
-#### Question: for var a = (2, 3, 5); what is the value of a?
+#### Question: for `var a = (2, 3, 5)`; what is the value of a?
 
 **Answer**: 5. The comma operator evaluates each of its operands (from left to right) and returns the value of the last operand. ref: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator)
+
+#### Question: for var a = (1, 5 - 1) \* 2 what is the value of a?
+
+**Answer**: 8
+
+#### Question: What is the value of !'bang'
+
+**Answer**: false. ! is NOT. If you put ! in front of truthy values, it will return false. Using !! (double bang) is a tricky way to check anything truthy or falsy by avoiding implicit type conversion of == comparison.
+
+#### Question: What is the value of `parseFloat('12.3.4')`
+
+**Answer**: 12.3
