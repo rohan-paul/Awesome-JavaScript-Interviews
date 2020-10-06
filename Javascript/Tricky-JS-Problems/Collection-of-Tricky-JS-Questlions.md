@@ -184,7 +184,7 @@ The site has detailed explanations as well as information on how to fix the prob
 
 **Answer:**"number"
 
-#### Further Explanations
+#### Explanations-1
 
 ###### In addition to the question - Why is `NaN === NaN` or `NaN == NaN` returning false.
 
@@ -213,16 +213,42 @@ Real operations with complex results:
 
 All these values may not be the same. A simple test for a NaN is to test `value == value` is false.
 
-#### More Explanations
+#### Explanations-2
 
 `NaN != NaN` because they are not necessary the SAME non-number. Thus it makes a lot of sense...
 Also why floats have both +0.00 and -0.00 that are not the same. Rounding may do that they are actually not zero.
 
 As for typeof, that depends on the language. And most languages will say that NaN is a float, double or number depending on how they classify it... I know of no languages that will say this is an unknown type or null.
 
+#### Explanation-3
+
+`NaN` just means the specific value cannot be represented within the limitations of the numeric type (although that could be said for all numbers that have to be rounded to fit, but `NaN` is a special case).
+
+A specific `NaN` is not considered equal to another `NaN` because they may be different values. However, `NaN` is still a number type, just like 2718 or 31415.
+
 ---
 
-Question: 2 in [1,2]
+To explain in layman's terms:
+
+> A comparison with a NaN always returns an unordered result even when comparing with itself. The comparison predicates are either signalling or non-signalling, the signalling versions signal an invalid exception for such comparisons. The equality and inequality predicates are non-signalling so x = x returning false can be used to test if x is a quiet NaN.
+
+All this means is (broken down into parts):
+
+> A comparison with a NaN always returns an unordered result even when comparing with itself.
+
+Basically, a `NaN` is not equal to any other number, including another `NaN`, and even including _itself_.
+
+> The comparison predicates are either signalling or non-signalling, the signalling versions signal an invalid exception for such comparisons.
+
+Attempting to do comparison (less than, greater than, and so on) operations between a `NaN` and another number can either result in an exception being thrown (signalling) or just getting false as the result (non-signalling or quiet).
+
+> The equality and inequality predicates are non-signalling so x = x returning false can be used to test if x is a quiet NaN.
+
+Tests for equality (equal to, not equal to) are never signalling so using them will not cause an exception. If you have a regular number `x`, then `x == x` will always be true. If `x` is a `NaN`, then `x == x` will always be false. It's giving you a way to detect `NaN` easily (quietly).
+
+---
+
+Question: What is `2 in [1,2]`
 
 **Answer:** false. Because "in" returns whether a particular property/index available in the Object. In this case object has index 0 and 1 but don't have 2. Hence you get false.
 
