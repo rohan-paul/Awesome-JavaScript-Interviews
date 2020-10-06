@@ -69,3 +69,26 @@ So you're converting a value to a boolean, then inverting it, then inverting it 
     val.enabled = (userId != 0);
 
 ---
+
+### More explanations
+
+`!!expr` returns a Boolean value (`true` or `false`) depending on the _truthiness_ of the expression. It makes more sense when used on non-boolean types. Consider these examples, especially the 3rd example and onward:
+
+              !!false === false
+               !!true === true
+
+                  !!0 === false
+    !!parseInt("foo") === false // NaN is falsy
+                  !!1 === true
+                 !!-1 === true  // -1 is truthy
+              !!(1/0) === true  // Infinity is truthy
+
+                 !!"" === false // empty string is falsy
+              !!"foo" === true  // non-empty string is truthy
+            !!"false" === true  // ...even if it contains a falsy value
+
+         !!window.foo === false // undefined is falsy
+               !!null === false // null is falsy
+
+                 !!{} === true  // an (empty) object is truthy
+                 !![] === true  // an (empty) array is truthy; PHP programmers beware!
