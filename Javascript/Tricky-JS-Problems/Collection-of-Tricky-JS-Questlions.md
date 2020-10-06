@@ -104,6 +104,32 @@
 
 **Answer:** "object"
 
+### Explanation
+
+> If `null` is a primitive, why does `typeof(null)` return `"object"`?
+
+Because [the spec says so](http://www.ecma-international.org/ecma-262/5.1/#sec-11.4.3).
+
+### [11.4.3][1] The `typeof` Operator
+
+The production _UnaryExpression_ : `typeof` _UnaryExpression_ is evaluated as follows:
+
+1.  Let _val_ be the result of evaluating _UnaryExpression_.
+2.  If [Type][2](_val_) is [Reference][3], then
+    &nbsp;&nbsp;&nbsp;a. If [IsUnresolvableReference][4](_val_) is **true**, return "**`undefined`**".
+    &nbsp;&nbsp;&nbsp;b. Let _val_ be [GetValue][5](_val_).
+3.  Return a String determined by [Type][6](_val_) according to Table 20.
+
+![enter image description here][7]
+
+[1]: http://www.ecma-international.org/ecma-262/5.1/#sec-11.4.3
+[2]: http://www.ecma-international.org/ecma-262/5.1/#sec-8
+[3]: http://www.ecma-international.org/ecma-262/5.1/#sec-8.7
+[4]: http://www.ecma-international.org/ecma-262/5.1/#sec-8.7
+[5]: http://www.ecma-international.org/ecma-262/5.1/#sec-8.7.1
+[6]: http://www.ecma-international.org/ecma-262/5.1/#sec-8
+[7]: http://i.stack.imgur.com/FzI1R.png
+
 ---
 
 ### Question: If `var a = 2, b =3` what would be value of a && b
