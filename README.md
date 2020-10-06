@@ -185,6 +185,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [typeof-NaN](Javascript/Tricky-JS-Problems/typeof-NaN.md)
 - [If null is a primitive, why does typeof(null) return "object"?](Javascript/Tricky-JS-Problems/typeof-null-why-its-object.md)
 - [null-vs-undefined](Javascript/Tricky-JS-Problems/null-vs-undefined.md)
+- [Closures-Inside-Loops](Javascript/Tricky-JS-Problems/Closures-Inside-Loops.md)
 
 ## Most common Async/Await and Promise related Interview Topics & Questions
 
