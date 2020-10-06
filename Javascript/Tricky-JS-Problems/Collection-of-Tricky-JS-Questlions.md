@@ -191,9 +191,46 @@ The site has detailed explanations as well as information on how to fix the prob
 
 ---
 
-Question: typeof(NaN)
+### Question: typeof(NaN)
 
 **Answer:**"number"
+
+#### Further Explanations
+
+###### In addition to the question - Why is `NaN === NaN` or `NaN == NaN` returning false.
+
+It is not a peculiarity of javascript but common computer science principle.
+
+From http://en.wikipedia.org/wiki/NaN:
+
+> There are three kinds of operation
+> which return NaN:
+>
+> Operations with a NaN as at least one operand
+>
+> Indeterminate forms
+>
+> - The divisions 0/0, ∞/∞, ∞/−∞, −∞/∞, and −∞/−∞
+> - The multiplications 0×∞ and 0×−∞
+> - The power 1^∞
+> - The additions ∞ + (−∞), (−∞) + ∞ and equivalent subtractions.
+>
+> Real operations with complex results:
+>
+> - The square root of a negative number
+> - The logarithm of a negative number
+> - The tangent of an odd multiple of 90 degrees (or π/2 radians)
+> - The inverse sine or cosine of a number which is less than −1 or
+>   greater than +1.
+
+All these values may not be the same. A simple test for a NaN is to test `value == value` is false.
+
+#### More Explanations
+
+`NaN != NaN` because they are not necessary the SAME non-number. Thus it makes a lot of sense...
+Also why floats have both +0.00 and -0.00 that are not the same. Rounding may do that they are actually not zero.
+
+As for typeof, that depends on the language. And most languages will say that NaN is a float, double or number depending on how they classify it... I know of no languages that will say this is an unknown type or null.
 
 ---
 
