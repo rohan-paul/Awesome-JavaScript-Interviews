@@ -27,3 +27,13 @@ But if you ⇒
 
     console.log(!!navigator.userAgent.match(/MSIE 8.0/));
     // returns either true or false
+
+---
+
+### Further Explanations
+
+It's just the logical NOT operator, twice - it's used to convert something to boolean, e.g.:
+
+    true === !!10
+
+    false === !!0
