@@ -124,3 +124,70 @@ There is also a similarly named, but different, function on `Array.prototype`: `
 # Array#pop
 
 `Array#pop` removes the last element from an array, and returns that element. This operation changes the length of the array.
+
+---
+
+### Solution-4
+
+The term you have used in your question title `Remove a property from a JavaScript object`, can be interpreted in some different ways. The one is to remove it for whole the memory and the list of object keys or the other is just to remove it from your object. As it has been mentioned in some other answers, the `delete` keyword is the main part. Let's say you have your object like:
+
+    myJSONObject = {"ircEvent": "PRIVMSG", "method": "newURI", "regex": "^http://.*"};
+
+If you do:
+
+    console.log(Object.keys(myJSONObject));
+
+the result would be:
+
+    ["ircEvent", "method", "regex"]
+
+You can delete that specific key from your object keys like:
+
+    delete myJSONObject["regex"];
+
+Then your objects key using `Object.keys(myJSONObject)` would be:
+
+    ["ircEvent", "method"]
+
+But the point is if you care about memory and you want to whole the object gets removed from the memory, it is recommended to set it to null before you delete the key:
+
+    myJSONObject["regex"] = null;
+    delete myJSONObject["regex"];
+
+The other important point here is to be careful about your other references to the same object. For instance, if you create a variable like:
+
+    var regex = myJSONObject["regex"];
+
+Or add it as a new pointer to another object like:
+
+    var myOtherObject = {};
+    myOtherObject["regex"] = myJSONObject["regex"];
+
+Then even if you remove it from your object `myJSONObject`, that specific object won't get deleted from the memory, since the `regex` variable and `myOtherObject["regex"]` still have their values. Then how could we remove the object from the memory for sure?
+
+The answer would be to **delete all the references you have in your code, pointed to that very object** and also **not use `var` statements to create new references to that object**. This last point regarding `var` statements, is one of the most crucial issues that we are usually faced with, because using `var` statements would prevent the created object from getting removed.
+
+Which means in this case you won't be able to remove that object because you have created the `regex` variable via a `var` statement, and if you do:
+
+    delete regex; //False
+
+The result would be `false`, which means that your delete statement haven't been executed as you expected. But if you had not created that variable before, and you only had `myOtherObject["regex"]` as your last existing reference, you could have done this just by removing it like:
+
+    myOtherObject["regex"] = null;
+    delete myOtherObject["regex"];
+
+**In other words, a JavaScript object gets killed as soon as there is no reference left in your code pointed to that object.**
+
+---
+
+**Update:**
+Thanks to @AgentME:
+
+> Setting a property to null before deleting it doesn't accomplish
+> anything (unless the object has been sealed by Object.seal and the
+> delete fails. That's not usually the case unless you specifically
+> try).
+
+To get more info on `Object.seal`: [Object.seal()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal)
+
+---
