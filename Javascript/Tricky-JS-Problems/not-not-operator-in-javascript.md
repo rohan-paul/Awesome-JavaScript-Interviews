@@ -50,3 +50,22 @@ the `!!` operator results in a double negation.
     !!foo // Result: true
 
 ---
+
+### More explanations
+
+### Sometime its quite obscure and unreadable way to do a type conversion.
+
+`!` is _NOT_. So `!true` is `false`, and `!false` is `true`. `!0` is `true`, and `!1` is `false`.
+
+So you're converting a value to a boolean, then inverting it, then inverting it again.
+
+    // Maximum Obscurity:
+    val.enabled = !!userId;
+
+    // Partial Obscurity:
+    val.enabled = (userId != 0) ? true : false;
+
+    // And finally, much easier to understand:
+    val.enabled = (userId != 0);
+
+---
