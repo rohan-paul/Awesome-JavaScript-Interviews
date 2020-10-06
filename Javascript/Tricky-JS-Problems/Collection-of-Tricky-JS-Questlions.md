@@ -174,7 +174,7 @@ The site has detailed explanations as well as information on how to fix the prob
 
 ---
 
-### Question:42 . toString()
+### Question: 42 . toString()
 
 **Answer:** "42"
 

@@ -2,6 +2,41 @@
 
 **Answer:**"number"
 
+First, NaN is not a keyword (unlike true, false, null, etc..), it is a property of the global object. The value of NaN is the same as the value of Number.NaN:
+
+```
+NaN; // NaN
+Number.NaN; // NaN
+
+```
+
+There are several ways in which NaN can happen:
+
+- Division of zero by zero
+- Dividing an infinity by an infinity
+- Multiplication of an infinity by a zero
+- Any operation in which NaN is an operand
+- Converting a non-numeric string or undefined into a number
+
+The ECMAScript standard states that Numbers should be IEEE-754 floating point data. This includes Infinity, -Infinity, and also NaN.
+By definition, NaN is the return value from operations which have an undefined numerical result. Hence why, in JavaScript, aside from being part of the global object, it is also part of the Number object: Number.NaN. It is still a numeric data type, but [it is undefined as a real number](http://en.wikipedia.org/wiki/Real_number).
+NaN also represents any number outside of the ECMAScript domain of definition.
+
+NaN is unordered
+According to the IEEE 754 floating-point standard, comparison with NaN always returns an unordered result. That is, NaN is not equal to, greater than, or less than anything, including itself:
+
+```
+NaN < 1;    // false
+NaN > 1;    // false
+NaN == NaN; // false
+// But we can still check for NaN:
+isNaN(NaN); // true
+```
+
+---
+
+## Now Various Explanations from Blogs and [Stackoverflow](https://stackoverflow.com/questions/2801601/why-does-typeof-nan-return-number)
+
 #### Explanations-1
 
 `NaN != NaN` because they are not necessary the SAME non-number. Thus it makes a lot of sense...
