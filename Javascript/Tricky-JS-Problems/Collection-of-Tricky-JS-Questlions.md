@@ -9,3 +9,7 @@
 #### Question: What is `2+true`
 
 **Answer**: 3. The plus operator between a number and a boolean or two boolean will convert boolean to number. Hence, true converts to 1 and you get result of 2+1
+
+#### Question: What is '6'+9
+
+**Answer**: 69. If one of the operands of the plus (+) operator is string it will convert other number or boolean to string and perform a concatenation. For the same reason, "2"+true will return "2true"
