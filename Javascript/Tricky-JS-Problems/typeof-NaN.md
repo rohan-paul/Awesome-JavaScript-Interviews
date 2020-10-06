@@ -2,12 +2,13 @@
 
 **Answer:**"number"
 
+[From this excellent Blog](https://javascriptrefined.io/nan-and-typeof-36cd6e2a4e43)
+
 First, NaN is not a keyword (unlike true, false, null, etc..), it is a property of the global object. The value of NaN is the same as the value of Number.NaN:
 
-```
-NaN; // NaN
-Number.NaN; // NaN
-
+```js
+NaN // NaN
+Number.NaN // NaN
 ```
 
 There are several ways in which NaN can happen:
@@ -25,12 +26,42 @@ NaN also represents any number outside of the ECMAScript domain of definition.
 NaN is unordered
 According to the IEEE 754 floating-point standard, comparison with NaN always returns an unordered result. That is, NaN is not equal to, greater than, or less than anything, including itself:
 
-```
-NaN < 1;    // false
-NaN > 1;    // false
-NaN == NaN; // false
+```js
+NaN < 1 // false
+NaN > 1 // false
+NaN == NaN // false
 // But we can still check for NaN:
-isNaN(NaN); // true
+isNaN(NaN) // true
+```
+
+This is why you cannot determine whether a given value is NaN by comparing it to NaN, and instead you must use the isNaN() function.
+It is not surprising, then, that the native implementation of the function isNaN() could be simply replaced with:
+
+```js
+// Native implementation
+function isNaN(x) {
+  // Coerce into number
+  x = Number(x)
+  // if x is NaN, NaN != NaN is true, otherwise it's false
+  return x != x
+}
+```
+
+### Booleans are not NaNs
+
+Consider the following code:
+
+```
+isNaN(true);  // false
+isNaN(false); // false
+
+```
+
+This is because booleans are considered and implemented as numerical values with a single binary digit (i.e., bit), thus they are coerced into their respective bit representations:
+
+```js
+Number(true) // 1
+Number(false) // 0
 ```
 
 ---
