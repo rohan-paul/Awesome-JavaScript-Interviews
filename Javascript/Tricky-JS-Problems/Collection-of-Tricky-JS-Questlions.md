@@ -73,3 +73,23 @@ Answer: "object"
 ### Question: If var a = 2, b =3 what would be value of a && b
 
 Answer: 3
+
+### Question: What would be consoled var foo = 'outside'; function logIt(){console.log(foo); var foo = 'inside';} logIt();
+
+Answer: undefined
+
+Question: What is -5%2
+
+Answer:-1. the result of remainder always get the symbol of first operand
+
+Question: Why .1+.2 != .3
+
+Answer:
+
+Question: 42..toString()
+
+Anwser: "42"
+
+Question: 4.2..toString
+
+Anwser: //SyntaxError: Unexpected token .

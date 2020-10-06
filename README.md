@@ -172,6 +172,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 (along with explanations - Links are across this whole Repository)
 
+- [Collection-of-Tricky-JS-Questlions](Javascript/Tricky-JS-Problems/Collection-of-Tricky-JS-Questlions.md)
 - [closure-tricky and great Example](Javascript/js-basics/Closure/closure-tricky-GREAT-EXAMPLE.JS)
 - [logical-and-operator-Tricky Question](Javascript/Tricky-JS-Problems/logical-and-operator.js)
 - [Value of Null](Javascript/Tricky-JS-Problems/value-of-null.js)
