@@ -126,3 +126,71 @@ So `+"" === 0`, and thus `+[] === 0`.
 ---
 
 ### Explanation-2
+
+```js
+    ++[[]][+[]] => 1 // [+[]] = [0], ++0 = 1
+    [+[]] => [0]
+```
+
+Then we have a string concatenation
+
+```js
+1 + [0].toString() = 10
+```
+
+---
+
+### Explanation-3
+
++[] evaluates to 0 [...] then summing (+ operation) it with anything converts array content to its string representation consisting of elements joined with comma.
+
+Anything other like taking index of array (have grater priority than + operation) is ordinal and is nothing interesting.
+
+---
+
+### Explanation-4
+
+The following is adapted from a [blog post][1] answering this question that I posted while this question was still closed. Links are to (an HTML copy of) the ECMAScript 3 spec, still the baseline for JavaScript in today's commonly used web browsers.
+
+First, a comment: this kind of expression is never going to show up in any (sane) production environment and is only of any use as an exercise in just how well the reader knows the dirty edges of JavaScript. The general principle that JavaScript operators implicitly convert between types is useful, as are some of the common conversions, but much of the detail in this case is not.
+
+The expression `++[[]][+[]]+[+[]]` may initially look rather imposing and obscure, but is actually relatively easy break down into separate expressions. Below I’ve simply added parentheses for clarity; I can assure you they change nothing, but if you want to verify that then feel free to read up about the [grouping operator][2]. So, the expression can be more clearly written as
+
+    ( ++[[]][+[]] ) + ( [+[]] )
+
+Breaking this down, we can simplify by observing that `+[]` evaluates to `0`. To satisfy yourself why this is true, check out the [unary + operator][3] and follow the slightly tortuous trail which ends up with [ToPrimitive][4] converting the empty array into an empty string, which is then finally converted to `0` by [ToNumber][5]. We can now substitute `0` for each instance of `+[]`:
+
+    ( ++[[]][0] ) + [0]
+
+Simpler already. As for `++[[]][0]`, that’s a combination of the [prefix increment operator][6] (`++`), an [array literal][7] defining an array with single element that is itself an empty array (`[[]]`) and a [property accessor][8] (`[0]`) called on the array defined by the array literal.
+
+So, we can simplify `[[]][0]` to just `[]` and we have `++[]`, right? In fact, this is not the case because evaluating `++[]` throws an error, which may initially seem confusing. However, a little thought about the nature of `++` makes this clear: it’s used to increment a variable (e.g. `++i`) or an object property (e.g. `++obj.count`). Not only does it evaluate to a value, it also stores that value somewhere. In the case of `++[]`, it has nowhere to put the new value (whatever it may be) because there is no reference to an object property or variable to update. In spec terms, this is covered by the internal [PutValue][9] operation, which is called by the prefix increment operator.
+
+So then, what does `++[[]][0]` do? Well, by similar logic as `+[]`, the inner array is converted to `0` and this value is incremented by `1` to give us a final value of `1`. The value of property `0` in the outer array is updated to `1` and the whole expression evaluates to `1`.
+
+This leaves us with
+
+    1 + [0]
+
+... which is a simple use of the [addition operator][10]. Both operands are first [converted to primitives][11] and if either primitive value is a string, string concatenation is performed, otherwise numeric addition is performed. `[0]` converts to `"0"`, so string concatenation is used, producing `"10"`.
+
+As a final aside, something that may not be immediately apparent is that overriding either one of the `toString()` or `valueOf()` methods of `Array.prototype` will change the result of the expression, because both are checked and used if present when converting an object into a primitive value. For example, the following
+
+    Array.prototype.toString = function() {
+      return "foo";
+    };
+    ++[[]][+[]]+[+[]]
+
+... produces `"NaNfoo"`. Why this happens is left as an exercise for the reader...
+
+[1]: http://tmik.co.uk/?p=672
+[2]: http://bclary.com/2004/11/07/#a-11.1.6
+[3]: http://bclary.com/2004/11/07/#a-11.4.6
+[4]: http://bclary.com/2004/11/07/#a-9.1
+[5]: http://bclary.com/2004/11/07/#a-9.3
+[6]: http://bclary.com/2004/11/07/#a-11.4.4
+[7]: http://bclary.com/2004/11/07/#a-11.1.4
+[8]: http://bclary.com/2004/11/07/#a-11.2.1
+[9]: http://bclary.com/2004/11/07/#a-8.7.2
+[10]: http://bclary.com/2004/11/07/#a-11.6.1
+[11]: http://bclary.com/2004/11/07/#a-9.1
