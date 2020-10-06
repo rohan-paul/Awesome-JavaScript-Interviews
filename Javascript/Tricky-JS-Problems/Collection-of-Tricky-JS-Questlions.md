@@ -321,3 +321,32 @@ Here's the sequence of events:
 - `parseInt` ignores the remainder of the string, since it can't be converted.
 
 Note that you'd get a result for any base `>= 19`, but not for bases below that. For bases `>= 24`, you'll get a larger result, as `n` becomes a valid digit at that point.
+
+### Explanation-3
+
+To add to the above answers
+
+`parseInt(1/0,19)` is equivalent to `parseInt("Infinity",19)`
+
+Within base 19 numbers `0-9` and `A-I` `(or a-i)` are a valid numbers. So, from the "Infinity" it takes `I` of base 19 and converts to base 10 which becomes 18
+Then it tries to take the next character i.e. `n` which is not present in base 19 so discards next characters (as per javascript's behavior of converting string to number)
+
+So, if you write `parseInt("Infinity",19)` OR `parseInt("I",19)` OR `parseInt("i",19)` the result will be same i.e `18`.
+
+Now, if you write `parseInt("I0",19)` the result will be `342`
+as `I X 19 (the base)^1 + 0 X 19^0` = `18 X 19^1 + 0 X 19^0` = `18 X 19 + 0 X 1` = `342`
+
+Similarly, `parseInt("I11",19)` will result in `6518`
+
+i.e.
+
+```
+      18 X 19^2  +   1 X 19^1   +  1 X 19^0
+    = 18 X 19^2  +   1 X 19^1   +  1 X 19^0
+    = 18 X 361   +   1 X 19     +  1 X 1
+    = 6498  +  19  +  1
+    = 6518
+
+```
+
+---
