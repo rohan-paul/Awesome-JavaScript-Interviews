@@ -191,3 +191,18 @@ Thanks to @AgentME:
 To get more info on `Object.seal`: [Object.seal()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal)
 
 ---
+
+### Solution-5
+
+Objects in JavaScript can be thought of as maps between keys and values. The `delete` operator is used to remove these keys, more commonly known as object properties, one at a time.
+
+    var obj = {
+      myProperty: 1
+    }
+    console.log(obj.hasOwnProperty('myProperty')) // true
+    delete obj.myProperty
+    console.log(obj.hasOwnProperty('myProperty')) // false
+
+The `delete` operator does not directly free memory, and it differs from simply assigning the value of `null` or `undefined` to a property, in that the property _itself_ is removed from the object. Note that if the _value_ of a deleted property was a reference type (an object), and another part of your program still holds a reference to that object, then that object will, of course, not be garbage collected until all references to it have disappeared.
+
+`delete` will only work on properties whose descriptor marks them as configurable.
