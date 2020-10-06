@@ -249,3 +249,20 @@ Question: What is `2 in [1,2]`
 **Answer:** false. Because "in" returns whether a particular property/index available in the Object. In this case object has index 0 and 1 but don't have 2. Hence you get false.
 
 ---
+
+### Question - Why does ++[[]][+[]]+[+[]] return the string “10”?
+
+**Answer** -
+
+```js
+    ++[[]][+[]] => 1 // [+[]] = [0], ++0 = 1
+    [+[]] => [0]
+```
+
+Then we have a string concatenation
+
+```js
+1 + [0].toString() = 10
+```
+
+**For Detailed Ans - see **
