@@ -521,6 +521,8 @@ A collection of super-popular Interview questions, along with explanations and i
 - :link: [Front-end-Developer-Interview-Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
 - :link: [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook) - Almost complete answers to "Front-end Job Interview Questions" which you can use to interview potential candidates, test yourself or completely ignore
 
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
 ## Github Repositories with large collections of problems-and-solutions of them most popular Interview challenges
 
 - :link: [Algorithms-Leetcode-Javascript](https://github.com/ignacio-chiazzo/Algorithms-Leetcode-Javascript)
@@ -1142,3 +1144,5 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Nextdoor Engineering Blog](https://engblog.nextdoor.com/)
 - [Booking.com Development Blog](https://blog.booking.com/)
 - [Scalyr Engineering Blog ](https://blog.scalyr.com/)
+
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
