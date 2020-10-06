@@ -8,7 +8,7 @@ console.log(++[[]][+[]] + [+[]])
 
 ---
 
-#### Explanation-1
+### [Explanation-1](https://stackoverflow.com/a/7202287/1902852)
 
 If we split it up, the mess is equal to:
 
@@ -124,3 +124,5 @@ The MV of StringNumericLiteral ::: [empty] is 0.
 So `+"" === 0`, and thus `+[] === 0`.
 
 ---
+
+### Explanation-2

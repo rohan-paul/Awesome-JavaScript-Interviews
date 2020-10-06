@@ -265,4 +265,4 @@ Then we have a string concatenation
 1 + [0].toString() = 10
 ```
 
-**For Detailed Ans - see **
+**[For Detailed Ans - see](why-does-return-the-string-10.md) **
