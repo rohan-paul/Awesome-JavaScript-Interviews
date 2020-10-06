@@ -13,7 +13,21 @@ In particular only certain sums of powers of two are exactly representable. 0.5 
 ### Problem statement: How is it that 0.1 + 0.2 = 0.30000000000000004?
 
 if you have done programming in languages like Java or C, you must be aware of different data types used to store values. The two data types we would be considering in the discussion ahead are integer and float.
+
 Integer data types store whole numbers, while float data types store fractional numbers.
 Before we proceed, let’s understand one small concept: How are numbers represented for computational purposes? Very small and very large numbers are usually stored in scientific notation. They are represented as:
 
 ![](assets/2020-10-06-22-02-56.png)
+
+Also, a number is normalized when it is written in scientific notation with one nonzero decimal digit before the decimal point. For example, a number 0.0005606 in scientific notation and normalized will be represented as:
+
+![](assets/2020-10-06-22-03-37.png)
+
+Significant is the number of significant digits which do not include zeroes, and base represents the base system used — which is decimal(10) here. Exponent represents the number of places the radix point needs to be moved left or right to be represented correctly.
+
+Now, there are two ways to display numbers in floating point arithmetic: single precision and double precision. Single precision uses 32 bits, and double precision uses 64 bits for floating-point arithmetic.
+
+Unlike many other programming languages, JavaScript does not define different types of numeric data types and always stores numbers as double precision floating point numbers, following the international IEEE 754 standard.
+This format stores numbers in 64 bits, where the number (the fraction) is stored in bits 0 to 51, the exponent in bits 52 to 62, and the sign in bit 63.
+
+![](assets/2020-10-06-22-04-14.png)
