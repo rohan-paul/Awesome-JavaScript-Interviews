@@ -177,6 +177,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Value of Null](Javascript/Tricky-JS-Problems/value-of-null.js)
 - [pitfall-of-using-typeof](Javascript/Tricky-JS-Problems/pitfall-of-using-typeof.md)
 - [What-is-the-value-of-Math.max([2,3,4,5])](<Javascript/Tricky-JS-Problems/What-is-the-value-of-Math.max([2,3,4,5]).md>)
+- [not-not-operator-in-javascript](Javascript/Tricky-JS-Problems/not-not-operator-in-javascript.md)
 
 ## Most common Async/Await and Promise related Interview Topics & Questions
 
