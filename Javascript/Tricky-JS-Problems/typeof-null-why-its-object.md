@@ -47,3 +47,20 @@ typeof null === 'object';
 [1]: http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null
 
 ---
+
+##### Explanation-3
+
+This page has a nice description of the history here surrounding why `typeof(null)` gives "object":
+[JS Data Types - Null][1]
+
+Here is the relevant portion (although I would suggest you read the whole post):
+
+Why does `typeof null` return `"object"`?
+`// What's happening here?` >`typeof null === "object"; // true`
+The answer might disappoint some, but the truth is simply because the table above says to do so.
+
+The reasoning behind this is that `null`, in contrast with `undefined`, was (and still is) often used where objects appear. In other words, `null` is often used to signify an empty reference to an object. When Brendan Eich created JavaScript, he followed the same paradigm, and it made sense (arguably) to return `"object"`. In fact, the ECMAScript specification defines `null` as _the primitive value that represents the intentional absence of any object value_ (ECMA-262, 11.4.11).
+
+To draw a parallel here, consider `typeof(NaN) === "number"`. So why does JavaScript give "number" as the type of `NaN` (not a number)? It is because `NaN` is used where numbers appear, it is a value that represents the intentional absence of a number value. Similar reasoning applies to `null`, the only difference being that `null` is implemented as a primitive and `NaN` is actually implemented as a `Number` object (so `NaN.foo = 42` would actually work).
+
+[1]: https://developer.mozilla.org/en-US/docs/Glossary/Null

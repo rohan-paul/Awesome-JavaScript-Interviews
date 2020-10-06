@@ -183,6 +183,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [not-not-operator-in-javascript](Javascript/Tricky-JS-Problems/not-not-operator-in-javascript.md)
 - [why-does-adding-two-decimals-in-javascript-produce-a-wrong-result](Javascript/Tricky-JS-Problems/why-does-adding-two-decimals-in-javascript-produce-a-wrong-result.md)
 - [typeof-NaN](Javascript/Tricky-JS-Problems/typeof-NaN.md)
+- [If null is a primitive, why does typeof(null) return "object"?](Javascript/Tricky-JS-Problems/typeof-null-why-its-object.md)
 
 ## Most common Async/Await and Promise related Interview Topics & Questions
 
