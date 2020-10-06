@@ -8,6 +8,22 @@ In particular only certain sums of powers of two are exactly representable. 0.5 
 
 ### Why is 0.1 + 0.2 Not Equal to 0.3 in Most Programming Languages?
 
+In decimal, each place to the right of the decimal point is worth one tenth as much as the place to the left of it. So it has a tenths-place, then a hundredths-place, a thousandths-place and so on. Three tenths - which is 0.3 - stores cleanly and nicely in the tenths place.
+
+In binary however, each place to the right of the decimal is worth half as much as the place to the left of it. So binary has a halves-place, a quarters-place, an eighths-place, a sixteenths-place, a thirty-seconds place, a sixty-fourths place, etc.
+
+The binary floating point format is going to have to store the value as a quarter, plus a thirty-second, and a sixty-fourth, and so on, getting closer and closer to 0.3 - but never actually exactly reaching it.
+
+So it stores the closest approximation of 0.3 that it can in the number of bits the variable has available, and that approximation is what you’re seeing when inspecting the value in your program.
+
+If you really need to be able to store decimal numbers precisely in a program - eg. financial applications - there are a few options available:
+
+If you know the maximum precision you’ll need, you could consider using fixed-point. In fixed point, you use an integer type to store the value, but treat the increment amount as something smaller than 1. For example, you could store a price as an integer in cents, or tenths/hundredths of a cent.
+
+You could also use a format called “binary coded decimal”. It uses four bits to store each decimal digit - which is somewhat inefficient, because 16 values can be stored in 4 bits, but BCD only makes use of 10 of those possible values to store 0–9.
+
+If precise representation of decimal numbers is what’s really important for your application however, it may still be worth using despite the inefficiency.
+
 ---
 
 ##### [VERY DETAILED ANS](https://medium.com/better-programming/why-is-0-1-0-2-not-equal-to-0-3-in-most-programming-languages-99432310d476)
