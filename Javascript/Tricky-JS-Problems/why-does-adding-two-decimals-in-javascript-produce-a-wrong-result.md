@@ -31,3 +31,17 @@ Unlike many other programming languages, JavaScript does not define different ty
 This format stores numbers in 64 bits, where the number (the fraction) is stored in bits 0 to 51, the exponent in bits 52 to 62, and the sign in bit 63.
 
 ![](assets/2020-10-06-22-04-14.png)
+
+Let’s represent 0.1 in 64 bit following the IEEE754 standard.
+The first step is converting (0.1)base 10 to its binary equivalent (base 2).
+To do so, we will start by multiplying 0.1 by 2 and will separate out the digit before the decimal to get the binary equivalent.
+
+![](assets/2020-10-06-22-04-39.png)
+
+On repeating this for 64 bits, we are going to arrange them in ascending order to get our mantissa, which we are going to round off to 52 bits as per the double precision standard.
+
+![](assets/2020-10-06-22-04-59.png)
+
+Representing it in scientific form and rounding off to the first 52 bits will yield:
+
+![](assets/2020-10-06-22-05-14.png)
