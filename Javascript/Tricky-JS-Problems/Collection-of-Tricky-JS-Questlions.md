@@ -140,6 +140,31 @@ logIt();
 
 In particular only certain sums of powers of two are exactly representable. 0.5 = =0.1b = 2^(-1), 0.25=0.01b=(2^-2), 0.75=0.11b = (2^-1 + 2^-2) are all OK. But 1/10 = 0.000110001100011..b can only be expressed as an infinite sum of powers of 2, which the language chops off at some point. Its this chopping that is causing these slight errors.
 
+**Further Explanation**
+
+From [The Floating-Point Guide][1]:
+
+> **Why don’t my numbers, like 0.1 + 0.2
+> add up to a nice round 0.3, and
+> instead I get a weird result like
+> 0.30000000000000004?**
+>
+> Because internally, computers use a
+> format (binary floating-point) that
+> cannot accurately represent a number
+> like 0.1, 0.2 or 0.3 at all.
+>
+> When the code is compiled or
+> interpreted, your “0.1” is already
+> rounded to the nearest number in that
+> format, which results in a small
+> rounding error even before the
+> calculation happens.
+
+The site has detailed explanations as well as information on how to fix the problem (and how to decide whether it is a problem at all in your case).
+
+[1]: http://floating-point-gui.de/
+
 ---
 
 ### Question: `42..toString()`
