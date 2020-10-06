@@ -246,6 +246,26 @@ Attempting to do comparison (less than, greater than, and so on) operations betw
 
 Tests for equality (equal to, not equal to) are never signalling so using them will not cause an exception. If you have a regular number `x`, then `x == x` will always be true. If `x` is a `NaN`, then `x == x` will always be false. It's giving you a way to detect `NaN` easily (quietly).
 
+#### Important References to Standards
+
+The ECMAScript (JavaScript) standard specifies that `Numbers` are [IEEE 754](http://en.wikipedia.org/wiki/IEEE_754) floats, which include `NaN` as a possible value.
+
+### [ECMA 262 5e Section 4.3.19](http://ecma262-5.com/ELS5_Section_4.htm#Section_4.3.19): Number value
+
+primitive value corresponding to a double-precision 64-bit binary format IEEE 754 value.
+
+### [ECMA 262 5e Section 4.3.23](http://ecma262-5.com/ELS5_Section_4.htm#Section_4.3.23): NaN
+
+Number value that is a IEEE 754 "Not-a-Number" value.
+
+### [IEEE 754](http://en.wikipedia.org/wiki/IEEE_754) on Wikipedia
+
+The IEEE Standard for Floating-Point Arithmetic is a technical standard established by the Institute of Electrical and Electronics Engineers and the most widely used standard for floating-point computation [...]
+
+The standard defines
+
+- _arithmetic formats_: sets of binary and decimal floating-point data, which consist of finite numbers (including signed zeros and subnormal numbers), infinities, and **special "not a number" values (NaNs)**
+
 ---
 
 Question: What is `2 in [1,2]`
