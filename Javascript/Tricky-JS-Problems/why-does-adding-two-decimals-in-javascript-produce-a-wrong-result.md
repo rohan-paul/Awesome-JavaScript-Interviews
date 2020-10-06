@@ -10,7 +10,9 @@ In particular only certain sums of powers of two are exactly representable. 0.5 
 
 ---
 
-### Problem statement: How is it that 0.1 + 0.2 = 0.30000000000000004?
+##### [VERY DETAILED ANS](https://medium.com/better-programming/why-is-0-1-0-2-not-equal-to-0-3-in-most-programming-languages-99432310d476)
+
+##### Problem statement: How is it that 0.1 + 0.2 = 0.30000000000000004?
 
 if you have done programming in languages like Java or C, you must be aware of different data types used to store values. The two data types we would be considering in the discussion ahead are integer and float.
 
