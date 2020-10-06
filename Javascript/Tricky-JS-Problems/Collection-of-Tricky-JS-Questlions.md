@@ -49,3 +49,15 @@
 #### Question: What is the value of `parseFloat('12.3.4')`
 
 **Answer**: 12.3
+
+#### Question: What is the value of `Math.max([2,3,4,5]);`
+
+Answer: NaN
+
+#### Question: What is value of `3 instanceof Number`
+
+Answer: false
+
+#### Question:null == undefined
+
+Answer: true
