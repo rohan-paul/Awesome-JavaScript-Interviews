@@ -350,3 +350,35 @@ i.e.
 ```
 
 ---
+
+### Question - Explain the difference between Object.freeze() vs const
+
+#### Answer
+
+`const` and `Object.freeze` are two completely different things.
+
+`const` applies to bindings ("variables"). It creates an immutable binding, i.e. you cannot assign a new value to the binding.
+
+```js
+const person = {
+  name: "Leonardo",
+}
+let animal = {
+  species: "snake",
+}
+person = animal // ERROR "person" is read-only
+```
+
+`Object.freeze` works on values, and more specifically, object values. It makes an object immutable, i.e. you cannot change its properties.
+
+```js
+let person = {
+  name: "Leonardo",
+}
+let animal = {
+  species: "snake",
+}
+Object.freeze(person)
+person.name = "Lima" //TypeError: Cannot assign to read only property 'name' of object
+console.log(person)
+```
