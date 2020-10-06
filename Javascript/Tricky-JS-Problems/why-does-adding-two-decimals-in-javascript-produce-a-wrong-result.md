@@ -7,3 +7,13 @@ In particular only certain sums of powers of two are exactly representable. 0.5 
 ---
 
 ### Why is 0.1 + 0.2 Not Equal to 0.3 in Most Programming Languages?
+
+---
+
+### Problem statement: How is it that 0.1 + 0.2 = 0.30000000000000004?
+
+if you have done programming in languages like Java or C, you must be aware of different data types used to store values. The two data types we would be considering in the discussion ahead are integer and float.
+Integer data types store whole numbers, while float data types store fractional numbers.
+Before we proceed, let’s understand one small concept: How are numbers represented for computational purposes? Very small and very large numbers are usually stored in scientific notation. They are represented as:
+
+![](assets/2020-10-06-22-02-56.png)
