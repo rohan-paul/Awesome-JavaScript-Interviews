@@ -45,3 +45,9 @@ On repeating this for 64 bits, we are going to arrange them in ascending order t
 Representing it in scientific form and rounding off to the first 52 bits will yield:
 
 ![](assets/2020-10-06-22-05-14.png)
+
+The mantissa part is ready. Now for the exponent we shall use the below calculation:
+
+![](assets/2020-10-06-22-05-43.png)
+
+![](assets/2020-10-06-22-06-26.png)
