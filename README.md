@@ -145,8 +145,6 @@ A collection of super-popular Interview questions, along with explanations and i
 - [spread-operator-vs-rest-parameters](Javascript/rest-spread-destructuring/spread-operator-vs-rest-parameters.md)
 - [rest-spread-basic-techniques](Javascript/rest-spread-destructuring/rest-spread-basic-techniques.js)
 - [More on rest and spread operator](Javascript/rest-spread-destructuring/rest-spread-2.js)
-- [logical-and-operator-Tricky Question](Javascript/Tricky-JS-Problems/logical-and-operator.js)
-- [Value of Null](Javascript/Tricky-JS-Problems/value-of-null.js)
 - [Example of Call Stack](Javascript/call-stack-good-example.md)
 - [const-var-let](Javascript/const-var-let.md)
 - [curried-function](Javascript/curried-function.md)
@@ -163,13 +161,21 @@ A collection of super-popular Interview questions, along with explanations and i
 - [passing-by-value-and-by-reference](Javascript/passing-by-value-and-by-reference.md)
 - [undefined-vs-not_defined](Javascript/undefined-vs-not_defined.md)
 - [Why-eval-function-considered-dangerous](Javascript/Why-eval-function-considered-dangerous.md)
-- [pitfall-of-using-typeof](Javascript/Tricky-JS-Problems/pitfall-of-using-typeof.md)
 - [use-strict-describe](Javascript/use-strict-describe.md)
 - [How would you compare two objects in JavaScript?](Large-Collection-of-Popular-Problems-with-Solutions/Objects-Master-List-of-Problems-Super-Useful-Daily-Techniques/compare-two-objects.md)
 - [Memoize a function](Large-Collection-of-Popular-Problems-with-Solutions/Objects-Master-List-of-Problems-Super-Useful-Daily-Techniques/Memoize-a-function.md)
 - [repaint-reflow](Javascript/repaint-reflow.md)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
+
+## Most common Tricky Javascript Interview Topics & Questions
+
+(along with explanations - Links are across this whole Repository)
+
+- [closure-tricky and great Example](Javascript/js-basics/Closure/closure-tricky-GREAT-EXAMPLE.JS)
+- [logical-and-operator-Tricky Question](Javascript/Tricky-JS-Problems/logical-and-operator.js)
+- [Value of Null](Javascript/Tricky-JS-Problems/value-of-null.js)
+- [pitfall-of-using-typeof](Javascript/Tricky-JS-Problems/pitfall-of-using-typeof.md)
 
 ## Most common Async/Await and Promise related Interview Topics & Questions
 
