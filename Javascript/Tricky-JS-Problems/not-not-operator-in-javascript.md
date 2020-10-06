@@ -37,3 +37,16 @@ It's just the logical NOT operator, twice - it's used to convert something to bo
     true === !!10
 
     false === !!0
+
+---
+
+### Even more explanations
+
+the `!!` operator results in a double negation.
+
+    var foo = "Hello World!";
+
+    !foo // Result: false
+    !!foo // Result: true
+
+---
