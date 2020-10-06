@@ -165,6 +165,10 @@ The site has detailed explanations as well as information on how to fix the prob
 
 [1]: http://floating-point-gui.de/
 
+##### For a very detailed ans to this above question, collected from various blogs - see this file
+
+[why-does-adding-two-decimals-in-javascript-produce-a-wrong-result](why-does-adding-two-decimals-in-javascript-produce-a-wrong-result.md)
+
 ---
 
 ### Question: `42..toString()`
