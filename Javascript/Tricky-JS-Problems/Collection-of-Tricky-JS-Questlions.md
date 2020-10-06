@@ -29,3 +29,11 @@
 #### Question: What is the value of +'dude'
 
 **Answer**: NaN. The plus (+) operator in front of a string is an unary operator that will try to convert the string to number. Here, JavaScript will fail to convert the "dude" to a number and will produce NaN.
+
+#### Question: If you have var y = 1, x = y = typeof x; What is the value of x?
+
+**Answer**: "undefined"
+
+#### Question: for var a = (2, 3, 5); what is the value of a?
+
+**Answer**: 5. The comma operator evaluates each of its operands (from left to right) and returns the value of the last operand. ref: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator)
