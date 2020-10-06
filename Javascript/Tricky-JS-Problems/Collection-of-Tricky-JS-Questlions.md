@@ -57,3 +57,19 @@
 #### Question:null == undefined
 
 **Answer**: true
+
+### Question:What is the value of !!function(){};
+
+Answer: true
+
+### Question: What is the value of typeof bar
+
+Answer: "undefined"
+
+### Question: What is the value of typeof null
+
+Answer: "object"
+
+### Question: If var a = 2, b =3 what would be value of a && b
+
+Answer: 3
