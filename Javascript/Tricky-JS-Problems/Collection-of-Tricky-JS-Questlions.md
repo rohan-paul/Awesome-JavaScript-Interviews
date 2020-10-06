@@ -106,7 +106,7 @@
 
 ### Explanation
 
-> If `null` is a primitive, why does `typeof(null)` return `"object"`?
+If `null` is a primitive, why does `typeof(null)` return `"object"`?
 
 Because [the spec says so](http://www.ecma-international.org/ecma-262/5.1/#sec-11.4.3).
 
