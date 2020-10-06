@@ -311,3 +311,13 @@ Therefore it behaves as if you called `parseInt("I", 19)`, which converts to dec
 
 [1]: https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Infinity
 [2]: https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/parseInt
+
+### Explanation-2
+
+Here's the sequence of events:
+
+- `1/0` evaluates to `Infinity`
+- `parseInt` reads `Infinity` and happily notes that `I` is 18 in base 19
+- `parseInt` ignores the remainder of the string, since it can't be converted.
+
+Note that you'd get a result for any base `>= 19`, but not for bases below that. For bases `>= 24`, you'll get a larger result, as `n` becomes a valid digit at that point.
