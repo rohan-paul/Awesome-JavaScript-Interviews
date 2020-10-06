@@ -90,25 +90,25 @@
 
 ### Question:What is the value of !!function(){};
 
-Answer: true
+**Answer:** true
 
 ---
 
 ### Question: What is the value of `typeof bar`
 
-Answer: "undefined"
+**Answer:** "undefined"
 
 ---
 
 ### Question: What is the value of `typeof null`
 
-Answer: "object"
+**Answer:** "object"
 
 ---
 
 ### Question: If `var a = 2, b =3` what would be value of a && b
 
-Answer: 3
+**Answer:** 3
 
 ---
 
@@ -124,19 +124,19 @@ logIt();
 
 ```
 
-Answer: undefined
+**Answer:** undefined
 
 ---
 
 ### Question: What is `-5%2`
 
-Answer:-1. the result of remainder always get the symbol of first operand
+**Answer:**-1. the result of remainder always get the symbol of first operand
 
 ---
 
 ### Question: Why `.1+.2 != .3`
 
-Answer:
+**Answer:**
 
 ---
 
@@ -144,10 +144,30 @@ Answer:
 
 ---
 
-Anwser: "42"
+**Answer:** "42"
 
 ---
 
 ### Question: `4.2..toString`
 
-Answer: //SyntaxError: Unexpected token .
+**Answer:** //SyntaxError: Unexpected token .
+
+---
+
+### Question:42 . toString()
+
+**Answer:** "42"
+
+---
+
+Question: typeof(NaN)
+
+**Answer:**"number"
+
+---
+
+Question: 2 in [1,2]
+
+**Answer:** false. Because "in" returns whether a particular property/index available in the Object. In this case object has index 0 and 1 but don't have 2. Hence you get false.
+
+---
