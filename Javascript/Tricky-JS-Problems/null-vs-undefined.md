@@ -55,5 +55,24 @@ let logHi = (str = "hi") => {
 ```
 
 The code above creates a function named logHi. This function requires one parameter and sets the default of that parameter to hi if it isn’t supplied. Here’s what that looks like:
-logHi();
+
+```js
+logHi()
 // hi
+```
+
+We can also supply a parameter to overwrite this default:
+
+```js
+logHi("bye")
+// bye
+```
+
+With default parameters, undefined will use the default while null does not.
+
+```js
+logHi(undefined)
+// hi
+logHi(null)
+// null
+```
