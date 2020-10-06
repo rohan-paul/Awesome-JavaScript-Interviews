@@ -206,3 +206,39 @@ Objects in JavaScript can be thought of as maps between keys and values. The `de
 The `delete` operator does not directly free memory, and it differs from simply assigning the value of `null` or `undefined` to a property, in that the property _itself_ is removed from the object. Note that if the _value_ of a deleted property was a reference type (an object), and another part of your program still holds a reference to that object, then that object will, of course, not be garbage collected until all references to it have disappeared.
 
 `delete` will only work on properties whose descriptor marks them as configurable.
+
+---
+
+### Solutlion-6
+
+Another alternative is to use the [Underscore.js][1] library.
+
+Note that `_.pick()` and `_.omit()` both return a copy of the object and don't directly modify the original object. Assigning the result to the original object should do the trick (not shown).
+
+Reference: [link][2] **\_.pick(object, \*keys)**
+
+Return a copy of the object, filtered to only have values for the
+whitelisted keys (or array of valid keys).
+
+    var myJSONObject =
+    {"ircEvent": "PRIVMSG", "method": "newURI", "regex": "^http://.*"};
+
+    _.pick(myJSONObject, "ircEvent", "method");
+    => {"ircEvent": "PRIVMSG", "method": "newURI"};
+
+Reference: [link][3] **\_.omit(object, \*keys)**
+
+Return a copy of the object, filtered to omit the
+blacklisted keys (or array of keys).
+
+    var myJSONObject =
+    {"ircEvent": "PRIVMSG", "method": "newURI", "regex": "^http://.*"};
+
+    _.omit(myJSONObject, "regex");
+    => {"ircEvent": "PRIVMSG", "method": "newURI"};
+
+For arrays, `_.filter()` and `_.reject()` can be used in a similar manner.
+
+[1]: https://underscorejs.org
+[2]: http://underscorejs.org/#pick
+[3]: http://underscorejs.org/#omit
