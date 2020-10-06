@@ -242,3 +242,38 @@ For arrays, `_.filter()` and `_.reject()` can be used in a similar manner.
 [1]: https://underscorejs.org
 [2]: http://underscorejs.org/#pick
 [3]: http://underscorejs.org/#omit
+
+---
+
+### Solution-7
+
+With `unset` function
+
+The reason for writing this with new `unset` function, is to keep the index of all other variables in this hash_map. Look at the following example, and see how the index of "test2" did not change after removing a value from the hash_map.
+
+    function unset(unsetKey, unsetArr, resort){
+      var tempArr = unsetArr;
+      var unsetArr = {};
+      delete tempArr[unsetKey];
+      if(resort){
+        j = -1;
+      }
+      for(i in tempArr){
+        if(typeof(tempArr[i]) !== 'undefined'){
+          if(resort){
+            j++;
+          }else{
+            j = i;
+          }
+          unsetArr[j] = tempArr[i];
+        }
+      }
+      return unsetArr;
+    }
+
+    var unsetArr = ['test','deletedString','test2'];
+
+    console.log(unset('1',unsetArr,true)); // output Object {0: "test", 1: "test2"}
+    console.log(unset('1',unsetArr,false)); // output Object {0: "test", 2: "test2"}
+
+---
