@@ -10,7 +10,7 @@
 
 **Answer**: 3. The plus operator between a number and a boolean or two boolean will convert boolean to number. Hence, true converts to 1 and you get result of 2+1
 
-#### Question: What is '6'+9
+#### Question: What is `'6'+9`
 
 **Answer**: 69. If one of the operands of the plus (+) operator is string it will convert other number or boolean to string and perform a concatenation. For the same reason, "2"+true will return "2true"
 
@@ -26,11 +26,11 @@
 
 **Answer**: -24. minus(-) in front of a string is an unary operator that will convert the string to a number and will make it negative. Hence, -'34' becomes, -34 and then plus (+) will perform simple addition as both the operands are number.
 
-#### Question: What is the value of +'dude'
+#### Question: What is the value of `+'dude'`
 
 **Answer**: NaN. The plus (+) operator in front of a string is an unary operator that will try to convert the string to number. Here, JavaScript will fail to convert the "dude" to a number and will produce NaN.
 
-#### Question: If you have var `y = 1, x = y = typeof x;` What is the value of x?
+#### Question: If you have `var y = 1, x = y = typeof x;` What is the value of x?
 
 **Answer**: "undefined"
 
@@ -38,11 +38,11 @@
 
 **Answer**: 5. The comma operator evaluates each of its operands (from left to right) and returns the value of the last operand. ref: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator)
 
-#### Question: for var a = (1, 5 - 1) \* 2 what is the value of a?
+#### Question: for `var a = (1, 5 - 1) \* 2` what is the value of a?
 
 **Answer**: 8
 
-#### Question: What is the value of !'bang'
+#### Question: What is the value of `!'bang'`
 
 **Answer**: false. ! is NOT. If you put ! in front of truthy values, it will return false. Using !! (double bang) is a tricky way to check anything truthy or falsy by avoiding implicit type conversion of == comparison.
 
