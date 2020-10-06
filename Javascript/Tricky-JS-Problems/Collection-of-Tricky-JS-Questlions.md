@@ -144,22 +144,11 @@ In particular only certain sums of powers of two are exactly representable. 0.5 
 
 From [The Floating-Point Guide][1]:
 
-> **Why don’t my numbers, like 0.1 + 0.2
-> add up to a nice round 0.3, and
-> instead I get a weird result like
-> 0.30000000000000004?**
->
-> Because internally, computers use a
-> format (binary floating-point) that
-> cannot accurately represent a number
-> like 0.1, 0.2 or 0.3 at all.
->
-> When the code is compiled or
-> interpreted, your “0.1” is already
-> rounded to the nearest number in that
-> format, which results in a small
-> rounding error even before the
-> calculation happens.
+**Why don’t my numbers, like `0.1 + 0.2` add up to a nice round `0.3`, and
+instead I get a weird result like `0.30000000000000004`?**
+
+Because internally, computers use a format (binary floating-point) that cannot accurately represent a number like 0.1, 0.2 or 0.3 at all.
+When the code is compiled or interpreted, your “0.1” is already rounded to the nearest number in that format, which results in a small rounding error even before the calculation happens.
 
 The site has detailed explanations as well as information on how to fix the problem (and how to decide whether it is a problem at all in your case).
 
@@ -203,25 +192,24 @@ It is not a peculiarity of javascript but common computer science principle.
 
 From http://en.wikipedia.org/wiki/NaN:
 
-> There are three kinds of operation
-> which return NaN:
->
-> Operations with a NaN as at least one operand
->
-> Indeterminate forms
->
-> - The divisions 0/0, ∞/∞, ∞/−∞, −∞/∞, and −∞/−∞
-> - The multiplications 0×∞ and 0×−∞
-> - The power 1^∞
-> - The additions ∞ + (−∞), (−∞) + ∞ and equivalent subtractions.
->
-> Real operations with complex results:
->
-> - The square root of a negative number
-> - The logarithm of a negative number
-> - The tangent of an odd multiple of 90 degrees (or π/2 radians)
-> - The inverse sine or cosine of a number which is less than −1 or
->   greater than +1.
+There are three kinds of operation which return NaN:
+
+Operations with a NaN as at least one operand
+
+Indeterminate forms
+
+- The divisions 0/0, ∞/∞, ∞/−∞, −∞/∞, and −∞/−∞
+- The multiplications 0×∞ and 0×−∞
+- The power 1^∞
+- The additions ∞ + (−∞), (−∞) + ∞ and equivalent subtractions.
+
+Real operations with complex results:
+
+- The square root of a negative number
+- The logarithm of a negative number
+- The tangent of an odd multiple of 90 degrees (or π/2 radians)
+- The inverse sine or cosine of a number which is less than −1 or
+  greater than +1.
 
 All these values may not be the same. A simple test for a NaN is to test `value == value` is false.
 
