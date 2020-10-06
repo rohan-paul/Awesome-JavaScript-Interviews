@@ -39,3 +39,10 @@ or you can use the [new spread operator][3]
 [1]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 [2]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
 [3]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator
+
+#### Alternative way to achieve the same above
+
+The above `Math.max([2,3,4,5]);` was producing NaN - because I was passing an array as the parameter instead of comma separated numbers. Try spreading the array like this:
+
+data = [4, 2, 6, 1, 3, 7, 5, 3];
+alert(Math.max(...data));
