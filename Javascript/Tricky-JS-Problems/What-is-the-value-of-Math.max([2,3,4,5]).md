@@ -16,3 +16,26 @@ When you call Math.max with array parameter like
 Math.max([1,2,3])
 
 ```
+
+you call this function with **one** parameter - `[1,2,3]` and javascript try convert it to number and get ("1,2,3" -> _NaN_) fail.
+So result as expected - _NaN_
+
+**NOTE:** if array with just _one_ number - all work correctly
+
+     Math.max([23]) // return 23
+
+because `[23] -> "23" -> 23` and covert to Number is done.
+
+<hr>
+
+If you want get max element from array you should use [_apply_][2] function, like
+
+    Math.max.apply(Math,[1,2,3])
+
+or you can use the [new spread operator][3]
+
+    Math.max(...[1,2,3])
+
+[1]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+[2]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
+[3]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator
