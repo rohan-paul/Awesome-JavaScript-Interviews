@@ -382,3 +382,96 @@ Object.freeze(person)
 person.name = "Lima" //TypeError: Cannot assign to read only property 'name' of object
 console.log(person)
 ```
+
+#### [More explanations](https://stackoverflow.com/a/51858981/1902852)
+
+## Summary:
+
+`const` and `Object.freeze()` serve totally different purposes.
+
+- `const` is there for declaring a variable which has to assinged right away and can't be reassigned. variables declared by `const` are block scoped and not function scoped like variables declared with `var`
+- `Object.freeze()` is a method which accepts an object and returns the same object. Now the object cannot have any of its properties removed or any new properties added.
+
+## Examples `const`:
+
+**Example 1: Can't reassign `const`**
+
+```
+    const foo = 5;
+
+    foo = 6;
+
+```
+
+The following code throws an error because we are trying to reassign the variable foo who was declared with the `const` keyword, we can't reassign it.
+
+**Example 2: Data structures which are assigned to `const` can be mutated**
+
+```
+    const object = {
+      prop1: 1,
+      prop2: 2
+    }
+
+    object.prop1 = 5;   // object is still mutable!
+    object.prop3 = 3;   // object is still mutable!
+
+    console.log(object);  // object is mutated
+
+
+```
+
+In this example we declare a variable using the `const` keyword and assign an object to it. Although we can't reassign to this variable called object, we can mutate the object itself. If we change existing properties or add new properties this will this have effect. To disable any changes to the object we need `Object.freeze()`.
+
+## Examples `Object.freeze()`:
+
+**Example 1: Can't mutate a frozen object**
+
+<!-- begin snippet: js hide: false console: true babel: false -->
+
+<!-- language: lang-js -->
+
+    object1 = {
+      prop1: 1,
+      prop2: 2
+    }
+
+    object2 = Object.freeze(object1);
+
+    console.log(object1 === object2); // both objects are refer to the same instance
+
+    object2.prop3 = 3; // no new property can be added, won't work
+
+    delete object2.prop1; // no property can be deleted, won't work
+
+    console.log(object2); // object unchanged
+
+<!-- end snippet -->
+
+In this example when we call `Object.freeze()` and give `object1` as an argument the function returns the object which is now 'frozen'. If we compare the reference of the new object to the old object using the `===` operator we can observe that they refer to the same object. Also when we try to add or remove any properties we can see that this does not have any effect (will throw error in strict mode).
+
+**Example 2: Objects with references aren't fully frozen**
+
+<!-- begin snippet: js hide: false console: true babel: false -->
+
+<!-- language: lang-js -->
+
+    const object = {
+      prop1: 1,
+      nestedObj: {
+        nestedProp1: 1,
+        nestedProp2: 2,
+      }
+    }
+
+
+    const frozen = Object.freeze(object);
+
+    frozen.prop1 = 5; // won't have any effect
+    frozen.nestedObj.nestedProp1 = 5; //will update because the nestedObject isn't frozen
+
+    console.log(frozen);
+
+<!-- end snippet -->
+
+This example shows that the properties of nested objects (and other by reference data structures) are **still mutable**. So `Object.freeze()` doesn't fully 'freeze' the object when it has properties which are references (to e.g. Arrays, Objects).
