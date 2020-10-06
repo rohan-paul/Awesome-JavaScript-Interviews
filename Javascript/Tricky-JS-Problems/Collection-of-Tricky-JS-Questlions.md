@@ -25,3 +25,7 @@
 #### Question: What is the value of -'34'+10
 
 **Answer**: -24. minus(-) in front of a string is an unary operator that will convert the string to a number and will make it negative. Hence, -'34' becomes, -34 and then plus (+) will perform simple addition as both the operands are number.
+
+#### Question: What is the value of +'dude'
+
+**Answer**: NaN. The plus (+) operator in front of a string is an unary operator that will try to convert the string to number. Here, JavaScript will fail to convert the "dude" to a number and will produce NaN.
