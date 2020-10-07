@@ -187,6 +187,8 @@ A collection of super-popular Interview questions, along with explanations and i
 - [null-vs-undefined](Javascript/Tricky-JS-Problems/null-vs-undefined.md)
 - [Closures-Inside-Loops](Javascript/Tricky-JS-Problems/Closures-Inside-Loops.md)
 
+[[↑] Back to top](#table-of-contents-of-this-readme-file)
+
 ## Most common Async/Await and Promise related Interview Topics & Questions
 
 (along with explanations - Links are across this whole Repository)
