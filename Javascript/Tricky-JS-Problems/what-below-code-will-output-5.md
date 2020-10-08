@@ -45,7 +45,7 @@ function display() {
 
 So b becomes a global variable because there is no var keyword before it and a becomes a local variable. Therefore, outside the function, only b is available so `typeof a === 'undefined'` comes as true and `typeof b === 'undefined'` comes as false.
 
-![](2020-10-08-17-22-29.png)
+![](assets/2020-10-08-17-22-29.png)
 
 If we execute the above code in strict mode as shown below,
 
