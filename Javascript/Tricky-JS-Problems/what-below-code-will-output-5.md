@@ -42,3 +42,22 @@ function display() {
  var a = b;
 }
 ```
+
+So b becomes a global variable because there is no var keyword before it and a becomes a local variable. Therefore, outside the function, only b is available so `typeof a === 'undefined'` comes as true and `typeof b === 'undefined'` comes as false.
+
+![](2020-10-08-17-22-29.png)
+
+If we execute the above code in strict mode as shown below,
+
+```js
+"use strict"
+function display() {
+  var a = (b = 10)
+}
+display()
+console.log("b", typeof b === "undefined")
+console.log("a", typeof a === "undefined")
+```
+
+It will throw an error because b becomes a global variable and strict mode does not allow creating global variables so you will get an error when you execute this code.
+That’s it for today. I hope you learned something new.
