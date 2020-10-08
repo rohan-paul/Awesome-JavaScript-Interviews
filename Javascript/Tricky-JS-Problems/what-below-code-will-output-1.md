@@ -1,8 +1,10 @@
-![](2020-10-08-16-50-10.png)
+#### Q - What will be the output of the below code and why
+
+![](assets/2020-10-08-16-50-10.png)
 
 #### Ans - if you are not using strict mode), the output of the code snippet would be:
 
-![](2020-10-08-16-51-07.png)
+![](assets/2020-10-08-16-51-07.png)
 
 ### Explanations
 
@@ -10,15 +12,15 @@ Since both a and b are defined within the enclosing scope of the function, and s
 
 However, that is not the case. The issue here is that most developers incorrectly understand the statement var a = b = 3; to be shorthand for:
 
-![](2020-10-08-16-59-10.png)
+![](assets/2020-10-08-16-59-10.png)
 
 But in fact, var a = b = 3; is actually shorthand for:
 
-![](2020-10-08-16-59-22.png)
+![](assets/2020-10-08-16-59-22.png)
 
 As a result (if you are not using strict mode), the output of the code snippet would be:
 
-![](2020-10-08-16-59-37.png)
+![](assets/2020-10-08-16-59-37.png)
 
 But how can b be defined outside of the scope of the enclosing function? Well, since the statement var a = b = 3; is shorthand for the statements b = 3; and var a = b;, b ends up being a global variable (since it is not preceded by the var keyword) and is therefore still in scope even outside of the enclosing function.
 
