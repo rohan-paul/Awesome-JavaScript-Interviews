@@ -1,18 +1,16 @@
 // Regular iterative approach
 
 raiseToPower = (base, exponent) => {
-
-  let result = 1;
+  let result = 1
 
   for (let i = 1; i <= exponent; i++) {
-    result *= base;
+    result *= base
   }
 
-  return result;
+  return result
 }
 
-console.log(raiseToPower(5, 3));
-
+console.log(raiseToPower(5, 3))
 
 /* SOLUTION - 2 as given in - https://js-algorithms.tutorialhorizon.com/2015/10/23/implement-a-power-function/ - "If our exponent is 10,000 then our loop has to run 10,000 times. But we can optimize this logic to use only log2(10,000) ~ 14 times by using the binary form of the exponent."
 
@@ -39,7 +37,6 @@ https://en.wikipedia.org/wiki/Bitwise_operation#AND
 
 */
 
-
 /* Steps - Optimized logic:
 If exponent’s last binary digit is one then multiply the result with base
 Divide the exponent by 2 by doing one right shift. Note from above, a single ritht shift means juse diving the number by 2
@@ -47,20 +44,18 @@ Multiply base with itself
  */
 
 raiseToPower_binary = (base, exponent) => {
-
   if (exponent < 0) {
-    throw new Error('Negative exponent are not accepted')
+    throw new Error("Negative exponent are not accepted")
   }
 
-  let result = 1;
+  let result = 1
 
   while (exponent) {
-
     // Scan the binary representation of exponent on each iteration of the loop. If it finds a 1 then it multiplies the result by base (just like the iterative approach).
     // Finding a 1 means that the current value of exponent is not divisible by 2
 
     if ((exponent & 1) === 1) {
-      result *= base;
+      result *= base
     }
 
     // Divide the exponent by 2 by doing one right shift. Note from above, a single ritht shift means juse diving the number by 2
@@ -70,8 +65,7 @@ raiseToPower_binary = (base, exponent) => {
     base *= base
   }
 
-  return result;
-
+  return result
 }
 
-console.log(raiseToPower_binary(5, 3));
+console.log(raiseToPower_binary(5, 3))

@@ -1,40 +1,34 @@
 // Write a function to list Down All Prototype Properties of an Javascript Object
 
-printPrototypeProperties = obj => {
-    var result = [];
+printPrototypeProperties = (obj) => {
+  var result = []
 
-    let objProp = Object.getOwnPropertyNames(obj)
-    console.log(objProp)
+  let objProp = Object.getOwnPropertyNames(obj)
+  console.log(objProp)
 
-    // console.log(Object.keys(obj))
+  // console.log(Object.keys(obj))
 
-    for (let i of objProp) {
-
-      if (result.indexOf(i) === -1 ) {
-        result.push(i);
-      }
+  for (let i of objProp) {
+    if (result.indexOf(i) === -1) {
+      result.push(i)
     }
-    return result;
   }
-
-
-let myObj = {
-	"a": 1,
-	"b": 2,
-    "c": 3
+  return result
 }
 
-console.log(printPrototypeProperties(myObj));
+let myObj = {
+  a: 1,
+  b: 2,
+  c: 3,
+}
 
+console.log(printPrototypeProperties(myObj))
 
 /* Object.getOwnPropertyNames vs Object.keys
 
 https://stackoverflow.com/questions/22658488/object-getownpropertynames-vs-object-keys
 
 
-203
-down vote
-accepted
 There is a little difference. Object.getOwnPropertyNames(a) returns all own properties of the object a. Object.keys(a) returns all enumerable own properties. It means that if you define your object properties without making some of them enumerable: false these two methods will give you the same result.
 
 It's easy to test:
