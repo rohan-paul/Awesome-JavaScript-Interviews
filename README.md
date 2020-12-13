@@ -86,7 +86,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 ## Most common Fundamental JavaScript Interview Topics & Questions
 
-(along with explanations - Links are across this whole Repository)
+(Below Links are all within this Repository)
 
 - [Explain event delegation](Javascript/event-delegation-propagation-bubbling.md)
 - [Explain how `this` works in JavaScript](Javascript/this-keyword/this-keyword-2nd-example-GREAT-Example.md)
@@ -172,7 +172,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 ## Most common Tricky Javascript Interview Topics & Questions
 
-(along with explanations - Links are across this whole Repository)
+(Below Links are all within this Repository)
 
 - [Collection-of-Tricky-JS-Questlions](Javascript/Tricky-JS-Problems/Collection-of-Tricky-JS-Questlions.md)
 - [closure-tricky and great Example](Javascript/js-basics/Closure/closure-tricky-GREAT-EXAMPLE.JS)
@@ -191,7 +191,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 ## Most common Async/Await and Promise related Interview Topics & Questions
 
-(along with explanations - Links are across this whole Repository)
+(Below Links are all within this Repository)
 
 - [Async/Await - Understanding the fundamentals](Promise-Async-Await-Sequential-Execution/async-await-master-notes/README.md)
 - [asyn-await-how-its-called-asynchronous-when-it-makes-possible-to-execute-in-synchrounous-manner](Promise-Async-Await-Sequential-Execution/async-await-master-notes/asyn-await-how-its-called-asynchronous-when-it-makes-possible-to-execute-in-synchrounous-manner.md)
@@ -227,7 +227,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 ## Most common Node Interview Topics & Questions
 
-(along with explanations - Links are across this whole Repository)
+(Below Links are all within this Repository)
 
 - [why-nodejs-required-at-all-and-difference-vs-plain-js](Node-Express/why-nodejs-required-at-all-and-difference-vs-plain-js.md)
 - [How-nodejs-works](Node-Express/How-nodejs-works.md)
@@ -267,7 +267,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 ## Most common Web-Development Architecture related Interview Topics & Questions
 
-(along with explanations - Links are across this whole Repository)
+(Below Links are all within this Repository)
 
 - [critical-render-path](Web-Development-In-General/critical-render-path.md)
 - [How-to-Check-HTTP-Request-Response-on-Chrome](Web-Development-In-General/How-to-Check-HTTP-Request-Response-on-Chrome.md)
@@ -288,7 +288,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 ## Most common React Interview Topics & Questions
 
-(along with explanations - Links are across this whole Repository)
+(Below Links are all within this Repository)
 
 - [Element-vs-Component-in-React](React/Element-vs-Component-in-React.md)
 - [What is a Prop - props-Absolute-Basics](React/props-Absolute-Basics.md)
@@ -359,7 +359,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 ## Most common Redux Interview Topics & Questions
 
-(along with explanations - Links are across this whole Repository)
+(Below Links are all within this Repository)
 
 - [What is Redux Actions](Redux/Actions.md)
 - [actions-why-enclosed-in-curly-braces](Redux/actions-why-enclosed-in-curly-braces.md)
@@ -391,7 +391,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 ## Most common Angular Interview Topics & Questions
 
-(along with explanations - Links are across this whole Repository)
+(Below Links are all within this Repository)
 
 - [AsyncPipe-fundamentals](Angular-Topics-Interview/AsyncPipe/AsyncPipe-fundamentals.md)
 - [AsyncPipe-basic-Oberservable-use-case](Angular-Topics-Interview/AsyncPipe/AsyncPipe-basic-Oberservable-use-case.md)
@@ -458,7 +458,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 ## Most common MongoDB Interview Topics & Questions
 
-(along with explanations - Links are across this whole Repository)
+(Below Links are all within this Repository)
 
 - [aggregation-in-mongodb](MongoDB/aggregation-in-mongodb.md)
 - [delete-single-document-from-collection](MongoDB/delete-single-document-from-collection.md)
@@ -475,7 +475,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 ## Most common HTML Interview Topics & Questions
 
-(along with explanations - Links are across this whole Repository)
+(Below Links are all within this Repository)
 
 - [Collection-of-HTML-Interview-Questions](HTML/Collection-of-HTML-Interview-Questions.md)
 - [DOM-fundamentals](HTML/DOM-fundamentals.md)
@@ -484,7 +484,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 ## Most common CSS Interview Topics & Questions
 
-(along with explanations - Links are across this whole Repository)
+(Below Links are all within this Repository)
 
 - [Collection-of-CSS-Questions](CSS/Collection-of-CSS-Questions.md)
 - [BEM-Model](BEM-Model)
@@ -504,7 +504,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 ## Most common Git and Github related Interview Topics & Questions
 
-(along with explanations - Links are across this whole Repository)
+(Below Links are all within this Repository)
 
 - [What is git stash](Git-and-Github/git-stash.md)
 - [What is git rebase](Git-and-Github/git-rebase/git-rebase.md)
@@ -974,7 +974,7 @@ A collection of super-popular Interview questions, along with explanations and i
 
 ## Most common System-Design Interview Topics & Questions
 
-(along with explanations - Links are across this whole Repository)
+(Below Links are all within this Repository)
 
 - [design-url-shortner](system-design/design-url-shortner.md)
 - [e-Commerce-site](system-design/e-Commerce-site.md)

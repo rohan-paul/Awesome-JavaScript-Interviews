@@ -29,3 +29,6 @@ The counter currently is at 14
 
 
 
+https://gdcoder.com/decision-tree-regressor-explained-in-depth/
+
+df_train = pd.read_csv('../input/house-prices-advanced-regression-techniques/train.csv')
