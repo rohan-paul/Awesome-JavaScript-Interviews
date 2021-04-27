@@ -555,6 +555,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - :link: [javascript-Exercises](https://github.com/kolodny/exercises)
 - :link: [30-seconds-of-interview](https://github.com/30-seconds/30-seconds-of-interviews)
 - :link: [js--interview-questions](https://github.com/vvscode/js--interview-questions)
+- :link: [JavaScript-Code-Challenges](https://github.com/sadanandpai/javascript-code-challenges)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
