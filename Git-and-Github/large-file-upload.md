@@ -1,3 +1,9 @@
+### IMPORTANT - Monthly bandwidth quota IS ONLY 1 GB.
+
+Every account using Git Large File Storage receives 1 GB of free storage and 1 GB a month of free bandwidth.
+
+---
+
 ### Install and upload
 
 **Note, max size in normal github is only 100mb per file**
