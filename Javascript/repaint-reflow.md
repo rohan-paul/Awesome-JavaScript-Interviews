@@ -20,3 +20,5 @@ So what about repaint? Repaint happens when you change the element's apperance w
 `visibility:hidden`.
 
 From a performance standpoint, repaint is less expensive than reflow.
+
+For better understanding go to this link (https://gist.github.com/faressoft/36cdd64faae21ed22948b458e6bf04d5) 
