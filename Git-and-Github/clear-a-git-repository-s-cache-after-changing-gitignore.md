@@ -10,3 +10,8 @@ git add .
 git commit -am 'git cache cleared'
 git push
 ```
+
+
+```
+git rm -r --cached . && git add . && git commit -am 'git cache cleared' && git push
+```

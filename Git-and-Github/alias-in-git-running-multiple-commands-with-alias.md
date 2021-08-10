@@ -42,7 +42,7 @@ Now in `~/.gitconfig` file add the below
 
 ```js
 [alias];
-c = '!f(){ git add . && git commit -m "$1"; git push; };f';
+  c = "!f(){ git add -A && git commit -m \"$1\"; git push; };f"
 ```
 
 Now when you run `git c 'some message'` from **current_branch_i_am_in** it will actually run under the hood the following commands sequentially.
