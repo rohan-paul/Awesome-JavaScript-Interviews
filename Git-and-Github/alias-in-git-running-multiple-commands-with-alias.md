@@ -53,3 +53,9 @@ git commit -m 'some message'
 git push origin current_branch_i_am_in
 
 ```
+
+And as always when you can not push for some odd reasons you can always force it with
+
+```
+git push -f origin master
+```
