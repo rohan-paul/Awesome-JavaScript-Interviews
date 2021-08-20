@@ -179,7 +179,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [logical-and-operator-Tricky Question](Javascript/Tricky-JS-Problems/logical-and-operator.js)
 - [Value of Null](Javascript/Tricky-JS-Problems/value-of-null.js)
 - [pitfall-of-using-typeof](Javascript/Tricky-JS-Problems/pitfall-of-using-typeof.md)
-- [What-is-the-value-of-Math.max([2,3,4,5])](<Javascript/Tricky-JS-Problems/What-is-the-value-of-Math.max([2,3,4,5]).md>)
+- [What-is-the-value-of-Math.max([2,3,4,5])](Javascript/Tricky-JS-Problems/What-is-the-value-of-Math.max_2_3_4_5_.md)
 - [not-not-operator-in-javascript](Javascript/Tricky-JS-Problems/not-not-operator-in-javascript.md)
 - [why-does-adding-two-decimals-in-javascript-produce-a-wrong-result](Javascript/Tricky-JS-Problems/why-does-adding-two-decimals-in-javascript-produce-a-wrong-result.md)
 - [typeof-NaN](Javascript/Tricky-JS-Problems/typeof-NaN.md)
