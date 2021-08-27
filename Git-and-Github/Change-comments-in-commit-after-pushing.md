@@ -1,4 +1,4 @@
-## After pushing a commit how to chanage the comments in that commit - Applicable for the most recent commit - 26Jun2018
+## After pushing a commit how to change the comments in that commit - Applicable for the most recent commit - 26Jun2018
 
 https://gist.github.com/nepsilon/156387acf9e1e72d48fa35c4fabef0b4#already-pushed--most-recent-commit
 
