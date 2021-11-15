@@ -1,3 +1,16 @@
+/* The QUESTION HERE IS -
+
+I have an array like this [10, 20, 30, 40]
+
+and I want print the individual numbers after 1000ms with setTimeout()
+
+What will be the output of the below code implementing setTimeout() and
+Explain why
+
+And if you are getting wrong kind of output - how to to correct it
+
+*/
+
 const arr = [10, 20, 30, 40]
 
 for (var i = 0; i < arr.length; i++) {
@@ -19,27 +32,32 @@ Index: 4, element : undefined
 The inner function has access not only to the outer function’s variables, but also to the outer function's parameters.
 
 Explanation - of above output from setTimeout()
+
 The setTimeout function creates a function (the closure) that has access to its outer scope, which is the loop that contains the index i. After 1 second go by, the function is executed and it prints out the value of i, which at the end of the loop is at 4 because it cycles through 0, 1, 2, 3, 4 and the loop finally stops at 4. And arr[4] does not exist, which is why you get undefined.
 
 The variable i is actually declared within the for loop and the inner function accesses it. So when the for loop is done running, each of the inner functions refers to the same variable i, which at the end of the loop is equal to 3. Our goal is for each inner function to maintain its reference to the variable i without the value of it being altered. We'll solve this using an IIFE
 
 */
 
-//SOLUTION - 1 - To print all number from 0..4 after 1000 ms - use let instead of var
+// ******************** SOLUTION - 1 *****************************
 
-// const arr1 = [10, 12, 15, 21];
+// To print all number from 10..21 after 1000 ms - use let instead of var
 
-// for (let i = 0; i < arr1.length; i++) {
-//   // using the ES6 let syntax, it creates a new binding
-//   // every single time the function is called
-//   // read more here: http://exploringjs.com/es6/ch_variables.html#sec_let-const-loop-heads
+const arr1 = [10, 12, 15, 21]
 
-//   setTimeout(() => {
-//     console.log('The index of this number is: ' + i);
-//   }, 1000);
-// }
+for (let i = 0; i < arr1.length; i++) {
+  // using the ES6 let syntax, it creates a new binding
+  // every single time the function is called
+  // read more here: http://exploringjs.com/es6/ch_variables.html#sec_let-const-loop-heads
 
-// SOLUTION - 2 - To print all number from 0..4 after 1000 ms
+  setTimeout(() => {
+    console.log("The index of this number is: " + i)
+  }, 1000)
+}
+
+// ******************** SOLUTION - 2 *****************************
+
+// To print all number from 10..21 from the below arr2 after 1000 ms
 
 const arr2 = [10, 12, 15, 21]
 
@@ -53,7 +71,7 @@ for (var i = 1; i <= arr2.length; i++) {
         console.log("The index of this number is " + i_local)
       }
     })(i),
-    i * 1000,
+    i * 1000
   )
 }
 
@@ -71,7 +89,9 @@ Further Reading -
 
 */
 
-// SOLUTION - 3 - Use different iterator variable i and j
+// ******************** SOLUTION - 3 *****************************
+
+// Use different iterator variable i and j
 
 for (var i = 1; i <= 3; i++) {
   setTimeout(function () {
