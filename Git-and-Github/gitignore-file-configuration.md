@@ -37,3 +37,16 @@ git add .
 git commit -am 'git cache cleared'
 git push
 ```
+
+---
+
+### The below is the MOST EFFECTIVE one to ignore a folder at any depth below the current level
+
+The below is the way to ignore all directories called "node_modules" anywhere below the current level in a directory tree
+
+```
+node_modules/
+```
+
+Source -  https://stackoverflow.com/a/1470664/1902852
+

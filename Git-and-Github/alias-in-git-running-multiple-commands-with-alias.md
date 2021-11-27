@@ -21,7 +21,7 @@ will create a git alias to do that. It will add the following entry into your gl
 
 ```js
 [alias];
-co = checkout;
+co = checkout;f{ git add -A && git commit -m
 ```
 
 #### git alias setup, so that when I run the following command from my local machine’s feature_branch, it will push to remote repo's branch by the same name (feature_branch)
