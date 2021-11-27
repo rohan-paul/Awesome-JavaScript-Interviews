@@ -1,7 +1,142 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# dependencies
+node_modules/
+# The above is the MOST EFFECTIVE ONE as per
+# https://stackoverflow.com/a/1470664/1902852
+# The way to ignore all directories called "node_modules"
+# anywhere below the current level in a directory tree
+
+# Further if I have already pushed a directory to remote then remove that with below
+# Execute a folder remove (rm) from index only (--cached) recursivelly (-r). Command line example for root bin folder:
+# `git rm -r --cached full_absolute_path`
+# e.g. I had to run the below kind of command to remove the ".next" folder that was pushed to remote github
+# passing the full path of the .next folder
+# git rm -r --cached /media/veracrypt2/014-agency-classic-next/.next
+
+*node_modules
+/*node_modules
+*/*node_modules
+**/*node_modules
 /node_modules
+/node_modules/*
+*/node_modules/*
+
+# If you have performed a task, such as adding a new line item to your .gitignore file, I MUST need to clear out your git repo's cache in order for the changes to take place. Here are the commands for doing that:
+# git rm -r --cached . && git add . && git commit -am 'git cache cleared' && git push
+
+
+__MACOSX/
+*__MACOSX
+/*__MACOSX
+*/*__MACOSX
+**/*__MACOSX
+/__MACOSX
+/__MACOSX/*
+*/__MACOSX/*
+
+.next/
+*.next
+/*.next
+*/*.next
+**/*.next
+/.next
+/.next/*
+*/.next/*
+
+.npy/
+*.npy
+/*.npy
+*/*.npy
+**/*.npy
+/.npy
+
+# testing
+coverage/
+*coverage
+/*coverage
+*/*coverage
+**/*coverage
+/coverage
+/coverage/*
+*/coverage/*
+
+# production
+build/
+*build
+/*build
+*/*build
+**/*build
+/build
+/build/*
+*/build/*
+
+
+.db/
+*.db
+/*.db
+*/*.db
+**/*.db
+/.db
+
+.pkl/
+*.pkl
+/*.pkl
+*/*.pkl
+**/*.pkl
+/.pkl
+
+.pyc/
+*.pyc
+/*.pyc
+*/*.pyc
+**/*.pyc
+/.pyc
+
+*.txt
+/*.txt
+*/*.txt
+**/*.txt
+/.txt
+
+*.csv
+/*.csv
+*/*.csv
+**/*.csv
+/.csv
+
+
+*glove_vectors
+/glove_vectors
+*/*glove_vectors
+**/*glove_vectors
+/glove_vectors
+
+
+
+*.zip
+/*.zip
+*/*.zip
+**/*.zip
+/.zip
+
+*.rar
+/*.rar
+*/*.rar
+**/*.rar
+/.rar
+
+*.7z
+/*.7z
+*/*.7z
+**/*.7z
+/.7z
+
+LARGE_Datasets
+*/LARGE_Datasets
+*/LARGE_Datasets/**
+**/LARGE_Datasets/**
+
+# *** END OF FILES SPECIFIC TO ML Projects ****
 
 # testing
 /coverage
