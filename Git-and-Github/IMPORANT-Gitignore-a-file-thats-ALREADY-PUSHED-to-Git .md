@@ -25,3 +25,11 @@ git add .
 git commit -am 'git cache cleared'
 git push
 ```
+
+I have create an alias for doing the above
+
+OR The below for running all together
+
+```
+git rm -r --cached . && git add . && git commit -am 'git cache cleared' && git push
+```
