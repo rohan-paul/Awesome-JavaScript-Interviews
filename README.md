@@ -719,7 +719,6 @@ A collection of super-popular Interview questions, along with explanations and i
 - :link: Krop: http://krop.com
 - :link: PowerToFly: http://powertofly.com/jobs
 - :link: Developers for Hire: http://developersforhire.com
-- :link: Codepen job board: https://codepen.io/jobs
 - :link: http://Joblist.app: http://joblist.app
 - :link: Fullstack Job: http://fullstackjob.com
 - :link: Authentic jobs: http://authenticjobs.com
@@ -849,7 +848,6 @@ A collection of super-popular Interview questions, along with explanations and i
 - [JS Project Guidelines](https://github.com/wearehive/project-guidelines) : A set of best practices for JavaScript projects.
 - [Learn to Code With Me](https://learntocodewith.me) : A comprehensive site resource by Laurence Bradford for developers who aims to build a career in the tech world
 - [Lessons From A Lifetime Of Being A Programmer](http://thecodist.com/article/lessons_from_a_lifetime_of_being_a_programmer) : The Codist Header Lessons From A Lifetime Of Being A Programmer
-- [Programming Principles](https://webpro.github.io/programming-principles/) : Categorized overview of Programming Principles & Patterns
 - [Software design pattern](https://en.wikipedia.org/wiki/Software_design_pattern) : The entire collection of Design Patterns.
 - [Things I Wish Someone Had Told Me When I Was Learning How to Code — Free Code Camp](https://medium.freecodecamp.com/things-i-wish-someone-had-told-me-when-i-was-learning-how-to-code-565fc9dcb329?gi=fc6d0a309be) : What I’ve learned from teaching others
 - [What every computer science major should know](http://matt.might.net/articles/what-cs-majors-should-know/) : The Principles of Good Programming
@@ -862,10 +860,10 @@ A collection of super-popular Interview questions, along with explanations and i
 - [A Software Developer’s Reading List](https://stevewedig.com/2014/02/03/software-developers-reading-list/) : Some good books and links in there.
 - [Code a TCP/IP stack](http://www.saminiir.com/lets-code-tcp-ip-stack-5-tcp-retransmission/) : Let's code a TCP/IP stack, 5: TCP Retransmission
 - [Codewords.recurse](https://codewords.recurse.com/issues/four/the-language-of-choice) : The language of choice
-- [Data structure and Algorithms](https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-practice-problems-and-their-solutions) : List of some algorithms and data structures with their solutions.
 - [Dive into the byte code](https://www.wikiwand.com/en/Java_bytecode)
 - [Expectations of a Junior Developer](http://blog.thefirehoseproject.com/posts/expectations-of-a-junior-developer/)
 - [Getting Started with MongoDB – An Introduction](https://studio3t.com/knowledge-base/articles/mongodb-getting-started/)
+- [How to install ELK](https://logit.io/blog/post/elk-stack-guide) 
 - [Linux Inside](https://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-1.html)
 - [List of algorithms](https://www.wikiwand.com/en/List_of_algorithms)
 - [Step by Step Guide to Database Normalization](https://www.databasestar.com/normalization-in-dbms/): A guide to database normalization.
@@ -874,7 +872,6 @@ A collection of super-popular Interview questions, along with explanations and i
 - [We are reinventing the retail industry through innovative technology](http://multithreaded.stitchfix.com)
 - [What every programmer absolutely, positively needs to know about encodings and character sets to work with text](http://kunststube.net/encoding/)
 - [What every programmer should know about memory - PDF](http://futuretech.blinkenlights.nl/misc/cpumemory.pdf)
-- [Why fast pages are important](https://fly.io/articles/why-fast-pages-are-important/) : Why App Speed Matters, Revenue
 - [qotoqot - improving-focus](https://qotoqot.com/blog/improving-focus/) : How I got to 200 productive hours a month
 - [Pixel Beat - Unix](http://www.pixelbeat.org/docs/unix-parallel-tools.html) : Parallel processing with Unix tools
 - [Learning Vim](https://hackernoon.com/learning-vim-what-i-wish-i-knew-b5dca186bef7) : What I Wish I Knew
@@ -936,7 +933,6 @@ A collection of super-popular Interview questions, along with explanations and i
 - [github.com/jiangxiaoli/leetcode-javascript](https://github.com/jiangxiaoli/leetcode-javascript)
 - [skyyen999.gitbooks.io/-leetcode-with-javascript/content/questions/299md.html](https://skyyen999.gitbooks.io/-leetcode-with-javascript/content/questions/299md.html)
 - [github.com/HandsomeOne/LeetCode/tree/master/Algorithms](https://github.com/HandsomeOne/LeetCode/tree/master/Algorithms)
-- [github.com/sean1093/leetcode/tree/master/algorithms](https://github.com/sean1093/leetcode/tree/master/algorithms)
 - [github.com/zj972/leetcode/tree/master/code](https://github.com/zj972/leetcode/tree/master/code)
 - [github.com/xiaoliwang/leetcode/tree/master/iojs](https://github.com/xiaoliwang/leetcode/tree/master/iojs)
 - [github.com/dieface/leetcode/tree/master/javascript](https://github.com/dieface/leetcode/tree/master/javascript)
@@ -986,7 +982,6 @@ A collection of super-popular Interview questions, along with explanations and i
 
 ## System-Design related topics-Some very useful articles
 
-- [How to Rock a Systems Design Interview](http://www.palantir.com/2011/10/how-to-rock-a-systems-design-interview/)
 - [System Interview](http://www.hiredintech.com/app#system-design)
 - [Scalability for Dummies](http://www.lecloud.net/tagged/scalability)
 - [Scalable Web Architecture and Distributed Systems](http://www.aosabook.org/en/distsys.html)
@@ -995,7 +990,6 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Scalable System Design Patterns](http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html)
 - [Introduction to Architecting Systems for Scale](http://lethain.com/introduction-to-architecting-systems-for-scale/)
 - [Transactions Across Datacenters](http://snarfed.org/transactions_across_datacenters_io.html)
-- [A Plain English Introduction to CAP Theorem](http://ksat.me/a-plain-english-introduction-to-cap-theorem/)
 - [The CAP FAQ](https://github.com/henryr/cap-faq)
 - [Paxos Made Simple](http://research.microsoft.com/en-us/um/people/lamport/pubs/paxos-simple.pdf)
 - [Consistent Hashing](http://www.tom-e-white.com/2007/11/consistent-hashing.html)
@@ -1052,7 +1046,6 @@ A collection of super-popular Interview questions, along with explanations and i
 - [How to Create an Asynchronous Multiplayer Game](http://www.indieflashblog.com/how-to-create-an-asynchronous-multiplayer-game.html)
 - [How to Create an Asynchronous Multiplayer Game Part 2: Saving the Game State to Online Database](http://www.indieflashblog.com/how-to-create-async-part2.html)
 - [How to Create an Asynchronous Multiplayer Game Part 3: Loading Games from the Database](http://www.indieflashblog.com/how-to-create-async-part3.html)
-- [How to Create an Asynchronous Multiplayer Game Part 4: Matchmaking](http://www.indieflashblog.com/how-to-create-async-part4-html.html#comment-4447)
 - [Real Time Multiplayer in HTML5](http://buildnewgames.com/real-time-multiplayer/)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
@@ -1089,7 +1082,6 @@ A collection of super-popular Interview questions, along with explanations and i
 **Design a tinyurl system**
 
 - [System Design for Big Data-tinyurl](http://n00tc0d3r.blogspot.com/)
-- [URL Shortener API](https://developers.google.com/url-shortener/?csw=1)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
