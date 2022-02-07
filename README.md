@@ -366,7 +366,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [What are actions.payload](Redux/actions.payload.md)
 - [What is applyMiddleware](Redux/applyMiddleware.md)
 - [What is bindActionCreators](Redux/bindActionCreators.md)
-- [What is combine-Recucer](Redux/combine-Recucer.md)
+- [What is combine-Reducer](Redux/combine-Recucer.md)
 - [What is compose-function](Redux/compose-function.md)
 - [What is Connect function](Redux/Connect.md)
 - [What is container-component](Redux/container-component.md)
@@ -821,7 +821,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Learn Anything](https://learn-anything.xyz) : Community curated knowledge graph of best paths for learning anything
 - [Quora](https://www.quora.com) : A place to share knowledge and better understand the world
 - [Stack Overflow](https://stackoverflow.com) : subscribe to their weekly newsletter and any other topic which you find interesting
-- [Stackoverflow High Scored JS Questions](https://dashboard.nbshare.io/apps/stackoverflow/top-javascript-questions/) : Dashboard to track top Javascript questions asked on Stackoverflow 
+- [Stackoverflow High Scored JS Questions](https://dashboard.nbshare.io/apps/stackoverflow/top-javascript-questions/) : Dashboard to track top Javascript questions asked on Stackoverflow
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
@@ -863,7 +863,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Dive into the byte code](https://www.wikiwand.com/en/Java_bytecode)
 - [Expectations of a Junior Developer](http://blog.thefirehoseproject.com/posts/expectations-of-a-junior-developer/)
 - [Getting Started with MongoDB – An Introduction](https://studio3t.com/knowledge-base/articles/mongodb-getting-started/)
-- [How to install ELK](https://logit.io/blog/post/elk-stack-guide) 
+- [How to install ELK](https://logit.io/blog/post/elk-stack-guide)
 - [Linux Inside](https://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-1.html)
 - [List of algorithms](https://www.wikiwand.com/en/List_of_algorithms)
 - [Step by Step Guide to Database Normalization](https://www.databasestar.com/normalization-in-dbms/): A guide to database normalization.
