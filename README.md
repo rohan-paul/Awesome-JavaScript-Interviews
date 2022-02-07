@@ -167,8 +167,11 @@ A collection of super-popular Interview questions, along with explanations and i
 - [How would you compare two objects in JavaScript?](Large-Collection-of-Popular-Problems-with-Solutions/Objects-Master-List-of-Problems-Super-Useful-Daily-Techniques/compare-two-objects.md)
 - [Memoize a function](Large-Collection-of-Popular-Problems-with-Solutions/Objects-Master-List-of-Problems-Super-Useful-Daily-Techniques/Memoize-a-function.md)
 - [repaint-reflow](Javascript/repaint-reflow.md)
+-
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
+
+---
 
 ## Most common Tricky Javascript Interview Topics & Questions
 
@@ -279,7 +282,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [http-vs-https](Web-Development-In-General/http-vs-https.md)
 - [minimize-page-load-time](Web-Development-In-General/minimmize-page-load-time.md)
 - [Postman-checking-protected-routes-from-backend](Web-Development-In-General/Postman-checking-protected-routes-from-backend.md)
-- [websocket-basics](Web-Development-In-General/websocket-basics.md
+- [websocket-basics](Web-Development-In-General/websocket-basics.md)
 - [What-happens-when-you-navigate-to-an-URL](Web-Development-In-General/What-happens-when-you-navigate-to-an-URL.md)
 - [What-happens-when-you-navigate-to-google](Web-Development-In-General/What-happens-when-you-navigate-to-google.md)
 - [what-is-AJAX](Web-Development-In-General/what-is-AJAX.md)
