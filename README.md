@@ -703,7 +703,8 @@ A collection of super-popular Interview questions, along with explanations and i
 ## List of sites where you can hunt for a developer job
 
 - :link: AngelList - https://angel.co
-- :link: GitHub: http://jobs.github.com
+- :link: DevITjobs.us: https://devitjobs.us
+- :link: DevITjobs.uk: https://devitjobs.uk
 - :link: Mashable: http://jobs.mashable.com/jobs
 - :link: Indeed: http://indeed.com
 - :link: StackOverflow: http://stackoverflow.com/jobs
