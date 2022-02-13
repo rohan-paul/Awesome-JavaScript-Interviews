@@ -168,6 +168,7 @@ A collection of super-popular Interview questions, along with explanations and i
 - [Memoize a function](Large-Collection-of-Popular-Problems-with-Solutions/Objects-Master-List-of-Problems-Super-Useful-Daily-Techniques/Memoize-a-function.md)
 - [repaint-reflow](Javascript/repaint-reflow.md)
 - [What are events?](Javascript/what-are-events.md)
+- [What are the options in a cookie](Javascript/What-are-the-options-in-a-cookie.md)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
