@@ -6,6 +6,8 @@
 
 [![Youtube Link][yt_cover]](https://www.youtube.com/channel/UC0_a8SNpTFkmVv5SLMs1CIA/videos)
 
+---
+
 ### Author: Rohan Paul
 
 #### Find me here..
