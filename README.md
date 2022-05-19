@@ -1,8 +1,30 @@
-<img src="office.jpg">
-
 # Awesome JavaScript Interviews
 
-A collection of super-popular Interview questions, along with explanations and implementation examples that I was putting together for myself while preparing for my first Full-Stack JavaScript job interviews.
+## Checkout my [Deep Learning | Machine Learning YouTube Channel](https://www.youtube.com/channel/UC0_a8SNpTFkmVv5SLMs1CIA/featured)
+
+[yt_cover]: /assets/Youtube_Cover.jpg
+
+[![Youtube Link][yt_cover]](https://www.youtube.com/channel/UC0_a8SNpTFkmVv5SLMs1CIA/videos)
+
+### Author: Rohan Paul
+
+#### Find me here..
+
+- 🐦 TWITTER: https://twitter.com/rohanpaul_ai
+- ​👨‍🔧​ Kaggle: https://www.kaggle.com/paulrohan2020
+- 👨🏻‍💼 LINKEDIN: https://www.linkedin.com/in/rohan-paul-b27285129/
+- 👨‍💻 GITHUB: https://github.com/rohan-paul
+- 🤖: My Website and Blog: https://rohan-paul-ai.netlify.app/
+- 🧑‍🦰 Facebook Page: https://www.facebook.com/Computer-Vision-with-Rohan-Paul-109348958325690
+- 📸 Instagram: https://www.instagram.com/rohan_paul_2020/
+
+---
+
+[logo]: https://raw.githubusercontent.com/rohan-paul/MachineLearning-DeepLearning-Code-for-my-Youtube-Channel/master/assets/yt_logo.png
+
+---
+
+## Below are a collection of super-popular Interview questions, along with explanations and implementation examples that I was putting together for myself while preparing for my first Full-Stack JavaScript job interviews.
 
 ## Table of Contents of this Readme file
 
