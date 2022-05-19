@@ -8,9 +8,7 @@
 
 ---
 
-### Author: Rohan Paul
-
-#### Find me here..
+#### You can find me here..
 
 - 🐦 TWITTER: https://twitter.com/rohanpaul_ai
 - ​👨‍🔧​ Kaggle: https://www.kaggle.com/paulrohan2020
