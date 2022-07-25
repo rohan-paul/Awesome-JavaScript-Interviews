@@ -631,6 +631,7 @@
 - :link: [https://scotch.io/](https://scotch.io/)
 - :link: [https://30secondsofcode.org/](https://30secondsofcode.org/)
 - :link: [Front-end JavaScript Interviews in 2018–19](https://blog.webf.zone/front-end-javascript-interviews-in-2018-19-e17b0b10514)
+- :link: [Scaler Topics](https://www.scaler.com/topics/)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
