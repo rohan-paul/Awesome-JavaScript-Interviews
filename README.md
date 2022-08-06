@@ -862,6 +862,7 @@
 - [vicky002/1000-Projects](https://github.com/vicky002/1000_Projects) : Mega List of practical projects that one can solve in any programming language!
 - [reddit.com/r/AppIdeas](https://www.reddit.com/r/AppIdeas/) : A place to discuss ideas for applications, for bored developers.
 - [reddit.com/r/SomebodyMakeThis](https://www.reddit.com/r/SomebodyMakeThis/) : A home for ideas by people who lack time, money, or skills.
+- [InterviewBit | JavaScript Projects Ideas](https://www.interviewbit.com/blog/javascript-projects/) : Top 15+ JavaScript Projects Ideas.
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
