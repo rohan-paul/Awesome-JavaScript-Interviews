@@ -288,6 +288,7 @@
 - [REST-architectural-concepts](Node-Express/REST-architectural-concepts.md)
 - [significance-of-file-bin-www](Node-Express/significance-of-file-bin-www.md)
 - [Streams Concepts in Node](Node-Express/Streams.md)
+- [Node.js Interview Questions](https://www.interviewbit.com/node-js-interview-questions/)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
@@ -309,6 +310,7 @@
 - [What-happens-when-you-navigate-to-an-URL](Web-Development-In-General/What-happens-when-you-navigate-to-an-URL.md)
 - [What-happens-when-you-navigate-to-google](Web-Development-In-General/What-happens-when-you-navigate-to-google.md)
 - [what-is-AJAX](Web-Development-In-General/what-is-AJAX.md)
+- [Web Developer Interview Questions](https://www.interviewbit.com/web-developer-interview-questions/)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
@@ -380,6 +382,7 @@
 - [this.props.children](React/this.props.children.md)
 - [Virtual-DOM-and-Reconciliation-Algorithm](React/Virtual-DOM-and-Reconciliation-Algorithm.md)
 - [What are the approaches to include polyfills in your create-react-app](React/include-polyfills.md)
+- [React Interview Questions](https://www.interviewbit.com/react-interview-questions/)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
@@ -412,6 +415,7 @@
 - [Why-Redux-needs-reducers-to-be-pure functions](React/immutable-state-store-in-React-Redux/Why-Redux-needs-reducers-to-be-pure-functions-VERY-GOOD-EXPLANATIONS.md)
 - [immutable-state-store-in-React-Redux-2](React/immutable-state-store-in-React-Redux/immutable-state-store-in-React-Redux-2.md)
 - [immutable-state-store-in-React-Redux-Pass-by-Reference-shallow-comapre](React/immutable-state-store-in-React-Redux/immutable-state-store-in-React-Redux-Pass-by-Reference-shallow-comapre.md)
+- [Redux Interview Questions](https://www.interviewbit.com/redux-interview-questions/)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
@@ -479,6 +483,7 @@
 - [ng-content](Angular-Topics-Interview/ng-content.md)
 - [ngModel-basics-1](Angular-Topics-Interview/ngModel-basics-1.md)
 - [ngModel-basics-2](Angular-Topics-Interview/ngModel-basics-2.md)
+- [Angular Interview Questions](https://www.interviewbit.com/angular-interview-questions/)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
@@ -496,6 +501,7 @@
 - [referencing-another-schema-in-Mongoose-1](MongoDB/referencing-another-schema-in-Mongoose-1.md)
 - [More on referencing-another-schema-in-Mongoose-1](MongoDB/referencing-another-schema-in-Mongoose-2.md)
 - [sharding-in-mongodb](MongoDB/sharding-in-mongodb.md)
+- [MongpDB Interview Questions](https://www.interviewbit.com/mongodb-interview-questions/)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
@@ -505,6 +511,7 @@
 
 - [Collection-of-HTML-Interview-Questions](HTML/Collection-of-HTML-Interview-Questions.md)
 - [DOM-fundamentals](HTML/DOM-fundamentals.md)
+- [HTML Interview Questions](https://www.interviewbit.com/html-interview-questions/)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
@@ -525,6 +532,7 @@
 - [relative-positioning-basic-good-notes](CSS/relative-positioning-basic-good-notes.md)
 - [rem-unit-basics-and-converting-px](CSS/rem-unit-basics-and-converting-px.md)
 - [z-index](CSS/z-index.md)
+- [CSS Interview Questions](https://www.interviewbit.com/css-interview-questions/)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
@@ -539,6 +547,7 @@
 - [Pull-Requst-Steps-to-take-in-a-team-before-submitting-PR](Git-and-Github/PR-Flow/Pull-Requst-Steps-to-take-in-a-team-before-submitting-PR.md)
 - [Update-cloned-repo-in-local-machine-with-latest-master-branch](Git-and-Github/PR-Flow/Update-cloned-repo-in-local-machine-with-latest-master-branch.md)
 - [git-staging-area](Git-and-Github/git-staging-area.md)
+- [Git Interview Questions](https://www.interviewbit.com/git-interview-questions/)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
@@ -564,6 +573,7 @@
 - :link: [reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions)
 - :link: [Front-end-Developer-Interview-Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
 - :link: [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook) - Almost complete answers to "Front-end Job Interview Questions" which you can use to interview potential candidates, test yourself or completely ignore
+- :link: [Algorithm Interview Questions](https://www.interviewbit.com/algorithm-interview-questions/)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
@@ -617,6 +627,7 @@
 ### Other important resources
 
 - :link: [javascript cheatsheet](http://overapi.com/javascript)
+- :link: [Javascript cheat sheet - InterviewBit](https://www.interviewbit.com/javascript-cheat-sheet/)
 - :link: [Super useful es6-cheatsheet](https://github.com/DrkSephy/es6-cheatsheet)
 - :link: [freeCodeCamp Guide](https://guide.freecodecamp.org/)
 - :link: [functional-programming-in-js-map-filter-reduce](https://hackernoon.com/functional-programming-in-js-map-filter-reduce-pt-5-308a205fdd5f)
@@ -698,6 +709,8 @@
 - :link: [https://medium.com/coderbyte/a-tricky-javascript-interview-question-asked-by-google-and-amazon-48d212890703](https://medium.com/coderbyte/a-tricky-javascript-interview-question-asked-by-google-and-amazon-48d212890703) - A Tricky JavaScript Interview Question Asked by Google and Amazon
 
 - :link: [Many tricky and common javascript-questions](https://github.com/lydiahallie/javascript-questions)
+
+- :link: [Javascript Interview Questions]([https://github.com/lydiahallie/javascript-questions](https://www.interviewbit.com/javascript-interview-questions/) - Prepare from this comprehensive list of the latest Javascript Interview Questions and ace your interview.
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
@@ -1025,6 +1038,7 @@
 - [NOSQL Patterns](http://horicky.blogspot.com/2009/11/nosql-patterns.html)
 - [Scalability, Availability & Stability Patterns](http://www.slideshare.net/jboner/scalability-availability-stability-patterns)
 - [Design a CDN network-Globally Distributed Content Delivery](http://repository.cmu.edu/cgi/viewcontent.cgi?article=2112&context=compsci)
+- [System Design Interview Questions](https://www.interviewbit.com/system-design-interview-questions/)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
