@@ -30,7 +30,7 @@ But if I do the following instead of user.foo()
 
 Then it prints 'true' - Because now the simple function foo is in the global execution context and so the 'this' refers to global
 
-But then agin if my foo() function is in strict mode
+But then again if my foo() function is in strict mode
 
 ```js
 function foo() {
