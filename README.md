@@ -485,6 +485,7 @@
 - [ngModel-basics-1](Angular-Topics-Interview/ngModel-basics-1.md)
 - [ngModel-basics-2](Angular-Topics-Interview/ngModel-basics-2.md)
 - [Angular Interview Questions](https://www.interviewbit.com/angular-interview-questions/)
+- [JavaScript vs Typescript:](https://dev.to/alishaas11/javascript-vs-typescript-know-the-difference-4dg6)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
