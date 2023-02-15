@@ -136,6 +136,19 @@ LARGE_Datasets
 */LARGE_Datasets/**
 **/LARGE_Datasets/**
 
+*.mov
+/*.mov
+*/*.mov
+**/*.mov
+/.mov
+
+
+*.mp4
+/*.mp4
+*/*.mp4
+**/*.mp4
+/.mp4
+
 # *** END OF FILES SPECIFIC TO ML Projects ****
 
 # testing
