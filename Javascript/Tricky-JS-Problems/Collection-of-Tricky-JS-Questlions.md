@@ -58,7 +58,7 @@
 
 ---
 
-### Question: for `var a = (1, 5 - 1) \* 2` what is the value of a?
+### Question: for `var a = (1, 5 - 1) * 2` what is the value of a?
 
 **Answer**: 8
 
