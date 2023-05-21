@@ -4,7 +4,7 @@
   "description": "**A curated list of resources for JavaScript Interviews**",
   "main": "random-code-1.js",
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.2",
     "immutability-helper": "^2.7.1",
     "lodash": "^4.17.21",
     "request": "^2.87.0"
