@@ -33,9 +33,9 @@ It should also be noted that the branch determination is static, that is, it is 
 
 The propagation is bidirectional, from the window to the event target and back. This propagation can be divided into three phases:
 
-From the window to the event target parent: this is the capture phase
-The event target itself: this is the target phase
-From the event target parent back to the window: the bubble phase
+- From the window to the event target parent: this is the capture phase
+- The event target itself: this is the target phase
+- From the event target parent back to the window: the bubble phase
 
 ## How will it help me?
 
