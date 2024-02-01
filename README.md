@@ -795,6 +795,7 @@
 - :link: IWantRemote: http://iwantremote.com
 - :link: DailyRemote - https://dailyremote.com
 - :link: Remotive: https://remotive.io/remote-jobs/software-dev
+- :link: OkJob - https://okjob.io
 - :link: Outsourcely: http://outsourcely.com/remote-web-development-jobs
 - :link: Pangian: https://pangian.com/job-travel-remote/
 - :link: RemoteLeads: http://remoteleads.io
