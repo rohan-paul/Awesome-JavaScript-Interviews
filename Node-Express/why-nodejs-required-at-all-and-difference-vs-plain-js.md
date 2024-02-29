@@ -10,9 +10,9 @@ Node.js is a good choice for applications that have to
 
  - **Video conference app that will work with specific hardware or VoIP**.
 
- - **nline gaming apps or e-commerce transaction software, where online data is of much importance**
+ - **Online gaming apps or e-commerce transaction software, where online data is of much importance**
 
-- **Noe is quite a natural fit for exposing the data from object DBs (e.g. MongoDB)**. JSON stored data allow Node.js to function without the impedance mismatch and data conversion.
+- **Node is quite a natural fit for exposing the data from object DBs (e.g. MongoDB)**. JSON stored data allow Node.js to function without the impedance mismatch and data conversion.
 
 Node.js is very efficient with real-time applications: it facilitates handling multiple client requests, enables sharing and reusing packages of library code, and the data sync between the client and server happens very fast.
 
