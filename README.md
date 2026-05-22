@@ -671,6 +671,7 @@
 - :link: [uCoder](ucoder.com.br)
 - :link: [LintCode](https://www.lintcode.com/)
 - :link: [CodeCombat](https://codecombat.com/)
+- :link: [LeakCode](https://leakcode.dev/)
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
