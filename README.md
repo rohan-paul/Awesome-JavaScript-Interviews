@@ -826,6 +826,7 @@
 
 - :link: JrDevJobs: http://jrdevjobs.com
 - :link: Stackoverflow Junior jobs: https://stackoverflow.com/jobs/junior-developer-jobs
+- :link: Hanzilla Jobs: https://jobs.hanzilla.co/new-grad/ - daily-updated Canadian student/new-grad and junior roles, including internships and co-ops
 
 [[↑] Back to top](#table-of-contents-of-this-readme-file)
 
