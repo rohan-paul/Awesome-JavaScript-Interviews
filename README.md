@@ -569,7 +569,7 @@
 - :link: [www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/](https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/)
 - :link: [best javascript-algorithms github repo](https://github.com/trekhleb/javascript-algorithms)
 - :link: [14-patterns-to-ace-any-coding-interview-question](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
-- :link: [Grokking the Coding Interview: Patterns for Coding Questions](https://www.educative.io/collection/5668639101419520/5671464854355968)
+- :link: [Grokking the Coding Interview: Patterns for Coding Questions](https://www.designgurus.io/course/grokking-the-coding-interview)
 - :link: [https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript](https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript)
 - :link: [coding-interview-university](https://github.com/jwasham/coding-interview-university)
 - :link: [reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions)
